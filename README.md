@@ -5,6 +5,7 @@ Ignacio Costa
 Selena Abigail Ramos
 Martin Alejandro Esteves Magalhaes 
 Nicolás Gerez
+
 Referencias: 
 -https://compragamer.com/
 -https://www.scphardstore.com/
