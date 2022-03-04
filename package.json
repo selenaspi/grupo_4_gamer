@@ -1,0 +1,23 @@
+{
+  "name": "grupo_4_gamer",
+  "version": "1.0.0",
+  "description": "Infinity Store es un E-commerce orientado a la venta de componentes de PC, desde microprocesadores hasta accesorios.\r Nuestro sitio apunta a un público genérico, de videojugadores, empresas o todo aquel que desee actualizar los componentes de sus ordenadores.\r Integrantes: \r Ignacio Costa\r Selena Abigail Ramos\r Martin Alejandro Esteves Magalhaes \r Nicolás Gerez",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selenaspi/grupo_4_gamer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/selenaspi/grupo_4_gamer/issues"
+  },
+  "homepage": "https://github.com/selenaspi/grupo_4_gamer#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
