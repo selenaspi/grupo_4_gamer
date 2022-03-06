@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header></header>
+    <nav></nav>
+
+    <main>
+        <h1>Artículos del carrito</h1>
+        <section class="productos">
+            <article>
+                <img src="/images/TECLADO GAMER EVGA Z15 RGB COLOR LINEAR SILVER SPANISH.jpg" alt="Foto del producto">
+                <button type="button">Eliminar</button>
+                <h3>TECLADO GAMER EVGA Z15 RGB COLOR LINEAR SILVER SPANISH</h3>
+                <button type="button">-</button>
+                <input type="number" placeholder="0" value="1">
+                <button type="button">+</button>
+                <h2>$ 6.870</h2>
+            </article>
+
+            <article>
+                <img src="/images/NOTEBOOK MSI CREATOR 15 A10SE.jpg" alt="Foto del producto">
+                <button type="button">Eliminar</button>
+                <h3>NOTEBOOK MSI CREATOR 15 A10SE</h3>
+                <button type="button">-</button>
+                <input type="number" placeholder="0" value="1">
+                <button type="button">+</button>
+                <h2>$ 380.638</h2>
+            </article>
+
+            <article>
+                <!--Implementar elemento picture-->
+                <img src="/images/SILLA GAMER PRIMUS THRONOS 100T BLACK-AMARILLA.jpg" alt="Foto del producto">
+                <button type="button">Eliminar</button>
+                <h3>SILLA GAMER PRIMUS THRONOS 100T BLACK/YELLOW</h3>
+                <button type="button">-</button>
+                <input type="number" placeholder="0" value="1">
+                <button type="button">+</button>
+                <h2>$ 46.840</h2>
+            </article>
+
+            <div class="subtotal-productos">
+                <h2>Subtotal: $ 434.348</h2>
+            </div>
+        </section>
+
+        <section class="envio">
+            <h2>Envío</h2>
+            <div>
+                <input type="radio" id="retiro-sucursal" name="envio">
+                <label for="retiro-sucursal">Retiro por sucursal</label>
+
+                <div>
+                    <input type="radio" id="envio-domicilio" name="envio">
+                    <label for="envio-domicilio">Envío a destino</label>
+    
+                    <input type="text" placeholder="Código postal">
+                    <button type="button">Calcular</button>
+                </div>
+
+                <h3>Costo de envío: $XXX.XX</h3>
+            </div>
+
+
+        </section>
+
+        <button type="button">Siguiente</button>
+
+    </main>
+</body>
+
+</html>
