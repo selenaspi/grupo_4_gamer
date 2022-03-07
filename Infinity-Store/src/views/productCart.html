@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styleproductCart.css">
+    <title>Infinity Store</title>
 </head>
 
 <body>
@@ -13,36 +19,52 @@
     <nav></nav>
 
     <main>
+
         <h1>Artículos del carrito</h1>
+
         <section class="productos">
+
             <article>
+
                 <img src="/images/TECLADO GAMER EVGA Z15 RGB COLOR LINEAR SILVER SPANISH.jpg" alt="Foto del producto">
-                <button type="button">Eliminar</button>
+
+                <button type="button" class="borrar-producto"><i class="fa-solid fa-trash"></i></button>
+
                 <h3>TECLADO GAMER EVGA Z15 RGB COLOR LINEAR SILVER SPANISH</h3>
-                <button type="button">-</button>
-                <input type="number" placeholder="0" value="1">
-                <button type="button">+</button>
+                <div class="agregar-sacar">
+                    <button type="button"><i class="fa-solid fa-minus"></i></button>
+                    <input type="number" placeholder="0" value="1">
+                    <button type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
                 <h2>$ 6.870</h2>
             </article>
 
             <article>
                 <img src="/images/NOTEBOOK MSI CREATOR 15 A10SE.jpg" alt="Foto del producto">
-                <button type="button">Eliminar</button>
+                <button type="button" class="borrar-producto"><i class="fa-solid fa-trash"></i></button>
                 <h3>NOTEBOOK MSI CREATOR 15 A10SE</h3>
-                <button type="button">-</button>
-                <input type="number" placeholder="0" value="1">
-                <button type="button">+</button>
+
+                <div class="agregar-sacar">
+                    <button type="button"><i class="fa-solid fa-minus"></i></button>
+                    <input type="number" placeholder="0" value="1">
+                    <button type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+
                 <h2>$ 380.638</h2>
             </article>
 
             <article>
                 <!--Implementar elemento picture-->
                 <img src="/images/SILLA GAMER PRIMUS THRONOS 100T BLACK-AMARILLA.jpg" alt="Foto del producto">
-                <button type="button">Eliminar</button>
+                <button type="button" class="borrar-producto"><i class="fa-solid fa-trash"></i></button>
                 <h3>SILLA GAMER PRIMUS THRONOS 100T BLACK/YELLOW</h3>
-                <button type="button">-</button>
-                <input type="number" placeholder="0" value="1">
-                <button type="button">+</button>
+
+                <div class="agregar-sacar">
+                    <button type="button"><i class="fa-solid fa-minus"></i></button>
+                    <input type="number" placeholder="0" value="1">
+                    <button type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                
                 <h2>$ 46.840</h2>
             </article>
 
@@ -60,7 +82,7 @@
                 <div>
                     <input type="radio" id="envio-domicilio" name="envio">
                     <label for="envio-domicilio">Envío a destino</label>
-    
+
                     <input type="text" placeholder="Código postal">
                     <button type="button">Calcular</button>
                 </div>
