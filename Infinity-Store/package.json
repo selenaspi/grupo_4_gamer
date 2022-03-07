@@ -19,5 +19,6 @@
   "homepage": "https://github.com/selenaspi/grupo_4_gamer#readme",
   "dependencies": {
     "express": "^4.17.3"
-  }
+  },
+  "keywords": []
 }
