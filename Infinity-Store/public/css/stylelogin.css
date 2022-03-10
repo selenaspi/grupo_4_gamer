@@ -6,7 +6,7 @@ box-sizing: border-box;
 
 body{
     font-family: arial;
-    background-image: url('fondo_login.jpg');
+    background-image: url('/images/fondo_login_register.jpg');
 }
 
 .form-login{

@@ -3,8 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: arial;
+    background-image: url('/images/fondo_login_register.jpg');
+}
 
-.form-register{
+.Form-register{
 width: 400px;
 background: #24303c;
 padding: 30px;
@@ -16,12 +20,13 @@ color: white;
 box-shadow: 7px 13px 37px #000;
 }
 
-.form-register h4{
+.Form-register h4{
  font-size: 22px;
  margin-bottom: 20px;
+ text-align: center;
 }
 
-.controls{
+.Controls{
     width: 100%;
     background: #24303c;
     padding: 10px;
@@ -33,24 +38,24 @@ box-shadow: 7px 13px 37px #000;
     color: white;
 }
 
-.form-register p{
+.Form-register p{
     height: 40px;
     text-align: center;
     font-size:18px;
     line-height: 40px;
 }
 
-.form-register a{
+.Form-register a{
     color: white;
     text-decoration: none;
 }
 
-.form-register a:hover{
+.Form-register a:hover{
     color: white;
     text-decoration: underline;
 }
 
-.form-register .botons {
+.Form-register .botons {
     width: 100%;
     background: #1f53c5;
     border: none;
@@ -58,4 +63,5 @@ box-shadow: 7px 13px 37px #000;
     color: white;
     margin: 16px 0;
     font-size: 16px;
+    text-align: center;
 }
