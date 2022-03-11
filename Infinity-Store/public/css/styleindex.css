@@ -1,17 +1,113 @@
-.nav-bar {
-    text-align:center;
+:root {
+  --amarillo: #eac926;
+  --azul: #03264c;
+  --celeste: #1259c3;
+  --grisOscuro: #666;
+  --grisClaro: #ebebeb;
+  --verde: #39b54a;
+}
+img{
+    width: 100%;;
 }
 
-.img{
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+body{
     
-    width:100%;
+    background-color: #ebebeb;
+}
+h3{
+    font-size: 24px;
+    text-align: center;
 }
 
-.ofertas{
+p{
+    font-size: 18px;
     text-align:center;
 }
-
-.recomend{
-    text-align:center;
+.productos{
+padding:0px;
+margin: 0px;
+}
+p.precio{
+    font-size: 18px;
+    text-align: center;
+}
+.descuento{
+   
+    text-align: center;
 }
 
+.descuento,
+.descripcion{
+    font-size: 16px;
+    font-weight: normal;
+}
+main{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+article{
+    justify-content:center;
+}
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.descuento{
+    color: #39b54a;
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+article{
+    text-align: center;
+}
+
+
+
+
+@media (min-width: 361px){
+    main section article .descripcion{
+        display: block;
+    }
+
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    main section div.productos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    main section div.productos article{
+        width: 45%;
+    }
+
+    .precio,
+    .descuento{
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px){
+    main section div.productos article{
+        width: 22%;
+    }
+
+}
