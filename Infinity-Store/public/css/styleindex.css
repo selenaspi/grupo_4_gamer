@@ -45,6 +45,7 @@ p.precio{
 .descripcion{
     font-size: 16px;
     font-weight: normal;
+    text-align: center;
 }
 main{
     width: 90%;
@@ -73,12 +74,13 @@ main section h3{
 }
 article{
     text-align: center;
+   
 }
 
 
 
 
-@media (min-width: 361px){
+@media (min-width: 520px){
     main section article .descripcion{
         display: block;
     }
@@ -101,7 +103,8 @@ article{
 
     .precio,
     .descuento{
-        width: 50%;
+        
+        text-align: center;
     }
 }
 
