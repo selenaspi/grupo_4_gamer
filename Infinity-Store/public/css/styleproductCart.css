@@ -1,98 +1,128 @@
 /*------------------------ Universales ------------------------*/
+
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    /* background-color: rgba(117, 20, 183, 0.7); */
+    background-color: rgb(240, 240, 240);
 }
 
 img {
     width: 100%;
 }
 
-/*-------------------------------------------------*/
+h1 {
+    font-size: 1.7rem;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+/*----------------------- Main --------------------------*/
 
 main {
-    width: 90%;
+    width: 80%;
     margin: auto;
     margin-top: 5%;
 }
 
 main>h1 {
-    display: block;
-    width: 90%;
-    margin: auto; 
-    font-size: 1.8em;
-
+    display: block; 
+    color: rgba(32, 33, 65, .8);
 }
 
-main .product-cards article {
-    background-color: rgba(117, 20, 183, 0.7);
+main>h2 {
+    display: block; 
+    font-size: 1.5em;
+}
+
+main .product-cards-subtotal {
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+main .product-cards-subtotal article {
+    background-color: white;
     margin-top: 6%;
     width: 100%;
     display: block;
-
-
     position: relative;
-    /* height: 550px; */
+    padding-bottom: 5%;
+    -webkit-box-shadow: -1px 2px 22px -1px rgba(70,24,140,1);
+    -moz-box-shadow: -1px 2px 22px -1px rgba(70,24,140,1);
+    box-shadow: -1px 2px 22px -1px rgba(70,24,140,1);
 }
 
-.product-cards, .envio {
-    width: 90%;
-    margin: auto;
-    margin-top: 5%;
-}
-
-.product-cards article img {
-    display: block;
+main .product-cards-subtotal article .foto-articulo {
+    display: flex;
     width: 80%;
     margin: auto;
-    min-height: 215px;
-    height: 40vh;
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding: 10% 0% 5% 0%;
 }
 
-.product-cards article .borrar-producto {
-    border-radius: 50px;
-    border-style: solid;
-    border-width: 3px;
-    border-color: black;
+
+
+.product-cards-subtotal article .borrar-producto {
+    border-radius: 50%;
+    border: solid 2px #dc3545; 
     position: absolute;
     top: 20%;
-    right: -9%;
+    right: -7.5%;
     display: block;
 }
 
-.product-cards article .borrar-producto i {
-    padding: 16px 13px;
-    font-size: 1rem;
-
+.product-cards-subtotal article .borrar-producto i {
+    padding: 12px 9px;
+    font-size: 1.2rem;
+    color: #dc3545;
 }
 
-.product-cards article h3 {
+.product-cards-subtotal article .descripcion-producto>h3 {
     width: 80%;
     margin: auto;
+    padding-bottom: 5%;
 }
 
-.product-cards article h2 {
-    width: 80%;
-    margin: auto;
-    text-align: right;
-}
-
-.agregar-sacar {
+.product-cards-subtotal article .agregar-sacar {
+    display: flex;
+    justify-content: center;
+    height: 5.5vh;
     width: 80%;
     margin: auto;
     text-align: center;
+    padding-bottom: 6%;
+    border-bottom: 1px solid black;
 }
 
-.agregar-sacar>input {
-    width: 20%;
+.product-cards-subtotal article .agregar-sacar button {
+    padding: 0px 8px;
+    border-radius: 15%;
+    border-style: none;
 }
 
-.subtotal-productos {
+.product-cards-subtotal article .agregar-sacar button i {
+    padding-top: 1px;
+}
+
+.product-cards-subtotal article .agregar-sacar input {
+    border-radius: 15%;
+    border: 1px black solid;
+    margin: 0px 5px;
+    width: 15%;
+    text-align: center;
+}
+
+.product-cards-subtotal article h2 {
+    width: 70%;
+    margin: auto;
+    text-align: right;
+    padding-top: 3%;
+}
+
+
+.product-cards-subtotal .subtotal-productos {
     background-color: rgba(117, 20, 183, 0.7);
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .subtotal-productos h2 {
@@ -100,7 +130,103 @@ main .product-cards article {
     text-align: center;
 }
 
+main .envio {
+    display: block;
+    width: 100%;
+    margin-top: 5%;
+    background-color: rgba(117, 20, 183, 0.7);
+    padding: 1% 0% 3% ;
+}
 
+main .envio>div {
+    width: 80%;
+    margin: auto;
+    padding: 5% 0% 0%;
+}
+
+main .envio .calcular-envio {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+
+main .envio .calcular-envio input {
+    width: 50%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    height: 2rem;
+    padding-left: 8px;
+}
+
+main .envio .calcular-envio button {
+    border-radius: 0%;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: white;
+}
+
+main .envio h2 {
+    display: block;
+    width: 80%;
+    margin: auto;
+    text-align: end;
+    font-size: 1.4rem;
+    padding-top: 3%;
+    border-top: solid black 1px;
+}
+
+
+
+
+
+/*------------------------------------------------------------*/
+main .detalles-compra {
+    background-color: blueviolet;
+    padding: 3% 0%;
+}
+
+main .detalles-compra p {
+    margin: 0%;
+}
+
+main .conteiner-detalles {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+main .detalles-compra h2 {
+    margin: 0%;
+    margin-bottom: 2%;
+}
+
+main .detalles-compra .d-producto, main .detalles-compra .d-envio, main .detalles-compra .d-impuestos {
+    margin-bottom: 5%;
+}
+
+main .detalles-compra .d-producto>div, main .detalles-compra .d-envio>div, main .detalles-compra .d-impuestos>div, main .detalles-compra .d-descuentos>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .detalles-compra .d-envio>h2 {
+    font-size: 1.3rem;
+}
+
+main .detalles-compra .d-impuestos>div, main .detalles-compra .d-descuentos>div {
+    margin-bottom: 3%;
+}
+
+main .detalles-compra .d-descuentos {
+    padding-bottom: 5%;
+}
+
+main .conteiner-detalles>h2 {
+    padding: 5% 0%;
+    margin: 0%;
+    border-top: 1px solid black;
+}
 
 /*---------------------- Media Queries -----------------------*/
 
