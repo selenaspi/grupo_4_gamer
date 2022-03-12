@@ -5,9 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styleregistro.css">
+    <script
+       src="https://kit.fontawesome.com/7e5b2d153f.js"
+       crossorigin="anonymous"></script>
     <title>register</title>
 </head>
 <body>
+    <header class="header">
+        <nav class = "nav">
+            <a href="#" class="logo nav-link">Logo</a>
+            <button class = "nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">Categorías</a></li>
+                <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">Armá tu pc</a></li>
+                <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">Carrito</a></li>
+                <li class="nav-menu-item"><a href="/login" class="nav-menu-link nav-link">Ingresar</a></li>
+                <li class="nav-menu-item"><a href="/register" class="nav-menu-link nav-link">Registrarme</a></li>
+        
+            </ul>
+            
+        </nav>
+    </header>
+
     <section class="Form-register">
         <h4>Formulario de Registro</h4>
         <input class = "Controls" type="text" name ="Nombres" id="Nombres" placeholder="Ingrese su Nombre">
@@ -18,7 +39,7 @@
         <input class = "Controls" type="text" name ="Contraseña" id="Contraseña" placeholder="Contraseña">
         <input class = "Controls" type="text" name ="Repetir Contraseña" id="Repetir Contraseña" placeholder="Repetir Contraseña">
         <p> Acepto los <a href = "#">términos y condiciones</a></p>
-        <input class="botons" type="sbmit" value="Aceptar">
+        <input class = "botons" type="submit" value="Aceptar">
     </section>
 </body>
 </html>
