@@ -108,19 +108,22 @@
 
         <section class="envio">
 
-            <div>
+            <div class="o-sucursal">
                 <input type="radio" id="retiro-sucursal" name="envio">
                 <label for="retiro-sucursal">Retiro por sucursal</label>
             </div>
 
-            <div>
-                <input type="radio" id="envio-domicilio" name="envio">
-                <label for="envio-domicilio">Envío a destino</label>
-            </div>
+            <div class="o-domicilio">
+                <div class="o-dom">
+                    <input type="radio" id="envio-domicilio" name="envio">
+                    <label for="envio-domicilio">Envío a destino</label>
+                </div>
 
-            <div class="calcular-envio">
-                <input type="text" placeholder="Código postal">
-                <button type="button"><i class="fa-solid fa-truck"></i></button>
+                <div class="calculador">
+                    <input type="text" placeholder="Código postal">
+                    <button type="button"><i class="fa-solid fa-truck"></i></button>
+                </div>
+
             </div>
 
             <h2>Costo de envío: $XXX.XX</h2>
@@ -147,7 +150,7 @@
                         <p><strong>TECLADO GAMER EVGA Z15 RGB COLOR LINEAR SILVER SPANISH</strong></p>
 
                         <div>
-                            <p>2</p>
+                            <p class="cantidad-mobile">2</p>
                             <p>$ 13.740</p>
                         </div>
 
@@ -230,7 +233,7 @@
                 <h2>Total: $ 432.225</h2>
 
             </div>
-        
+
         </section>
 
         <button type="button">Atrás</button>

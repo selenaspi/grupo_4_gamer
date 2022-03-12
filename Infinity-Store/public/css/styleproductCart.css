@@ -26,14 +26,9 @@ main {
     margin-top: 5%;
 }
 
-main>h1 {
+main>h1, main>h2 {
     display: block; 
     color: rgba(32, 33, 65, .8);
-}
-
-main>h2 {
-    display: block; 
-    font-size: 1.5em;
 }
 
 main .product-cards-subtotal {
@@ -130,6 +125,8 @@ main .product-cards-subtotal article .foto-articulo {
     text-align: center;
 }
 
+/*--- Envío ---*/
+
 main .envio {
     display: block;
     width: 100%;
@@ -138,20 +135,24 @@ main .envio {
     padding: 1% 0% 3% ;
 }
 
-main .envio>div {
+main .envio .o-sucursal, main .envio .o-domicilio {
     width: 80%;
     margin: auto;
-    padding: 5% 0% 0%;
+    padding-top: 5%;
 }
 
-main .envio .calcular-envio {
+main .envio .o-domicilio .o-dom {
+    padding-bottom: 5%;
+}
+
+main .envio .calculador {
     display: flex;
     justify-content: center;
     padding-bottom: 5%;
 }
 
-main .envio .calcular-envio input {
-    width: 50%;
+main .envio .calculador input {
+    width: 30%;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border: none;
@@ -159,7 +160,7 @@ main .envio .calcular-envio input {
     padding-left: 8px;
 }
 
-main .envio .calcular-envio button {
+main .envio .calculador button {
     border-radius: 0%;
     border: none;
     border-top-right-radius: 5px;
@@ -230,6 +231,239 @@ main .conteiner-detalles>h2 {
 
 /*---------------------- Media Queries -----------------------*/
 
-@media (min-width: 361px) {
+@media (min-width: 781px) {
 
+    body {
+        font-size: 22px;
+    }
+
+/*--------------- Main ------------------*/
+
+    main {
+        width: 90%;
+    }
+
+    .product-cards-subtotal {
+        background-color: white;
+        -webkit-box-shadow: -1px 2px 22px -1px rgba(70,24,140,1);
+        -moz-box-shadow: -1px 2px 22px -1px rgba(70,24,140,1);
+        box-shadow: -1px 2px 22px -1px rgba(70,24,140,1);
+    }
+
+    main .product-cards-subtotal article {
+        display: flex;
+        width: 90%;
+        margin-top: 0%;
+        margin: auto;
+        padding: 3% 0% 2%;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        align-items: center;
+        border-bottom: solid 1px gray;
+    }
+
+    main .product-cards-subtotal article .foto-articulo {
+        margin: auto;
+        padding: 0%;
+        width: 20%;
+        flex-grow: 0.2;
+    }
+
+    main .product-cards-subtotal article .foto-articulo>img {
+        width: 100%;
+    }
+
+    .product-cards-subtotal article .descripcion-producto {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        width: 80%;
+    }
+
+    .product-cards-subtotal article .borrar-producto {
+        border: none;
+        border-radius: 10%;
+        display: block;
+        position: static;
+        height: 20%;
+        padding: 0%;
+        order: 1;
+    }
+    
+    .product-cards-subtotal article .borrar-producto i {
+        padding: 3px 10px 5px;
+        font-size: 1rem;
+        color: #dc3545;
+    }
+
+    .product-cards-subtotal article .descripcion-producto>h3 {
+        padding-bottom: 0%;
+        font-size: 1rem;
+        padding-left: 5%;
+    }
+
+    .product-cards-subtotal article .agregar-sacar {
+        padding-bottom: 0%;
+        border-bottom: none;
+        height: 5.5vh;
+        width: 50%;
+        margin: auto;
+    }
+
+    .product-cards-subtotal article .agregar-sacar button {
+        padding: 0px 6px;
+        border-radius: 15%;
+        border-style: none;
+    }
+
+    .product-cards-subtotal article .agregar-sacar input {
+        border-radius: 15%;
+        border: 1px black solid;
+        margin: 0px 5px;
+        width: 30px;
+        text-align: center;
+    }
+
+    .product-cards-subtotal article h2 {
+        text-align: center;
+        padding-top: 0%;
+    }
+
+    .product-cards-subtotal .subtotal-productos {
+        display: block;
+        width: 90%;
+        margin: auto;
+        margin-top: 0%;
+        padding-top: 1%;
+        background-color: white;
+    }
+
+    .product-cards-subtotal .subtotal-productos>h2 {
+        margin-bottom: 0%;
+        padding: 0%;
+        padding-bottom: 3%;
+        text-align: right;
+    }
+
+    /* --- Envío ---*/
+
+    main .envio {
+        display: block;
+        width: 100%;
+        margin-top: 3%;
+        /* background-color: white; */
+        background-color: #dc3545;
+        padding: 1% 0% 2% ;
+    }
+    
+    main .envio .o-sucursal, main .envio .o-domicilio {
+        width: 90%;
+        margin: auto;
+        padding-top: 2%;
+    }
+
+    main .envio .o-domicilio {
+        display: flex;
+        padding-bottom: 3%;
+        align-items: center;
+    }
+    
+    main .envio .o-domicilio .o-dom {
+        padding-bottom: 0%;
+    }
+    
+    main .envio .calculador {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 0%;
+    }
+    
+    main .envio .calculador input {
+        width: 50%;
+        height: 2rem;
+        font-size: 18px;
+        padding-left: 8px;
+        border: none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    
+    main .envio .calculador button {
+        background-color: white;
+        border: none;
+        border-radius: 0%;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    
+    main .envio h2 {
+        display: block;
+        width: 90%;
+        margin: auto;
+        text-align: end;
+        font-size: 1.4rem;
+        padding-top: 2%;
+        border-top: solid black 1px;
+    }
+    
+    
+/**/
+main .detalles-compra {
+    background-color: blueviolet;
+    padding: 3% 0%;
+}
+
+main .detalles-compra p {
+    margin: 0%;
+}
+
+main .conteiner-detalles {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+main .detalles-compra h2 {
+    margin: 0%;
+    margin-bottom: 2%;
+}
+
+main .detalles-compra .d-producto, main .detalles-compra .d-envio, main .detalles-compra .d-impuestos {
+    margin-bottom: 5%;
+    display: flex;
+}
+
+main .detalles-compra .d-producto>div, main .detalles-compra .d-envio>div, main .detalles-compra .d-impuestos>div, main .detalles-compra .d-descuentos>div {
+    display: flex;
+    justify-content: space-between;
+}
+.cantidad-mobile {
+    position: relative;
+    left:100px;
+}
+main .detalles-compra .d-envio>h2 {
+    font-size: 1.3rem;
+}
+
+main .detalles-compra .d-impuestos>div, main .detalles-compra .d-descuentos>div {
+    margin-bottom: 3%;
+}
+
+main .detalles-compra .d-descuentos {
+    padding-bottom: 5%;
+}
+
+main .conteiner-detalles>h2 {
+    padding: 5% 0%;
+    margin: 0%;
+    border-top: 1px solid black;
+}
+
+
+}
+
+@media (min-width: 1200px) {
+    main {
+        width: 80%;
+    }
 }
