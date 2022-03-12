@@ -18,7 +18,7 @@ h2{
     font-size: 1.5rem;
 }
 
-/*----------------------- Main --------------------------*/
+/*------------------------ Main ------------------------*/
 
 main {
     width: 80%;
@@ -31,22 +31,28 @@ main>h1, main>h2 {
     color: rgba(32, 33, 65, .8);
 }
 
+/*------Productos y subtotal------*/
+
 main .product-cards-subtotal {
     width: 100%;
     margin-bottom: 10%;
 }
 
+/*-----Producto-----*/
+
 main .product-cards-subtotal article {
+    display: block;
+    width: 100%;
+    position: relative;
     background-color: white;
     margin-top: 6%;
-    width: 100%;
-    display: block;
-    position: relative;
     padding-bottom: 5%;
     -webkit-box-shadow: -1px 2px 22px -1px rgba(70,24,140,1);
     -moz-box-shadow: -1px 2px 22px -1px rgba(70,24,140,1);
     box-shadow: -1px 2px 22px -1px rgba(70,24,140,1);
 }
+
+/*----Fotos de los artículos----*/
 
 main .product-cards-subtotal article .foto-articulo {
     display: flex;
@@ -55,29 +61,15 @@ main .product-cards-subtotal article .foto-articulo {
     padding: 10% 0% 5% 0%;
 }
 
-.borrar-producto-desktop {
-    display: none;
-}
-
-.product-cards-subtotal article .borrar-producto-m-t {
-    border-radius: 50%;
-    border: solid 2px #dc3545; 
-    position: absolute;
-    top: -3%;
-    right: -5%;
-}
-
-.product-cards-subtotal article .borrar-producto-m-t i {
-    padding: 6px;
-    font-size: 1.5rem;
-    color: #dc3545;
-}
+/*---Nombre artículo---*/
 
 .product-cards-subtotal article .descripcion-producto>h3 {
     width: 80%;
     margin: auto;
     padding-bottom: 5%;
 }
+
+/*---Agregar sacar---*/
 
 .product-cards-subtotal article .agregar-sacar {
     display: flex;
@@ -108,13 +100,38 @@ main .product-cards-subtotal article .foto-articulo {
     text-align: center;
 }
 
-.product-cards-subtotal article h2 {
+/*---Precio producto---*/
+
+main .product-cards-subtotal article .c-precio-a-s h2 {
     width: 70%;
     margin: auto;
     text-align: right;
     padding-top: 3%;
 }
 
+/*Botón desktop que desaparece*/
+
+.borrar-producto-desktop {
+    display: none;
+}
+
+/*Borrar mobile-tablet*/
+
+.product-cards-subtotal article .borrar-producto-m-t {
+    border-radius: 50%;
+    border: solid 2px #dc3545; 
+    position: absolute;
+    top: -3%;
+    right: -5%;
+}
+
+.product-cards-subtotal article .borrar-producto-m-t i {
+    padding: 6px;
+    font-size: 1.5rem;
+    color: #dc3545;
+}
+
+/*-----Subtotal------*/
 
 .product-cards-subtotal .subtotal-productos {
     background-color: rgba(117, 20, 183, 0.7);
@@ -126,7 +143,8 @@ main .product-cards-subtotal article .foto-articulo {
     text-align: center;
 }
 
-/*--- Envío ---*/
+
+/*------ Envío ------*/
 
 main .envio {
     display: block;
@@ -146,6 +164,7 @@ main .envio .o-domicilio .o-dom {
     padding-bottom: 5%;
 }
 
+/*---- Calculador envío ----*/
 main .envio .calculador {
     display: flex;
     justify-content: center;
@@ -170,6 +189,7 @@ main .envio .calculador button {
     background-color: white;
 }
 
+/*---- Subtotal envío ----*/
 main .envio h2 {
     display: block;
     width: 80%;
@@ -181,10 +201,8 @@ main .envio h2 {
 }
 
 
+/*------------------------------ Detalles compra ------------------------------*/
 
-
-
-/*------------------------------------------------------------*/
 main .detalles-compra {
     background-color: blueviolet;
     padding: 3% 0%;
@@ -194,61 +212,272 @@ main .detalles-compra p {
     margin: 0%;
 }
 
-main .conteiner-detalles {
-    display: block;
-    width: 90%;
-    margin: auto;
-}
-
-.nombre-desktop {
-    display: none;
-}
-
 main .detalles-compra h2 {
     margin: 0%;
     margin-bottom: 2%;
 }
 
-main .detalles-compra .d-producto, main .detalles-compra .d-envio, main .detalles-compra .d-impuestos {
-    margin-bottom: 5%;
+main .detalles-compra .conteiner-detalles {
+    display: block;
+    width: 90%;
+    margin: auto;
 }
+
+/*Nombre artículo en desktop que desaparece*/
+
+.nombre-desktop {
+    display: none;
+}
+
+.nombre-mobile>strong {
+    font-weight: 400;
+}
+
+/*Especificación por producto, envío e impuestos*/
+
+main .detalles-compra .d-producto, main .detalles-compra .d-envio, main .detalles-compra .d-impuestos {
+    margin-bottom: 3%;
+}
+
+/*Cantidad de un mismo producto e importe, destino y costo de ese envío, nombre y monto de impuesto/descuento*/
 
 main .detalles-compra .d-producto>div, main .detalles-compra .d-envio, main .detalles-compra .d-impuestos>div, main .detalles-compra .d-descuentos>div {
     display: flex;
     justify-content: space-between;
 }
 
-main .detalles-compra .d-impuestos>div, main .detalles-compra .d-descuentos>div {
-    margin-bottom: 3%;
+main .detalles-compra .d-producto>div {
+    margin-top: 2%;
 }
 
 main .detalles-compra .d-descuentos {
-    padding-bottom: 5%;
+    padding-bottom: 5%; /*Padding para que se separe del borde del subtotal*/
 }
 
+/*Total*/
 main .conteiner-detalles .total {
-    padding: 5% 0%;
+    padding: 5% 0% 3%;
     margin: 0%;
     border-top: 1px solid black;
+    text-align: end;
 }
-
-
 
 
 /*---------------------- Media Queries -----------------------*/
 
-@media (min-width: 781px) {
+@media (min-width: 521px) {
+    
+    main {
+        width: 85%;
+        margin: auto;
+        margin-top: 5%;
+    }
+    
+    main .product-cards-subtotal {
+        margin-bottom: 6%;
+    }
 
+    main .product-cards-subtotal article {
+        display: flex;
+        padding: 3% 0% 3%;
+        align-items: center;
+        margin: 0% 0% 4%;
+        position: relative;
+    }
+    
+    
+    main .product-cards-subtotal article .foto-articulo {
+        width: 15%;
+        padding: 0% 4%;
+        flex-grow: 0.2;
+        margin: 0%;
+        /* flex-grow: 0.25; */
+    }
+    
+    main .product-cards-subtotal article .foto-articulo>img {
+        width: 100%;
+    }
+    
+    .product-cards-subtotal article .descripcion-producto {
+        width: 85%;
+    }
+    
+    .product-cards-subtotal article .descripcion-producto>h3 {
+        width: 90%;
+        margin-right: 10%;
+        padding-bottom: 2%;
+    }
+    
+    main .product-cards-subtotal article .c-precio-a-s {
+        display: flex;
+        width: 80%;
+    }
+    
+    .product-cards-subtotal article .c-precio-a-s .agregar-sacar {
+        justify-content: left;
+        border-bottom: none;
+        padding-bottom: 0%;
+        height: 4.5vh;
+        width: 50%;
+    }
+    
+    main .product-cards-subtotal article .c-precio-a-s h2 {
+        text-align: left;
+        width: 70%;
+        margin: auto;
+        font-size: 1.4rem;
+        padding-top: 0%;
+    }
+
+    /*Borrar mobile-tablet*/
+
+    .product-cards-subtotal article .borrar-producto-m-t {
+        position: absolute;
+        border-radius: 50%;
+        border: solid 2px #dc3545; 
+        right: -3%; 
+        top: -15%;
+    }
+
+    .product-cards-subtotal article .borrar-producto-m-t i {
+        padding: 4px;
+        font-size: 1.4rem;
+        color: #dc3545;
+    }
+
+    .product-cards-subtotal .subtotal-productos {
+        background-color: rgba(117, 20, 183, 0.7);
+        margin-top: 5%;
+    }
+    
+    .subtotal-productos h2 {
+        padding: 3%;
+        margin: 0% 0% 2%;
+        text-align: right;
+    }
+    
+    /*------ Envío ------*/
+
+    main .envio {
+        margin-top: 0%;
+        padding: 0% 0% 3% ;
+    }
+    
+    main .envio .o-sucursal {
+        width: 85%;
+        padding-top: 4%;
+    }
+    
+    main .envio .o-domicilio {
+        display: flex;
+        width: 85%;
+        padding: 3% 0%;
+        align-items: center;
+    }
+    
+    main .envio .o-domicilio .o-dom {
+        padding-bottom: 0%;
+    }
+    
+    /*---- Calculador envío ----*/
+
+    main .envio .calculador {
+        padding-bottom: 0%;
+    }
+
+    main .envio .calculador input {
+        width: 50%;
+        font-size: 16px;
+        padding-left: 8px;
+    }
+
+    /*---- Subtotal envío ----*/
+
+    main .envio h2 {
+        width: 85%;
+        text-align: end;
+        font-size: 1.4rem;
+        padding-top: 2%;
+        border-top: solid black 1px;
+    }
+
+    /*------------------ Detalles compra ------------------*/
+
+
+    main .detalles-compra p {
+        font-size: 1rem;
+    }
+
+    main .detalles-compra .d-producto>div {
+        align-items: center;
+        margin-top: 0%;
+    }
+
+    /*Nombre artículo en mobile que desaparece*/
+
+    .nombre-mobile {
+        display: none;
+    }
+
+    /*Nombre artículo en desktop que aparece*/
+
+    .nombre-desktop {
+        display: inherit;
+        width: 70%;
+        font-size: 20px;
+    }
+
+    .nombre-desktop>strong {
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
+    main .detalles-compra .d-producto {
+        margin-bottom: 2%;
+    }
+
+    main .detalles-compra .d-producto .cantidad {
+        display: block;
+        width: 8%;
+    }
+    
+    main .detalles-compra .d-producto .precio {
+        display: block;
+        width: 20%;
+        text-align: end;
+    }
+    
+    
+    main .detalles-compra .d-impuestos>div, main .detalles-compra .d-descuentos>div {
+        margin-bottom: 2%;
+    }
+
+
+    main .detalles-compra .d-descuentos {
+        padding-bottom: 1%; /*Padding para que se separe del borde del subtotal*/
+    }
+    
+    /*Total*/
+    main .conteiner-detalles .total {
+        padding: 3% 0% 0%;
+    }
+ 
+
+}
+
+
+@media (min-width: 769px) {
+    
     body {
         font-size: 22px;
     }
-
-/*--------------- Main ------------------*/
-
+    
+    /*--------------- Main ------------------*/
+    
     main {
         width: 90%;
     }
-
+    
     .product-cards-subtotal {
         background-color: white;
         -webkit-box-shadow: -1px 2px 22px -1px rgba(70,24,140,1);
