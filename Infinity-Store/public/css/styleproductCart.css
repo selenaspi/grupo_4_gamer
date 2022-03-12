@@ -55,20 +55,21 @@ main .product-cards-subtotal article .foto-articulo {
     padding: 10% 0% 5% 0%;
 }
 
+.borrar-producto-desktop {
+    display: none;
+}
 
-
-.product-cards-subtotal article .borrar-producto {
+.product-cards-subtotal article .borrar-producto-m-t {
     border-radius: 50%;
     border: solid 2px #dc3545; 
     position: absolute;
-    top: 20%;
-    right: -7.5%;
-    display: block;
+    top: -3%;
+    right: -5%;
 }
 
-.product-cards-subtotal article .borrar-producto i {
-    padding: 12px 9px;
-    font-size: 1.2rem;
+.product-cards-subtotal article .borrar-producto-m-t i {
+    padding: 6px;
+    font-size: 1.5rem;
     color: #dc3545;
 }
 
@@ -153,6 +154,7 @@ main .envio .calculador {
 
 main .envio .calculador input {
     width: 30%;
+    font-size: 14px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border: none;
@@ -197,6 +199,11 @@ main .conteiner-detalles {
     width: 90%;
     margin: auto;
 }
+
+.nombre-desktop {
+    display: none;
+}
+
 main .detalles-compra h2 {
     margin: 0%;
     margin-bottom: 2%;
@@ -206,13 +213,9 @@ main .detalles-compra .d-producto, main .detalles-compra .d-envio, main .detalle
     margin-bottom: 5%;
 }
 
-main .detalles-compra .d-producto>div, main .detalles-compra .d-envio>div, main .detalles-compra .d-impuestos>div, main .detalles-compra .d-descuentos>div {
+main .detalles-compra .d-producto>div, main .detalles-compra .d-envio, main .detalles-compra .d-impuestos>div, main .detalles-compra .d-descuentos>div {
     display: flex;
     justify-content: space-between;
-}
-
-main .detalles-compra .d-envio>h2 {
-    font-size: 1.3rem;
 }
 
 main .detalles-compra .d-impuestos>div, main .detalles-compra .d-descuentos>div {
@@ -223,11 +226,14 @@ main .detalles-compra .d-descuentos {
     padding-bottom: 5%;
 }
 
-main .conteiner-detalles>h2 {
+main .conteiner-detalles .total {
     padding: 5% 0%;
     margin: 0%;
     border-top: 1px solid black;
 }
+
+
+
 
 /*---------------------- Media Queries -----------------------*/
 
@@ -281,22 +287,6 @@ main .conteiner-detalles>h2 {
         width: 80%;
     }
 
-    .product-cards-subtotal article .borrar-producto {
-        border: none;
-        border-radius: 10%;
-        display: block;
-        position: static;
-        height: 20%;
-        padding: 0%;
-        order: 1;
-    }
-    
-    .product-cards-subtotal article .borrar-producto i {
-        padding: 3px 10px 5px;
-        font-size: 1rem;
-        color: #dc3545;
-    }
-
     .product-cards-subtotal article .descripcion-producto>h3 {
         padding-bottom: 0%;
         font-size: 1rem;
@@ -304,11 +294,11 @@ main .conteiner-detalles>h2 {
     }
 
     .product-cards-subtotal article .agregar-sacar {
-        padding-bottom: 0%;
+        margin: auto;
+        width: 50%;
+        padding: 0% 2%;
         border-bottom: none;
         height: 5.5vh;
-        width: 50%;
-        margin: auto;
     }
 
     .product-cards-subtotal article .agregar-sacar button {
@@ -323,6 +313,42 @@ main .conteiner-detalles>h2 {
         margin: 0px 5px;
         width: 30px;
         text-align: center;
+    }
+
+    .borrar-producto-m-t {
+        display: none;
+    }
+
+    .product-cards-subtotal article .descripcion-producto>h2 {
+        display: block;
+        width: 50%;
+    }
+    
+    .product-cards-subtotal article .c-b-borrar-producto {
+        width: 20%;
+        border: none;
+        border-radius: 10%;
+        height: 20%;
+        padding: 0%;
+        order: 1;
+    }
+    
+    .product-cards-subtotal article .borrar-producto-desktop {
+        display: block;
+margin: auto;
+        
+
+        border: none;
+        border-radius: 10%;
+        position: static;
+        height: 20%;
+        padding: 0%;
+    }
+    
+    .product-cards-subtotal article .borrar-producto-desktop i {
+        padding: 3px 10px 5px;
+        font-size: 1rem;
+        color: #dc3545;
     }
 
     .product-cards-subtotal article h2 {
@@ -357,10 +383,11 @@ main .conteiner-detalles>h2 {
         padding: 1% 0% 2% ;
     }
     
-    main .envio .o-sucursal, main .envio .o-domicilio {
+    main .envio .o-sucursal, main .envio .o-domicilio { 
         width: 90%;
         margin: auto;
         padding-top: 2%;
+        font-size: 1em;
     }
 
     main .envio .o-domicilio {
@@ -407,53 +434,70 @@ main .conteiner-detalles>h2 {
         border-top: solid black 1px;
     }
     
-    
-/**/
-main .detalles-compra {
-    background-color: blueviolet;
-    padding: 3% 0%;
-}
+   
+    /**/
+    main .detalles-compra {
+        background-color: blueviolet;
+        padding: 3% 0%;
+    }
 
-main .detalles-compra p {
-    margin: 0%;
-}
+    main .detalles-compra p {
+        margin: 0%;
+        font-size: 1.2rem;
+    }
 
-main .conteiner-detalles {
-    display: block;
-    width: 90%;
-    margin: auto;
-}
-main .detalles-compra h2 {
-    margin: 0%;
-    margin-bottom: 2%;
-}
+    main .conteiner-detalles {
+        display: block;
+        width: 90%;
+        margin: auto;
+    }
 
-main .detalles-compra .d-producto, main .detalles-compra .d-envio, main .detalles-compra .d-impuestos {
-    margin-bottom: 5%;
-    display: flex;
-}
+    main .detalles-compra h2 {
+        margin: 0%;
+        margin-bottom: 2%;
+    }
 
-main .detalles-compra .d-producto>div, main .detalles-compra .d-envio>div, main .detalles-compra .d-impuestos>div, main .detalles-compra .d-descuentos>div {
-    display: flex;
-    justify-content: space-between;
-}
-.cantidad-mobile {
-    position: relative;
-    left:100px;
-}
-main .detalles-compra .d-envio>h2 {
-    font-size: 1.3rem;
-}
+    main .detalles-compra .d-producto, main .detalles-compra .d-envio, main .detalles-compra .d-impuestos {
+        margin-bottom: 3%;
+    }
 
-main .detalles-compra .d-impuestos>div, main .detalles-compra .d-descuentos>div {
-    margin-bottom: 3%;
-}
+    main .detalles-compra .d-producto>div, main .detalles-compra .d-envio, main .detalles-compra .d-impuestos>div, main .detalles-compra .d-descuentos>div {
+        display: flex;
+        justify-content: space-between;
+    }
 
-main .detalles-compra .d-descuentos {
-    padding-bottom: 5%;
-}
+    main .detalles-compra .d-producto .cantidad {
+        display: block;
+        width: 5%;
+    }
 
-main .conteiner-detalles>h2 {
+    main .detalles-compra .d-producto .precio {
+        display: block;
+        width: 15%;
+    }
+
+    .nombre-mobile {
+        display: none;
+    }
+
+    .nombre-desktop {
+        display: inherit;
+        width: 75%;
+    }
+
+    main .detalles-compra .d-envio>h2 {
+        font-size: 1.3rem;
+    }
+
+    main .detalles-compra .d-impuestos>div, main .detalles-compra .d-descuentos>div {
+        margin-bottom: 3%;
+    }
+
+    main .detalles-compra .d-descuentos {
+        padding-bottom: 3%;
+    }
+
+main .conteiner-detalles .total {
     padding: 5% 0%;
     margin: 0%;
     border-top: 1px solid black;
@@ -464,6 +508,6 @@ main .conteiner-detalles>h2 {
 
 @media (min-width: 1200px) {
     main {
-        width: 80%;
+        width: 70%;
     }
 }
