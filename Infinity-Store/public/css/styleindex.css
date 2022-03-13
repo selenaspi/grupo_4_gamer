@@ -100,10 +100,23 @@ main article{
     padding: 15px;
 } */
 
-
-main section article i{
+.fa-solid.fa-star{
     display: block;
     font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    color: #eac926;
+    position: absolute;
+    right: 25px;
+    font-size: 35px;
+    top:10px;
+  border: 0px none;
+  
+
+}
+.fa-solid.fa-cart-shopping {
+    display: block;
     padding: 5px;
     width: 30px;
     height: 30px;
