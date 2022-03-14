@@ -1,5 +1,11 @@
 /*------------------------ Universales ------------------------*/
 
+:root {
+    --azulOscuro: rgb(32, 33, 65);
+    --purpuraOscuro: #46188c;
+    --negro: rgba(0, 0, 0, 0.8);
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -21,6 +27,8 @@ h2{
 /*------------------------ Main ------------------------*/
 
 main {
+    position: relative;
+    top: 12vh;
     width: 80%;
     margin: auto;
     margin-top: 5%;
@@ -36,6 +44,7 @@ main>h1, main>h2 {
 main .product-cards-subtotal {
     width: 100%;
     margin-bottom: 10%;
+    color: var(--negro);
 }
 
 /*-----Producto-----*/
@@ -45,11 +54,11 @@ main .product-cards-subtotal article {
     width: 100%;
     position: relative;
     background-color: white;
-    margin-top: 6%;
+    margin-bottom: 8%;
     padding-bottom: 5%;
-    -webkit-box-shadow: -1px 2px 22px -1px rgba(70,24,140,1);
-    -moz-box-shadow: -1px 2px 22px -1px rgba(70,24,140,1);
-    box-shadow: -1px 2px 22px -1px rgba(70,24,140,1);
+    -webkit-box-shadow: 10px 10px 25px -20px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 25px -20px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 25px -20px rgba(0,0,0,0.75);
 }
 
 /*----Fotos de los artículos----*/
@@ -119,23 +128,28 @@ main .product-cards-subtotal article .c-precio-a-s h2 {
 
 .product-cards-subtotal article .borrar-producto-m-t {
     border-radius: 50%;
-    border: solid 2px #dc3545; 
+    border: solid 2.5px rgb(50, 50, 50); 
     position: absolute;
     top: -3%;
     right: -5%;
+    background-color: rgba(124, 124, 124, 0.5);
 }
 
 .product-cards-subtotal article .borrar-producto-m-t i {
-    padding: 6px;
-    font-size: 1.5rem;
-    color: #dc3545;
+    padding: 5px;
+    font-size: 1.4rem;
+    color: rgb(50, 50, 50);
 }
 
 /*-----Subtotal------*/
 
 .product-cards-subtotal .subtotal-productos {
-    background-color: rgba(117, 20, 183, 0.7);
     margin-top: 5%;
+    color: rgba(255, 255, 255, 0.9);
+    background-color: var(--purpuraOscuro);
+    -webkit-box-shadow: 10px 10px 25px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 25px -14px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 25px -14px rgba(0,0,0,0.75);
 }
 
 .subtotal-productos h2 {
@@ -149,8 +163,12 @@ main .envio {
     display: block;
     width: 100%;
     margin-top: 5%;
-    background-color: rgba(117, 20, 183, 0.7);
-    padding: 1% 0% 3% ;
+    padding: 1% 0% 4% ;
+    background-color: var(--purpuraOscuro);
+    color: white;
+    -webkit-box-shadow: 10px 10px 25px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 25px -14px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 25px -14px rgba(0,0,0,0.75);
 }
 
 main .envio .o-sucursal, main .envio .o-domicilio {
@@ -172,13 +190,13 @@ main .envio .calculador {
 }
 
 main .envio .calculador input {
-    width: 30%;
+    width: 40%;
+    height: 2rem;
+    padding-left: 8px;
     font-size: 14px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border: none;
-    height: 2rem;
-    padding-left: 8px;
 }
 
 main .envio .calculador button {
@@ -195,18 +213,23 @@ main .envio h2 {
     display: block;
     width: 80%;
     margin: auto;
-    text-align: end;
-    font-size: 1.4rem;
     padding-top: 3%;
-    border-top: solid black 1px;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: end;
+    border-top: solid rgb(230, 230, 230, 0.8) 1px;
 }
 
 
 /*------------------------------ Detalles compra ------------------------------*/
 
 main .detalles-compra {
-    background-color: blueviolet;
+    background-color: white;
     padding: 3% 0%;
+    -webkit-box-shadow: 10px 10px 25px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 25px -14px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 25px -14px rgba(0,0,0,0.75);
+    color: var(--negro);  
 }
 
 main .detalles-compra p {
@@ -278,6 +301,7 @@ main .conteiner-detalles .total {
     
     main {
         width: 85%;
+        top: 12vh;
     }
 
     /*------Productos y subtotal------*/
@@ -323,7 +347,7 @@ main .conteiner-detalles .total {
     
     main .product-cards-subtotal article .c-precio-a-s {
         display: flex;
-        width: 80%;
+        width: 90%;
     }
     
     /*--Agregar sacar--*/
@@ -341,25 +365,26 @@ main .conteiner-detalles .total {
     main .product-cards-subtotal article .c-precio-a-s h2 {
         padding-top: 0%;
         font-size: 1.4rem;
-        text-align: left;
+        text-align: right;
     }
 
     /*Borrar mobile-tablet*/
 
     .product-cards-subtotal article .borrar-producto-m-t {
-        right: -3%; 
-        top: -15%;
+        padding: 2px 6px 0px;
+        right: -2%; 
+        top: -12%;
     }
 
     .product-cards-subtotal article .borrar-producto-m-t i {
-        padding: 4px;
-        font-size: 1.4rem;
+        padding: 0;
+        font-size: 1.2rem;
     }
 
     /*-----Subtotal------*/
 
     .subtotal-productos h2 {
-        padding: 3%;
+        padding: 3% 5%;
         margin: 0% 0% 2%;
         text-align: right;
     }
@@ -406,7 +431,7 @@ main .conteiner-detalles .total {
     }
 
     /*------------------ Detalles compra ------------------*/
-    
+
     main .detalles-compra p {
         font-size: 1rem;
     }
@@ -489,6 +514,7 @@ main .conteiner-detalles .total {
 
     main {
         width: 90%;
+        top: 8vh;
     }
     
 
@@ -496,9 +522,9 @@ main .conteiner-detalles .total {
 
     .product-cards-subtotal {
         background-color: white;
-        -webkit-box-shadow: -1px 2px 22px -1px rgba(70,24,140,1);
-        -moz-box-shadow: -1px 2px 22px -1px rgba(70,24,140,1);
-        box-shadow: -1px 2px 22px -1px rgba(70,24,140,1);
+        -webkit-box-shadow: 10px 10px 25px -10px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 25px -10px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 25px -10px rgba(0,0,0,0.75);
     }
     
     /*-----Producto-----*/
@@ -516,7 +542,7 @@ main .conteiner-detalles .total {
     /*----Fotos de los artículos----*/
 
     main .product-cards-subtotal article .foto-articulo {
-        width: 20%;
+        width: 15%;
         padding: 0%;
     }
 
@@ -524,7 +550,7 @@ main .conteiner-detalles .total {
 
     .product-cards-subtotal article .descripcion-producto {
         display: flex;
-        width: 80%;
+        width: 90%;
         align-items: center;
     }
     
@@ -607,6 +633,10 @@ main .conteiner-detalles .total {
         margin-top: 0%;
         padding: 2% 0%;
         background-color: white;
+        color: rgba(0, 0, 0, 0.8);
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
     }
 
     .product-cards-subtotal .subtotal-productos h2 {
@@ -620,7 +650,6 @@ main .conteiner-detalles .total {
     main .envio {
         margin-top: 3%;
         padding: 1% 0% 2% ;
-        background-color: #dc3545;
     }
 
     main .envio .o-sucursal, main .envio .o-domicilio { 
@@ -636,6 +665,7 @@ main .conteiner-detalles .total {
     /*---- Calculador envío ----*/
 
     main .envio .calculador input {
+        width: 60%;
         font-size: 18px;
     }
 

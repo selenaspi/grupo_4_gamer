@@ -10,14 +10,99 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="/css/styleproductCart.css">
     <title>Infinity Store</title>
 </head>
 
 <body>
 
-    <header></header>
-    <nav></nav>
+    <header>
+
+        <nav>
+
+            <ul class="nav-bar">
+
+                <li class="menu-desplegable">
+
+                    <button class="burger-menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+
+                    <ul>
+                        <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">Categorías</a>
+
+                            <ul>
+                                <li><a href="#">Notebook</a></li>
+                                <li><a href="#">Auriculares</a></li>
+                                <li><a href="#">Placas de video</a></li>
+                            </ul>
+
+                        </li>
+
+                        <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">Armá tu pc</a></li>
+                        <li class="nav-menu-item"><a href="/productCart" class="nav-menu-link nav-link">Carrito</a></li>
+                        <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">Mis compras</a></li>
+                        <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">Mi perfil</a>
+                        <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">Configuración</a>
+                        <li class="nav-menu-item"><a href="/login" class="nav-menu-link nav-link">Ingresar</a></li>
+
+                    </ul>
+
+                </li>
+
+                <li class="logo-infinity-store">
+                    <a href="/index" class="logo-rectangular-m-t"><img src="/images/dragon_rectangular.jpg" alt=""></a>
+                    <a href="/index" class="logo-cuadrado-d"><img src="/images/dragon_cuadrado.jpg" alt=""></a>
+                </li>
+
+                <li class="categorias">
+
+                    <button type="button" class="boton-categorias">Categorías <i
+                            class="fa-solid fa-caret-down"></i></button>
+
+                    <ul>
+                        <li><a href="#">Notebook</a></li>
+                        <li><a href="#">Auriculares</a></li>
+                        <li><a href="#">Placas de video</a></li>
+                    </ul>
+
+                </li>
+
+                <li class="arma-tu-pc"><a href="#">Armá tu pc</a></li>
+
+                <li class="buscador">
+
+                    <input type="text" name="" id="" class="barra-busqueda"
+                        placeholder="Buscar por producto, marca, categoría...">
+
+                    <button type="button"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></button>
+
+                </li>
+
+                <li class="carrito"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+
+                <li class="login"><a href="/login">Ingresar</a></li>
+
+                <!--Próxima incorporación-->
+
+                <li class="perfil"><a href="#">Mi perfil</a>
+
+                    <ul>
+                        <li class="menu-perfil"><a href="#">Mis compras</a></li>
+                        <li class="menu-perfil"><a href="#">Mi perfil</a>
+                        <li class="menu-perfil"><a href="#">Configuración</a>
+                        <li class="menu-perfil"><a href="#">Configuración</a>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
 
     <main>
 
@@ -115,7 +200,7 @@
                         </div>
 
                         <h2>$ 46.840</h2>
-                        
+
                     </div>
 
                 </div>
@@ -260,6 +345,7 @@
         </section>
 
         <button type="button">Atrás</button>
+        <button type="button">Descargar comprobante</button>
         <button type="button">Comprar</button>
 
     </main>
