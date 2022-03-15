@@ -27,8 +27,6 @@ h2{
 /*------------------------ Main ------------------------*/
 
 main {
-    position: relative;
-    top: 12vh;
     width: 80%;
     margin: auto;
     margin-top: 5%;
@@ -301,7 +299,6 @@ main .conteiner-detalles .total {
     
     main {
         width: 85%;
-        top: 12vh;
     }
 
     /*------Productos y subtotal------*/
@@ -514,7 +511,6 @@ main .conteiner-detalles .total {
 
     main {
         width: 90%;
-        top: 8vh;
     }
     
 

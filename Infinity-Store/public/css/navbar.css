@@ -6,10 +6,18 @@
 
 ul {
     list-style: none;
+    padding-left: 0%;
 }
 
 a {
     text-decoration: none;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
 }
 
 nav .nav-bar{
@@ -17,16 +25,20 @@ nav .nav-bar{
     width: 100%;
     margin: 0%;
     padding: 0;
-    position: fixed;
-    top: 0;
-    z-index: 10;
     justify-content: space-between;
     align-items: center;
     background-color: var(--azulOscuro);
     list-style: none;
 }
 
+main, footer {
+    position: relative;
+    top: 12vh;
+}
+
 /*-------------------------- Mobile --------------------------*/
+
+/*---------------------NavBar---------------------*/
 
 /*------Menú despegable------*/
 
@@ -81,6 +93,43 @@ nav .buscador i {
     color: white;
 }
 
+/*---------------------Footer---------------------*/
+footer {
+    background-color: var(--azulOscuro);
+}
+
+footer>ul {
+    width: 80%;
+    margin: auto;
+    padding: 10%;
+}
+
+footer>ul>li button {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 0%;
+    border: none;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+footer>ul>li button h3 {
+    margin: 4% 0%;
+    padding-left: 1%;
+}
+
+footer>ul>li button i {
+    font-size: 20px;
+    padding-right: 3%
+}
+
+footer>ul>li>ul, footer>ul>li p {
+    display: none;
+}
+
 /*--------------------------------------- Media Queries ---------------------------------------*/
 
 @media (min-width: 521px) {
@@ -119,6 +168,10 @@ nav .buscador i {
 }
 
 @media (min-width: 769px) {
+
+    main, footer {
+        top: 8vh;
+    }
 
     nav .nav-bar {
         justify-content: space-around;
