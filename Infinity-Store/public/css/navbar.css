@@ -1,0 +1,265 @@
+/*------------------------ Universales ------------------------*/
+
+:root {
+    --azulOscuro: rgb(32, 33, 65);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0%;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+nav .nav-bar{
+    display: flex;
+    width: 100%;
+    margin: 0%;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--azulOscuro);
+    list-style: none;
+}
+
+main, footer {
+    position: relative;
+    top: 12vh;
+}
+
+/*-------------------------- Mobile --------------------------*/
+
+/*---------------------NavBar---------------------*/
+
+/*------Menú despegable------*/
+
+nav .menu-desplegable {
+    width: 20%;
+}
+
+nav .menu-desplegable .burger-menu {
+    display: block;
+    margin: auto;
+    padding: 1vh 1.5vh 0.8vh;
+    border-radius: 10%;
+    border: white 1px solid;
+    font-size: 18px;
+    color: white;
+    background-color: transparent;
+}
+
+/*-----Logo----*/
+
+nav .logo-infinity-store {
+    width: 30%;
+    padding: 2%;
+
+}
+
+nav .logo-infinity-store img {
+    max-height: 8vh;
+}
+
+/*-----Opciones de menú desplegable, botón de categorías, armá tu pc. carrito y login, 
+logo cuadradro del navbar desktop, barra de busqueda, posible botón de perfil-----*/
+
+nav .menu-desplegable ul, nav .categorias, nav .arma-tu-pc, nav .logo-infinity-store .logo-cuadrado-d, nav .buscador .barra-busqueda, nav .carrito, nav .login, nav .perfil{
+    display: none;
+}
+
+/*------Buscador------*/
+
+nav .buscador {
+    width: 20%;
+    text-align: center;
+    font-size: 20px;
+}
+
+nav .buscador button {
+    background-color: transparent;
+    border: none;
+}
+
+nav .buscador i {
+    color: white;
+}
+
+/*---------------------Footer---------------------*/
+footer {
+    background-color: var(--azulOscuro);
+}
+
+footer>ul {
+    width: 80%;
+    margin: auto;
+    padding: 10%;
+}
+
+footer>ul>li button {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 0%;
+    border: none;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+footer>ul>li button h3 {
+    margin: 4% 0%;
+    padding-left: 1%;
+}
+
+footer>ul>li button i {
+    font-size: 20px;
+    padding-right: 3%
+}
+
+footer>ul>li>ul, footer>ul>li p {
+    display: none;
+}
+
+/*--------------------------------------- Media Queries ---------------------------------------*/
+
+@media (min-width: 521px) {
+
+    nav .nav-bar {
+        justify-content: space-between;
+    }
+
+    /*------Menú despegable------*/
+
+    nav .menu-desplegable {
+        width: 15%;
+    }
+    
+    nav .menu-desplegable .burger-menu {
+        font-size: 22px;
+    }
+
+    /*-----Logo----*/
+    
+    nav .logo-infinity-store {
+        width: 40%;   
+    }
+    
+    /*------Buscador------*/
+    
+    nav .buscador {
+        width: 15%;
+        font-size: 24px;
+    }
+    
+    nav .buscador .barra-busqueda{
+        display: none;
+    }
+
+}
+
+@media (min-width: 769px) {
+
+    main, footer {
+        top: 8vh;
+    }
+
+    nav .nav-bar {
+        justify-content: space-around;
+        font-size: 18px;
+    }
+
+    /*------Menú despegable (desaparece)------*/
+
+    nav .menu-desplegable {
+        display: none;
+    }
+
+    /*-----Logo----*/
+
+    nav .logo-infinity-store {
+        order: -1;
+        width: 5%;
+        padding: 1%;
+    }
+
+    nav .logo-infinity-store .logo-cuadrado-d {
+        display: block;
+        width: 100%;
+    }
+    
+    nav .logo-infinity-store img {
+        max-height: max-content;
+    }
+
+    /*-----Logo rectangular, opciones de categorías-----*/
+    nav .logo-infinity-store .logo-rectangular-m-t, nav .categorias ul {
+        display: none;
+    }
+    
+    /*-----Botón de categorías, armá tu pc, carrito y login (aparece)-----*/
+    
+    nav .categorias, nav .arma-tu-pc, nav .carrito, nav .login {
+        display: block;
+
+    }
+
+    nav .categorias .boton-categorias {
+        background-color: transparent;
+        border: none;
+        color: white;
+    }
+
+    /*----Enlace armá tu pc----*/
+    
+    nav .arma-tu-pc a {        
+        color: white;
+    }
+
+    /*------Buscador------*/
+
+    nav .buscador {
+        width: 30%;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    nav .buscador .barra-busqueda{
+        display: block;
+        width: 80%;
+        font-size: 14px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border: none;
+        height: 2rem;
+        padding-left: 8px;
+    }
+    
+    nav .buscador button {
+        border-radius: 0%;
+        border: none;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-color: white;
+    }
+
+    nav .buscador i {
+        color: var(--azulOscuro);
+
+    }
+
+    nav .carrito i, nav .login a {
+        color: white;
+    }
+
+}

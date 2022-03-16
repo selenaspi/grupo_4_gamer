@@ -6,8 +6,11 @@
   --grisClaro: #ebebeb;
   --verde: #39b54a;
 }
+
+/* BODY */
 img{
-    width: 100%;;
+    width: 100%;
+   
 }
 
 *{
@@ -17,7 +20,7 @@ img{
 }
 body{
     
-    background-color: #ebebeb;
+    background-color: var(--grisClaro);
 }
 h3{
     font-size: 24px;
@@ -25,7 +28,7 @@ h3{
 }
 
 p{
-    font-size: 18px;
+    font-size: 22px;
     text-align:center;
 }
 .productos{
@@ -33,7 +36,7 @@ padding:0px;
 margin: 0px;
 }
 p.precio{
-    font-size: 18px;
+    font-size:18px;
     text-align: center;
 }
 .descuento{
@@ -43,7 +46,7 @@ p.precio{
 
 .descuento,
 .descripcion{
-    font-size: 16px;
+    font-size: 20px;
     font-weight: normal;
     text-align: center;
 }
@@ -77,8 +80,50 @@ article{
    
 }
 
+main article{
+    background-color: #fff;
+    margin-top: 6%;
+    width: 100%;
+    display: block;
+    position: relative;
+    box-shadow:-1px 2px 22px -1px var(--grisOscuro);
+    padding: 30px;
+}
 
 
+
+.fa-solid.fa-star{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    color: #eac926;
+    position: absolute;
+    right: 25px;
+    font-size: 35px;
+    top:10px;
+  border: 0px none;
+  
+}
+
+.fa-solid.fa-cart-shopping {
+    display: block;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    right: 11px;
+    bottom: 10px;
+}
+
+.fa-solid.fa-cart-shopping:hover{
+    transform:rotate(-90deg);
+}
+
+/* ADAPTATiVO */ 
 
 @media (min-width: 520px){
     main section article .descripcion{
@@ -86,7 +131,12 @@ article{
     }
 
     main section article{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        box-shadow:-1px 2px 22px -1px var(--grisOscuro));
+
+    }
+    main section article:hover{
+        box-shadow:-1px 2px 22px -1px var(--celeste);
+
     }
 
     main section div.productos{
@@ -106,7 +156,7 @@ article{
         
         text-align: center;
     }
-}
+
 
 @media (min-width: 769px){
     main section div.productos article{
