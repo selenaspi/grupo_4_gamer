@@ -20,7 +20,7 @@ img{
 }
 body{
     
-    background-color: #ebebeb;
+    background-color: var(--grisClaro);
 }
 h3{
     font-size: 24px;
@@ -36,7 +36,7 @@ padding:0px;
 margin: 0px;
 }
 p.precio{
-    font-size: 22px;
+    font-size:18px;
     text-align: center;
 }
 .descuento{
@@ -86,19 +86,11 @@ main article{
     width: 100%;
     display: block;
     position: relative;
-    box-shadow:-1px 2px 22px -1px rgb(70, 24, 140);
+    box-shadow:-1px 2px 22px -1px var(--grisOscuro);
     padding: 30px;
 }
 
-/* article div.main-article{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    border-top: 1px solid #ebebeb;
-    position: relative;
-    padding: 15px;
-} */
+
 
 .fa-solid.fa-star{
     display: block;
@@ -113,16 +105,13 @@ main article{
     top:10px;
   border: 0px none;
   
-
 }
+
 .fa-solid.fa-cart-shopping {
     display: block;
     padding: 5px;
     width: 30px;
     height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
     position: absolute;
     right: 20px;
     font-size: 20px;
@@ -130,9 +119,11 @@ main article{
     bottom: 10px;
 }
 
+.fa-solid.fa-cart-shopping:hover{
+    transform:rotate(-90deg);
+}
 
-
-/* ADAPTATIVO */ 
+/* ADAPTATiVO */ 
 
 @media (min-width: 520px){
     main section article .descripcion{
@@ -140,7 +131,11 @@ main article{
     }
 
     main section article{
-        box-shadow:-1px 2px 22px -1px rgb(70, 24, 140);
+        box-shadow:-1px 2px 22px -1px var(--grisOscuro));
+
+    }
+    main section article:hover{
+        box-shadow:-1px 2px 22px -1px var(--celeste);
 
     }
 
@@ -161,7 +156,7 @@ main article{
         
         text-align: center;
     }
-}
+
 
 @media (min-width: 769px){
     main section div.productos article{
