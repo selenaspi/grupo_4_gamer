@@ -17,3 +17,6 @@ Referencias:
 -http://compulider.com.ar/index.php 
 -https://www.shop.4krc.com.ar/
 -https://www.gezatek.com.ar/
+
+Link Tablero de Trabajo
+https://trello.com/b/Vr33f2tr/grupo4
