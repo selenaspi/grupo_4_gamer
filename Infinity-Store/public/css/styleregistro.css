@@ -3,20 +3,29 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --azulOscuro: rgb(32, 33, 65);
+    --purpuraOscuro: #46188c;
+    --negro: rgba(0, 0, 0, 0.8);
+    --grisOscuro: #666;
+    --grisClaro: #ebebeb;
+}
+
 body{
-    font-family: arial;
+    font-family:'Montserrat', sans-serif;
     background-image: url('/images/fondo_login_register.jpg');
 }
 
 .Form-register{
 width: 400px;
-background: #24303c;
+background: var(--grisOscuro);
 padding: 30px;
 margin: auto;
 margin-top: 100px;
 border-radius: 4px;
 font-family: 'calibri';
-color: white;
+color:var(--grisClaro);
 box-shadow: 7px 13px 37px #000;
 }
 
@@ -32,10 +41,10 @@ box-shadow: 7px 13px 37px #000;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 16px;
-    border: 1px solid #1f53c5;
+    border: 1px solid var(--purpuraOscuro);
     font-family: 'calibri';
     font-size: 18px;
-    color: white;
+    color: var(--grisClaro);
 }
 
 .Form-register p{
@@ -46,33 +55,33 @@ box-shadow: 7px 13px 37px #000;
 }
 
 .Form-register a{
-    color: white;
+    color: var(--grisClaro);
     text-decoration: none;
 }
 
 .Form-register a:hover{
-    color: white;
+    color: var(--grisClaro);
     text-decoration: underline;
 }
 
 .Form-register .botons {
     width: 100%;
-    background: #1f53c5;
+    background: var(--purpuraOscuro);
     border: none;
     padding: 12px;
-    color: white;
+    color: var(--grisClaro);
     margin: 16px 0;
     font-size: 16px;
     text-align: center;
 }
 
 body{
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
     padding: 90px 20px 0;
 }
 
 .header{
-    background-color: white;
+    background-color: var(--azulOscuro);
     height: 80px;
     position: fixed;
     width: 100%;
@@ -89,7 +98,7 @@ body{
     }
 
 .nav-link{
-    color: black;
+    color: var(--grisClaro);
     text-decoration: none;
 
 }
@@ -119,12 +128,12 @@ body{
     border-radius: 3px;
 }
 .nav-menu-link:hover{
-    background-color: #034574;
+    background-color: var(--azulOscuro);
     transition: 0.5s;
 }
 
 .nav-toggle {
-    color : black;
+    color : var(--grisClaro);
     background:none;
     font-size: 30px;
     padding: 0 20px;
