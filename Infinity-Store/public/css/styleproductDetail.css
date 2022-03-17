@@ -19,7 +19,7 @@ main{
     width: 90%;
     margin: auto;
     position: relative;
-    top: 10vh;
+    margin-top: 5%;
 }
 
 
@@ -30,6 +30,11 @@ div.caja-titulo{
 h2.producto{font-size: 20px;
     padding-top: 10px;
     text-align: center;}
+
+.caja-producto{
+margin-top: 5%;
+}
+
 
 /*Fotos*/
 .foto-2{display:none;}
@@ -170,7 +175,7 @@ div.articulo{
     font-size: 20px;
     text-align: center;
 }
-footer{ }
+
 
 /*Responsive*/
 
@@ -408,7 +413,7 @@ div.articulo{
         }
         .caja-producto{
             width: 90%;
-            margin-top: -3%;
+            margin-top: 5%;
         }
         .caja-compra{ 
         
@@ -522,11 +527,6 @@ div.articulo{
         
             }
     
-
-    main {
-        position: relative;
-        top: 20vh;
-    }
 /*body {font-family: 'Roboto', sans-serif;}
 .foto-principal{
     width: 500px;
