@@ -142,13 +142,13 @@ body{
     display: none;
     border-radius: 10px; 
     border: none;
-}
+} 
 
 @media(max-width: 768px){
     body{
         padding: 90px 20px 0;
     }
-    
+     
     .header{
         height: 60px;       
     }
@@ -176,5 +176,5 @@ body{
     
     .nav-toggle {
         display: block;
-    }
+    } 
 }

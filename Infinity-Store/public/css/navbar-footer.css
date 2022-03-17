@@ -2,6 +2,7 @@
 
 :root {
     --azulOscuro: rgb(32, 33, 65);
+    --xiketic: #0b0b16;
 }
 
 ul {
@@ -34,6 +35,10 @@ nav .nav-bar{
 main, footer {
     position: relative;
     top: 12vh;
+}
+
+img {
+    width: 100%;
 }
 
 /*-------------------------- Mobile --------------------------*/
@@ -94,15 +99,21 @@ nav .buscador i {
 }
 
 /*---------------------Footer---------------------*/
+
 footer {
-    background-color: var(--azulOscuro);
+    background-color: var(--xiketic);
+    margin-top: 10%;
 }
+
+/*------Tópicos------*/
 
 footer>ul {
     width: 80%;
     margin: auto;
-    padding: 10%;
+    padding: 10% 10% 2%;
 }
+
+/*-----Botones desplegables tópicos-----*/
 
 footer>ul>li button {
     display: flex;
@@ -126,8 +137,47 @@ footer>ul>li button i {
     padding-right: 3%
 }
 
+/*----h3 que desaparece en mobile----*/
+
+footer>ul>li>h3 {
+    display: none;
+}
+
+/*----El menú desplegable no se muestra en mobile (clickeable)-----*/
+
 footer>ul>li>ul, footer>ul>li p {
     display: none;
+}
+
+/*----Redes----*/
+
+footer .f-redes {
+    margin: 20% 0% 3%;
+    text-align: center;
+}
+
+footer .f-redes h3{
+    display: none; /*El título no se muestra*/
+}
+
+/*---Íconos de las redes---*/
+
+footer .f-redes a {
+    padding: 8px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/*-----Copyright-----*/
+
+footer>p {
+    display: block;
+    width: 80%;
+    margin: auto;
+    padding: 3% 0% 5%;
+    color: white;
+    text-align: center;
+    border-top: 1px solid white;
 }
 
 /*--------------------------------------- Media Queries ---------------------------------------*/
@@ -163,6 +213,63 @@ footer>ul>li>ul, footer>ul>li p {
     
     nav .buscador .barra-busqueda{
         display: none;
+    }
+
+    /*---------------------Footer---------------------*/
+
+    /*------Tópicos------*/
+
+    footer>ul {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        padding: 5% 0% 8%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    footer>ul>li {
+        width: 50%;
+    }
+
+    footer>ul>li button {
+        display: none;
+    }
+
+    footer>ul>li>h3 {
+        display: inherit;
+        color: white;
+        margin-bottom: 1%;
+    }
+
+    /*----Ítems del tópic-----*/
+
+    footer>ul>li>ul, footer>ul>li p {
+        display: inherit;
+        color: white;
+    }
+
+    footer>ul>li>ul a {
+        color: white;
+    }
+
+    /*---Horario de atención---*/
+
+    footer .f-atencion p{
+        margin: 0%;
+        font-style: italic;
+    }
+
+    /*----Redes----*/
+
+    footer .f-redes {
+        margin: 0%;
+    }
+
+    footer .f-redes h3{
+        display: inherit; /*El título se muestra*/
     }
 
 }
@@ -260,6 +367,45 @@ footer>ul>li>ul, footer>ul>li p {
 
     nav .carrito i, nav .login a {
         color: white;
+    }
+
+    /*---------------------Footer---------------------*/
+
+    /*------Tópicos------*/
+
+    footer>ul {
+        padding: 4% 0%;
+    }
+
+    /*-----Copyright-----*/
+
+    footer>p {
+        padding: 1% 0%;
+        font-size: 16px;
+    }
+
+}
+
+@media (min-width: 1100px) {
+
+    main, footer {
+        top: 12vh
+    }
+
+    nav .nav-bar {
+        font-size: 22px;
+    }
+
+    /*---------------------Footer---------------------*/
+
+    /*------Tópicos------*/
+
+    footer>ul {
+        width: 90%;
+        flex-wrap: nowrap;
+        padding-top: 3%;
+        text-align: center;
+        font-size: 18px;
     }
 
 }
