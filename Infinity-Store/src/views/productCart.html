@@ -10,7 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/navbar-footer.css">
     <link rel="stylesheet" href="/css/styleproductCart.css">
     <title>Infinity Store</title>
 </head>
@@ -52,13 +52,14 @@
                 </li>
 
                 <li class="logo-infinity-store">
-                    <a href="/index" class="logo-rectangular-m-t"><img src="/images/dragon_rectangular.jpg" alt=""></a>
-                    <a href="/index" class="logo-cuadrado-d"><img src="/images/dragon_cuadrado.jpg" alt=""></a>
+                    <a href="/" class="logo-rectangular-m-t"><img src="/images/dragon_rectangular.jpg" alt=""></a>
+                    <a href="/" class="logo-cuadrado-d"><img src="/images/dragon_cuadrado.jpg" alt=""></a>
                 </li>
 
                 <li class="categorias">
 
-                    <button type="button" class="boton-categorias">Categorías   <i class="fa-solid fa-angle-down"></i></button>
+                    <button type="button" class="boton-categorias">Categorías <i
+                            class="fa-solid fa-angle-down"></i></button>
 
                     <ul>
                         <li><a href="#">Notebook</a></li>
@@ -236,14 +237,17 @@
 
             <h2>Costo de envío: $XXX.XX</h2>
 
-
         </section>
 
-        <button type="button">Siguiente</button>
+        <div class="siguiente-b">
+            <button type="button">Siguiente</button>
+        </div>
 
         <!----------------------------¿En un html nuevo? idk--------------------------------------->
 
-        <h1>Detalles de la compra</h1>
+        <h1 class="title-m-t">Detalles de la compra</h1>
+
+        <h2 class="title-desktop">Detalles de la compra</h2>
 
         <section class="detalles-compra">
 
@@ -343,9 +347,17 @@
 
         </section>
 
-        <button type="button">Atrás</button>
-        <button type="button">Descargar comprobante</button>
-        <button type="button">Comprar</button>
+        <div class="final-b">
+
+            <div>
+                <button type="button">Atrás</button>
+                <button type="button"><i class="fas fa-download"></i></button>
+            </div>
+
+            <button type="button">Comprar</button>
+
+        </div>
+
 
     </main>
 
@@ -353,17 +365,22 @@
 
         <ul>
 
-            <li class="f-ayuda"><button><h3>Ayuda</h3><i class="fa-solid fa-angle-down"></i></button>
+            <li class="f-ayuda"><button>
+                    <h3>Ayuda</h3><i class="fa-solid fa-angle-down"></i>
+                </button>
+                <h3>Ayuda</h3>
                 <ul>
-                    <li><a href="#">Preguntas frecuentes</a></li>
-                    <li><a href="#">Pagos</a></li>
-                    <li><a href="#">Envíos</a></li>
-                    <li><a href="#">Políticas de cambios</a></li>
                     <li><a href="#">Botón de arrepentimiento</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Políticas de cambios</a></li>
+                    <li><a href="#">Pagos y envíos</a></li>
                 </ul>
             </li>
 
-            <li class="f-institucional"><button><h3>Institucional</h3><i class="fa-solid fa-angle-down"></i></button>
+            <li class="f-institucional"><button>
+                    <h3>Institucional</h3><i class="fa-solid fa-angle-down"></i>
+                </button>
+                <h3>Institucional</h3>
                 <ul>
                     <li><a href="#">Sobre nosotros</a></li>
                     <li><a href="#">Políticas de seguridad</a></li>
@@ -372,7 +389,10 @@
                 </ul>
             </li>
 
-            <li class="f-atencion"><button><h3>Centro de atención</h3><i class="fa-solid fa-angle-down"></i></button>
+            <li class="f-atencion"><button>
+                    <h3>Centro de atención</h3><i class="fa-solid fa-angle-down"></i>
+                </button>
+                <h3>Centro de atención</h3>
                 <p>Lunes a viernes de 9:00 a 18:00</p>
                 <ul>
                     <li>infinity-store@dominio.com</li>
@@ -384,11 +404,16 @@
             <li class="f-redes">
                 <h3>Síguenos en redes</h3>
                 <div class="redes">
-
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter-square"></i></a>              
                 </div>
             </li>
 
         </ul>
+
+        <p>Copyright © 2022 Infinity Store®</p>
+
     </footer>
 
 </body>

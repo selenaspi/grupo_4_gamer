@@ -1,7 +1,6 @@
 /**/
 /*Normalize*/
 @import url('normalize.css');
-*{box-sizing: border-box;}
 
 /*Body*/
 body{
@@ -10,25 +9,17 @@ body{
 
 
 /*Nav-bar*/
-.nav-bar{
-height: 50px;
-}
+
 h1{
     text-align: center;
 }
-.linea-nav-top{
-    border-color: black;
-    margin-top: 10px;
-    width: 100%;
-  }
-.linea-nav-bot{
-    border-color: black;
-    width: 100%;
-}
+
 
 main{
     width: 90%;
     margin: auto;
+    position: relative;
+    top: 10vh;
 }
 
 
@@ -361,6 +352,11 @@ div.articulo{
     .foto-3{display: block;}
     .foto-4{display: block;}
     .foto-5{display: block;} 
+    }
+
+    main {
+        position: relative;
+        top: 20vh;
     }
 /*body {font-family: 'Roboto', sans-serif;}
 .foto-principal{

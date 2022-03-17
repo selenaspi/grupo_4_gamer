@@ -3,7 +3,10 @@
 :root {
     --azulOscuro: rgb(32, 33, 65);
     --purpuraOscuro: #46188c;
+    --purpura: #7514b7;
     --negro: rgba(0, 0, 0, 0.8);
+    --turquesa: #15cec0;
+    --blanco: rgba(255, 255, 255, 0.9);
 }
 
 body {
@@ -22,6 +25,12 @@ h1 {
 
 h2{
     font-size: 1.5rem;
+}
+
+main .siguiente-b button:hover, main .final-b button:hover{
+    border: var(--purpura) solid 2px;
+    background-color: var(--turquesa);
+    color: black;
 }
 
 /*------------------------ Main ------------------------*/
@@ -93,6 +102,7 @@ main .product-cards-subtotal article .foto-articulo {
     padding: 0px 8px;
     border-radius: 15%;
     border-style: none;
+    background-color: var(--turquesa);
 }
 
 .product-cards-subtotal article .agregar-sacar button i {
@@ -218,8 +228,22 @@ main .envio h2 {
     border-top: solid rgb(230, 230, 230, 0.8) 1px;
 }
 
+/*---- Botón siguiente ----*/
+
+main .siguiente-b {
+    margin-top: 8%;
+    text-align: center;
+}
+
+main .siguiente-b button {
+    font-size: 20px;
+}
 
 /*------------------------------ Detalles compra ------------------------------*/
+
+main .title-desktop {
+    display: none;
+}
 
 main .detalles-compra {
     background-color: white;
@@ -279,6 +303,7 @@ main .detalles-compra .d-descuentos {
 }
 
 /*Total*/
+
 main .conteiner-detalles .total {
     padding: 5% 0% 3%;
     margin: 0%;
@@ -286,6 +311,28 @@ main .conteiner-detalles .total {
     text-align: end;
 }
 
+/*Botones terminar compra, descargar pdf y volver*/
+
+main .final-b {
+    margin: 5% 0%;
+    padding: 0% 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .final-b button {
+    font-size: 18px;
+}
+
+/*----Botones general----*/
+
+main .siguiente-b button, main .final-b button{
+    padding: 7px;
+    background-color: var(--purpura);
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: normal;
+    border-radius: 5px;
+}
 
 /*--------------------------------------- Media Queries ---------------------------------------*/
 
@@ -425,6 +472,10 @@ main .conteiner-detalles .total {
     main .envio h2 {
         width: 85%;
         padding-top: 2%;
+    }
+
+    main .siguiente-b {
+        margin-top: 5%;
     }
 
     /*------------------ Detalles compra ------------------*/
@@ -645,6 +696,7 @@ main .conteiner-detalles .total {
 
     main .envio {
         margin-top: 3%;
+        margin-bottom: 6%;
         padding: 1% 0% 2% ;
     }
 
@@ -671,8 +723,21 @@ main .conteiner-detalles .total {
         width: 90%;
     }
 
+    /*---- Botón siguiente ----*/
+
+    main .siguiente-b {
+        display: none;
+    }
 
     /*------------------ Detalles compra ------------------*/
+
+    main .title-m-t {
+        display: none;
+    }
+
+    main .title-desktop {
+        display: inherit;
+    }
 
     main .detalles-compra p {
         font-size: 1.2rem;
@@ -735,10 +800,12 @@ main .conteiner-detalles .total {
         padding: 2% 0% 0%;
     }
 
+    main .final-b button {
+        font-size: 22px;
+    }
+
 }
 
-@media (min-width: 1200px) {
-    main {
-        width: 70%;
-    }
+@media (min-width: 1100px) {
+
 }

@@ -131,7 +131,7 @@ main article{
     }
 
     main section article{
-        box-shadow:-1px 2px 22px -1px var(--grisOscuro));
+        box-shadow:-1px 2px 22px -1px var(--grisOscuro);
 
     }
     main section article:hover{
@@ -163,4 +163,5 @@ main article{
         width: 22%;
     }
 
+}
 }
