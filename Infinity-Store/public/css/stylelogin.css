@@ -8,6 +8,7 @@ box-sizing: border-box;
 :root {
     --azulOscuro: rgb(32, 33, 65);
     --purpuraOscuro: #46188c;
+    --purpura: #7514b7;
     --negro: rgba(0, 0, 0, 0.8);
     --grisOscuro: #666;
     --grisClaro: #ebebeb;
