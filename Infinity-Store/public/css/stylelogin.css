@@ -75,12 +75,11 @@ font-size: 16px;
 .form-login a{
     text-decoration: underline;
 }
-
-@media(max-width: 768px){
+@media(max-width: 521px){
     body{
         padding: 90px 20px 0;
     }
-    
+     
     .header{
         height: 60px;       
     }
@@ -108,5 +107,39 @@ font-size: 16px;
     
     .nav-toggle {
         display: block;
+    } 
+}
+@media(max-width: 769px){
+    body{
+        padding: 90px 20px 0;
     }
+     
+    .header{
+        height: 60px;       
+    }
+    .logo {
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+        align-items: center; 
+    }
+    
+    .nav-menu {
+        display: none;
+        margin-right: 20px;
+        height: calc(100% - 60%);
+        overflow-y: auto;
+    }
+    
+    .nav-menu-item{
+        line-height: 70px;
+    }
+
+    .nav-menu-link:hover{
+        background-color: none;
+    }
+    
+    .nav-toggle {
+        display: block;
+    } 
 }
