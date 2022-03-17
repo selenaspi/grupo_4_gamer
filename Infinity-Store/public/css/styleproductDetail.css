@@ -179,13 +179,6 @@ div.articulo{
 
 /*Responsive*/
 
-@media(min-width: 480px){
-.foto-2 {display: block;}   
-.foto-3 {display: block;}
-.foto-4 {display: block;}
-.foto-5 {display: block;}
-}
-
 /*-------------------------------------MediaQuery Desktop-----------------------------------*/
 @media (min-width: 769px){
 main{
