@@ -236,6 +236,7 @@ footer>p {
 
     footer>ul>li {
         width: 50%;
+        margin-bottom: 1.5rem;
     }
 
     footer>ul>li button {
@@ -243,9 +244,13 @@ footer>p {
     }
 
     footer>ul>li>h3 {
-        display: inherit;
-        color: white;
         margin-bottom: 1%;
+        display: inherit;
+        width: 80%;
+        color: white;
+        margin: auto;
+        padding-bottom: 5px;
+        border-bottom: 1px solid white;
     }
 
     /*----Ítems del tópic-----*/
@@ -274,6 +279,7 @@ footer>p {
 
     footer .f-redes h3{
         display: inherit; /*El título se muestra*/
+        border-bottom: none;
     }
 
 }
@@ -412,6 +418,10 @@ footer>p {
         padding-top: 3%;
         text-align: center;
         font-size: 18px;
+    }
+
+    footer>ul>li {
+        margin-bottom: 0%;
     }
 
 }

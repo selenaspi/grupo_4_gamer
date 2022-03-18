@@ -33,6 +33,12 @@ main .siguiente-b button:hover, main .final-b button:hover{
     color: black;
 }
 
+/*------------------------ Navbar -----------------------*/
+
+li.carrito {
+    display: none; /*Sería una poco redundante que en el carrito aparezca el carrito*/
+}
+
 /*------------------------ Main ------------------------*/
 
 main {
