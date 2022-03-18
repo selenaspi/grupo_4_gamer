@@ -21,14 +21,18 @@ header {
     z-index: 10;
 }
 
-nav .nav-bar{
+nav {
+    width: 100%;
+    background-color: var(--azulOscuro);
+}
+
+nav .nav-bar {
     display: flex;
     width: 100%;
     margin: 0%;
     padding: 0;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--azulOscuro);
     list-style: none;
 }
 
@@ -102,7 +106,7 @@ nav .buscador i {
 
 footer {
     background-color: var(--xiketic);
-    margin-top: 10%;
+    margin-top: 8%;
 }
 
 /*------Tópicos------*/
@@ -393,6 +397,8 @@ footer>p {
     }
 
     nav .nav-bar {
+        width: 90%;
+        margin: auto;
         font-size: 22px;
     }
 
