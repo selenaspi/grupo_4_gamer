@@ -5,8 +5,9 @@
 /*Body*/
 body{
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;}
-
+    font-size: 15px;
+}
+    
 
 /*Nav-bar*/
 
@@ -112,14 +113,14 @@ div .boton-flotante{
     right: 40px;
     z-index: 5;
 }
-.fa-cart-shopping{
+/*.fa-cart-shopping{
     position: fixed;
     top: 527px;
     right: 53px;
     z-index: 10; 
     padding: auto;
     font-size: 30px;
-}
+}*/
 
 
 /* Botones*/
@@ -145,7 +146,6 @@ div .boton-flotante{
     margin-top: 50px
  }
  .caja-similares{
-     height: 350px;
  }
 .similarestitu{font-size: 30px;
     margin: 0px 0px 0px 35px;}
@@ -175,6 +175,7 @@ div.articulo{
     font-size: 20px;
     text-align: center;
 }
+
 
 
 /*Responsive*/
@@ -330,6 +331,7 @@ div.articulo{
     right: 40px;
     z-index: 5;
 }
+/*
 .fa-cart-shopping{
     position: fixed;
     top: 497px;
@@ -338,6 +340,7 @@ div.articulo{
     padding: auto;
     font-size: 30px;
 }
+*/
 .producto2{
     display: inherit;
     padding-top: 4%;
@@ -503,7 +506,8 @@ div.articulo{
             right: 40px;
             z-index: 5;
         }
-        .fa-cart-shopping{
+        
+        /*.fa-cart-shopping{
             position: fixed;
             top: 497px;
             right: 53px;
@@ -511,6 +515,7 @@ div.articulo{
             padding: auto;
             font-size: 30px;
         }
+        */
         .producto2{
             display: inherit;
             padding-top: 4%;
