@@ -121,7 +121,11 @@ form h3{
         line-height: 60px;
         align-items: center; 
     }
-    
+
+    .form-login{
+        width: 80%;
+    }
+
     .nav-menu {
         display: none;
         margin-right: 20px;
