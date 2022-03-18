@@ -32,10 +32,10 @@ nav .nav-bar{
     list-style: none;
 }
 
-main, footer {
+/* main, footer {
     position: relative;
     top: 12vh;
-}
+} */
 
 img {
     width: 100%;
