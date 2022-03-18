@@ -3,7 +3,6 @@ margin: 0;
 padding: 0; 
 box-sizing: border-box;
 }
-
 :root {
     --azulOscuro: rgb(32, 33, 65);
     --purpuraOscuro: #46188c;
@@ -64,6 +63,13 @@ font-size: 16px;
     text-decoration: underline;
     font-size: 14px;
     justify-content: center;
+    display: flex;
+    padding: 2px;
+}
+form h3{
+    color: var(--grisClaro);
+    text-align: center;
+    font-size: 12px;
     display: flex;
 }
 
