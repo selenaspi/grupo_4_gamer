@@ -1,10 +1,8 @@
-*{
+* {
 margin: 0;
 padding: 0; 
 box-sizing: border-box;
 }
-
-
 :root {
     --azulOscuro: rgb(32, 33, 65);
     --purpuraOscuro: #46188c;
@@ -28,8 +26,8 @@ body{
  margin-top: 180px;
  box-shadow: 7px 13px 37px #000;
  padding:20px 30px; 
- border-top: 4px solid var(--purpuraOscuro);
  color:var(--grisClaro);
+ border-radius: 5%;
 }
 
 .form-login h4{
@@ -60,24 +58,24 @@ font-size: 16px;
     margin-bottom: 16px;
 }
 
-.form-login p{
-    height: 40px;
-    text-align: center;
-    
-}
-
-.form-login a{
+.Enlaces{
     color: var(--grisClaro);
-    text-decoration: none;
+    text-decoration: underline;
     font-size: 14px;
+    justify-content: center;
+    display: flex;
+    padding: 2px;
+}
+form h3{
+    color: var(--grisClaro);
+    text-align: center;
+    font-size: 12px;
+    display: flex;
 }
 
-.form-login a{
-    text-decoration: underline;
-}
 @media(max-width: 521px){
     body{
-        padding: 90px 20px 0;
+        font-size: 18px;
     }
      
     .header{
@@ -111,7 +109,7 @@ font-size: 16px;
 }
 @media(max-width: 769px){
     body{
-        padding: 90px 20px 0;
+        font-size: 22px;
     }
      
     .header{

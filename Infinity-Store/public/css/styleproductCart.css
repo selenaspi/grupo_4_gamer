@@ -808,4 +808,19 @@ main .siguiente-b button, main .final-b button{
 
 @media (min-width: 1100px) {
 
+    main {
+        width: 70%;
+    }
+        
+    /*---- Calculador envío ----*/
+
+    main .envio .calculador {
+        width: 40%;
+        justify-content: center;
+    }
+
+    main .envio .calculador input {
+        width: 60%;
+        font-size: 18px;
+    }
 }
