@@ -18,7 +18,7 @@ body{
  
 }
 
-.Form-register{
+.Form-register{    
 width: 400px;
 background: var(--grisOscuro);
 padding: 30px;
@@ -207,7 +207,4 @@ box-shadow: 7px 13px 37px #000;
     .nav-toggle {
         display: block;
     } 
-}
-@media (min-width: 1100px) {
-
 }
