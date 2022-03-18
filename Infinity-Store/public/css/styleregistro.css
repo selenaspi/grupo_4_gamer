@@ -15,6 +15,7 @@
 body{
     font-family:'Montserrat', sans-serif;
     background-image: url('/images/fondo_login_register.jpg');
+ 
 }
 
 .Form-register{
@@ -23,7 +24,7 @@ background: var(--grisOscuro);
 padding: 30px;
 margin: auto;
 margin-top: 100px;
-border-radius: 4px;
+border-radius: 5px;
 font-family: 'calibri';
 color:var(--grisClaro);
 box-shadow: 7px 13px 37px #000;
@@ -73,11 +74,6 @@ box-shadow: 7px 13px 37px #000;
     margin: 16px 0;
     font-size: 16px;
     text-align: center;
-}
-
-body{
-    font-family: 'Montserrat', sans-serif;
-    padding: 90px 20px 0;
 }
 
 .header{
@@ -146,7 +142,7 @@ body{
 
 @media(max-width: 521px){
     body{
-        padding: 90px 20px 0;
+        font-size: 18px;
     }
      
     .header{
@@ -180,7 +176,7 @@ body{
 }
 @media(max-width: 769px){
     body{
-        padding: 90px 20px 0;
+        font-size: 22px;
     }
      
     .header{
@@ -211,4 +207,7 @@ body{
     .nav-toggle {
         display: block;
     } 
+}
+@media (min-width: 1100px) {
+
 }
