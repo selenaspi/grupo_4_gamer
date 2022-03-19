@@ -1,0 +1,8 @@
+Tipografía: Montserrat
+Paleta de colores: 
+*#46188c
+*#7514b7
+*#15cec0
+*#0b0b16
+*#c800d9
+*#202141
