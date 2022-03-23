@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require ('path');
 const app = express(); 
+app.set("views engine", "ejs");
 const mainRouter = require('./routes/main');
 const productCartRouter = require('./routes/productCart');
 const loginRouter = require('./routes/login');
