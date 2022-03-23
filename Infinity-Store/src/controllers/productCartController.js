@@ -1,7 +1,7 @@
 const path = require("path");
 
 const controller = {
-    mostrarCarrito : (req, res) => {res.sendFile(path.join(__dirname, "../" ,"views", "productCart.html"))}
+    mostrarCarrito : (req, res) => {res.render("productCart.ejs")}
 }
 
 module.exports = controller;
