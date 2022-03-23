@@ -1,7 +1,7 @@
 const path = require('path');
 
 const controller = {
-    mostrarRegistro : (req, res) => {res.sendFile(path.join(__dirname, "../", "views", "register.html"))}
+    mostrarRegistro : (req, res) => {res.render("register.ejs")}
 }
 
 module.exports = controller;
