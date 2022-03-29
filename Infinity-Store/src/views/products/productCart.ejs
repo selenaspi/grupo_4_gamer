@@ -110,106 +110,57 @@
 
         <section class="product-cards-subtotal">
 
-            <article>
+            <%let subtotal=0%>
 
-                <div class="foto-articulo">
-                    <img src="/images/TECLADO GAMER EVGA Z15 RGB COLOR LINEAR SILVER SPANISH.jpg"
-                        alt="Foto del producto">
-                </div>
+                <% for(i=0; i < productos.length; i++) { %>
 
-                <div class="descripcion-producto">
+                    <article>
 
-                    <button type="button" class="borrar-producto-m-t"><i class="fa-solid fa-xmark"></i></button>
-
-                    <div class="c-b-borrar-producto">
-                        <button type="button" class="borrar-producto-desktop"><i class="fa-solid fa-trash"></i></button>
-                    </div>
-
-                    <h3>TECLADO GAMER EVGA Z15 RGB COLOR LINEAR SILVER SPANISH</h3>
-
-                    <div class="c-precio-a-s">
-
-                        <div class="agregar-sacar">
-                            <button type="button"><i class="fa-solid fa-minus"></i></button>
-                            <input type="number" placeholder="0" value="1">
-                            <button type="button"><i class="fa-solid fa-plus"></i></button>
+                        <!--Implementar elemento picture-->
+                        <div class="foto-articulo">
+                            <img src="<%=productos[i].foto%>" alt="Foto del producto">
                         </div>
 
-                        <h2>$ 6.870</h2>
+                        <div class="descripcion-producto">
 
-                    </div>
+                            <button type="button" class="borrar-producto-m-t"><i class="fa-solid fa-xmark"></i></button>
 
-                </div>
+                            <div class="c-b-borrar-producto">
+                                <button type="button" class="borrar-producto-desktop"><i
+                                        class="fa-solid fa-trash"></i></button>
+                            </div>
 
-            </article>
+                            <h3>
+                                <%=productos[i].name%>
+                            </h3>
 
-            <article>
+                            <div class="c-precio-a-s">
 
-                <div class="foto-articulo">
-                    <img src="/images/NOTEBOOK MSI CREATOR 15 A10SE.jpg" alt="Foto del producto">
-                </div>
+                                <div class="agregar-sacar">
+                                    <button type="button"><i class="fa-solid fa-minus"></i></button>
+                                    <input type="number" placeholder="0" value="<%=productos[i].cantidad%>">
+                                    <button type="button"><i class="fa-solid fa-plus"></i></button>
+                                </div>
 
-                <div class="descripcion-producto">
+                                <% let subtotalProducto=productos[i].precio * productos[i].cantidad %>
 
-                    <button type="button" class="borrar-producto-m-t"><i class="fa-solid fa-xmark"></i></button>
+                                    <h2>$ <%=subtotalProducto%>
+                                    </h2>
 
-                    <div class="c-b-borrar-producto">
-                        <button type="button" class="borrar-producto-desktop"><i class="fa-solid fa-trash"></i></button>
-                    </div>
+                            </div>
 
-                    <h3>NOTEBOOK MSI CREATOR 15 A10SE</h3>
-
-                    <div class="c-precio-a-s">
-
-                        <div class="agregar-sacar">
-                            <button type="button"><i class="fa-solid fa-minus"></i></button>
-                            <input type="number" placeholder="0" value="1">
-                            <button type="button"><i class="fa-solid fa-plus"></i></button>
                         </div>
 
-                        <h2>$ 380.638</h2>
+                    </article>
 
-                    </div>
+                    <%subtotal+= subtotalProducto%>
 
-                </div>
+                        <%}%>
 
-            </article>
-
-            <article>
-                <!--Implementar elemento picture-->
-                <div class="foto-articulo">
-                    <img src="/images/SILLA GAMER PRIMUS THRONOS 100T BLACK-AMARILLA.jpg" alt="Foto del producto">
-                </div>
-
-
-                <div class="descripcion-producto">
-
-                    <button type="button" class="borrar-producto-m-t"><i class="fa-solid fa-xmark"></i></button>
-
-                    <div class="c-b-borrar-producto">
-                        <button type="button" class="borrar-producto-desktop"><i class="fa-solid fa-trash"></i></button>
-                    </div>
-
-                    <h3>SILLA GAMER PRIMUS THRONOS 100T BLACK/YELLOW</h3>
-                    <div class="c-precio-a-s">
-
-                        <div class="agregar-sacar">
-                            <button type="button"><i class="fa-solid fa-minus"></i></button>
-                            <input type="number" placeholder="0" value="1">
-                            <button type="button"><i class="fa-solid fa-plus"></i></button>
-                        </div>
-
-                        <h2>$ 46.840</h2>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-            <div class="subtotal-productos">
-                <h2>Subtotal: $ 434.348</h2>
-            </div>
+                            <div class="subtotal-productos">
+                                <h2>Subtotal: $ <%= subtotal %>
+                                </h2>
+                            </div>
 
         </section>
 
@@ -236,7 +187,8 @@
 
             </div>
 
-            <h2>Costo de envío: $XXX.XX</h2>
+            <h2>Costo de envío: $ <%= envio.precio %>
+            </h2>
 
         </section>
 
@@ -258,71 +210,44 @@
 
                     <h2>Productos</h2>
 
-                    <div class="d-producto">
+                    <%for(i=0; i < detallesDeLaCompra.destallesProductos.length; i++) {%>
 
-                        <p class="nombre-mobile"><strong>TECLADO GAMER EVGA Z15 RGB COLOR LINEAR SILVER SPANISH</strong>
-                        </p>
+                        <div class="d-producto">
 
-                        <div>
-                            <p class="cantidad">2</p>
-                            <p class="nombre-desktop"><strong>TECLADO GAMER EVGA Z15 RGB COLOR LINEAR SILVER
-                                    SPANISH</strong></p>
-                            <p class="precio">$ 13.740</p>
+                            <p class="nombre-mobile"><strong><%= detallesDeLaCompra.destallesProductos[i].name%></strong></p>
+
+                            <div>
+                                <p class="cantidad"><%= detallesDeLaCompra.destallesProductos[i].cantidad %></p>
+                                <p class="nombre-desktop"><strong><%= detallesDeLaCompra.destallesProductos[i].name%></strong></p>
+                                <p class="precio">$ <%= detallesDeLaCompra.destallesProductos[i].cantidad * detallesDeLaCompra.destallesProductos[i].precio%>
+                                </p>
+                            </div>
+
                         </div>
 
-                    </div>
-
-                    <div class="d-producto">
-
-                        <p class="nombre-mobile"><strong>NOTEBOOK MSI CREATOR 15 A10SE</strong></p>
-
-                        <div>
-                            <p class="cantidad">1</p>
-                            <p class="nombre-desktop"><strong>NOTEBOOK MSI CREATOR 15 A10SE</strong></p>
-                            <p class="precio">$ 380.638</p>
-                        </div>
-
-                    </div>
-
-                    <div class="d-producto">
-
-                        <p class="nombre-mobile"><strong>SILLA GAMER PRIMUS THRONOS 100T BLACK/YELLOW</strong></p>
-
-                        <div>
-                            <p class="cantidad">1</p>
-                            <p class="nombre-desktop"><strong>SILLA GAMER PRIMUS THRONOS 100T BLACK/YELLOW</strong></p>
-                            <p class="precio">$ 46.840</p>
-                        </div>
-
-                    </div>
+                    <%}%>
 
                 </section>
 
                 <h2>Envío</h2>
 
                 <section class="d-envio">
-                    <p>Destino</p>
-                    <p>$600</p>
+                    <p><%= detallesDeLaCompra.envio.destino%></p>
+                    <p>$ <%= detallesDeLaCompra.envio.precio%></p>
                 </section>
 
                 <h2>Tasas e impuestos</h2>
 
                 <section class="d-impuestos">
 
-                    <div>
-                        <p>Nombre impuesto 1</p>
-                        <p>$ XXX</p>
-                    </div>
+                    <% for(i = 0; i < detallesDeLaCompra.impuestos.length; i++) {%>
 
-                    <div>
-                        <p>Nombre impuesto 2</p>
-                        <p>$ XXX</p>
-                    </div>
+                        <div>
+                            <p><%= detallesDeLaCompra.impuestos[i].name %></p>
+                            <p>$ <%= detallesDeLaCompra.impuestos[i].valor %></p>
+                        </div>
 
-                    <div>
-                        <p>Nombre impuesto 3</p>
-                        <p>$ XXX</p>
-                    </div>
+                    <%}%>
 
                 </section>
 
@@ -330,19 +255,18 @@
 
                 <section class="d-descuentos">
 
-                    <div>
-                        <p>Nombre descuento 1</p>
-                        <p>- $ XXX</p>
-                    </div>
+                    <% for(i = 0; i < detallesDeLaCompra.descuentos.length; i++) {%>
 
-                    <div>
-                        <p>Nombre descuento 2</p>
-                        <p>- $ XXX</p>
-                    </div>
+                        <div>
+                            <p><%= detallesDeLaCompra.descuentos[i].name%></p>
+                            <p>$ <%= detallesDeLaCompra.descuentos[i].valor%></p>
+                        </div>
+
+                    <%}%>
 
                 </section>
 
-                <h2 class="total">Total: $ 432.225</h2>
+                <h2 class="total">Total: $ <%= detallesDeLaCompra.calcularTotal() %></h2>
 
             </div>
 
@@ -407,7 +331,7 @@
                 <div class="redes">
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter-square"></i></a>              
+                    <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
                 </div>
             </li>
 
