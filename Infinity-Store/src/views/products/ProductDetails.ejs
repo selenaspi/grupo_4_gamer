@@ -82,25 +82,14 @@
             <hr>
             <section class="similares">
                 <div class="articulo">
+                <% for(let i = 0; i < 4; i++) { %>
+                <article>
                     <img src="/images/DraconicNegro.jpg" alt="Foto Similares">
-                    <p class="producto-similar1">Teclado Mecánico Inalámbrico Redragon Draconic K530RGB</p>
-                    <p class="valor2">$6620</p>
+                    <p class="producto-similar1"><%= productosSimilares.descripcion %></p>
+                    <p class="valor2"><%= productosSimilares.precio %></p>
                 </div>
-                <div class="articulo">
-                    <img src="/images/DraconicNegro.jpg" alt="Foto Similares">
-                    <p class="producto-similar1">Teclado Mecánico Inalámbrico Redragon Draconic K530RGB</p>
-                    <p class="valor2">$6620</p>
-                </div>
-                <div class="articulo">
-                    <img src="/images/DraconicNegro.jpg" alt="Foto Similares">
-                    <p class="producto-similar1">Teclado Mecánico Inalámbrico Redragon Draconic K530RGB</p>
-                    <p class="valor2">$6620</p>
-                </div>
-                <div class="articulo">
-                    <img src="/images/DraconicNegro.jpg" alt="Foto Similares">
-                    <p class="producto-similar1">Teclado Mecánico Inalámbrico Redragon Draconic K530RGB</p>
-                    <p class="valor2">$6620</p>
-                </div>
+                </article>
+                <% } %> 
             </section>
 
         </div>
