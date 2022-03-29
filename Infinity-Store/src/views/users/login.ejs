@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
     <%- include('../partials/head') %>
-    <link rel="stylesheet" href="css/stylelogin.css">
+    <link rel="stylesheet" href="/css/stylelogin.css">
     <link rel="stylesheet" href="/css/styleregistro.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
 
 <body>
     <%- include('../partials/header') %>
@@ -15,7 +17,7 @@
         <input class="control" type="password" name="contraseña" value="" placeholder="Contraseña">
         <input class="boton" type="submit" name="" value="Ingresar">
   
-    <li class="Enlaces">¿No tienes cuenta?<a href="/Register">Regístrate</a></li>
+    <li class="Enlaces">¿No tienes cuenta?<a href="/users/Register">Regístrate</a></li>
     <li class="Enlaces"><a href="#">¿Olvidaste tu Contraseña?</a></li>
     Recordar Contraseña<input class="recordar" type = "checkbox" name="contraseña" value = "Recordar Contraseña"/></form>
     </main>

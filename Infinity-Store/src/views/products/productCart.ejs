@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head') %>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"rel="stylesheet">
-<link rel="stylesheet" href="/css/styleproductCart.css">
+
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/styleproductCart.css">
+</head>
+
 <body>
+
     <%- include('../partials/header') %>
+
     <main>
 
         <h1>Artículos del carrito</h1>
@@ -13,55 +18,52 @@
 
             <%let subtotal=0%>
 
-                <% for(i=0; i < productos.length; i++) { %>
+            <% for(i=0; i < productos.length; i++) { %>
 
-                    <article>
+                <article>
 
-                        <!--Implementar elemento picture-->
-                        <div class="foto-articulo">
-                            <img src="<%=productos[i].foto%>" alt="Foto del producto">
+                    <!--Implementar elemento picture-->
+                    <div class="foto-articulo">
+                        <img src="<%=productos[i].foto%>" alt="Foto del producto">
+                    </div>
+
+                    <div class="descripcion-producto">
+
+                        <button type="button" class="borrar-producto-m-t"><i
+                                class="fa-solid fa-xmark"></i></button>
+
+                        <div class="c-b-borrar-producto">
+                            <button type="button" class="borrar-producto-desktop"><i
+                                    class="fa-solid fa-trash"></i></button>
                         </div>
 
-                        <div class="descripcion-producto">
+                        <h3><%=productos[i].name%></h3>
 
-                            <button type="button" class="borrar-producto-m-t"><i class="fa-solid fa-xmark"></i></button>
+                        <div class="c-precio-a-s">
 
-                            <div class="c-b-borrar-producto">
-                                <button type="button" class="borrar-producto-desktop"><i
-                                        class="fa-solid fa-trash"></i></button>
+                            <div class="agregar-sacar">
+                                <button type="button"><i class="fa-solid fa-minus"></i></button>
+                                <input type="number" placeholder="0" value="<%=productos[i].cantidad%>">
+                                <button type="button"><i class="fa-solid fa-plus"></i></button>
                             </div>
 
-                            <h3>
-                                <%=productos[i].name%>
-                            </h3>
+                            <% let subtotalProducto=productos[i].precio * productos[i].cantidad %>
 
-                            <div class="c-precio-a-s">
-
-                                <div class="agregar-sacar">
-                                    <button type="button"><i class="fa-solid fa-minus"></i></button>
-                                    <input type="number" placeholder="0" value="<%=productos[i].cantidad%>">
-                                    <button type="button"><i class="fa-solid fa-plus"></i></button>
-                                </div>
-
-                                <% let subtotalProducto=productos[i].precio * productos[i].cantidad %>
-
-                                    <h2>$ <%=subtotalProducto%>
-                                    </h2>
-
-                            </div>
+                            <h2>$ <%=subtotalProducto%></h2>
 
                         </div>
 
-                    </article>
+                    </div>
 
-                    <%subtotal+= subtotalProducto%>
+                </article>
 
-                        <%}%>
+                <%subtotal+= subtotalProducto%>
 
-                            <div class="subtotal-productos">
-                                <h2>Subtotal: $ <%= subtotal %>
-                                </h2>
-                            </div>
+            <%}%>
+
+            <div class="subtotal-productos">
+                <h2>Subtotal: $ <%= subtotal %></h2>
+            </div>
 
         </section>
 
@@ -88,8 +90,7 @@
 
             </div>
 
-            <h2>Costo de envío: $ <%= envio.precio %>
-            </h2>
+            <h2>Costo de envío: $ <%= envio.precio %></h2>
 
         </section>
 
@@ -115,13 +116,23 @@
 
                         <div class="d-producto">
 
-                            <p class="nombre-mobile"><strong><%= detallesDeLaCompra.destallesProductos[i].name%></strong></p>
+                            <p class="nombre-mobile"><strong>
+                                        <%= detallesDeLaCompra.destallesProductos[i].name%>
+                                    </strong></p>
 
                             <div>
-                                <p class="cantidad"><%= detallesDeLaCompra.destallesProductos[i].cantidad %></p>
-                                <p class="nombre-desktop"><strong><%= detallesDeLaCompra.destallesProductos[i].name%></strong></p>
-                                <p class="precio">$ <%= detallesDeLaCompra.destallesProductos[i].cantidad * detallesDeLaCompra.destallesProductos[i].precio%>
+                                <p class="cantidad">
+                                    <%= detallesDeLaCompra.destallesProductos[i].cantidad %>
                                 </p>
+
+                                <p class="nombre-desktop">
+                                    <strong><%= detallesDeLaCompra.destallesProductos[i].name%></strong>
+                                </p>
+
+                                <p class="precio">$ <%= detallesDeLaCompra.destallesProductos[i].cantidad *
+                                            detallesDeLaCompra.destallesProductos[i].precio%>
+                                </p>
+
                             </div>
 
                         </div>
@@ -141,7 +152,7 @@
 
                 <section class="d-impuestos">
 
-                    <% for(i = 0; i < detallesDeLaCompra.impuestos.length; i++) {%>
+                    <% for(i=0; i < detallesDeLaCompra.impuestos.length; i++) {%>
 
                         <div>
                             <p><%= detallesDeLaCompra.impuestos[i].name %></p>
@@ -156,7 +167,7 @@
 
                 <section class="d-descuentos">
 
-                    <% for(i = 0; i < detallesDeLaCompra.descuentos.length; i++) {%>
+                    <% for(i=0; i < detallesDeLaCompra.descuentos.length; i++) {%>
 
                         <div>
                             <p><%= detallesDeLaCompra.descuentos[i].name%></p>
@@ -166,7 +177,7 @@
                     <%}%>
 
                 </section>
-
+                    
                 <h2 class="total">Total: $ <%= detallesDeLaCompra.calcularTotal() %></h2>
 
             </div>
