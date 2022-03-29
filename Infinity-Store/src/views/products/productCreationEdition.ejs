@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1><%= existe ? "Actualizar producto" : "Crear producto"%></h1>
+
+  <form action="/" method="POST">
+
+    <div class="nombreproducto">
+      <p>Nombre del producto</p>
+      <input class="Controls" type="text" name="Nombres" id="Nombres" placeholder="Ingrese el nombre del producto"
+        value="<%= name%>" />
+    </div>
+
+    <div class="descripcionproducto">
+      <p>Descripcion del producto</p>
+      <textarea class="Controls" name="" id="" cols="30" rows="10"
+        placeholder="Ingrese descripción del producto"><%= descripcion%></textarea>
+    </div>
+
+    <div>
+      <p>Fotos del producto</p>
+      <input type="file" />
+    </div>
+
+    <div class="categoriaproducto">
+
+      <p>Categoria del producto</p>
+
+      <select id="categoria">
+        <option value="auricular" <%=categoria==="auricular" ? "Selected" : "" %> >Auriculares</option>
+        <option value="almacenamiento" <%=categoria==="almacenamiento" ? "Selected" : "" %> >Almacenamiento</option>
+        <option value="fan-cooler" <%=categoria==="fan-cooler" ? "Selected" : "" %> >Fan coolers</option>
+        <option value="microprocesador" <%=categoria==="microprocesador" ? "Selected" : "" %> >Microprocesadores
+        </option>
+        <option value="monitor" <%=categoria==="monitor" ? "Selected" : "" %> >Monitores</option>
+        <option value="mouse" <%=categoria==="mouse" ? "Selected" : "" %> >Mouse</option>
+        <option value="notebook" <%=categoria==="notebook" ? "Selected" : "" %> >Notebook</option>
+        <option value="parlante" <%=categoria==="parlante" ? "Selected" : "" %> >Parlantes</option>
+        <option value="placa-video" <%=categoria==="placa-video" ? "Selected" : "" %> >Placas de video</option>
+        <option value="silla" <%=categoria==="silla" ? "Selected" : "" %> >Silla gamer</option>
+        <option value="teclado" <%=categoria==="teclado" ? "Selected" : "" %>>Teclado</option>
+      </select>
+
+    </div>
+
+    <div class="precioproducto">
+      <p>Precio del producto</p>
+      <input class="Controls" type="number" name="Nombres" id="Precio" placeholder="Ingrese el precio del producto" />
+    </div>
+
+    <div class="descuentos">
+
+      <input type="checkbox" id="check-descuento" value="true"><label for="check-descuento">Tiene descuento</label>
+      <div>
+        <label for="in-descuento">Porcentaje de descuento (%):</label>
+        <input type="number" placeholder="Ingrese el porcentaje de descuento">
+      </div>
+    </div>
+
+    <div>
+      <label for="colores">Colores disponibles:</label>
+      <input type="text" id="colores">
+      <button>+</button>
+    </div>
+
+    <div class="botones">
+      <button type="reset"><a href="/"><i class="fa-solid fa-arrows-rotate"></i></a></button>
+      <button type="submit"><a href="/">
+          <%= existe ? "Actualizar" : "Publicar" %>
+        </a></button>
+    </div>
+
+  </form>
+
+</body>
+
+</html>
