@@ -27,25 +27,12 @@ let productosOfertas = [
      },
      
 ];
-let productosRecomendados = [
+let productosRecomendados = 
 {
         descripcion :"Productos Recomendados",
         precio : "$10000",  
-},
-{
-    descripcion :"Productos Recomendados",
-    precio : "$10000",  
-},
-{
-    descripcion :"Productos Recomendados",
-    precio : "$10000",  
-},
-{
-    descripcion :"Productos Recomendados",
-    precio : "$10000",  
-},
+};
 
-];
 
 
         res.render('products/index',{productosOfertas, productosRecomendados})}

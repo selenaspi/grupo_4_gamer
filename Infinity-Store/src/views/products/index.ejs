@@ -74,15 +74,15 @@
             <h2>Recomendados</h2>
             <div class="productos">
 
-                <% for(let i = 0; i < productosRecomendados.length; i++) { %>
+                <% for(let i = 0; i < 4; i++) { %>
                     <article>
                         <img src="/images\NOTEBOOK MSI CREATOR 15 A10SE.jpg" alt="">
                         <div class="main-article">
                             <i class="fa-solid fa-star"></i>
                             <br>
-                            <p class="descripcion"><b><%= productosRecomendados[i].descripcion %></b></p>
+                            <p class="descripcion"><b><%= productosRecomendados.descripcion %></b></p>
                             <br>
-                            <p class="precio"><b><%= productosRecomendados[i].precio %></b></p>
+                            <p class="precio"><b><%= productosRecomendados.precio %></b></p>
                         </div>
                     </article>
 
