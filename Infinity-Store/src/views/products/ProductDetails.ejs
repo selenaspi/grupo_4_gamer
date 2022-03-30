@@ -78,17 +78,16 @@
             </div>
         </section>
         <div class="caja-similares">
+
             <p class="similarestitu">Similares</p>
             <hr>
-            <section class="similares">
-                <div class="articulo">
+        <section class="similares">
                 <% for(let i = 0; i < 4; i++) { %>
-                <article>
+                    <div class="articulo">
                     <img src="/images/DraconicNegro.jpg" alt="Foto Similares">
-                    <p class="producto-similar1"><%= productosSimilares.descripcion %></p>
-                    <p class="valor2"><%= productosSimilares.precio %></p>
+                    <p class="producto-similar1"> <%= productosSimilares.descripcion %> </p>
+                    <p class="valor2"> <%= productosSimilares.precio %> </p>
                 </div>
-                </article>
                 <% } %> 
             </section>
 
