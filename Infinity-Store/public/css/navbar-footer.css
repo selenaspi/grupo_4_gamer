@@ -36,9 +36,14 @@ nav .nav-bar {
     list-style: none;
 }
 
-main, footer {
+main {
     position: relative;
     top: 12vh;
+}
+
+footer {
+    position: relative;
+    top: 18vh;
 }
 
 img {
