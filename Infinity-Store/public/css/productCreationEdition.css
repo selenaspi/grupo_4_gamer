@@ -23,8 +23,6 @@
 body {
   width: 100%;
   background: var(--negro);
-  padding: 50px;
-  padding-left: 70px;
   margin: auto;
   border-radius: 4px;
   font-family: "Montserrat", sans-serif;
@@ -69,5 +67,10 @@ h1 {
  .botones{
      text-align: center;
  }
+
+
+.nav-bar{
+  width: 100%;
+}
 
 /* -----------------------------------------------MediasQuerys------------------------- */
