@@ -41,35 +41,29 @@
     </section>
 
 
-
-
     <!-- ICONO FIXED -->
     <div class="shoppingCarF">
         <i class="fa-solid fa-cart-shopping"></i> 
     </div>
 
-    <main>
-        <section class="ofertas">
-            <h2>Ofertas</h2>
-            <div class="productos">
-
-                <% for(let i = 0; i < productosOfertas.length; i++) { %>
-
-                    
-                    <article>
-                        <img src="/images/SILLA GAMER PRIMUS THRONOS 100T BLACK-AMARILLA.jpg" alt="primer producto">
-                        <div class="main-article">
-                            <i class="fa-solid fa-star"></i>
-                            <br>
-                            <p class="descripcion"><b><%= productosOfertas[i].descripcion %></b></p>
-                            <br>
-                            <p class="descuento"><b><%= productosOfertas[i].descuento %></b></p>
-                            <br>
-                            <p class="precio"><b><%= productosOfertas[i].precio %></b></p>
+<main>
+  <section class="ofertas">
+    <h2>Ofertas</h2>
+       <div class="productos">
+         <% for(let i = 0; i < productosOfertas.length; i++) { %>
+             <article>
+                  <img src="/images/SILLA GAMER PRIMUS THRONOS 100T BLACK-AMARILLA.jpg" alt="primer producto">
+                    <div class="main-article">
+                     <i class="fa-solid fa-star"></i>
+                       <br>
+                        <p class="descripcion"><b><%= productosOfertas[i].descripcion %></b></p>
+                        <br>
+                        <p class="descuento"><b><%= productosOfertas[i].descuento %></b></p>
+                        <br>
+                        <p class="precio"><b><%= productosOfertas[i].precio %></b></p>
                         </div>
                     </article>
-
-                <% } %>
+                      <% } %>
     
             </div>
         </section>
