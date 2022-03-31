@@ -23,7 +23,8 @@
 }
 body {
   font-family: "Montserrat", sans-serif;
-  background: linear-gradient(var(--xiketic), var(--purpura))
+ background: linear-gradient(var(--xiketic), var(--azul)) 
+  /* background-image: url(/images/pexels-photo-3945655.webp); */
 
 }
 
@@ -170,7 +171,7 @@ main article {
     text-align: center;
   }
   .productos {
-    background: linear-gradient(var(--azul), var(--rosado));
+    background: linear-gradient(var(--rosado), var(--celeste));
     padding: 3% 3% 3% 3%;
   }
   .shoppingCarF i {
