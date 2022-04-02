@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/stylelogin.css">
+    <link rel="stylesheet" href="/css/styleregistro.css">
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+
+    <main class="form-login">
+        <form action="/" method="POST">
+        <h4>Formulario Login</h4>
+        <input class="control" type="text" name="usuario" value="" placeholder="Usuario">
+        <input class="control" type="password" name="contraseña" value="" placeholder="Contraseña">
+        <input class="boton" type="submit" name="" value="Ingresar">
+  
+    <li class="Enlaces">¿No tienes cuenta?<a href="/users/Register">Regístrate</a></li>
+    <li class="Enlaces"><a href="#">¿Olvidaste tu Contraseña?</a></li>
+    Recordar Contraseña<input class="recordar" type = "checkbox" name="contraseña" value = "Recordar Contraseña"/></form>
+    </main>
+
+    <%- include('../partials/footer') %>
+    
+</body>
+
+</html>

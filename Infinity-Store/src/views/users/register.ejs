@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/styleregistro.css">
+    <link rel="stylesheet" href="/css/stylelogin.css">
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+
+    <main class="Form-register">
+        <form action="/" method="POST">
+        <h4>Formulario de Registro</h4>
+        <input class="Controls" type="text" name="Nombres" id="Nombres" placeholder="Ingrese su Nombre">
+        <input class="Controls" type="text" name="Apellido" id="Apellido" placeholder="Ingrese su Apellido">
+        <input class="Controls" type="text" name="Correo electrónico" id="Correo electrónico"
+            placeholder="Ingrese su Correo">
+        <input class="Controls" type="text" name="Teléfono" id="Teléfono" placeholder="Código de área">
+        <input class="Controls" type="text" name="Teléfono" id="Teléfono" placeholder="Teléfono">
+        <input class="Controls" type="text" name="Contraseña" id="Contraseña" placeholder="Contraseña">
+        <input class="Controls" type="text" name="Repetir Contraseña" id="Repetir Contraseña"
+            placeholder="Repetir Contraseña">
+        <p> Acepto los <a href="#">términos y condiciones</a></p>
+        <input class="botons" type="submit" value="Aceptar"></form>
+    </main>
+
+    <%- include('../partials/footer') %>
+    
+</body>
+
+</html>

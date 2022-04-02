@@ -14,7 +14,6 @@
   --xiketic: #0b0b16;
 }
 
-
 /*------------------------------------------- BODY ---------------------------------------*/
 
 * {
@@ -24,22 +23,20 @@
 }
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: var(--blanco); 
- 
+ background: linear-gradient(var(--xiketic), var(--azul)) 
+  /* background-image: url(/images/pexels-photo-3945655.webp); */
+
 }
 
- h2{
-font-size: 30px;
-font-weight: bold;
-margin: 3.5% 0% 2% 0%;
- }
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 3.5% 0% 2% 0%;
+  color: var(--blanco);
+}
 p {
   font-size: 22px;
   text-align: center;
-}
-.productos {
-  padding: 0;
-  margin: 0;
 }
 p.precio {
   font-size: 18px;
@@ -60,7 +57,6 @@ p.precio {
   position: relative;
   top: 9.5vh;
 }
-
 .categorias {
   display: none;
 }
@@ -69,12 +65,12 @@ p.precio {
 main {
   width: 90%;
   margin: 0 auto;
-  
 }
 article {
   text-align: center;
   justify-content: center;
   /* margin: 25%; */
+  border-radius: 15px;
 }
 
 main section article {
@@ -103,7 +99,6 @@ main article {
   position: relative;
   box-shadow: -1px 2px 22px -1px var(--azul);
   padding: 30px;
-
 }
 
 .fa-solid.fa-star {
@@ -122,7 +117,7 @@ main article {
 
 /* ---------------------------- CARRITO FIXED ------------------------------------ */
 
-.shoppingCarF i{
+.shoppingCarF i {
   display: block;
   padding: 5px;
   right: 20px;
@@ -153,7 +148,8 @@ main article {
     box-shadow: -1px 2px 22px -1px var(--grisOscuro);
   }
   main section article:hover {
-    box-shadow: -1px 2px 22px -1px var(--amarillo);
+  transform: scale(1.2);
+  transition: .5s;
   }
 
   main section div.productos {
@@ -162,7 +158,8 @@ main article {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    border: 1px solid var(--grisClaro);
+    /* border: 0px solid var(--grisClaro); */
+    border-radius: 2%;
   }
 
   main section div.productos article {
@@ -174,9 +171,8 @@ main article {
     text-align: center;
   }
   .productos {
-    background-color: var(--azul);
+    background: linear-gradient(var(--rosado), var(--celeste));
     padding: 3% 3% 3% 3%;
-    
   }
   .shoppingCarF i {
     position: fixed;
@@ -213,20 +209,20 @@ main article {
     background-color: var(--azul);
     color: #fff;
   }
-   .icon1,
+  .icon1,
   .icon2,
   .icon3,
   .icon4,
   .icon5,
   .icon6 {
-    box-shadow: -1px 2px 22px -1px var(--turquesa);
-  } 
+    box-shadow: -1px 2px 22px -1px var(--blanco);
+  }
   .icon1:hover,
   .icon2:hover,
   .icon3:hover,
   .icon4:hover,
   .icon5:hover,
-  .icon6:hover{
+  .icon6:hover {
     box-shadow: -1px 2px 22px -1px var(--amarillo);
   }
   .icon5,
@@ -253,9 +249,8 @@ main article {
     position: relative;
     top: -4vh;
     height: 13vw;
-    
   }
-  
+
   .icon1,
   .icon2,
   .icon3,
@@ -267,25 +262,24 @@ main article {
     border-radius: 50%;
     width: 13%;
   }
-  
+
   .banner {
-    top: 4.6vh;  
-    height:50vh;
+    top: 4.6vh;
+    height: 50vh;
   }
-  .banner img{
+  .banner img {
     height: 100%;
   }
   .icon5,
   .icon6 {
     display: inherit;
   }
-  h2{
-    
-    font-size:35px;
+  h2 {
+    font-size: 35px;
   }
 }
 
-@media(min-width:1100px){
+@media (min-width: 1100px) {
   section.categorias {
     display: flex;
     text-align: center;
@@ -306,10 +300,10 @@ main article {
     width: 11%;
   }
   .banner {
-    top: 4.6vh;  
-    height:70vh;
+    top: 4.6vh;
+    height: 70vh;
   }
-  .banner img{
+  .banner img {
     height: 100%;
   }
 }

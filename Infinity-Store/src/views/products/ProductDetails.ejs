@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/styleproductDetail.css">
+</head>
+
+<body>
+    
+    <%- include('../partials/header') %>
+
+    <main>
+        <section class="caja-producto">
+            <div class="caja-titulo">
+                <h2 class="producto">Teclado Mecánico Inalámbrico Redragon Draconic K530W-RGB White</h2>
+            </div>
+            <section class="contenedor-fotos-datos">
+                <div class="caja-articulo">
+                    <div class="caja-foto-principal">
+                        <img src="/images/Draconic1.jpg" alt="Foto principal">
+                    </div>
+                    <div class="fotos-muestra">
+                        <div class="foto-2">
+                            <img src="/images/Draconic2.jpg" alt="Foto">
+                        </div>
+                        <div class="foto-3">
+                            <img src="/images/Draconic3.jpg" alt="Foto">
+                        </div>
+                        <div class="foto-4">
+                            <img src="/images/Draconic4.jpg" alt="Foto">
+                        </div>
+                        <div class="foto-5">
+                            <img src="/images/Draconic5.jpg" alt="Foto">
+                        </div>
+                    </div>
+                </div>
+                <div class="contenedor-datos">
+                    <div class="titulo-producto2">
+                    <h2 class="producto2">Teclado Mecánico Inalámbrico Redragon Draconic K530W-RGB White</h2>
+                    </div>
+                    <div class="caja-compra">
+                        <p class="valor">$7310</p>
+                        <p class="cuotas">12 cuotas de $725.16</p>
+                    </div>
+                    <div class="caja-carrito">
+                        <p class="cantidad"><button>1</button></p>
+                        <p class="agregar-carrito"><button>Añadir al carrito</button></p>
+                    </div>
+                    <div class="caja-envio">
+                        <p class="envio">Envio</p>
+                        <p class="texto-envio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum facilis nam
+                            tempora.
+                            Voluptatibus</p>
+                    </div>
+                </div>
+            </section>
+            <!-- <div class="boton-flotante">
+                <img src="/images/CirculoFixed.png" alt="Foto">
+                <p><i class="fa-solid fa-cart-shopping"></i></p>
+            </div> -->
+            <div class="caja-botones">
+                <p class="estado"><button>En stock</button> </p>
+                <button class="botondedescripcion">Descripción</button>
+                <div class="caja-descripcion">
+                    <p class="descripcion">Disfrutá de tus partidas en otro nivel con Redragon, marca reconocida que se
+                        especializa
+                        en brindar la mejor experiencia de juego al público gamer desde hace más de 20 años. Sus
+                        teclados se
+                        adaptan
+                        a todo tipo de jugadores y esto los convierten en un fiel reflejo de la alta gama y calidad que
+                        la
+                        compañía
+                        ofrece.</p>
+                </div>
+                <button class="botondeficha">Ficha técnica</button>
+                <button class="botondeopiniones">Opiniones</button>
+            </div>
+        </section>
+        <div class="caja-similares">
+
+            <p class="similarestitu">Similares</p>
+            <hr> 
+        <section class="similares">
+                <% for(let i = 0; i < productos.length; i++) { %>
+                    <div class="articulo">
+                    <img src="<%=productos[i].foto%>" alt="Foto Similares">
+                    <p class="producto-similar1"> <%=productos[i].name%> </p>
+                    <p class="valor2">$<%= productos[i].precio %> </p>
+                </div>
+                <% } %> 
+            </section>
+
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>

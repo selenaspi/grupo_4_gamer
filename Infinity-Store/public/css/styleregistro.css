@@ -14,20 +14,23 @@
 
 body{
     font-family:'Montserrat', sans-serif;
-    background-image: url('/images/fondo_login_register.jpg');
- 
+    background-image: url('/images/pexels-photo.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
 }
 
-.Form-register{    
-width: 400px;
-background: var(--grisOscuro);
-padding: 30px;
-margin: auto;
-margin-top: 100px;
-border-radius: 5px;
-font-family: 'calibri';
-color:var(--grisClaro);
-box-shadow: 7px 13px 37px #000;
+.Form-register{
+    width: 400px;    
+    background: var(--grisOscuro);
+    padding:20px 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 5px;
+    font-family: 'calibri';
+    color:var(--grisClaro);
+    box-shadow: 7px 13px 37px #000;
 }
 
 .Form-register h4{
@@ -154,7 +157,7 @@ box-shadow: 7px 13px 37px #000;
         line-height: 60px;
         align-items: center; 
     }
-    
+
     .nav-menu {
         display: none;
         margin-right: 20px;
@@ -188,7 +191,9 @@ box-shadow: 7px 13px 37px #000;
         line-height: 60px;
         align-items: center; 
     }
-    
+    .Form-register{
+        width: 80%;
+   }
     .nav-menu {
         display: none;
         margin-right: 20px;

@@ -1,0 +1,242 @@
+:root {
+  --amarillo: #eac926;
+  --azul: #03264c;
+  --azulOscuro: rgb(32, 33, 65);
+  --celeste: #1259c3;
+  --grisOscuro: #666;
+  --grisClaro: #ebebeb;
+  --verde: #39b54a;
+  --rosado: rgba(196, 15, 233, 0.986);
+  --purpuraOscuro: #46188c;
+  --purpura: #7514b7;
+  --negro: rgba(0, 0, 0, 0.8);
+  --turquesa: #15cec0;
+  --blanco: rgba(255, 255, 255, 0.9);
+  --xiketic: #0b0b16;
+}
+/* -------------------------------------------------------------------------------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+   text-decoration: none;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  background-color: black;
+  background-image: url('/images/fondo-creation.jpg');
+  background-size: cover;
+}
+
+main {
+  width: 90%;
+  padding-bottom: 5%;
+  margin: auto;
+  position: relative;
+  top: 18vh;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+  margin: 0;
+  padding: 5% 0%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 28px;
+  color: var(--blanco);
+}
+
+form {
+  width: 85%;
+  margin: auto;
+}
+
+form>div {
+  margin-bottom: 5%;
+  color: var(--blanco);
+}
+
+.controls {
+  width: 97%;
+  height: 2.5rem;
+  margin-top: 2%;
+  padding-left: 3%;
+  border-radius: 5px;
+  border: 2px solid var(--celeste);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+#categoria.controls {
+  width: 100%;
+  height: 2.8rem;
+}
+
+.descripcion {
+  margin-bottom: 4%;
+}
+
+.descripcion .controls {
+  height: 5rem;
+  padding-top: 5px;
+}
+
+input#photo {
+  height: 2rem;
+  padding-top: 8px;
+  border: 2px solid var(--celeste);
+  border-style: outset;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+}
+
+.c-in-b-colores {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+
+#colores {
+  width: 82%;
+  margin: 0;
+}
+
+.b-colores {
+  width: 12%;
+  border-radius: 5px;
+  border: 2px solid var(--celeste);
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 32px;
+}
+
+.check-descuento {
+  padding-left: 7px;
+}
+
+.descuentos {
+  display: none;
+  margin-top: 1%;
+}
+
+input#check-descuento:checked ~ .descuentos{
+  display: block;
+}
+
+#in-descuento {
+  margin-left: 3%;
+  margin-top: 0;
+  height: 2.3rem;
+  width: 50%;
+  border-radius: 5px;
+  border: 2px solid var(--celeste);
+}
+
+.botones{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.botones button {
+  padding: 5px 7px;
+  font-size: 20px;
+  background-color: var(--azulOscuro);
+  border-style: outset;
+  border-radius: 5px;
+}
+
+.botones button a {
+  color: #ebebeb;
+}
+
+/*--------------------------------------- Media Queries ---------------------------------------*/
+
+@media (min-width: 521px) { 
+  main {
+    width: 70%;
+  }
+
+  form {
+    width: 80%;
+  }
+}
+
+@media (min-width: 769px) {
+
+  footer {
+    top: 14vh;
+  }
+
+  body {
+    background-image: url('/images/fondo-c-e-desktop.jpg');
+    background-size: cover;
+  }
+
+  main {
+    width: 45%;
+    padding-bottom: 3%;
+    margin: 0% 45% 0% 6%;
+    background-color: rgba(255, 255, 255, 0.3);
+    top: 20vh;
+  }
+  
+  form {
+    width: 82%;
+    margin: auto;
+  }
+  
+  form>div {
+    margin-bottom: 3%;
+  }
+  
+  .descripcion {
+    margin-bottom: 2%;
+  }
+  
+  .c-in-b-colores {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+  }
+  
+  input#check-descuento:checked ~ .descuentos{
+    display: block;
+  }
+  
+  #in-descuento {
+    margin-left: 3%;
+    margin-top: 0;
+    height: 2.3rem;
+    width: 50%;
+    border-radius: 5px;
+    border: 2px solid var(--celeste);
+  }
+  
+  .botones{
+    margin-top: 5%;
+    margin-bottom: 0%;
+  }
+  
+}
+
+@media (min-width: 1200px) {
+
+  body {
+    background-size: contain;
+  }
+
+  main {
+    width: 35%;
+    border-radius: 4px;
+  }
+  
+  form {
+    width: 80%;
+    margin: auto;
+  }
+  
+}

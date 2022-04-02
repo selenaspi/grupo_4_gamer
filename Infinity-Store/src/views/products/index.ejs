@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/styleindex.css">
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+
+    <!------------------------- BANNER  ------------------------------->
+
+    <aside class="banner">
+        <img src="/images/pexels-soumil-kumar-735911.jpg" alt="banner">
+    </aside>
+
+    <!-- ICONOS POR DEBAJO DE BANNER -->
+
+    <section class="categorias">
+
+        <div class="icon1" alt="PC Armadas">
+            <i class="fa-solid fa-computer"></i>
+        </div>
+
+        <div class="icon2" alt="Impresoras">
+            <i class="fa-solid fa-print"></i>
+        </div>
+        <div class="icon3" alt="Accesorios">
+            <i class="fa-solid fa-headphones-simple"></i>
+        </div>
+        <div class="icon4" alt="Conexiones">
+            <i class="fa-solid fa-wifi"></i>
+        </div>
+        <div class="icon5" alt="Hardware">
+            <i class="fa-solid fa-laptop-code"></i>
+        </div>
+        <div class="icon6" alt="OtraCosa">
+            <i class="fa-solid fa-laptop-code"></i>
+        </div>
+    </section>
+
+
+    <!-- ICONO FIXED -->
+    <div class="shoppingCarF">
+        <i class="fa-solid fa-cart-shopping"></i> 
+    </div>
+
+<main>
+  <section class="ofertas">
+    <h2>Ofertas</h2>
+       <div class="productos">
+         <% for(let i = 0; i < productosOfertas.length; i++) { %>
+             <article>
+                  <img src="/images/SILLA GAMER PRIMUS THRONOS 100T BLACK-AMARILLA.jpg" alt="primer producto">
+                    <div class="main-article">
+                     <i class="fa-solid fa-star"></i>
+                       <br>
+                        <p class="descripcion"><b><%= productosOfertas[i].descripcion %></b></p>
+                        <br>
+                        <p class="descuento"><b><%= productosOfertas[i].descuento %></b></p>
+                        <br>
+                        <p class="precio"><b><%= productosOfertas[i].precio %></b></p>
+                        </div>
+                    </article>
+                      <% } %>
+    
+            </div>
+        </section>
+
+        <section class="recomendado">
+            <h2>Recomendados</h2>
+            <div class="productos">
+
+                <% for(let i = 0; i < 4; i++) { %>
+                    <article>
+                        <img src="/images\NOTEBOOK MSI CREATOR 15 A10SE.jpg" alt="">
+                        <div class="main-article">
+                            <i class="fa-solid fa-star"></i>
+                            <br>
+                            <p class="descripcion"><b><%= productosRecomendados.descripcion %></b></p>
+                            <br>
+                            <p class="precio"><b><%= productosRecomendados.precio %></b></p>
+                        </div>
+                    </article>
+
+<% } %> 
+            
+            </div>
+        </section>
+    </main>
+
+    <%- include('../partials/footer') %>
+</body>
+
+</html>
