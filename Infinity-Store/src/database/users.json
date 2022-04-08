@@ -1,0 +1,25 @@
+[
+    {
+        "id" : 1,
+        "firsName" : "Manuel",
+        "lastName" : "Ortega",
+        "email" : "ortega@gmail.com",
+        "password": "1231",
+        "category" : "mmmmm",
+        "image" : "ccccc",
+        "date of birth":"28/06/1992" 
+
+    },
+    {
+        "id" : 2,
+        "firsName" : "Francisca",
+        "lastName" : "Gallardo",
+        "email" : "gallardo@gmail.com",
+        "password": "1345",
+        "category" : "zzzz",
+        "image" : "cvcv",
+        "date of birth":"28/09/1999" 
+
+    }
+
+]

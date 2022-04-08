@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require ('path');
 const app = express(); 
+const methodOverride = require('method-override');
 
 app.set("view engine", "ejs");
 app.set('views', './src/views');
@@ -21,4 +22,8 @@ app.use("/", mainRouter);
 app.use("/productCart", productCartRouter);
 app.use("/product", productRouter);
 app.use("/users",usersRouter);
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(methodOverride('_method'));
 

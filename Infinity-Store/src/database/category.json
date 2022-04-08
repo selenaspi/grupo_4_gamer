@@ -1,0 +1,118 @@
+[
+    {
+        "id" : 1,
+        "name" : "Accesorios"
+    },
+    {
+        "id" : 2,
+        "name" : "Almacenamiento"
+    },
+    {
+        "id" : 3,
+        "name" : "Auriculares"
+    },
+    {
+        "id" : 4,
+        "name" : "Cámaras digitales"
+    },
+    {
+        "id" : 5,
+        "name" : "Conectividad"
+    },
+    {
+        "id" : 6,
+        "name" : "Fan Coolers"
+    },
+    {
+        "id" : 7,
+        "name" : "Fuentes"
+    },
+    {
+        "id" : 8,
+        "name" : "Gabinetes"
+    },
+    {
+        "id" : 9,
+        "name" : "Impresoras"
+    },
+    {
+        "id" : 10,
+        "name" : "Joysticks"
+    },
+    {
+        "id" : 11,
+        "name" : "Memorias RAM"
+    },
+    {
+        "id" : 12,
+        "name" : "Micrófonos"
+    },
+    {
+        "id" : 13,
+        "name" : "Microprocesadores"
+    },
+    {
+        "id" : 14,
+        "name" : "Monitores"
+    },
+    {
+        "id" : 15,
+        "name" : "Motherboards"
+    },
+    {
+        "id" : 16,
+        "name" : "Mouse"
+    },
+    {
+        "id" : 17,
+        "name" : "Mouse Pads"
+    },
+    {
+        "id" : 18,
+        "name" : "Notebooks"
+    },
+    {
+        "id" : 19,
+        "name" : "Parlantes"
+    },
+    {
+        "id" : 20,
+        "name" : "Periféricos"
+    },
+    {
+        "id" : 21,
+        "name" : "PC armadas"
+    },
+    {
+        "id" : 22,
+        "name" : "Placas de sonido"
+    },
+    {
+        "id" : 23,
+        "name" : "Placas de video"
+    },
+    {
+        "id" : 24,
+        "name" : "Sillas gamer"
+    },
+    {
+        "id" : 25,
+        "name" : "Smartphones"
+    },
+    {
+        "id" : 26,
+        "name" : "Tablets"
+    },
+    {
+        "id" : 27,
+        "name" : "Teclados"
+    },
+    {
+        "id" : 28,
+        "name" : "Webcams"
+    }, 
+    {
+        "id" : 29,
+        "name" : "Otros"
+    }
+]
