@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 // CONTROLLER REQUIRE
-const usersController = require('../controllers/usersController.js')
+const usersController = require('../controllers/usersController')
 
 // GET ALL USERS 
 router.get("/", usersController.index);
@@ -24,7 +24,7 @@ router.put('/:id', usersController.update);
 router.delete('/:id', usersController.destroy);
 
 
-router.get("/login", users.mostrarLogin);
-router.get("/register", users.mostrarRegistro);
+router.get("/login", usersController.mostrarLogin);
+router.get("/register", usersController.mostrarRegistro);
 
 module.exports = router;
