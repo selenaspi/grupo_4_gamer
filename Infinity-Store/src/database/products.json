@@ -1,0 +1,36 @@
+[
+    {
+        "id" : 1,
+        "name" : "PENDRIVE PATRIOT BIT+ 64GB USB 3.2 GEN1",
+        "idCategory" : 1,
+        "description" : "La unidad flash USB Bit+ de Patriot ofrece una interfaz USB 3.2 Gen 1 de alta velocidad para una conexión sencilla y una transferencia de datos rápida en cualquier PC o portátil. ¡Bit+ está configurado para una calidad favorable y una confiabilidad sólida al almacenar documentos personales, datos importantes, sus películas favoritas, los juegos más recientes y más! Encerrado en una carcasa aerodinámica totalmente negra con un peso superligero de 1,7 gramos, el Bit+ es la solución flash plug and play perfecta y fácil de usar. Con un diseño compacto y sin tapa, el Bit+ se mantiene protegido mientras viaja. Un diseño pequeño y portátil permite que el USB quepa en su bolsillo, mochila o cartera. Lleva tus archivos contigo dondequiera que viajes. Creado teniendo en cuenta la compatibilidad, Bit+ se sincroniza sin problemas en los sistemas operativos más recientes. Simplemente conecte la unidad flash e inmediatamente acceda a un poco más de almacenamiento. Acceda al instante a Bit+ de Patriot con capacidades que se adaptan a todas sus necesidades de almacenamiento digital. Arrastra y suelta para transferir toda tu información y trabajar más rápido que nunca, manteniendo la productividad constante. ",
+        "data_sheet": "",
+        "image" : "",
+        "color" : ["Negro", "Blanco"],
+        "price" : 1964,
+        "inSale" : false
+    },
+    {
+        "id" : 2,
+        "name" : "REGULADOR DE VOLTAJE FORZA FVR-902A 220V 900VA/450W 4-IRAM",
+        "idCategory" : 1,
+        "description" : "",
+        "data_sheet": [{"name" : "Capacidad", "value" : "900va/450w"}, {"name" : "Tensión", "value" : "220v"}, {"name" : "Margen de tensión", "value" : "172-268VCA"}, {"name" : "Frecuencia", "value" : "50/60Hz (detección automática )"},{"name" : "Corriente máxima de protección:", "value" : "6000A"},{"name" : "Tipo de enchufe", "value" : "IRAM (Argentino Tipo I)"},{"name" : "Tomas de salida", "value" : "4 IRAM (Argentino Tipo I)"},{"name" : "Temporizador de retardo", "value" : "2 seg"},{"name" : "Pasos de regulación", "value" : "1 elevación/ 1 atenuación"},{"name" : "Protección contra sobrecarga", "value" : "termofusible"},{"name" : "Protección de red, línea telefónica, fax y módem", "value" : "rj45"},{"name" : "Regulación de tensión", "value" : "220V"},{"name" : "Función de elevación", "value" : "202VCA"},{"name" : "Función de atenuación", "value" : "246VCA"}
+        ],
+        "image" : "",
+        "color" : "",
+        "price" : 3051,
+        "inSale" : false
+    },
+    {
+        "id" : 3,
+        "name" : "PENDRIVE PATRIOT BIT+ 64GB USB 3.2 GEN1",
+        "idCategory" : 2,
+        "description" : "La unidad flash USB Bit+ de Patriot ofrece una interfaz USB 3.2 Gen 1 de alta velocidad para una conexión sencilla y una transferencia de datos rápida en cualquier PC o portátil. ¡Bit+ está configurado para una calidad favorable y una confiabilidad sólida al almacenar documentos personales, datos importantes, sus películas favoritas, los juegos más recientes y más! Encerrado en una carcasa aerodinámica totalmente negra con un peso superligero de 1,7 gramos, el Bit+ es la solución flash plug and play perfecta y fácil de usar. Con un diseño compacto y sin tapa, el Bit+ se mantiene protegido mientras viaja. Un diseño pequeño y portátil permite que el USB quepa en su bolsillo, mochila o cartera. Lleva tus archivos contigo dondequiera que viajes. Creado teniendo en cuenta la compatibilidad, Bit+ se sincroniza sin problemas en los sistemas operativos más recientes. Simplemente conecte la unidad flash e inmediatamente acceda a un poco más de almacenamiento. Acceda al instante a Bit+ de Patriot con capacidades que se adaptan a todas sus necesidades de almacenamiento digital. Arrastra y suelta para transferir toda tu información y trabajar más rápido que nunca, manteniendo la productividad constante. ",
+        "data_sheet": "",
+        "image" : "",
+        "color" : ["Negro", "Blanco"],
+        "price" : 1964,
+        "inSale" : false
+    }
+]
