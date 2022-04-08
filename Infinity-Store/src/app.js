@@ -22,3 +22,6 @@ app.use("/productCart", productCartRouter);
 app.use("/product", productRouter);
 app.use("/users",usersRouter);
 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
