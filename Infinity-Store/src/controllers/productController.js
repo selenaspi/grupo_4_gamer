@@ -15,7 +15,7 @@ const controller = {
     mostrarDetalleProducto: (req, res) => {
         let idProducto = Number(req.params.id);
         let listaProductos = [ p[idProducto], p[idProducto + 1], p[idProducto + 2], p[idProducto + 3] ];
-        console.log(idProducto);
+        
 
         res.render("products/productDetails",{similares: listaProductos, detalle: p[idProducto - 1]})
     },
