@@ -1,7 +1,7 @@
 const  products  = require("../database/products.json");
 
-let pDatabase = JSON.stringify(products)
-let p = JSON.parse(pDatabase);
+let productsJSON = JSON.stringify(products);
+let productsList = JSON.parse(productsJSON);
 
 function Producto(name = "Sin nombre", precio = 0, cantidad = 0, foto = "") {
     this.name = name;
@@ -13,10 +13,10 @@ function Producto(name = "Sin nombre", precio = 0, cantidad = 0, foto = "") {
 const controller = {
     mostrarDetalleProducto: (req, res) => {
         let idProducto = Number(req.params.id);
-        let listaProductos = [ p[idProducto], p[idProducto + 1], p[idProducto + 2], p[idProducto + 3] ];
+        let listaProductos = [ productsList[idProducto], productsList[idProducto + 1], productsList[idProducto + 2], productsList[idProducto + 3] ];
         
 
-        res.render("products/productDetails",{similares: listaProductos, detalle: p[idProducto - 1]})
+        res.render("products/productDetails",{similares: listaProductos, detalle: productsList[idProducto - 1]})
     },
     formCreation: (req, res) => { res.render("products/productCreationEdition", { existe: false, name: null, descripcion: null, foto: null, categoria: null, precio: null, descuento: null }) },
     editarProducto: (req, res) => {
