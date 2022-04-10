@@ -25,5 +25,3 @@ app.use("/", mainRouter);
 app.use("/productCart", productCartRouter);
 app.use("/product", productRouter);
 app.use("/users",usersRouter);
-
-

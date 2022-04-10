@@ -9,16 +9,15 @@
 <body>
     
     <%- include('../partials/header') %>
-
     <main>
         <section class="caja-producto">
             <div class="caja-titulo">
-                <h2 class="producto">Teclado Mecánico Inalámbrico Redragon Draconic K530W-RGB White</h2>
+                <h2 class="producto"><%= detalle.name %></h2>
             </div>
             <section class="contenedor-fotos-datos">
                 <div class="caja-articulo">
                     <div class="caja-foto-principal">
-                        <img src="/images/Draconic1.jpg" alt="Foto principal">
+                        <img src="<%= detalle.image %>" alt="Foto principal">
                     </div>
                     <div class="fotos-muestra">
                         <div class="foto-2">
@@ -37,11 +36,11 @@
                 </div>
                 <div class="contenedor-datos">
                     <div class="titulo-producto2">
-                    <h2 class="producto2">Teclado Mecánico Inalámbrico Redragon Draconic K530W-RGB White</h2>
+                    <h2 class="producto2"><%= detalle.name %></h2>
                     </div>
                     <div class="caja-compra">
-                        <p class="valor">$7310</p>
-                        <p class="cuotas">12 cuotas de $725.16</p>
+                        <p class="valor">$<%= detalle.price %></p>
+                        <p class="cuotas">12 cuotas de $<%= detalle.price /12 %></p>
                     </div>
                     <div class="caja-carrito">
                         <p class="cantidad"><button>1</button></p>
@@ -82,11 +81,11 @@
             <p class="similarestitu">Similares</p>
             <hr> 
         <section class="similares">
-                <% for(let i = 0; i < productos.length; i++) { %>
+                <% for(let i = 0; i < similares.length; i++) { %>
                     <div class="articulo">
-                    <img src="<%=productos[i].foto%>" alt="Foto Similares">
-                    <p class="producto-similar1"> <%=productos[i].name%> </p>
-                    <p class="valor2">$<%= productos[i].precio %> </p>
+                    <img src="<%=similares[i].image%>" alt="Foto Similares">
+                    <p class="producto-similar1"> <%=similares[i].name%> </p>
+                    <p class="valor2">$<%= similares[i].price %> </p>
                 </div>
                 <% } %> 
             </section>
