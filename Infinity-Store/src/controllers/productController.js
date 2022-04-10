@@ -2,7 +2,6 @@ const  products  = require("../database/products.json");
 
 let pDatabase = JSON.stringify(products)
 let p = JSON.parse(pDatabase);
-console.log(p);
 
 function Producto(name = "Sin nombre", precio = 0, cantidad = 0, foto = "") {
     this.name = name;
