@@ -1,7 +1,11 @@
 const  products  = require("../database/products.json");
+const fs = require('fs');
+const path = require('path')
+// let productsJSON = JSON.stringify(products);
+// let productsList = JSON.parse(productsJSON);
 
-let productsJSON = JSON.stringify(products);
-let productsList = JSON.parse(productsJSON);
+const productosfilePath = path.join(__dirname,'../database/products.json');
+const productos = JSON.parse(fs.readFileSync(productosfilePath,'utf-8'));
 
 function Producto(name = "Sin nombre", precio = 0, cantidad = 0, foto = "") {
     this.name = name;
@@ -31,8 +35,20 @@ const controller = {
         })
     },
     crearProducto: (req,res) => {
-        console.log(req.body)
-        res.redirect('/')
+        const newproduct ={
+            id: products[products.length -1].id+1,
+            name: req.body.name,
+            precio: req.body.precio,
+            descripcion: req.body.descripcion,
+            image: req.body.image,
+            // inSale: req.body.checkDescuento,
+            // discount: req.body.inDescuento,
+
+        }
+        productos.push(newproduct);
+        fs.writeFileSync(productosfilePath,JSON.stringify(productos));
+        console.log(req.body);
+        res.redirect('/');
     }
 }
 

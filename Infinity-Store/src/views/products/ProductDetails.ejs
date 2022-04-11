@@ -84,7 +84,7 @@
                 <% for(let i = 0; i < similares.length; i++) { %>
                     <div class="articulo">
                     <img src="<%=similares[i].image%>" alt="Foto Similares">
-                    <p class="producto-similar1"> <%=similares[i].name%> </p>
+                    <p class="producto-similar1"> <%=similares[i].name.substring(0, 20)%>... </p>
                     <p class="valor2">$<%= similares[i].price %> </p>
                 </div>
                 <% } %> 
