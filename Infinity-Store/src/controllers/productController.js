@@ -1,8 +1,8 @@
 const  products  = require("../database/products.json");
 const fs = require('fs');
 const path = require('path')
-// let productsJSON = JSON.stringify(products);
-// let productsList = JSON.parse(productsJSON);
+let productsJSON = JSON.stringify(products);
+let productsList = JSON.parse(productsJSON);
 
 const productosfilePath = path.join(__dirname,'../database/products.json');
 const productos = JSON.parse(fs.readFileSync(productosfilePath,'utf-8'));
@@ -49,7 +49,12 @@ const controller = {
         fs.writeFileSync(productosfilePath,JSON.stringify(productos));
         console.log(req.body);
         res.redirect('/');
+    },
+    allProducts: (req,res) => {
+ 
+        res.render("products/allProducts",{similares: productsList})
     }
+    
 }
 
 
