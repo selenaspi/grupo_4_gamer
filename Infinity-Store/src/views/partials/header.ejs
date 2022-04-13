@@ -1,18 +1,23 @@
-<header>
-
+<body>
+    
+    <header>
+        
     <nav>
 
         <ul class="nav-bar">
 
             <li class="menu-desplegable">
 
-                <button class="burger-menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-
-                <ul>
-                    <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">Categorías</a>
-
+                <div class="bar-menu" id="bar-menu">
+                    <span class="line1" id="line1"></span>
+                    <span class="line2" id="line2"></span>
+                    <span class="line3" id="line3"></span>
+                </div>
+                
+                <ul class="options-burger-menu" id="options-burger-menu">
+                    
+                    <li class="items cat"><a href="#" class="link-item">Categorías</a>
+                        
                         <ul>
                             <li><a href="#">Notebook</a></li>
                             <li><a href="#">Auriculares</a></li>
@@ -20,13 +25,13 @@
                         </ul>
 
                     </li>
-
-                    <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">Armá tu pc</a></li>
-                    <li class="nav-menu-item"><a href="/productCart" class="nav-menu-link nav-link">Carrito</a></li>
-                    <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">Mis compras</a></li>
-                    <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">Mi perfil</a>
-                    <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">Configuración</a>
-                    <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">Ingresar</a></li>
+                    
+                    <li class="items"><a href="#" class="link-item">Armá tu pc</a></li>
+                    <li class="items"><a href="/productCart" class="link-item">Carrito</a></li>
+                    <li class="items"><a href="#" class="link-item">Mis compras</a></li>
+                    <li class="items"><a href="#" class="link-item">Mi perfil</a>
+                        <li class="items"><a href="#" class="link-item">Configuración</a>
+                            <li class="items"><a href="#" class="link-item">Ingresar</a></li>
 
                 </ul>
 
@@ -36,31 +41,31 @@
                 <a href="/" class="logo-rectangular-m-t"><img src="/images/dragon_rectangular.jpg" alt=""></a>
                 <a href="/" class="logo-cuadrado-d"><img src="/images/dragon_cuadrado.jpg" alt=""></a>
             </li>
-
+            
             <li class="categorias">
 
                 <button type="button" class="boton-categorias">Categorías <i
                         class="fa-solid fa-angle-down"></i></button>
-
-                <ul>
-                    <li><a href="#">Notebook</a></li>
-                    <li><a href="#">Auriculares</a></li>
-                    <li><a href="#">Placas de video</a></li>
+                        
+                        <ul>
+                            <li><a href="#">Notebook</a></li>
+                            <li><a href="#">Auriculares</a></li>
+                            <li><a href="#">Placas de video</a></li>
                 </ul>
-
+                
             </li>
-
+            
             <li class="arma-tu-pc"><a href="#">Armá tu pc</a></li>
-
+            
             <li class="buscador">
-
+                
                 <input type="text" name="" id="" class="barra-busqueda"
-                    placeholder="Buscar por producto, marca, categoría...">
+                placeholder="Buscar por producto, marca, categoría...">
 
                 <button type="button"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></button>
 
             </li>
-
+            
             <li class="carrito"><a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a></li>
 
             <li class="login"><a href="/users/login">Ingresar</a></li>
@@ -68,7 +73,7 @@
             <!--Próxima incorporación-->
 
             <li class="perfil"><a href="#">Mi perfil</a>
-
+                
                 <ul>
                     <li class="menu-perfil"><a href="#">Mis compras</a></li>
                     <li class="menu-perfil"><a href="#">Mi perfil</a>
@@ -76,7 +81,7 @@
                     <li class="menu-perfil"><a href="#">Configuración</a>
 
                 </ul>
-
+                
             </li>
 
         </ul>
@@ -84,3 +89,5 @@
     </nav>
 
 </header>
+
+</body>

@@ -1,7 +1,15 @@
-const  products  = require("../database/products.json");
+const products = require("../database/products.json");
+const category = require("../database/category.json")
+const fs = require('fs');
+const path = require('path')
+let productsJSON = JSON.stringify(products);
+let productsList = JSON.parse(productsJSON);
+let categoryJSON = JSON.stringify(category);
+let categoryList = JSON.parse(categoryJSON);
 
-let pDatabase = JSON.stringify(products)
-let p = JSON.parse(pDatabase);
+
+const productosfilePath = path.join(__dirname, '../database/products.json');
+const productos = JSON.parse(fs.readFileSync(productosfilePath, 'utf-8'));
 
 function Producto(name = "Sin nombre", precio = 0, cantidad = 0, foto = "") {
     this.name = name;
@@ -11,28 +19,99 @@ function Producto(name = "Sin nombre", precio = 0, cantidad = 0, foto = "") {
 }
 
 const controller = {
+
     mostrarDetalleProducto: (req, res) => {
         let idProducto = Number(req.params.id);
-        let listaProductos = [ p[idProducto], p[idProducto + 1], p[idProducto + 2], p[idProducto + 3] ];
-        
+        let listaProductos = [productsList[idProducto], productsList[idProducto + 1], productsList[idProducto + 2], productsList[idProducto + 3]];
 
-        res.render("products/productDetails",{similares: listaProductos, detalle: p[idProducto - 1]})
+        res.render("products/productDetails", { similares: listaProductos, detalle: productsList[idProducto - 1] })
     },
-    formCreation: (req, res) => { res.render("products/productCreationEdition", { existe: false, name: null, descripcion: null, foto: null, categoria: null, precio: null, descuento: null }) },
-    editarProducto: (req, res) => {
+
+    formCreation: (req, res) => { 
         res.render("products/productCreationEdition", {
-            existe: true,
-            name: "Teclado Mecánico Inalámbrico Redragon Draconic K530W-RGB White",
-            descripcion: `Disfrutá de tus partidas en otro nivel con Redragon, marca reconocida que se especializa en brindar la mejor experiencia de juego al público gamer desde hace más de 20 años. Sus teclados se adaptan a todo tipo de jugadores y esto los convierten en un fiel reflejo de la alta gama y calidad que la compañía ofrece.`,
-            foto: null,
-            categoria: "teclado",
-            precio: 7310,
-            descuento: 15
+            metodo: "POST",
+            ruta: "",
+            category : categoryList
         })
     },
-    crearProducto: (req,res) => {
-        console.log(req.body)
-        res.redirect('/')
+
+    crearProducto: (req, res) => {
+        let ids = [];
+        productos.forEach(producto => {ids.push(producto.id)});
+        let maxId = Math.max(...ids);
+
+        let offSaleOn = req.body.checkDescuento === "on"? true: false;
+
+        let discountUpdate = offSaleOn? req.body.discount : 0; 
+
+        let newProduct =     {
+            id: maxId + 1,
+            name: req.body.name,
+            idCategory: req.body.category,
+            description: req.body.description,
+            data_sheet: [],
+            image : "",
+            color : [],
+            price : req.body.price,
+            offSale: offSaleOn,
+            discount: discountUpdate,
+            stock: req.body.stock
+        }
+
+        productos.push(newProduct);
+        fs.writeFileSync(productosfilePath, JSON.stringify(productos));
+        
+        res.redirect('/');
+    },
+
+    formEdition: (req, res) => {
+        idQuery = Number(req.params.id);
+        let productoElegido;
+
+        productsList.forEach(producto => {
+            if (producto.id === idQuery) {
+                productoElegido = producto
+            }
+        });
+
+        res.render("products/productCreationEdition", {
+            metodo: "PUT",
+            ruta: req.params.id + "?_method=PUT",
+            producto: productoElegido, 
+            category : categoryList
+        })
+    },
+
+    editarProducto : (req, res) => {
+
+        let listaNuevaProductos = [];
+
+        productos.forEach(producto => {
+            if (producto.id != req.params.id) {
+                listaNuevaProductos.push(producto);
+            }
+        });
+
+        let offSaleOn = req.body.checkDescuento === "on"? true: false;
+
+        let productUpdate =     {
+            id: req.params.id,
+            name: req.body.name,
+            idCategory: req.body.category,
+            description: req.body.description,
+            data_sheet: [],
+            image : "",
+            color : [],
+            price : req.body.price,
+            offSale: offSaleOn,
+            discount: offSaleOn === true? req.body.discount : 0,
+            stock: req.body.stock
+        }
+
+        listaNuevaProductos.push(productUpdate);
+        fs.writeFileSync(productosfilePath, JSON.stringify(listaNuevaProductos));
+
+        res.redirect('/');
     }
 }
 

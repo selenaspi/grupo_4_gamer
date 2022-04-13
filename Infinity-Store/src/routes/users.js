@@ -5,12 +5,9 @@ const router = express.Router();
 // CONTROLLER REQUIRE
 const usersController = require('../controllers/usersController')
 
-// GET ALL USERS 
-router.get("/", usersController.index);
-
 // CREATE ONE USER 
-router.get("/create", usersController.create);
-router.post("/", usersController.store);
+router.post("/register", usersController.store);
+router.get("/register", usersController.mostrarRegistro);
 
 // GET ONE USER
 router.get("/id:/", usersController.detail);
@@ -25,6 +22,6 @@ router.delete('/:id', usersController.destroy);
 
 
 router.get("/login", usersController.mostrarLogin);
-router.get("/register", usersController.mostrarRegistro);
+
 
 module.exports = router;

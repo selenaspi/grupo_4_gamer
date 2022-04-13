@@ -15,6 +15,9 @@ const publicPath = path.resolve(__dirname, '../public');
 const port = process.env.PORT || 3030;
 
 app.use(express.static(publicPath));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(methodOverride('_method'));
 
 app.listen(port, () => console.log("Servidor corriendo en el puerto " + port));
 
@@ -22,8 +25,3 @@ app.use("/", mainRouter);
 app.use("/productCart", productCartRouter);
 app.use("/product", productRouter);
 app.use("/users",usersRouter);
-
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-// app.use(methodOverride('_method'));
-

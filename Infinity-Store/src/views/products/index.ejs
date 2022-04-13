@@ -56,11 +56,11 @@
                     <div class="main-article">
                      <i class="fa-solid fa-star"></i>
                        <br>
-                        <p class="descripcion"><b><%= productosOfertas[i].descripcion %></b></p>
+                        <p class="descripcion"><b><%= productosOfertas[i].name.substring(0, 20) %>...</b></p>
                         <br>
-                        <p class="descuento"><b><%= productosOfertas[i].descuento %></b></p>
+                        <p class="descuento"><b><%= productosOfertas[i].discount %></b></p>
                         <br>
-                        <p class="precio"><b><%= productosOfertas[i].precio %></b></p>
+                        <p class="precio"><b><%= productosOfertas[i].price %></b></p>
                         </div>
                     </article>
                       <% } %>
@@ -72,15 +72,15 @@
             <h2><a href="#">Recomendados</a></h2>
             <div class="productos">
 
-                <% for(let i = 0; i < 4; i++) { %>
+                <% for(let i = 0; i < productsRecomendados.length; i++) { %>
                     <article>
                         <img src="/images\NOTEBOOK MSI CREATOR 15 A10SE.jpg" alt="">
                         <div class="main-article">
                             <i class="fa-solid fa-star"></i>
                             <br>
-                            <p class="descripcion"><b><%= productosRecomendados.descripcion %></b></p>
+                            <p class="descripcion"><b><%= productsRecomendados[i].name.substring(0, 20) %>...</b></p>
                             <br>
-                            <p class="precio"><b><%= productosRecomendados.precio %></b></p>
+                            <p class="precio"><b><%= productsRecomendados[i].price %></b></p>
                         </div>
                     </article>
 
@@ -91,6 +91,7 @@
     </main>
 
     <%- include('../partials/footer') %>
+
 </body>
 
 </html>
