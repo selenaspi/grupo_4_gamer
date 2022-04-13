@@ -27,3 +27,16 @@ disponibilidad de tiempo de cada integrante.
 4.	Hacer menos: Confiarnos con los tiempos a la hora de la entrega.
 
 5.	Dejar de hacer: No reflexionar sobre lo que falta por implementar.
+
+                                                     Sprint 4
+
+1. Comenzar a hacer: trabajar sobre la revisión del código de nuestro compañero/a de equipo, para proponer mejoras y así lograr mayor performance en nuestra aplicación. Documentar cada uno de los errores con el que nos encontramos.  
+
+2. Hacer mas: planificar las fechas en google calendar de las actividades grupales que desarrollaremos en cada encuentro. 
+
+3. Continuar haciendo: seguir fomentando la comunicación a través de los distintos medios que desde el inicio implementamos. Con el correr del tiempo la confianza del equipo ha ido creciendo , no solo por el conocimiento técnico adquirido, sino también por el conocimiento de la personalidad de cada uno de los participantes. Resaltamos que la reunión fija semanal implementada los días miércoles, ha sido de mucha utilidad, la misma es respetada por los participantes como un día de clases, allí se exponen dudas, compartimos la impresión de la clase impartida por el profesor los días Martes, así como también se expone parte del código que cada uno aporta al proyecto. Conscientes de que los desafíos se incrementarán, adicionamos una reunión grupal en la semana a decidir los días miércoles. 
+
+4. Hacer menos: Dejar de asistir a las reuniones con las dudas sin documentar, porque nos ocurre que olvidamos parte de la causa del error por no escribir los procedimientos que realizamos y no podemos explicar de forma clara a nuestros colegas. 
+
+5. Dejar de Hacer: No avisar cuando nos surje un problema extra, que nos impide dedicar horas de trabajo al sprint, porque en parte la buena comunicación lograda hace un tiempo es debido al planteo de estos problemas, propios de todo equipo.
+
