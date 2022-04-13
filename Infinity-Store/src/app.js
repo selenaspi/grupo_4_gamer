@@ -16,7 +16,7 @@ const port = process.env.PORT || 3030;
 
 app.use(express.static(publicPath));
 
-app.listen( port, () => console.log("Servidor corriendo en el puerto " + port));
+app.listen(port, () => console.log("Servidor corriendo en el puerto " + port));
 
 app.use("/", mainRouter);
 app.use("/productCart", productCartRouter);
