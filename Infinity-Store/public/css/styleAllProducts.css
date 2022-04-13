@@ -1,4 +1,19 @@
-
+:root {
+    --amarillo: #eac926;
+    --azul: #03264c;
+    --celeste: #1259c3;
+    --grisOscuro: #666;
+    --grisClaro: #ebebeb;
+    --verde: #39b54a;
+    --rosado: rgba(196, 15, 233, 0.986);
+    --purpuraOscuro: #46188c;
+    --purpura: #7514b7;
+    --negro: rgba(0, 0, 0, 0.8);
+    --turquesa: #15cec0;
+    --blanco: rgba(255, 255, 255, 0.9);
+    --xiketic: #0b0b16;
+  }
+  
 /*Normalize*/
 @import url('normalize.css');
 
@@ -14,7 +29,7 @@ main{
     flex-wrap:wrap;
     position: relative;
     margin-top: 5%;
-
+    background:linear-gradient(var(--rosado), var(--celeste))
 }
 
 
@@ -24,6 +39,7 @@ div.articulo{
     height: 250px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     margin-top: 20px;
+    background-color: white;
 }
 .articulo img{
     width: 225 ;
@@ -113,7 +129,8 @@ div.articulo{
         height: 80%;
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
         text-align: center;
-        margin-top: 10%;
+        margin-top: 5%;
+        margin-bottom: 3%;
     }
     .articulo img{
         margin-top: 10%;
