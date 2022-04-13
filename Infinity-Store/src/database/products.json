@@ -11,7 +11,7 @@
             "Blanco"
         ],
         "price": 1964,
-        "inSale": false,
+        "offSale": false,
         "discount": 0,
         "stock": 9
     },
@@ -129,7 +129,7 @@
         "image": "/images/REGULADOR-DE-VOLTAJE-FORZA-FVR902A-220V-900VA450W-4IRAM.jpg",
         "color": "",
         "price": 3051,
-        "inSale": false,
+        "offSale": false,
         "discount": 0,
         "stock": 2
     },
@@ -207,7 +207,7 @@
         "image": "/images/DISCO-SSD-2TB-ADATA-XPG-SPECTRIX-S40G-RGB-NVME.jpg",
         "color": [],
         "price": 42109,
-        "inSale": true,
+        "offSale": true,
         "discount": 15,
         "stock": 5
     },
@@ -255,7 +255,7 @@
             "Negro"
         ],
         "price": 390000,
-        "inSale": false,
+        "offSale": false,
         "discount": 0,
         "stock": 1
     },
@@ -337,7 +337,7 @@
         "image": "/images/COOLER-AEROCOOL-VERKHO-2.jpg",
         "color": [],
         "price": 2218,
-        "inSale": false,
+        "offSale": false,
         "discount": 0,
         "stock": 6
     },
@@ -431,7 +431,7 @@
         "image": "/images/COOLER-AEROCOOL-Mirage-5.jpg",
         "color": [],
         "price": 8915,
-        "inSale": true,
+        "offSale": true,
         "discount": 20,
         "stock": 4
     },
@@ -444,7 +444,7 @@
         "image": "/images/FAN-AEROCOOL-ASTRO-12-ARGB-DUAL-RING.jpg",
         "color": [],
         "price": 3184,
-        "inSale": false,
+        "offSale": false,
         "discount": 0,
         "stock": 8
     },
@@ -526,7 +526,7 @@
         "image": "/images/FUENTE-850W-CoolerMaster-MWE-GOLD-FULL-MODULAR.png",
         "color": [],
         "price": 34160,
-        "inSale": true,
+        "offSale": true,
         "discount": 8,
         "stock": 1
     },
@@ -560,7 +560,7 @@
         "image": "/images/MEMORIA-UDIMM-MUSHKIN-SILVERLINE-DDR4-16GB-3200MHZ-1.2V-BULK.jpg",
         "color": [],
         "price": 14738,
-        "inSale": true,
+        "offSale": true,
         "discount": 10,
         "stock": 3
     },
@@ -614,7 +614,7 @@
         "image": "/images/Memoria-DDR3-HYNIX-2GB-1600MHz.jpg",
         "color": [],
         "price": 1364,
-        "inSale": false,
+        "offSale": false,
         "discount": 0,
         "stock": 15
     },
@@ -654,7 +654,7 @@
             "Rosa"
         ],
         "price": 11042,
-        "inSale": false,
+        "offSale": false,
         "discount": 0,
         "stock": 5
     },
@@ -669,7 +669,7 @@
             "Negro"
         ],
         "price": 69909,
-        "inSale": true,
+        "offSale": true,
         "discount": 15,
         "stock": 1
     },
@@ -713,7 +713,7 @@
             "Negro"
         ],
         "price": 34854,
-        "inSale": true,
+        "offSale": true,
         "discount": 20,
         "stock": 5
     },
@@ -763,7 +763,7 @@
         "image": "/images/MPROCESADOR-AMD(AM4)-RYZEN-5-5600X-6-NÚCLEO.jpg",
         "color": [],
         "price": 53291,
-        "inSale": false,
+        "offSale": false,
         "discount": 0,
         "stock": 6
     },
@@ -805,7 +805,7 @@
         "image": "/images/MB-AMD(AM4)-ASUS-PRO-A320M-R-WI-FI-SI-(90MB10I0-M0ECY1).png",
         "color": [],
         "price": 11786,
-        "inSale": true,
+        "offSale": true,
         "discount": 5,
         "stock": 8
     }

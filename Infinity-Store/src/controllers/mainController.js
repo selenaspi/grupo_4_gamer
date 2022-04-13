@@ -10,15 +10,15 @@ const controller = {
 
    index: (req, res) => {
 
-      let productsInSale = productsList.filter(product => { return product.inSale });
-      let indexAleatorioInSale, indexAleatorioRecomendados;
+      let productsOffSale = productsList.filter(product => { return product.offSale });
+      let indexAleatorioOffSale, indexAleatorioRecomendados;
       let productosOfertas = [], popularProducts = [], opinionXProducto = [], productsRecomendados = [];
 
       for (i = 0; i < 4; i++) {
          do {
-            indexAleatorioInSale = Math.floor(Math.random() * productsInSale.length);
-         } while (productosOfertas.indexOf(productsInSale[indexAleatorioInSale]) !== -1);
-         productosOfertas.push(productsInSale[indexAleatorioInSale]);
+            indexAleatorioOffSale = Math.floor(Math.random() * productsOffSale.length);
+         } while (productosOfertas.indexOf(productsOffSale[indexAleatorioOffSale]) !== -1);
+         productosOfertas.push(productsOffSale[indexAleatorioOffSale]);
       } 
 
       /**/
