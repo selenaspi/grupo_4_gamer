@@ -10,8 +10,10 @@ ul {
     padding-left: 0%;
 }
 
-a {
+header a {
     text-decoration: none;
+    font-size: 18px;
+    font-weight: normal;
 }
 
 header {
@@ -58,9 +60,10 @@ img {
 
 nav .menu-desplegable {
     width: 20%;
+
 }
 
-nav .menu-desplegable .burger-menu {
+/*nav .menu-desplegable .burger-menu {
     display: block;
     margin: auto;
     padding: 1vh 1.5vh 0.8vh;
@@ -69,7 +72,64 @@ nav .menu-desplegable .burger-menu {
     font-size: 18px;
     color: white;
     background-color: transparent;
+} */
+
+.bar-menu {
+    width: 40px;
+    margin: auto;
+    padding: 2px 0px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: white 1.3px solid;
 }
+
+.bar-menu span {
+
+    display: block;
+    width: 80%;
+    height: 3px;
+    background-color: white;
+    margin: auto;
+    margin-top: 6.25px;
+    margin-bottom: 6.25px ;
+    transition: all 250ms;
+}
+
+.active #line1 {
+    transform: rotate(45deg) translate(2px, -4px);
+    transform-origin: 0%;
+}
+
+.active #line2 {
+    opacity: 0;
+    margin-left: -10px;
+    transition-delay: 0ms;
+}
+
+.active #line3 {
+    transform: rotate(-45deg) translate(2px, 4.5px);
+    transform-origin: 0%;
+}
+
+.options-burger-menu .items{
+    display: none;
+}
+
+.active-menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 12vh;
+    background-color: #0b0b16;
+}
+.active-menu .items {
+    display: flex;
+}
+
+.active-menu .cat> ul>li>a {
+    display: none;
+}
+
 
 /*-----Logo----*/
 
@@ -86,7 +146,7 @@ nav .logo-infinity-store img {
 /*-----Opciones de menú desplegable, botón de categorías, armá tu pc. carrito y login, 
 logo cuadradro del navbar desktop, barra de busqueda, posible botón de perfil-----*/
 
-nav .menu-desplegable ul, nav .categorias, nav .arma-tu-pc, nav .logo-infinity-store .logo-cuadrado-d, nav .buscador .barra-busqueda, nav .carrito, nav .login, nav .perfil{
+ nav .categorias, nav .arma-tu-pc, nav .logo-infinity-store .logo-cuadrado-d, nav .buscador .barra-busqueda, nav .carrito, nav .login, nav .perfil{
     display: none;
 }
 
@@ -405,6 +465,12 @@ footer>p {
 
     main, footer {
         top: 12vh
+    }
+
+    header a {
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: normal;
     }
 
     nav .nav-bar {
