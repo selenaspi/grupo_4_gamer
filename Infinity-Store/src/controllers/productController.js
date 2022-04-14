@@ -105,7 +105,12 @@ const controller = {
         fs.writeFileSync(productosfilePath, JSON.stringify(listaNuevaProductos));
 
         res.redirect('/');
+    },
+    allProducts: (req,res) => {
+ 
+        res.render("products/allProducts",{similares: productsList})
     }
+    
 }
 
 

@@ -12,4 +12,6 @@ router.put("/:id", productController.editarProducto)
 
 
 router.get("/details/:id", productController.mostrarDetalleProducto);
+router.get("/allProducts",productController.allProducts);
+
 module.exports = router;
