@@ -3,6 +3,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infinity Store</title>
+
+    <!-- https://material.io/resources/icons/?style=outline -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
         rel="stylesheet">
@@ -15,12 +19,14 @@
         $(document).ready(function () {
             const barMenu = document.querySelector("#bar-menu")
 
-            
             const options = document.querySelector("#options-burger-menu");
-            
+
+            const favOn = document.querySelector("#favOn");
+
             barMenu.addEventListener("click", () => {
                 barMenu.classList.toggle("active");
                 options.classList.toggle("active-menu")
+                favOn.classList.toggle("con-fav");
             });
 
         });

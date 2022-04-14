@@ -63,40 +63,29 @@ nav .menu-desplegable {
 
 }
 
-/*nav .menu-desplegable .burger-menu {
-    display: block;
-    margin: auto;
-    padding: 1vh 1.5vh 0.8vh;
-    border-radius: 10%;
-    border: white 1px solid;
-    font-size: 18px;
-    color: white;
-    background-color: transparent;
-} */
-
 .bar-menu {
-    width: 40px;
+    width: 38px;
     margin: auto;
     padding: 2px 0px;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 5px;
     border: white 1.3px solid;
 }
 
 .bar-menu span {
-
     display: block;
-    width: 80%;
+    width: 75%;
     height: 3px;
     background-color: white;
     margin: auto;
     margin-top: 6.25px;
     margin-bottom: 6.25px ;
     transition: all 250ms;
+    border-radius: 1px;
 }
 
 .active #line1 {
-    transform: rotate(45deg) translate(2px, -4px);
+    transform: rotate(45deg) translate(2.2px, -3.7px);
     transform-origin: 0%;
 }
 
@@ -107,7 +96,7 @@ nav .menu-desplegable {
 }
 
 .active #line3 {
-    transform: rotate(-45deg) translate(2px, 4.5px);
+    transform: rotate(-45deg) translate(2.4px, 4px);
     transform-origin: 0%;
 }
 
@@ -120,7 +109,7 @@ nav .menu-desplegable {
     width: 100%;
     height: 100%;
     top: 12vh;
-    background-color: #0b0b16;
+    background: var(--xiketic);
 }
 .active-menu .items {
     display: flex;
@@ -158,9 +147,10 @@ nav .buscador {
     font-size: 20px;
 }
 
-nav .buscador button {
+nav .buscador a {
     background-color: transparent;
     border: none;
+    font-size: 22px;
 }
 
 nav .buscador i {

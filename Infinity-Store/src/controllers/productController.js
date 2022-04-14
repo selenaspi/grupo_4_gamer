@@ -11,13 +11,6 @@ let categoryList = JSON.parse(categoryJSON);
 const productosfilePath = path.join(__dirname, '../database/products.json');
 const productos = JSON.parse(fs.readFileSync(productosfilePath, 'utf-8'));
 
-function Producto(name = "Sin nombre", precio = 0, cantidad = 0, foto = "") {
-    this.name = name;
-    this.precio = precio;
-    this.cantidad = cantidad;
-    this.foto = foto;
-}
-
 const controller = {
 
     mostrarDetalleProducto: (req, res) => {
