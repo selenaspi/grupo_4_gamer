@@ -21,7 +21,7 @@ const storage = multer.diskStorage({
 
 //Formulario de creación de productos
 router.get("/create",productController.formCreation);
-router.post('/',upload.single("photo"), productController.crearProducto);
+router.post('/',upload.single("image"), productController.crearProducto);
 
 //Formualario de edición
 router.get("/:id/edit", productController.formEdition);
