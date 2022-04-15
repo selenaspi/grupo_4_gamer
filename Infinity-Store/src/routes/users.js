@@ -22,7 +22,7 @@ const storage = multer.diskStorage({
 const usersController = require('../controllers/usersController')
 
 // Formulario de creación de usuarios
-router.post("/register",upload.single("photo"), usersController.store);
+router.post("/register",upload.single("image"), usersController.store);
 router.get("/register", usersController.mostrarRegistro);
 
 // GET ONE USER

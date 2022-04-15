@@ -48,7 +48,8 @@ const controller = {
             price : req.body.price,
             offSale: offSaleOn,
             discount: discountUpdate,
-            stock: req.body.stock
+            stock: req.body.stock,
+            image:req.file.filename,
         }
 
         productos.push(newProduct);

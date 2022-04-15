@@ -27,7 +27,8 @@ store:(req,res)=>{
          email: req.body.email,
          password: req.body.password,
          role:"user",
-         phone:req.body.phoneArea.toString()+req.body.phone.toString()
+         phone:req.body.phoneArea.toString()+req.body.phone.toString(),
+         image:req.file.filename
     
      }
      users.push(usuarionuevo);
