@@ -1,10 +1,27 @@
 const express = require("express");
 const router = express.Router();
+const path = require("path");
+const multer = require("multer");
+
+
 const productController = require('../controllers/productController.js')
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null,path.resolve(__dirname,"../../public/images"))
+    },
+    filename: function (req, file, cb) {
+      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+      cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));
+    }
+  })
+  
+  const upload = multer({ storage: storage })
+
 
 //Formulario de creación de productos
 router.get("/create",productController.formCreation);
-router.post('/', productController.crearProducto);
+router.post('/',upload.single("photo"), productController.crearProducto);
 
 //Formualario de edición
 router.get("/:id/edit", productController.formEdition);

@@ -16,7 +16,7 @@
         <%= metodo!=="POST" ? "Actualizar producto" : "Crear producto" %>
       </h1>
 
-      <form method="POST" action="/product/<%=ruta%>">
+      <form method="POST" action="/product/<%=ruta%>" enctype="multipart/form-data">
 
         <div>
           <label for="name">Nombre del producto</label>
@@ -51,7 +51,7 @@
 
         <div class="c-photos">
           <label for="photo">Fotos del producto</label>
-          <input type="file" name="image" accept="image/*" id="photo" class="controls" multiple/>
+          <input type="file" name="photo" accept="image/*" id="photo" class="controls" multiple/>
         </div>
 
         <div>
