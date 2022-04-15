@@ -1,14 +1,27 @@
 const products = require("../database/products.json");
 const opinions = require("../database/opinions.json");
+const category = require("../database/category.json")
 
 let productsJSON = JSON.stringify(products);
 let productsList = JSON.parse(productsJSON);
 let opinionsJSON = JSON.stringify(opinions);
 let opinionList = JSON.parse(opinionsJSON);
+let categoryJSON = JSON.stringify(category);
+let categoryList = JSON.parse(categoryJSON);
 
 const controller = {
 
    index: (req, res) => {
+
+      let categorias = categoryList;
+      let aleatorioCategory, randomCategorias =[];
+
+      for (i = 0; i < 6; i++) {
+         do {
+            aleatorioCategory = Math.floor(Math.random() * categorias.length);
+         } while (randomCategorias.indexOf(categorias[aleatorioCategory]) !== -1);
+         randomCategorias.push(categorias[aleatorioCategory]);
+      } 
 
       let productsOffSale = productsList.filter(product => { return product.offSale });
       let indexAleatorioOffSale, indexAleatorioRecomendados;
@@ -44,7 +57,7 @@ const controller = {
          productsRecomendados.push(popularProducts[indexAleatorioRecomendados]);
       }
 
-      res.render('products/index', { productosOfertas, productsRecomendados });
+      res.render('products/index', {randomCategorias, productosOfertas, productsRecomendados });
    }
 }
 
