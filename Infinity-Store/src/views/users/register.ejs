@@ -11,7 +11,7 @@
     <%- include('../partials/header') %>
 
     <main class="Form-register">
-        <form action="/users/register" method="POST">
+        <form action="/users/register" method="POST" enctype="multipart/form-data">
         <h4>Formulario de Registro</h4>
         <input class="Controls" type="text" name="name" id="Nombres" placeholder="Ingrese su Nombre">
         <input class="Controls" type="text" name="lastName" id="Apellido" placeholder="Ingrese su Apellido">
