@@ -43,13 +43,12 @@ const controller = {
             idCategory: req.body.category,
             description: req.body.description,
             data_sheet: [],
-            image : "",
+            image:req.file.filename,
             color : [],
             price : req.body.price,
             offSale: offSaleOn,
             discount: discountUpdate,
             stock: req.body.stock,
-            image:req.file.filename,
         }
 
         productos.push(newProduct);
