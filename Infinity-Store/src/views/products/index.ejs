@@ -27,7 +27,7 @@
                     <img src="<%=randomCategorias[i].image%>" alt="">
                 </div>
                 <div class="nameCategory<%=i + 1%>">
-                    <h3><%= randomCategorias[i].name%></h3>
+                    <h3><%= randomCategorias[i].name.length<10 ? randomCategorias[i].name : randomCategorias[i].name.substring(0, 8) + "..."%></h3>
                 </div>
             </div>
             
@@ -52,7 +52,7 @@
 
                 <% for(let i=0; i < productosOfertas.length; i++) { %>
 
-                    <article>
+                    <article class="articulo<%=i + 1%>">
 
                         <img src="/images/products/<%= productosOfertas[i].image%>" alt="primer producto">
                         
@@ -88,13 +88,9 @@
 
                 <% for(let i=0; i < productsRecomendados.length; i++) { %>
 
-                    <article>
+                    <article class="articulo<%=i + 1%>">
 
-<<<<<<< HEAD
-                        <img src="<%= productsRecomendados[i].image%>">
-=======
                         <img src= "/images/products/<%= productsRecomendados[i].image %>" alt="imagen del producto">
->>>>>>> c970e8a223f85583877707599671c2b1dca63ac0
                         
                         <button id="favOff"><span class="material-icons-outlined">favorite_border</span></button>
                         <!-- <button id="favOn"><span class="material-icons">favorite</span></button> -->
