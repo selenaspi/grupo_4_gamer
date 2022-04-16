@@ -279,6 +279,67 @@ p.descuento {
   .banner img {
     height: 50vh;
   }
+
+  /*------------------------ Categorías ------------------------*/
+
+.icon1, .icon2,  .icon3, .icon4, .icon5, .icon6 {
+  width: 13vw;
+  height: 13vw;
+}
+
+.nameCategory1, .nameCategory2, .nameCategory3, .nameCategory4, .nameCategory5, .nameCategory6 {
+  display: none;
+}
+
+.icon1:hover, .icon2:hover, .icon3:hover, .icon4:hover, .icon5:hover, .icon6:hover {
+  box-shadow: -1px 2px 22px -1px var(--amarillo);
+}
+
+.category5, .category6 {
+  display: none;
+}
+
+
+
+
+/* section.categorias {
+  position: relative;
+  top: -4vh;
+
+} */
+
+
+
+.icon5,
+.icon6 {
+  display: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   /* 
 
@@ -301,33 +362,7 @@ p.descuento {
   .shoppingCarF i {
     display: none;
   }
-  section.categorias {
-    display: flex;
-    text-align: center;
-    justify-content: space-around;
-    position: relative;
-    top: -4vh;
-    height: 13vw;
-  }
-
-  .icon1,
-  .icon2,
-  .icon3,
-  .icon4,
-  .icon5,
-  .icon6 {
-    font-size: 55px;
-    border: 1px solid var(--azul);
-    border-radius: 50%;
-    width: 13%;
-  }
-
-
-
-  .icon5,
-  .icon6 {
-    display: inherit;
-  }
+  
   h2 {
     font-size: 35px;
   }
