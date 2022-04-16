@@ -234,7 +234,7 @@ p.descuento {
     width: 42%;
     padding: 3%;
     box-shadow: -1px 2px 22px -1px var(--grisOscuro);
-    min-height: 330px;
+    min-height: 354px;
   }
   /* main section article:hover {
   transform: scale(1.2);
