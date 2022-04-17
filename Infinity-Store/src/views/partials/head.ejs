@@ -18,16 +18,22 @@
     <script>
         $(document).ready(function () {
             const barMenu = document.querySelector("#bar-menu")
-
             const options = document.querySelector("#options-burger-menu");
+            const main = document.querySelector("#main-oculto")
 
             const favOn = document.querySelector("#favOn");
+
+            const botonCat = document.querySelector("#b-categ")
 
             barMenu.addEventListener("click", () => {
                 barMenu.classList.toggle("active");
                 options.classList.toggle("active-menu")
-                favOn.classList.toggle("con-fav");
+                main.classList.toggle("main-active")
             });
+
+            botonCat.addEventListener("click", () => {
+                botonCat.classList.toggle("active-boton-cat");
+            })
 
         });
 

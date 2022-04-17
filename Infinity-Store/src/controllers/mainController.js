@@ -39,15 +39,23 @@ const controller = {
       let acumulador = 0;
 
       for (i = 0; i < productsList.length; i++) {
-         opinionXProducto = opinionList.filter(opinion => {
-            return opinion.idProduct === 5;
+         opinionList.forEach(opinion => {
+            if(opinion.idProduct === i) {
+               opinionXProducto.push(opinion);
+            }
          });
          opinionXProducto.forEach(opinion => {
             acumulador += opinion.rating;
          });
          if (acumulador / opinionXProducto.length >= 4) {
-            popularProducts.push(productsList[i]);
+            for(j = 0; j < productsList.length; j++) {
+               if(productsList[j].id === i) {
+                  popularProducts.push(productsList[j]);
+               }
+            }
          }
+         acumulador = 0;
+         opinionXProducto = []
       }
 
       for (i = 0; i < 4; i++) {
@@ -57,7 +65,8 @@ const controller = {
          productsRecomendados.push(popularProducts[indexAleatorioRecomendados]);
       }
 
-      res.render('products/index', {randomCategorias, productosOfertas, productsRecomendados });
+      res.render('products/index', {randomCategorias, productosOfertas, productsRecomendados, categoryList});
+      // res.send(productsRecomendados)
    }
 }
 
