@@ -3,11 +3,17 @@ const path = require('path');
 const usersFilePath = path.join(__dirname, '../database/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
+const category = require("../database/category.json")
+
+
+let categoryJSON = JSON.stringify(category);
+let categoryList = JSON.parse(categoryJSON);
+
 const controller = {
     
-    mostrarLogin : (req, res) => {res.render("users/login")},
+    mostrarLogin : (req, res) => {res.render("users/login", {categoryList})},
 
-    mostrarRegistro : (req, res) => {res.render("users/register")},
+    mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
 
 // Detail - Detail from one user 
 

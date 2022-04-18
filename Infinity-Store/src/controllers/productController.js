@@ -17,7 +17,7 @@ const controller = {
         let idProducto = Number(req.params.id);
         let listaProductos = [productsList[idProducto], productsList[idProducto + 1], productsList[idProducto + 2], productsList[idProducto + 3]];
 
-        res.render("products/productDetails", { similares: listaProductos, detalle: productsList[idProducto - 1] })
+        res.render("products/productDetails", { similares: listaProductos, detalle: productsList[idProducto - 1], categoryList })
     },
 
     formCreation: (req, res) => { 
@@ -43,13 +43,12 @@ const controller = {
             idCategory: req.body.category,
             description: req.body.description,
             data_sheet: [],
-            image : "",
+            image:req.file.filename,
             color : [],
             price : req.body.price,
             offSale: offSaleOn,
             discount: discountUpdate,
             stock: req.body.stock,
-            image:req.file.filename,
         }
 
         productos.push(newProduct);
@@ -109,7 +108,7 @@ const controller = {
     },
     allProducts: (req,res) => {
  
-        res.render("products/allProducts",{similares: productsList})
+        res.render("products/allProducts",{similares: productsList, categoryList})
     }
     
 }

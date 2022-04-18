@@ -36,6 +36,7 @@ nav .nav-bar {
     justify-content: space-between;
     align-items: center;
     list-style: none;
+    /* z-index: 40; */
 }
 
 main {
@@ -58,9 +59,10 @@ img {
 
 /*------Menú despegable------*/
 
+/*Menu hamburguesa*/
+
 nav .menu-desplegable {
     width: 20%;
-
 }
 
 .bar-menu {
@@ -100,26 +102,79 @@ nav .menu-desplegable {
     transform-origin: 0%;
 }
 
+/*Desplegable*/
+
 .options-burger-menu .items{
     display: none;
 }
 
 .active-menu {
     position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 12vh;
+    max-height: 80vh;
+    width: 70%;
+    top: 11vh;
+    padding: 5% 0% 8%;
+    overflow-y: auto;
+    z-index: -1;
     background: var(--xiketic);
-    z-index: 20;
 }
+
 .active-menu .items {
+    display: block;
+    width: 82%;
+    margin: auto;
+    margin-top: 3%;
+    font-size: 40px;
+}
+
+.link-item {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cat {
+    cursor: pointer;
+}
+
+.up {
+    display: none;
+}
+
+/*Desplegable categoría*/
+
+.active-menu .cat>div {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.active-menu .cat>div>p {
+    font-size: 24px;
+    color: white;
 }
 
 .active-menu .cat> ul>li>a {
     display: none;
 }
 
+.active-menu .active-boton-cat>div {
+    border-bottom: 1px solid white;
+    padding-bottom: 8px;
+}
+
+.active-menu .active-boton-cat ul>li>a {
+    display: block;
+    font-size: 22px;
+    margin: 10px 0px;
+}
+
+.active-boton-cat .up {
+    display: initial;
+}
+
+.active-boton-cat .down {
+    display: none;
+}
 
 /*-----Logo----*/
 
@@ -136,7 +191,7 @@ nav .logo-infinity-store img {
 /*-----Opciones de menú desplegable, botón de categorías, armá tu pc. carrito y login, 
 logo cuadradro del navbar desktop, barra de busqueda, posible botón de perfil-----*/
 
- nav .categorias, nav .arma-tu-pc, nav .logo-infinity-store .logo-cuadrado-d, nav .buscador .barra-busqueda, nav .carrito, nav .login, nav .perfil{
+nav .categorias, nav .arma-tu-pc, nav .logo-infinity-store .logo-cuadrado-d, nav .buscador .barra-busqueda, nav .carrito, nav .login, nav .perfil{
     display: none;
 }
 
@@ -251,7 +306,7 @@ footer>p {
 
 /*--------------------------------------- Media Queries ---------------------------------------*/
 
-@media (min-width: 621px) {
+@media (min-width: 521px) {
 
     nav .nav-bar {
         justify-content: space-between;
@@ -259,12 +314,20 @@ footer>p {
 
     /*------Menú despegable------*/
 
+    /*Menu hamburguesa*/
+
     nav .menu-desplegable {
         width: 15%;
     }
     
     nav .menu-desplegable .burger-menu {
         font-size: 22px;
+    }
+
+    /*Desplegable*/
+
+    .active-menu {
+        width: 70%;
     }
 
     /*-----Logo----*/
@@ -283,6 +346,9 @@ footer>p {
     nav .buscador .barra-busqueda{
         display: none;
     }
+}
+
+@media (min-width: 621px) {
 
     /*---------------------Footer---------------------*/
 

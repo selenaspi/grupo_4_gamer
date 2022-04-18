@@ -10,6 +10,8 @@
 
     <%- include('../partials/header') %>
 
+    <div class="main-oculto" id="main-oculto"></div>
+
     <!------------------------- BANNER  ------------------------->
 
     <aside class="banner">
@@ -17,6 +19,7 @@
     </aside>
 
     <!-- ICONOS POR DEBAJO DE BANNER -->
+        
 
     <section class="categorias">
 
@@ -24,10 +27,10 @@
 
             <div class="category<%=i + 1%>">
                 <div class="icon<%=i + 1%>">
-                    <img src="<%=randomCategorias[i].image%>" alt="">
+                    <img src="/images/category/<%=randomCategorias[i].image%>" alt="">
                 </div>
                 <div class="nameCategory<%=i + 1%>">
-                    <h3><%= randomCategorias[i].name%></h3>
+                    <h3><%= randomCategorias[i].name.length<10 ? randomCategorias[i].name : randomCategorias[i].name.substring(0, 8) + "..."%></h3>
                 </div>
             </div>
             
@@ -52,9 +55,9 @@
 
                 <% for(let i=0; i < productosOfertas.length; i++) { %>
 
-                    <article>
+                    <article class="articulo<%=i + 1%>">
 
-                        <img src="<%= productosOfertas[i].image%>" alt="primer producto">
+                        <img src="/images/products/<%= productosOfertas[i].image%>" alt="primer producto">
                         
                         <button id="favOff"><span class="material-icons-outlined">favorite_border</span></button>
                         <!-- <button id="favOn"><span class="material-icons">favorite</span></button> -->
@@ -88,9 +91,9 @@
 
                 <% for(let i=0; i < productsRecomendados.length; i++) { %>
 
-                    <article>
+                    <article class="articulo<%=i + 1%>">
 
-                        <img src="<%= productsRecomendados[i].image%>" alt="primer producto">
+                        <img src= "/images/products/<%= productsRecomendados[i].image %>" alt="imagen del producto">
                         
                         <button id="favOff"><span class="material-icons-outlined">favorite_border</span></button>
                         <!-- <button id="favOn"><span class="material-icons">favorite</span></button> -->

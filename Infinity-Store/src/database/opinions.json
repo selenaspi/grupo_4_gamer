@@ -124,5 +124,19 @@
         "idProduct" : 4,
         "rating" : 4,
         "message" : "Muy bueno (?"
+    },
+    {
+        "id" : 19,
+        "idUsuario" : 2,
+        "idProduct" : 14,
+        "rating" : 5,
+        "message" : "Muy bueno (?"
+    },
+    {
+        "id" : 18,
+        "idUsuario" : 2,
+        "idProduct" : 15,
+        "rating" : 5,
+        "message" : "Muy bueno (?"
     }
 ]
