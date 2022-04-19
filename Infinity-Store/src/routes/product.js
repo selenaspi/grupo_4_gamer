@@ -31,4 +31,6 @@ router.put("/:id", productController.editarProducto)
 router.get("/details/:id", productController.mostrarDetalleProducto);
 router.get("/allProducts",productController.allProducts);
 
+router.get("/delete", (req,res) => res.render("products/productDelete"))
+router.delete("/:id/delete", productController.productDelete);
 module.exports = router;

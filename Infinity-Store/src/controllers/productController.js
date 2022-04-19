@@ -109,7 +109,13 @@ const controller = {
     allProducts: (req,res) => {
  
         res.render("products/allProducts",{similares: productsList, categoryList})
-    }
+    },   productDelete : (req, res) => {
+        const id = req.params.id;
+        productsList = products.filter( productos => productos.id !=  id);
+        fs.writeFileSync(productosfilePath, JSON.stringify(productsList));
+        
+        res.redirect('/')}
+    
     
 }
 
