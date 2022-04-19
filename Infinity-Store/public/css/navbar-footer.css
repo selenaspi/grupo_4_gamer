@@ -166,6 +166,11 @@ nav .menu-desplegable {
     display: block;
     font-size: 22px;
     margin: 10px 0px;
+    margin-left: 8px;
+}
+
+.active-menu .active-boton-cat ul {
+    border-bottom: 1px solid white;
 }
 
 .active-boton-cat .up {

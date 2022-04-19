@@ -59,8 +59,8 @@
 
                         <img src="/images/products/<%= productosOfertas[i].image%>" alt="primer producto">
                         
-                        <button id="favOff"><span class="material-icons-outlined">favorite_border</span></button>
-                        <!-- <button id="favOn"><span class="material-icons">favorite</span></button> -->
+                        <div id="favOff<%=i + 1%>"><span class="material-icons-outlined">favorite_border</span></div>
+                        <div id="favOn<%=i + 1%>"><span class="material-icons">favorite</span></div>
                         
                         <div class="main-article">
 
@@ -95,8 +95,8 @@
 
                         <img src= "/images/products/<%= productsRecomendados[i].image %>" alt="imagen del producto">
                         
-                        <button id="favOff"><span class="material-icons-outlined">favorite_border</span></button>
-                        <!-- <button id="favOn"><span class="material-icons">favorite</span></button> -->
+                        <div id="favOffR<%=i + 1%>"><span class="material-icons-outlined">favorite_border</span></div>
+                        <div id="favOnR<%=i + 1%>"><span class="material-icons">favorite</span></div>
                         
                         <div class="main-article">
                                 
