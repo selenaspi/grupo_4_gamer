@@ -5,13 +5,13 @@
         "idCategory": 1,
         "description": "La unidad flash USB Bit+ de Patriot ofrece una interfaz USB 3.2 Gen 1 de alta velocidad para una conexión sencilla y una transferencia de datos rápida en cualquier PC o portátil. ¡Bit+ está configurado para una calidad favorable y una confiabilidad sólida al almacenar documentos personales, datos importantes, sus películas favoritas, los juegos más recientes y más! Encerrado en una carcasa aerodinámica totalmente negra con un peso superligero de 1,7 gramos, el Bit+ es la solución flash plug and play perfecta y fácil de usar. Con un diseño compacto y sin tapa, el Bit+ se mantiene protegido mientras viaja. Un diseño pequeño y portátil permite que el USB quepa en su bolsillo, mochila o cartera. Lleva tus archivos contigo dondequiera que viajes. Creado teniendo en cuenta la compatibilidad, Bit+ se sincroniza sin problemas en los sistemas operativos más recientes. Simplemente conecte la unidad flash e inmediatamente acceda a un poco más de almacenamiento. Acceda al instante a Bit+ de Patriot con capacidades que se adaptan a todas sus necesidades de almacenamiento digital. Arrastra y suelta para transferir toda tu información y trabajar más rápido que nunca, manteniendo la productividad constante. ",
         "data_sheet": "",
-        "image": "PENDRIVE-PATRIOT-BIT+-64GB-USB-3.2-GEN1.jpg",
+        "image": "/images/PENDRIVE-PATRIOT-BIT+-64GB-USB-3.2-GEN1.jpg",
         "color": [
             "Negro",
             "Blanco"
         ],
         "price": 1964,
-        "offSale": false,
+        "inSale": false,
         "discount": 0,
         "stock": 9
     },
