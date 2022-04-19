@@ -24,7 +24,7 @@ const controller = {
         res.render("products/productCreationEdition", {
             metodo: "POST",
             ruta: "",
-            category : categoryList
+            categoryList
         })
     },
 

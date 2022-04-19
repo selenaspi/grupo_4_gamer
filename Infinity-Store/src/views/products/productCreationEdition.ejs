@@ -30,8 +30,8 @@
 
           <select id="category" name="category" class="controls">
 
-            <% for(i=0; i < category.length; i++) {%>
-              <option value="<%=category[i].id%>" <%=metodo==="PUT" ? category[i].id===producto.idCategory? "Selected" : "" : "" %>><%= category[i].name%></option>
+            <% for(i=0; i < categoryList.length; i++) {%>
+              <option value="<%=categoryList[i].id%>" <%=metodo==="PUT" ? categoryList[i].id===producto.idCategory? "Selected" : "" : "" %>><%= categoryList[i].name%></option>
             <%}%>
 
           </select>
