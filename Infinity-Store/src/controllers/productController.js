@@ -113,7 +113,7 @@ const controller = {
         const id = req.params.id;
         productsList = products.filter( productos => productos.id !=  id);
         fs.writeFileSync(productosfilePath, JSON.stringify(productsList));
-        
+        console.log(id)
         res.redirect('/')}
     
     
