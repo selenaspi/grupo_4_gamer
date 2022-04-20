@@ -11,7 +11,7 @@
             "Blanco"
         ],
         "price": 1964,
-        "inSale": false,
+        "offSale": false,
         "discount": 0,
         "stock": 9
     },
