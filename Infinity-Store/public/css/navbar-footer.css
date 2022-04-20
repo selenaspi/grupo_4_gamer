@@ -10,15 +10,17 @@ ul {
     padding-left: 0%;
 }
 
-a {
+header a {
     text-decoration: none;
+    font-size: 18px;
+    font-weight: normal;
 }
 
 header {
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 10;
+    z-index: 20;
 }
 
 nav {
@@ -34,6 +36,7 @@ nav .nav-bar {
     justify-content: space-between;
     align-items: center;
     list-style: none;
+    /* z-index: 40; */
 }
 
 main {
@@ -56,19 +59,126 @@ img {
 
 /*------Menú despegable------*/
 
+/*Menu hamburguesa*/
+
 nav .menu-desplegable {
     width: 20%;
 }
 
-nav .menu-desplegable .burger-menu {
-    display: block;
+.bar-menu {
+    width: 38px;
     margin: auto;
-    padding: 1vh 1.5vh 0.8vh;
-    border-radius: 10%;
-    border: white 1px solid;
-    font-size: 18px;
+    padding: 2px 0px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: white 1.3px solid;
+}
+
+.bar-menu span {
+    display: block;
+    width: 75%;
+    height: 3px;
+    background-color: white;
+    margin: auto;
+    margin-top: 6.25px;
+    margin-bottom: 6.25px ;
+    transition: all 250ms;
+    border-radius: 1px;
+}
+
+.active #line1 {
+    transform: rotate(45deg) translate(2.2px, -3.7px);
+    transform-origin: 0%;
+}
+
+.active #line2 {
+    opacity: 0;
+    margin-left: -10px;
+    transition-delay: 0ms;
+}
+
+.active #line3 {
+    transform: rotate(-45deg) translate(2.4px, 4px);
+    transform-origin: 0%;
+}
+
+/*Desplegable*/
+
+.options-burger-menu .items{
+    display: none;
+}
+
+.active-menu {
+    position: fixed;
+    max-height: 80vh;
+    width: 70%;
+    top: 11vh;
+    padding: 5% 0% 8%;
+    overflow-y: auto;
+    z-index: -1;
+    background: var(--xiketic);
+}
+
+.active-menu .items {
+    display: block;
+    width: 82%;
+    margin: auto;
+    margin-top: 3%;
+    font-size: 40px;
+}
+
+.link-item {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cat {
+    cursor: pointer;
+}
+
+.up {
+    display: none;
+}
+
+/*Desplegable categoría*/
+
+.active-menu .cat>div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.active-menu .cat>div>p {
+    font-size: 24px;
     color: white;
-    background-color: transparent;
+}
+
+.active-menu .cat> ul>li>a {
+    display: none;
+}
+
+.active-menu .active-boton-cat>div {
+    border-bottom: 1px solid white;
+    padding-bottom: 8px;
+}
+
+.active-menu .active-boton-cat ul>li>a {
+    display: block;
+    font-size: 22px;
+    margin: 10px 0px;
+    margin-left: 8px;
+}
+
+.active-menu .active-boton-cat ul {
+    border-bottom: 1px solid white;
+}
+
+.active-boton-cat .up {
+    display: initial;
+}
+
+.active-boton-cat .down {
+    display: none;
 }
 
 /*-----Logo----*/
@@ -86,7 +196,7 @@ nav .logo-infinity-store img {
 /*-----Opciones de menú desplegable, botón de categorías, armá tu pc. carrito y login, 
 logo cuadradro del navbar desktop, barra de busqueda, posible botón de perfil-----*/
 
-nav .menu-desplegable ul, nav .categorias, nav .arma-tu-pc, nav .logo-infinity-store .logo-cuadrado-d, nav .buscador .barra-busqueda, nav .carrito, nav .login, nav .perfil{
+nav .categorias, nav .arma-tu-pc, nav .logo-infinity-store .logo-cuadrado-d, nav .buscador .barra-busqueda, nav .carrito, nav .login, nav .perfil{
     display: none;
 }
 
@@ -95,12 +205,17 @@ nav .menu-desplegable ul, nav .categorias, nav .arma-tu-pc, nav .logo-infinity-s
 nav .buscador {
     width: 20%;
     text-align: center;
-    font-size: 20px;
 }
 
 nav .buscador button {
     background-color: transparent;
     border: none;
+}
+
+nav .buscador a {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
 }
 
 nav .buscador i {
@@ -112,6 +227,11 @@ nav .buscador i {
 footer {
     background-color: var(--xiketic);
     margin-top: 8%;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 22px;
 }
 
 /*------Tópicos------*/
@@ -139,10 +259,10 @@ footer>ul>li button {
 footer>ul>li button h3 {
     margin: 4% 0%;
     padding-left: 1%;
+    font-size: 18px;
 }
 
 footer>ul>li button i {
-    font-size: 20px;
     padding-right: 3%
 }
 
@@ -199,12 +319,20 @@ footer>p {
 
     /*------Menú despegable------*/
 
+    /*Menu hamburguesa*/
+
     nav .menu-desplegable {
         width: 15%;
     }
     
     nav .menu-desplegable .burger-menu {
         font-size: 22px;
+    }
+
+    /*Desplegable*/
+
+    .active-menu {
+        width: 70%;
     }
 
     /*-----Logo----*/
@@ -223,6 +351,9 @@ footer>p {
     nav .buscador .barra-busqueda{
         display: none;
     }
+}
+
+@media (min-width: 621px) {
 
     /*---------------------Footer---------------------*/
 
@@ -237,6 +368,7 @@ footer>p {
         justify-content: space-around;
         text-align: center;
         line-height: 30px;
+        font-size: 18px;
     }
 
     footer>ul>li {
@@ -256,6 +388,7 @@ footer>p {
         margin: auto;
         padding-bottom: 5px;
         border-bottom: 1px solid white;
+        font-size: 20px;
     }
 
     /*----Ítems del tópic-----*/
@@ -375,9 +508,12 @@ footer>p {
         background-color: white;
     }
 
+    nav .buscador a {
+        font-size: 18px;
+    }
+
     nav .buscador i {
         color: var(--azulOscuro);
-
     }
 
     nav .carrito i, nav .login a {
@@ -405,6 +541,12 @@ footer>p {
 
     main, footer {
         top: 12vh
+    }
+
+    header a {
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: normal;
     }
 
     nav .nav-bar {

@@ -4,9 +4,16 @@ const router = require('../routes/users');
 const usersFilePath = path.join(__dirname, '../database/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
+const category = require("../database/category.json")
+
+
+let categoryJSON = JSON.stringify(category);
+let categoryList = JSON.parse(categoryJSON);
+
 const controller = {
     
-    mostrarLogin : (req, res) => {res.render("users/login")},
+    mostrarLogin : (req, res) => {res.render("users/login", {categoryList})},
+
 
     mostrarRegistro : (req, res) => {res.render("users/register")},
 
@@ -15,6 +22,9 @@ index: (req, res) => {
     return res.render("users", {users}); 
 },
 
+    mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
+
+
 // Detail - Detail from one user 
 detail : (req,res) => {
     const id = req.params.id;
@@ -22,14 +32,27 @@ detail : (req,res) => {
     return res.render("detail", {user});
 },
 
-// Create - form to create
-create : (req,res) =>{
-    return res.render("register");
-},
-
-// create - method to store
+// para crear nuevo usuario
 store:(req,res)=>{
+
     return res.redirect("/users");    
+
+ 
+     const usuarionuevo = {
+        id: users[ users.length -1].id + 1,
+         name: req.body.name,
+         lastName: req.body.lastName,
+         email: req.body.email,
+         password: req.body.password,
+         role:"user",
+         phone:req.body.phoneArea.toString()+req.body.phone.toString(),
+         image:req.file.filename
+    
+     }
+     users.push(usuarionuevo);
+    fs.writeFileSync(usersFilePath,JSON.stringify(users))
+    res.redirect("/");
+
 },
 
 edit: (req,res)=>{

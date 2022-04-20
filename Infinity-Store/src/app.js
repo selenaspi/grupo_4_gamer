@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
 
-app.listen( port, () => console.log("Servidor corriendo en el puerto " + port));
+app.listen(port, () => console.log("Servidor corriendo en el puerto " + port));
 
 app.use("/", mainRouter);
 app.use("/productCart", productCartRouter);
