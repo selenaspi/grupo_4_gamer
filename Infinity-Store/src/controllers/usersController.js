@@ -13,6 +13,7 @@ let categoryList = JSON.parse(categoryJSON);
 const controller = {
     
     mostrarLogin : (req, res) => {res.render("users/login", {categoryList})},
+<<<<<<< HEAD
 
 
 
@@ -22,6 +23,10 @@ const controller = {
 index: (req, res) => {
     return res.render("users", {users}); 
 },
+=======
+
+    mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
+>>>>>>> 38dc2fc51318a14dd8c5fb547c9e6243c7929712
 
 
     mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
@@ -39,11 +44,14 @@ detail : (req,res) => {
 
 // para crear nuevo usuario
 store:(req,res)=>{
+<<<<<<< HEAD
 
 
     return res.redirect("/users");    
 
 
+=======
+>>>>>>> 38dc2fc51318a14dd8c5fb547c9e6243c7929712
  
      const usuarionuevo = {
         id: users[ users.length -1].id + 1,

@@ -25,7 +25,10 @@ const usersController = require('../controllers/usersController')
 router.post("/register",upload.single("image"), usersController.store);
 router.get("/register", usersController.mostrarRegistro);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 38dc2fc51318a14dd8c5fb547c9e6243c7929712
 =======
 >>>>>>> 38dc2fc51318a14dd8c5fb547c9e6243c7929712
 
