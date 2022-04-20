@@ -9,7 +9,7 @@ let categoryList = JSON.parse(categoryJSON);
 
 
 const productosfilePath = path.join(__dirname, '../database/products.json');
-const productos = JSON.parse(fs.readFileSync(productosfilePath, 'utf-8'));
+let productos = JSON.parse(fs.readFileSync(productosfilePath, 'utf-8'));
 
 const controller = {
 
@@ -77,32 +77,27 @@ const controller = {
 
     editarProducto: (req, res) => {
 
-        let listaNuevaProductos = [];
-
-        productos.forEach(producto => {
-            if (producto.id != req.params.id) {
-                listaNuevaProductos.push(producto);
-            }
-        });
-
         let offSaleOn = req.body.checkDescuento === "on" ? true : false;
 
-        let productUpdate = {
-            id: req.params.id,
-            name: req.body.name,
-            idCategory: req.body.category,
-            description: req.body.description,
-            data_sheet: [],
-            image: "",
-            color: [],
-            price: req.body.price,
-            offSale: offSaleOn,
-            discount: offSaleOn === true ? req.body.discount : 0,
-            stock: req.body.stock
-        }
+        productos = productos.map(producto => {
+            if (producto.id == req.params.id) {
+              producto = { id: req.params.id, 
+                name: req.body.name,
+                idCategory: req.body.category,
+                description: req.body.description,
+                data_sheet: [],
+                image: "",
+                color: [],
+                price: req.body.price,
+                offSale: offSaleOn,
+                discount: offSaleOn === true ? req.body.discount : 0,
+                stock: req.body.stock }
+            }
+            return producto
+        });
 
-        listaNuevaProductos.push(productUpdate);
-        fs.writeFileSync(productosfilePath, JSON.stringify(listaNuevaProductos));
+        
+        fs.writeFileSync(productosfilePath, JSON.stringify(productos));
 
         res.redirect('/');
     },

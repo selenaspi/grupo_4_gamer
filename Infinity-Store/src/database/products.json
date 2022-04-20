@@ -716,17 +716,17 @@
         "stock": 8
     },
     {
-        "id": 17,
+        "id": "17",
         "name": "teclado",
         "idCategory": "1",
         "description": "nuevo",
         "data_sheet": [],
-        "image": "image-1650033049127-607683659.jpg",
+        "image": "",
         "color": [],
         "price": "4548",
         "offSale": false,
         "discount": 0,
-        "stock": "12"
+        "stock": "10"
     },
     {
         "id": 18,
