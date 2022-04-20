@@ -9,7 +9,7 @@ let categoryList = JSON.parse(categoryJSON);
 
 
 const productosfilePath = path.join(__dirname, '../database/products.json');
-const productos = JSON.parse(fs.readFileSync(productosfilePath, 'utf-8'));
+let productos = JSON.parse(fs.readFileSync(productosfilePath, 'utf-8'));
 
 const controller = {
 
@@ -20,7 +20,7 @@ const controller = {
         res.render("products/productDetails", { similares: listaProductos, detalle: productsList[idProducto - 1], categoryList })
     },
 
-    formCreation: (req, res) => { 
+    formCreation: (req, res) => {
         res.render("products/productCreationEdition", {
             metodo: "POST",
             ruta: "",
@@ -30,22 +30,22 @@ const controller = {
 
     crearProducto: (req, res) => {
         let ids = [];
-        productos.forEach(producto => {ids.push(producto.id)});
+        productos.forEach(producto => { ids.push(producto.id) });
         let maxId = Math.max(...ids);
 
-        let offSaleOn = req.body.checkDescuento === "on"? true: false;
+        let offSaleOn = req.body.checkDescuento === "on" ? true : false;
 
-        let discountUpdate = offSaleOn? req.body.discount : 0; 
+        let discountUpdate = offSaleOn ? req.body.discount : 0;
 
-        let newProduct =     {
+        let newProduct = {
             id: maxId + 1,
             name: req.body.name,
             idCategory: req.body.category,
             description: req.body.description,
             data_sheet: [],
-            image:req.file.filename,
-            color : [],
-            price : req.body.price,
+            image: req.file.filename,
+            color: [],
+            price: req.body.price,
             offSale: offSaleOn,
             discount: discountUpdate,
             stock: req.body.stock,
@@ -53,7 +53,7 @@ const controller = {
 
         productos.push(newProduct);
         fs.writeFileSync(productosfilePath, JSON.stringify(productos));
-        
+
         res.redirect('/');
     },
 
@@ -70,54 +70,51 @@ const controller = {
         res.render("products/productCreationEdition", {
             metodo: "PUT",
             ruta: req.params.id + "?_method=PUT",
-            producto: productoElegido, 
-            category : categoryList
+            producto: productoElegido,
+            categoryList
         })
     },
 
-    editarProducto : (req, res) => {
+    editarProducto: (req, res) => {
 
-        let listaNuevaProductos = [];
+        let offSaleOn = req.body.checkDescuento === "on" ? true : false;
 
-        productos.forEach(producto => {
-            if (producto.id != req.params.id) {
-                listaNuevaProductos.push(producto);
+        productos = productos.map(producto => {
+            if (producto.id == req.params.id) {
+              producto = { id: req.params.id, 
+                name: req.body.name,
+                idCategory: req.body.category,
+                description: req.body.description,
+                data_sheet: [],
+                image: "",
+                color: [],
+                price: req.body.price,
+                offSale: offSaleOn,
+                discount: offSaleOn === true ? req.body.discount : 0,
+                stock: req.body.stock }
             }
+            return producto
         });
 
-        let offSaleOn = req.body.checkDescuento === "on"? true: false;
-
-        let productUpdate =     {
-            id: req.params.id,
-            name: req.body.name,
-            idCategory: req.body.category,
-            description: req.body.description,
-            data_sheet: [],
-            image : "",
-            color : [],
-            price : req.body.price,
-            offSale: offSaleOn,
-            discount: offSaleOn === true? req.body.discount : 0,
-            stock: req.body.stock
-        }
-
-        listaNuevaProductos.push(productUpdate);
-        fs.writeFileSync(productosfilePath, JSON.stringify(listaNuevaProductos));
+        
+        fs.writeFileSync(productosfilePath, JSON.stringify(productos));
 
         res.redirect('/');
     },
-    allProducts: (req,res) => {
- 
-        res.render("products/allProducts",{similares: productsList, categoryList})
-    },   productDelete : (req, res) => {
+    allProducts: (req, res) => {
+
+        res.render("products/allProducts", { similares: productsList, categoryList })
+    },
+    productDelete: (req, res) => {
         const id = req.params.id;
-        productsList = products.filter( productos => productos.id !=  id);
+        productsList = products.filter(productos => productos.id != id);
         fs.writeFileSync(productosfilePath, JSON.stringify(productsList));
         console.log(id)
         res.redirect('/')}
     
     
-}
+    }
+
 
 
 module.exports = controller;
