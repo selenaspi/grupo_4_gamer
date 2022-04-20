@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const router = require('../routes/users');
 const usersFilePath = path.join(__dirname, '../database/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
@@ -8,13 +9,13 @@ const controller = {
     mostrarLogin : (req, res) => {res.render("users/login")},
 
     mostrarRegistro : (req, res) => {res.render("users/register")},
+
 // Root -- show all users 
 index: (req, res) => {
-    return res.render("users", {users});
+    return res.render("users", {users}); 
 },
 
 // Detail - Detail from one user 
-
 detail : (req,res) => {
     const id = req.params.id;
     const user = users.find(user => user.id == id);
@@ -28,7 +29,7 @@ create : (req,res) =>{
 
 // create - method to store
 store:(req,res)=>{
-    return res.send("Usuario creado");
+    return res.redirect("/users");    
 },
 
 edit: (req,res)=>{

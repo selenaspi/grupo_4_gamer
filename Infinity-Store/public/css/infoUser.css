@@ -1,0 +1,29 @@
+*{
+    
+    margin : 10px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 15px;
+    
+}
+legend{
+    font-weight:bold;
+    font-size:17px;  
+}
+
+input{
+    height: 20px;
+    border: 1px solid rgb(16, 2, 143);
+    display: flex;   
+    padding: 10px 10px 10px 10px;
+
+}
+label{
+    font-weight:bold;
+}
+
+botton{
+    align-items:center;
+    justify-content:center;
+}
+

@@ -12,6 +12,7 @@ router.get("/", usersController.index);
 router.get("/create", usersController.create);
 router.post("/", usersController.store);
 
+
 // GET ONE USER
 router.get("/id:/", usersController.detail);
 
