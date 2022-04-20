@@ -1,14 +1,7 @@
 [
     {
         "id": 1,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
-=======
-        "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
         "name": "PENDRIVE PATRIOT BIT+ 64GB USB 3.2 GEN1",
         "idCategory": 1,
         "description": "La unidad flash USB Bit+ de Patriot ofrece una interfaz USB 3.2 Gen 1 de alta velocidad para una conexión sencilla y una transferencia de datos rápida en cualquier PC o portátil. ¡Bit+ está configurado para una calidad favorable y una confiabilidad sólida al almacenar documentos personales, datos importantes, sus películas favoritas, los juegos más recientes y más! Encerrado en una carcasa aerodinámica totalmente negra con un peso superligero de 1,7 gramos, el Bit+ es la solución flash plug and play perfecta y fácil de usar. Con un diseño compacto y sin tapa, el Bit+ se mantiene protegido mientras viaja. Un diseño pequeño y portátil permite que el USB quepa en su bolsillo, mochila o cartera. Lleva tus archivos contigo dondequiera que viajes. Creado teniendo en cuenta la compatibilidad, Bit+ se sincroniza sin problemas en los sistemas operativos más recientes. Simplemente conecte la unidad flash e inmediatamente acceda a un poco más de almacenamiento. Acceda al instante a Bit+ de Patriot con capacidades que se adaptan a todas sus necesidades de almacenamiento digital. Arrastra y suelta para transferir toda tu información y trabajar más rápido que nunca, manteniendo la productividad constante. ",
@@ -25,14 +18,7 @@
     },
     {
         "id": 2,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
-=======
-        "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
         "name": "REGULADOR DE VOLTAJE FORZA FVR-902A 220V 900VA/450W 4-IRAM",
         "idCategory": 1,
         "description": "",
@@ -151,14 +137,7 @@
     },
     {
         "id": 3,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
-=======
-        "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
         "name": "DISCO SSD 2TB ADATA XPG SPECTRIX S40G RGB NVME",
         "idCategory": 2,
         "description": "Con la unidad en estado sólido XPG vas a incrementar la capacidad de respuesta de tu equipo. Gracias a esta tecnología podrás invertir en velocidad y eficiencia para el inicio, la carga y la transferencia de datos. Este disco transfiere datos a través de sus interfaces PCIe 3.0 y NVMe 1.3, lo que te permite transmitir una mayor cantidad de información de una sola vez.",
@@ -237,14 +216,7 @@
     },
     {
         "id": 4,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
-=======
-        "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
         "name": "LENTE NIKON 70-200 F4 ED VR",
         "idCategory": 4,
         "description": "",
@@ -293,14 +265,7 @@
     },
     {
         "id": 5,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
-=======
-        "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
         "name": "COOLER AEROCOOL VERKHO 2 (1150/1151/1156/775/FM2/FM1/FM2/AM3",
         "idCategory": 6,
         "description": "Dos heatpipes proporcionan una superficie perfectamente plana que asegura una disipación de calor más rápida. Las tiras abiertas a lo largo de los lados del ventilador aseguran un flujo de aire mejorado y más fuerte que otros ventiladores regulares de 90 mm, manteniendo el nivel de ruido al mínimo. El diseño irregular de la superficie de la aleta crea un área de disipación de calor. Es compatible con la mayoría de las CPUs debido a un diseño compacto.",
@@ -383,14 +348,7 @@
     },
     {
         "id": 7,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
-=======
-        "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
         "name": "FAN AEROCOOL ASTRO 12 ARGB DUAL RING",
         "idCategory": 6,
         "description": "Combinando un exclusivo diseño LED RGB Omni y un acabado de estilo fibra de carbono para conseguir una estética nunca vista, el ventilador ASTRO 12 de Aerocool te garantiza la mejor refrigeración y la mejor decoración interna para tu PC. Hasta 16.8 millones de colores con placas base ARGB y prestaciones profesionales para conseguir un rendimiento óptimo.",
@@ -404,14 +362,7 @@
     },
     {
         "id": 8,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
-=======
-        "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
         "name": "FUENTE 850W CoolerMaster MWE GOLD FULL MODULAR",
         "idCategory": 7,
         "description": "El MWE Gold - V2 (Full Modular) es el siguiente paso en la evolución de la línea de unidades de suministro de energía 80 PLUS Gold de Cooler Master. La serie MWE Gold original se creó para ofrecer una opción con calificación Gold más simple y asequible para ayudar a los usuarios a hacer más accesible la transición de las unidades de suministro de energía 80 PLUS White y Bronze. La eficiencia siempre ha sido uno de los factores más importantes para los usuarios a la hora de elegir su fuente de alimentación. Si bien hay una variedad de opciones de eficiencia, 80 PLUS Gold ha sido la opción ideal durante los últimos años y continúa siendo considerada el estándar en gran parte del mundo. El MWE Gold - V2 ofrece una certificación 80 PLUS Gold, lo que garantiza una eficiencia mínima típica del 90%.",
@@ -494,14 +445,7 @@
     },
     {
         "id": 9,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
-=======
-        "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
         "name": "MEMORIA UDIMM MUSHKIN SILVERLINE DDR4 16GB 3200MHZ 1.2V BULK",
         "idCategory": 11,
         "description": "Los módulos de memoria Ram Mushkin Silverline DDR4 están diseñados para exceder los estándares de la industria y garantizar la mayor compatibilidad con PC Intel y AMD. Su disipador de calor de nuevo diseño está hecho de aluminio de grado aeronáutico, lo que le da al módulo de memoria un aspecto refinado y elegante que complementa perfectamente su potencia. Ideal para Gamers y clientes que buscan la mejor performance, sin descuidar sus costos.",
@@ -536,14 +480,7 @@
     },
     {
         "id": 10,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
-=======
-        "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
         "name": "Memoria DDR3 HYNIX 2GB 1600MHz",
         "idCategory": 11,
         "description": "",
@@ -598,14 +535,7 @@
     },
     {
         "id": 11,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
-=======
-        "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
         "name": "MICROFONO RAZER SEIREN MINI ULTRA QUARTZ",
         "idCategory": 12,
         "description": "Hecho para configuraciones minimalistas o más pequeñas, este micrófono de condensador compacto apenas ocupa espacio en el escritorio y es discreto en la cámara para que el foco siempre esté en ti. También es fácil de llevar si necesita llevar su transmisión o trabajar a otra parte.",
@@ -646,14 +576,7 @@
     },
     {
         "id": 12,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
-=======
-        "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
         "name": "MICRÓFONO DE EXPANSIÓN LOGINTECH",
         "idCategory": 12,
         "description": "Amplía el alcance del sistema de videoconferencia GROUP con micrófonos de expansión Logitech GROUP. Puede haber hasta 20 personas en una sala grande y se oirá la voz de todas y cada una de ellas. Basta con conectar los microfonos al altavoz de GROUP. Se reconocerán y configurarán automáticamente. Un indicador luminoso muestra cuándo se ha silenciado el micrófono, cuándo hay una llamada activada y cuándo se ha iniciado el emparejamiento inalámbrico Bluetooth®. Altura: 83 mm Ancho: 83 mm Profundidad: 21 mm Peso: 230 g Tipo de conexión: Plug and Play Indicadores luminosos (LED): LED para confirmar streaming de video, silenciamiento de micrófono, llamada en espera y emparejamiento Bluetooth. Tipo de micrófono: Mono, banda ancha, supresión de ruido Botones/Conmutador: Silenciar micrófono",
@@ -669,14 +592,7 @@
     },
     {
         "id": 13,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
-=======
-        "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
         "name": "MICROFONO RAZER SEIREN EMOTE",
         "idCategory": 12,
         "description": "Sorprende a tus seguidores y lleva tus dotes escénicas a otro nivel con Razer Seiren Emote, el primer micrófono USB que utiliza emoticonos para interactuar con tu público. Da un toque divertido y fresco a tus retransmisiones y deja a tu público con ganas de más con un nuevo nivel de entretenimiento que te permite destacar entre los demás. ",
@@ -721,14 +637,7 @@
     },
     {
         "id": 14,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
-=======
-        "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
         "name": "MPROCESADOR AMD (AM4) RYZEN 5 5600X 6 NÚCLEO",
         "idCategory": 13,
         "description": "Obtenga rendimiento de alta velocidad en los juegos, con el mejor procesador para computadoras de escritorio del mundo. Los núcleos más rápidos del mundo para los jugadores de PC.Software que combina la velocidad de SSD con la capacidad de disco duro en una sola unidad rápida y fácil de administrar, gratuitamente con la placa madre AMD Serie 400. La utilidad de overclocking sencilla ya la vez potente para los procesadores AMD Ryzen™",
@@ -779,14 +688,7 @@
     },
     {
         "id": 15,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
-=======
-        "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
         "name": "MB AMD (AM4) ASUS PRO A320M-R WI-FI-SI (90MB10I0-M0ECY1)",
         "idCategory": 15,
         "description": "Tecnología de recuperación de BIOS automática exclusiva de ASUS para la recuperación automática del BIOS del sistema desde una copia de seguridad verificada Pueto LPC dedicada y tarjeta de depuración con pantalla LCD para una resolución de problemas más rápida. Registro de eventos para capturar y administrar información detallada del sistema. Las tarjetas madre comerciales ASUS Pro ofrecen características mejoradas para suavizar sus operaciones de TI, que incluyen protección integral del sistema, estabilidad y confiabilidad las 24 horas del día, los 7 días de la semana y un paquete de administración mejorado para una personalización más fácil. Conocida como la marca de tarjetas madre más grande y conocida del mundo, ASUS ofrece un servicio posventa de clase mundial y una disponibilidad garantizada a largo plazo para maximizar su inversión durante el ciclo de vida del producto y ofrece una solución de alta calidad optimizada para TCO para su negocio necesidades informáticas.",
@@ -829,14 +731,7 @@
     },
     {
         "id": 17,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "alta": false,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
-=======
-        "alta": false,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
         "name": "teclado",
         "idCategory": "1",
         "description": "nuevo",
@@ -850,14 +745,7 @@
     },
     {
         "id": 18,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
-=======
-        "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
         "name": "teclado Gamer",
         "idCategory": "1",
         "description": "teclado",
@@ -871,14 +759,7 @@
     },
     {
         "id": 19,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "alta": false,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
-=======
-        "alta": false,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
         "name": "auriculares",
         "idCategory": "1",
         "description": "auriculares ",
@@ -892,14 +773,7 @@
     },
     {
         "id": 20,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
-=======
-        "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
         "name": "sillas ",
         "idCategory": "1",
         "description": "para descansar",
@@ -913,14 +787,7 @@
     },
     {
         "id": 21,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
-=======
-        "alta": true,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
         "name": "notebooks",
         "idCategory": "18",
         "description": "super",
@@ -934,40 +801,13 @@
     },
     {
         "id": 22,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "alta": false,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
-=======
-        "alta": false,
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
         "name": "sillas ultralivianas",
         "idCategory": "1",
         "description": "nuevas ",
         "data_sheet": [],
         "image": "image-1650089181142-824292832.jpg",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "color": [],    
-=======
         "color": [],
->>>>>>> 1daf3f10fb1d6cff96bc6e6d0fd310382392d987
-=======
-        "color": [],
->>>>>>> 1daf3f10fb1d6cff96bc6e6d0fd310382392d987
-=======
-        "color": [],
->>>>>>> 1daf3f10fb1d6cff96bc6e6d0fd310382392d987
-=======
-        "color": [],
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
-=======
-        "color": [],
->>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
         "price": "51649",
         "offSale": false,
         "discount": 0,
