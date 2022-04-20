@@ -26,11 +26,14 @@ router.post("/register",upload.single("image"), usersController.store);
 router.get("/register", usersController.mostrarRegistro);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 38dc2fc51318a14dd8c5fb547c9e6243c7929712
 =======
 >>>>>>> 38dc2fc51318a14dd8c5fb547c9e6243c7929712
+=======
+>>>>>>> 1daf3f10fb1d6cff96bc6e6d0fd310382392d987
 
 // GET ONE USER
 router.get("/id:/", usersController.detail);

@@ -457,15 +457,44 @@ footer>p {
     }
 
     /*-----Logo rectangular, opciones de categorías-----*/
-    nav .logo-infinity-store .logo-rectangular-m-t, nav .categorias ul {
+    nav .logo-infinity-store .logo-rectangular-m-t {
         display: none;
     }
+
+    .categorias ul {
+        position: fixed;
+        top: 15vh;
+        /* display: flex; */
+        display: none;
+        flex-wrap: wrap;
+        width: 70vw;
+        min-height: 60vh;
+        background-color: var(--azulOscuro);
+        padding: 20px;
+    }
+
+    .categorias ul>li {
+
+        width: 20%;
+        font-size: 16px;
+    }
+
+    .categorias ul>li a {
+        display: flex;
+        align-items: center;
+    }
+
+    .categorias ul>li img {
+        width: 5vh;
+    }
     
+    .categorias ul>li span {
+        font-size: 14px;
+    }
     /*-----Botón de categorías, armá tu pc, carrito y login (aparece)-----*/
     
     nav .categorias, nav .arma-tu-pc, nav .carrito, nav .login {
         display: block;
-
     }
 
     nav .categorias .boton-categorias {
