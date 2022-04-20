@@ -24,7 +24,10 @@ const usersController = require('../controllers/usersController')
 // Formulario de creación de usuarios
 router.post("/register",upload.single("image"), usersController.store);
 router.get("/register", usersController.mostrarRegistro);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 38dc2fc51318a14dd8c5fb547c9e6243c7929712
 
 // GET ONE USER
 router.get("/id:/", usersController.detail);
