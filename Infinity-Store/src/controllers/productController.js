@@ -112,12 +112,12 @@ const controller = {
         const id = req.params.id;
         productsList = products.filter(productos => productos.id != id);
         fs.writeFileSync(productosfilePath, JSON.stringify(productsList));
-
-        res.redirect('/')
+        console.log(id)
+        res.redirect('/')}
+    
+    
     }
 
-
-}
 
 
 module.exports = controller;
