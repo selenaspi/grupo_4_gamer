@@ -21,7 +21,7 @@
         <div>
           <label for="name">Nombre del producto</label>
           <input type="text" name="name" class="controls" id="name" value="<%= metodo === 'POST' ? '' : producto.name%>"
-            placeholder="Ingrese el nombre del producto" />
+            placeholder="Ingrese el nombre del producto" required/>
         </div>
 
         <div>
@@ -40,7 +40,7 @@
 
         <div>
           <label for="precio">Precio del producto</label>
-          <input type="number" name="price" id="precio" class="controls" value="<%= metodo === 'POST' ? '' : producto.price%>" placeholder="Ingrese el precio del producto" />
+          <input type="number" name="price" id="precio" class="controls" value="<%= metodo === 'POST' ? '' : producto.price%>" placeholder="Ingrese el precio del producto" required/>
         </div>
 
         <div class="descripcion">
@@ -51,7 +51,7 @@
 
         <div class="c-photos">
           <label for="image"class="form-label">Fotos del producto</label>
-          <input type="file" name="image" accept="image" id="photo" class="form-input">
+          <input type="file" name="image" accept="image" id="photo" class="form-input" <%= metodo==="POST" ? "required" : ""%>>
         </div>
 
         <div>
@@ -72,7 +72,7 @@
 
         <div>
           <label for="stock">Cantidad en stock: </label>
-          <input type="number" name="stock" id="stock" class="controls" value="<%= metodo === 'POST' ? '' : producto.stock%>" placeholder="Ingrese el precio del producto" />
+          <input type="number" name="stock" id="stock" class="controls" value="<%= metodo === 'POST' ? '' : producto.stock%>" placeholder="Ingrese el stock de este producto" required/>
         </div>
 
         <div class="botones">
