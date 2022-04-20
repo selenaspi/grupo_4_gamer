@@ -13,12 +13,16 @@ let categoryList = JSON.parse(categoryJSON);
 const controller = {
     
     mostrarLogin : (req, res) => {res.render("users/login", {categoryList})},
+
     mostrarRegistro : (req, res) => {res.render("users/register")},
 
 // Root -- show all users 
 index: (req, res) => {
     return res.render("users", {users}); 
 },
+
+    mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
+
 
     mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
     mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
