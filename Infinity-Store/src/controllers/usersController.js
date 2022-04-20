@@ -15,6 +15,7 @@ const controller = {
     mostrarLogin : (req, res) => {res.render("users/login", {categoryList})},
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     mostrarRegistro : (req, res) => {res.render("users/register")},
 
 // Root -- show all users 
@@ -32,6 +33,8 @@ index: (req, res) => {
     mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
     mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
     mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
+=======
+>>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
     mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
 
 // Detail - Detail from one user 
@@ -44,9 +47,13 @@ detail : (req,res) => {
 // para crear nuevo usuario
 store:(req,res)=>{
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     return res.redirect("/users");    
 
+=======
+ 
+>>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
 =======
  
 >>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
