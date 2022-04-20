@@ -67,6 +67,7 @@ const controller = {
             }
         });
 
+        // res.send(productoElegido)
         res.render("products/productCreationEdition", {
             metodo: "PUT",
             ruta: req.params.id + "?_method=PUT",
@@ -81,22 +82,24 @@ const controller = {
 
         productos = productos.map(producto => {
             if (producto.id == req.params.id) {
-              producto = { id: req.params.id, 
-                name: req.body.name,
-                idCategory: req.body.category,
-                description: req.body.description,
-                data_sheet: [],
-                image: "",
-                color: [],
-                price: req.body.price,
-                offSale: offSaleOn,
-                discount: offSaleOn === true ? req.body.discount : 0,
-                stock: req.body.stock }
+                producto = {
+                    id: Number(req.params.id),
+                    name: req.body.name,
+                    idCategory: Number(req.body.category),
+                    description: req.body.description,
+                    data_sheet: [],
+                    image: "",
+                    color: [],
+                    price: Number(req.body.price),
+                    offSale: offSaleOn,
+                    discount: offSaleOn === true ? Number(req.body.discount) : 0,
+                    stock: Number(req.body.stock)
+                }
             }
             return producto
         });
 
-        
+
         fs.writeFileSync(productosfilePath, JSON.stringify(productos));
 
         res.redirect('/');
