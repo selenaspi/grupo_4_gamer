@@ -13,32 +13,18 @@ let categoryList = JSON.parse(categoryJSON);
 const controller = {
     
     mostrarLogin : (req, res) => {res.render("users/login", {categoryList})},
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
     mostrarRegistro : (req, res) => {res.render("users/register")},
 
 // Root -- show all users 
 index: (req, res) => {
     return res.render("users", {users}); 
 },
-=======
 
     mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
->>>>>>> 38dc2fc51318a14dd8c5fb547c9e6243c7929712
-
-
     mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
-
-
     mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
-
-=======
-
     mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
->>>>>>> 1daf3f10fb1d6cff96bc6e6d0fd310382392d987
+    mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
 
 // Detail - Detail from one user 
 detail : (req,res) => {
@@ -49,18 +35,9 @@ detail : (req,res) => {
 
 // para crear nuevo usuario
 store:(req,res)=>{
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
     return res.redirect("/users");    
 
-
-=======
->>>>>>> 38dc2fc51318a14dd8c5fb547c9e6243c7929712
-=======
->>>>>>> 1daf3f10fb1d6cff96bc6e6d0fd310382392d987
- 
      const usuarionuevo = {
         id: users[ users.length -1].id + 1,
          name: req.body.name,

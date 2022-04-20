@@ -94,7 +94,13 @@ main section article img {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #favOff1, #favOff2, #favOff3, #favOff4, #favOn1, #favOn2 ,#favOn3, #favOn4, #favOffR1, #favOffR2, #favOffR3, #favOffR4, #favOnR1, #favOnR2 ,#favOnR3, #favOnR4 {
+=======
+
+
+.favOff, #favOff1, #favOff2, #favOff3, #favOff4, #favOn1, #favOn2 ,#favOn3, #favOn4, #favOffR1, #favOffR2, #favOffR3, #favOffR4, #favOnR1, #favOnR2 ,#favOnR3, #favOnR4 {
+>>>>>>> 1daf3f10fb1d6cff96bc6e6d0fd310382392d987
 =======
 
 
@@ -114,7 +120,11 @@ main section article img {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #favOff1, #favOff2, #favOff3, #favOff4, #favOffR1, #favOffR2, #favOffR3, #favOffR4 {
+=======
+.favOff, #favOff1, #favOff2, #favOff3, #favOff4, #favOffR1, #favOffR2, #favOffR3, #favOffR4 {
+>>>>>>> 1daf3f10fb1d6cff96bc6e6d0fd310382392d987
 =======
 .favOff, #favOff1, #favOff2, #favOff3, #favOff4, #favOffR1, #favOffR2, #favOffR3, #favOffR4 {
 >>>>>>> 1daf3f10fb1d6cff96bc6e6d0fd310382392d987
@@ -122,6 +132,7 @@ main section article img {
   z-index: 10;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 #favOn1, #favOn2 ,#favOn3, #favOn4, #favOnR1, #favOnR2 ,#favOnR3, #favOnR4 {
   opacity: 0;
@@ -133,6 +144,8 @@ main section article img {
 
 #favOn1.con-fav .material-icons, #favOn2.con-fav .material-icons, #favOn3.con-fav .material-icons, #favOn4.con-fav .material-icons, #favOnR1.con-fav .material-icons, #favOnR2.con-fav .material-icons, #favOnR3.con-fav .material-icons, #favOnR4.con-fav .material-icons {
 =======
+=======
+>>>>>>> 1daf3f10fb1d6cff96bc6e6d0fd310382392d987
 .favOn, #favOn1, #favOn2 ,#favOn3, #favOn4, #favOnR1, #favOnR2 ,#favOnR3, #favOnR4 {
   opacity: 0;
 }
@@ -142,6 +155,9 @@ main section article img {
 }
 
 .favOn .material-icons, #favOn1.con-fav .material-icons, #favOn2.con-fav .material-icons, #favOn3.con-fav .material-icons, #favOn4.con-fav .material-icons, #favOnR1.con-fav .material-icons, #favOnR2.con-fav .material-icons, #favOnR3.con-fav .material-icons, #favOnR4.con-fav .material-icons {
+<<<<<<< HEAD
+>>>>>>> 1daf3f10fb1d6cff96bc6e6d0fd310382392d987
+=======
 >>>>>>> 1daf3f10fb1d6cff96bc6e6d0fd310382392d987
   font-size: 42px;
   color: rgb(60, 60, 60);
