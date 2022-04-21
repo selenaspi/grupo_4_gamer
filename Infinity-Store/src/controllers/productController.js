@@ -7,17 +7,18 @@ let productsList = JSON.parse(productsJSON);
 let categoryJSON = JSON.stringify(category);
 let categoryList = JSON.parse(categoryJSON);
 
-
 const productosfilePath = path.join(__dirname, '../database/products.json');
 let productos = JSON.parse(fs.readFileSync(productosfilePath, 'utf-8'));
+
+let productosActivos = productos.filter(producto => producto.alta);
 
 const controller = {
 
     mostrarDetalleProducto: (req, res) => {
         let idProducto = Number(req.params.id);
-        let listaProductos = [productsList[idProducto], productsList[idProducto + 1], productsList[idProducto + 2], productsList[idProducto + 3]];
+        let listaProductos = [productosActivos[idProducto], productosActivos[idProducto + 1], productosActivos[idProducto + 2], productosActivos[idProducto + 3]];
 
-        res.render("products/productDetails", { similares: listaProductos, detalle: productsList[idProducto - 1], categoryList })
+        res.render("products/productDetails", { similares: listaProductos, detalle: productosActivos[idProducto - 1], categoryList })
     },
 
     formCreation: (req, res) => {
@@ -106,7 +107,7 @@ const controller = {
     },
     allProducts: (req, res) => {
 
-        res.render("products/allProducts", { similares: productsList, categoryList })
+        res.render("products/allProducts", { similares: productosActivos, categoryList })
     },
     productDelete: (req, res) => {
         const id = req.params.id;
