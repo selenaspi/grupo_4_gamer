@@ -16,18 +16,6 @@ const controller = {
 
     mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
 
-    mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
-
-
-    mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
-
-
-    mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
-    mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
-    mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
-    mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
-    mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
-
 // Detail - Detail from one user 
 detail : (req,res) => {
     const id = req.params.id;

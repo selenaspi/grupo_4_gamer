@@ -102,6 +102,7 @@ main section article img {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #favOff1, #favOff2, #favOff3, #favOff4, #favOn1, #favOn2 ,#favOn3, #favOn4, #favOffR1, #favOffR2, #favOffR3, #favOffR4, #favOnR1, #favOnR2 ,#favOnR3, #favOnR4 {
 =======
 
@@ -148,6 +149,11 @@ main section article img {
 
 .favOff, #favOff1, #favOff2, #favOff3, #favOff4, #favOn1, #favOn2 ,#favOn3, #favOn4, #favOffR1, #favOffR2, #favOffR3, #favOffR4, #favOnR1, #favOnR2 ,#favOnR3, #favOnR4 {
 >>>>>>> dc607f64bb51b7f4068d36172a04ac992235b513
+=======
+
+
+.favOff, #favOff1, #favOff2, #favOff3, #favOff4, #favOn1, #favOn2 ,#favOn3, #favOn4, #favOffR1, #favOffR2, #favOffR3, #favOffR4, #favOnR1, #favOnR2 ,#favOnR3, #favOnR4 {
+>>>>>>> dc607f64bb51b7f4068d36172a04ac992235b513
   position: absolute;
   top: 4.2vh;
   right: 2.5vh;
@@ -161,6 +167,7 @@ main section article img {
   font-weight: 400;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -198,10 +205,14 @@ main section article img {
 =======
 .favOff, #favOff1, #favOff2, #favOff3, #favOff4, #favOffR1, #favOffR2, #favOffR3, #favOffR4 {
 >>>>>>> dc607f64bb51b7f4068d36172a04ac992235b513
+=======
+.favOff, #favOff1, #favOff2, #favOff3, #favOff4, #favOffR1, #favOffR2, #favOffR3, #favOffR4 {
+>>>>>>> dc607f64bb51b7f4068d36172a04ac992235b513
   cursor: pointer;
   z-index: 10;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -237,6 +248,8 @@ main section article img {
 >>>>>>> dc607f64bb51b7f4068d36172a04ac992235b513
 =======
 >>>>>>> dc607f64bb51b7f4068d36172a04ac992235b513
+=======
+>>>>>>> dc607f64bb51b7f4068d36172a04ac992235b513
 .favOn, #favOn1, #favOn2 ,#favOn3, #favOn4, #favOnR1, #favOnR2 ,#favOnR3, #favOnR4 {
   opacity: 0;
 }
@@ -254,6 +267,7 @@ main section article img {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1daf3f10fb1d6cff96bc6e6d0fd310382392d987
 =======
 >>>>>>> 1daf3f10fb1d6cff96bc6e6d0fd310382392d987
@@ -265,6 +279,8 @@ main section article img {
 >>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
 =======
 >>>>>>> eff128a5a4bc3aa109afbd68ef09a937e6ff875d
+=======
+>>>>>>> dc607f64bb51b7f4068d36172a04ac992235b513
 =======
 >>>>>>> dc607f64bb51b7f4068d36172a04ac992235b513
 =======
