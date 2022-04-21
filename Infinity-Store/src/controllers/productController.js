@@ -117,7 +117,7 @@ const controller = {
             if (producto.id == req.params.id) {
                 producto = {
                     id: Number(req.params.id),
-                    alta:false,
+                    alta: false,
                     name: producto.name,
                     idCategory: producto.idCategory,
                     description: producto.description,
@@ -134,10 +134,11 @@ const controller = {
             return producto;
         });
         fs.writeFileSync(productosfilePath, JSON.stringify(productos));
-        res.redirect('/')}
-    
-    
+        res.redirect('/')
     }
+
+
+}
 
 
 
