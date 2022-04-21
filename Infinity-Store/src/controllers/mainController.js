@@ -9,6 +9,8 @@ let opinionList = JSON.parse(opinionsJSON);
 let categoryJSON = JSON.stringify(category);
 let categoryList = JSON.parse(categoryJSON);
 
+let productosActivos = productsList.filter(producto => producto.alta);
+
 const controller = {
 
    index: (req, res) => {
@@ -23,7 +25,7 @@ const controller = {
          randomCategorias.push(categorias[aleatorioCategory]);
       } 
 
-      let productsOffSale = productsList.filter(product => { return product.offSale });
+      let productsOffSale = productosActivos.filter(product => { return product.offSale });
       let indexAleatorioOffSale, indexAleatorioRecomendados;
       let productosOfertas = [], popularProducts = [], opinionXProducto = [], productsRecomendados = [];
 
@@ -38,7 +40,7 @@ const controller = {
 
       let acumulador = 0;
 
-      for (i = 0; i < productsList.length; i++) {
+      for (i = 0; i < productosActivos.length; i++) {
          opinionList.forEach(opinion => {
             if(opinion.idProduct === i) {
                opinionXProducto.push(opinion);
@@ -48,9 +50,9 @@ const controller = {
             acumulador += opinion.rating;
          });
          if (acumulador / opinionXProducto.length >= 4) {
-            for(j = 0; j < productsList.length; j++) {
-               if(productsList[j].id === i) {
-                  popularProducts.push(productsList[j]);
+            for(j = 0; j < productosActivos.length; j++) {
+               if(productosActivos[j].id === i) {
+                  popularProducts.push(productosActivos[j]);
                }
             }
          }
