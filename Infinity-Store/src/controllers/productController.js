@@ -7,30 +7,18 @@ let productsList = JSON.parse(productsJSON);
 let categoryJSON = JSON.stringify(category);
 let categoryList = JSON.parse(categoryJSON);
 
-<<<<<<< HEAD
-
-const productosfilePath = path.join(__dirname, '../database/products.json');
-let productos = JSON.parse(fs.readFileSync(productosfilePath, 'utf-8'));
-=======
 const productosfilePath = path.join(__dirname, '../database/products.json');
 let productos = JSON.parse(fs.readFileSync(productosfilePath, 'utf-8'));
 
 let productosActivos = productos.filter(producto => producto.alta);
->>>>>>> dc607f64bb51b7f4068d36172a04ac992235b513
 
 const controller = {
 
     mostrarDetalleProducto: (req, res) => {
         let idProducto = Number(req.params.id);
-<<<<<<< HEAD
-        let listaProductos = [productsList[idProducto], productsList[idProducto + 1], productsList[idProducto + 2], productsList[idProducto + 3]];
-
-        res.render("products/productDetails", { similares: listaProductos, detalle: productsList[idProducto - 1], categoryList })
-=======
         let listaProductos = [productosActivos[idProducto], productosActivos[idProducto + 1], productosActivos[idProducto + 2], productosActivos[idProducto + 3]];
 
         res.render("products/productDetails", { similares: listaProductos, detalle: productosActivos[idProducto - 1], categoryList })
->>>>>>> dc607f64bb51b7f4068d36172a04ac992235b513
     },
 
     formCreation: (req, res) => {
@@ -52,10 +40,7 @@ const controller = {
 
         let newProduct = {
             id: maxId + 1,
-<<<<<<< HEAD
-=======
             alta: true,
->>>>>>> dc607f64bb51b7f4068d36172a04ac992235b513
             name: req.body.name,
             idCategory: req.body.category,
             description: req.body.description,
@@ -101,10 +86,7 @@ const controller = {
             if (producto.id == req.params.id) {
                 producto = {
                     id: Number(req.params.id),
-<<<<<<< HEAD
-=======
                     alta: true,
->>>>>>> dc607f64bb51b7f4068d36172a04ac992235b513
                     name: req.body.name,
                     idCategory: Number(req.body.category),
                     description: req.body.description,
@@ -127,19 +109,6 @@ const controller = {
     },
     allProducts: (req, res) => {
 
-<<<<<<< HEAD
-        res.render("products/allProducts", { similares: productsList, categoryList })
-    },
-    productDelete: (req, res) => {
-        const id = req.params.id;
-        productsList = products.filter(productos => productos.id != id);
-        fs.writeFileSync(productosfilePath, JSON.stringify(productsList));
-        console.log(id)
-        res.redirect('/')}
-
-    }
-
-=======
         res.render("products/allProducts", { similares: productosActivos, categoryList })
     },
     productDelete: (req, res) => {
@@ -170,7 +139,6 @@ const controller = {
 
 
 }
->>>>>>> dc607f64bb51b7f4068d36172a04ac992235b513
 
 
 

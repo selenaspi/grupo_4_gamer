@@ -14,16 +14,13 @@ const controller = {
     
     mostrarLogin : (req, res) => {res.render("users/login", {categoryList})},
 
-<<<<<<< HEAD
+
     mostrarRegistro : (req, res) => {res.render("users/register")},
 
 // Root -- show all users 
 index: (req, res) => {
     return res.render("users", {users}); 
 },
-=======
-    mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
->>>>>>> dc607f64bb51b7f4068d36172a04ac992235b513
 
     mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
 
@@ -35,7 +32,6 @@ index: (req, res) => {
     mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
     mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
     mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
-
     mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
 
 // Detail - Detail from one user 
@@ -47,14 +43,8 @@ detail : (req,res) => {
 
 // para crear nuevo usuario
 store:(req,res)=>{
-<<<<<<< HEAD
-
 
     return res.redirect("/users");    
-
-=======
- 
->>>>>>> dc607f64bb51b7f4068d36172a04ac992235b513
      const usuarionuevo = {
         id: users[ users.length -1].id + 1,
          name: req.body.name,
