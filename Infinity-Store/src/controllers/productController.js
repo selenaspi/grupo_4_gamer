@@ -114,8 +114,7 @@ const controller = {
         fs.writeFileSync(productosfilePath, JSON.stringify(productsList));
         console.log(id)
         res.redirect('/')}
-    
-    
+
     }
 
 
