@@ -40,6 +40,7 @@ const controller = {
 
         let newProduct = {
             id: maxId + 1,
+            alta: true,
             name: req.body.name,
             idCategory: req.body.category,
             description: req.body.description,
@@ -85,6 +86,7 @@ const controller = {
             if (producto.id == req.params.id) {
                 producto = {
                     id: Number(req.params.id),
+                    alta: true,
                     name: req.body.name,
                     idCategory: Number(req.body.category),
                     description: req.body.description,

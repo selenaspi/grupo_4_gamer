@@ -137,81 +137,16 @@
     },
     {
         "id": 3,
-        "alta": true,
+        "alta": false,
         "name": "DISCO SSD 2TB ADATA XPG SPECTRIX S40G RGB NVME",
         "idCategory": 2,
         "description": "Con la unidad en estado sólido XPG vas a incrementar la capacidad de respuesta de tu equipo. Gracias a esta tecnología podrás invertir en velocidad y eficiencia para el inicio, la carga y la transferencia de datos. Este disco transfiere datos a través de sus interfaces PCIe 3.0 y NVMe 1.3, lo que te permite transmitir una mayor cantidad de información de una sola vez.",
-        "data_sheet": [
-            {
-                "name": "Marca",
-                "value": "XPG"
-            },
-            {
-                "name": "Línea",
-                "value": "Spectrix S40G"
-            },
-            {
-                "name": "Modelo",
-                "value": "AS40G-256GT-C"
-            },
-            {
-                "name": "Ancho",
-                "value": "22 mm"
-            },
-            {
-                "name": "Altura",
-                "value": "8 mm"
-            },
-            {
-                "name": "Profundidad",
-                "value": "80 mm"
-            },
-            {
-                "name": "Peso",
-                "value": "13.4 g"
-            },
-            {
-                "name": "Capacidad",
-                "value": "256 GB"
-            },
-            {
-                "name": "Tecnología de almacenamiento",
-                "value": "SSD"
-            },
-            {
-                "name": "Interfaces",
-                "value": "PCIe 3.0, NVMe 1.3"
-            },
-            {
-                "name": "Aplicaciones",
-                "value": "PC"
-            },
-            {
-                "name": "Ubicación del disco",
-                "value": "Interno"
-            },
-            {
-                "name": "Factor de forma",
-                "value": "M.2 2280"
-            },
-            {
-                "name": "Con tecnología 3D NAND",
-                "value": "Sí"
-            },
-            {
-                "name": "Con disipador de calor",
-                "value": "Sí"
-            },
-            {
-                "name": "Consumo energético",
-                "value": "0.33 W"
-            }
-        ],
-        "image": "DISCO-SSD-2TB-ADATA-XPG-SPECTRIX-S40G-RGB-NVME.jpg",
+        "data_sheet": [],
+        "image": "",
         "color": [],
         "price": 42109,
         "offSale": true,
-        "discount": 15,
+        "discount": 10,
         "stock": 5
     },
     {
