@@ -113,9 +113,27 @@ const controller = {
     },
     productDelete: (req, res) => {
         const id = req.params.id;
-        productsList = products.filter(productos => productos.id != id);
-        fs.writeFileSync(productosfilePath, JSON.stringify(productsList));
-        console.log(id)
+        productos = productos.map(producto => {
+            if (producto.id == req.params.id) {
+                producto = {
+                    id: Number(req.params.id),
+                    alta:false,
+                    name: producto.name,
+                    idCategory: producto.idCategory,
+                    description: producto.description,
+                    data_sheet: [],
+                    image: "",
+                    color: [],
+                    price: producto.price,
+                    offSale: producto.offSale,
+                    discount: producto.discount,
+                    stock: producto.stock
+                }
+            }
+            console.log(producto);
+            return producto;
+        });
+        fs.writeFileSync(productosfilePath, JSON.stringify(productos));
         res.redirect('/')}
     
     
