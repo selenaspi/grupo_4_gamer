@@ -9,53 +9,94 @@ const category = require("../database/category.json")
 let categoryJSON = JSON.stringify(category);
 let categoryList = JSON.parse(categoryJSON);
 
+let usersActivos = users.filter(usuario => usuario.alta);
+
 const controller = {
-    
-    mostrarLogin : (req, res) => {res.render("users/login", {categoryList})},
+    mostrarProfileUser: (req, res) => { res.render("users/profileUser", { categoryList }) },
 
-    mostrarRegistro : (req, res) => {res.render("users/register", {categoryList})},
+    mostrarInfoUser: (req, res) => { res.render("users/infoUser", { categoryList }) },
 
-// Detail - Detail from one user 
+    mostrarLogin: (req, res) => { res.render("users/login", { categoryList }) },
 
-detail : (req,res) => {
-    const id = req.params.id;
-    const user = users.find(user => user.id == id);
-    return res.render("detail", {user});
-},
+    mostrarRegistro: (req, res) => { res.render("users/register", { categoryList }) },
 
-// para crear nuevo usuario
-store:(req,res)=>{
- 
-     const usuarionuevo = {
-        id: users[ users.length -1].id + 1,
-         name: req.body.name,
-         lastName: req.body.lastName,
-         email: req.body.email,
-         password: req.body.password,
-         role:"user",
-         phone:req.body.phoneArea.toString()+req.body.phone.toString(),
-         image:req.file.filename
-    
-     }
-     users.push(usuarionuevo);
-    fs.writeFileSync(usersFilePath,JSON.stringify(users))
-    res.redirect("/");
-},
+    // Detail - Detail from one user 
+    detail: (req, res) => {
+        const id = req.params.id;
+        const user = users.find(user => user.id == id);
+        return res.render("detail", { user });
+    },
 
-edit: (req,res)=>{
-    const id = req.params.id;
-    const user = user.find(user => user.id == id);
-	return res.render("login ", {user});
-},
-// Update - Method to update
-update: (req, res) => {
-    return res.send("Usuario editado");
-},
+    // para crear nuevo usuario
+    store: (req, res) => {
+        const usuarionuevo = {
+            id: users[users.length - 1].id + 1,
+            name: req.body.name,
+            lastName: req.body.lastName,
+            email: req.body.email,
+            password: req.body.password,
+            role: "user",
+            phone: req.body.phoneArea.toString() + req.body.phone.toString(),
+            image: req.file.filename
+        }
+        users.push(usuarionuevo);
+        fs.writeFileSync(usersFilePath, JSON.stringify(users))
+        res.redirect("/");
+    },
+    edit: (req, res) => {
+        const id = req.params.id;
+        const user = user.find(user => user.id == id);
+        return res.render("login ", { user }),
 
-// Delete - Delete one product from DB
-destroy : (req, res) => {
-    return res.send("Usuario eliminado");
-}
+            users = users.map(user => {
+
+                if (user.id == req.params.id) {
+                    user = {
+                        id: users[users.length - 1].id + 1,
+                        name: req.body.name,
+                        lastName: req.body.lastName,
+                        email: req.body.email,
+                        password: req.body.password,
+                        role: "user",
+                        phone: req.body.phoneArea.toString() + req.body.phone.toString(),
+                        image: req.file.filename
+                    }
+                }
+                return user;
+            }),
+
+            fs.writeFileSync(usersfilePath, JSON.stringify(users)),
+
+            res.redirect('/');
+
+    },
+    allUsers: (req, res) => {
+
+        res.render("users/profileUser", { similares: usersActivos, categoryList });
+    },
+    userDelete: (req, res) => {
+        const id = req.params.id;
+        users = users.map(user => {
+            if (user.id == req, params.id) {
+                user = {
+                    id: users[users.length - 1].id + 1,
+                    name: req.body.name,
+                    lastName: req.body.lastName,
+                    email: req.body.email,
+                    password: req.body.password,
+                    role: "user",
+                    phone: req.body.phoneArea.toString() + req.body.phone.toString(),
+                    image: req.file.filename
+                }
+            }
+            console.log(user);
+            return user;
+
+        }),
+            fs.writeFileSync(usersfilePath, JSON.stringify(users));
+        res.redirect('/')
+    }
 };
+
 
 module.exports = controller;

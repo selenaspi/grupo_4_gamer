@@ -29,15 +29,15 @@ router.get("/register", usersController.mostrarRegistro);
 router.get("/id:/", usersController.detail);
 
 /*** EDIT ONE USER ***/ 
-router.get('/edit/:id', usersController.edit); 
-router.put('/:id', usersController.update); 
-
+router.get('/edit/:id', usersController.mostrarInfoUser); 
+router.put('/:id',usersController.edit); 
 
 /*** DELETE ONE USER***/ 
-router.delete('/:id', usersController.destroy);
-
+router.get("/:id/delete", (req,res) => res.render("users/usersDelete", {id:req.params.id}))
+router.delete("/:id/delete", usersController.userDelete);
 
 router.get("/login", usersController.mostrarLogin);
 
+router.get("/profileUser",usersController.mostrarProfileUser);
 
 module.exports = router;
