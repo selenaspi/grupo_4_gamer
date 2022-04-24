@@ -61,5 +61,15 @@
         "role": "user",
         "phone": "034334215",
         "image": "image-1650032852895-26653613.jpg"
+    },
+    {
+        "id": 9,
+        "name": "carla",
+        "lastName": "tomasi",
+        "email": "carla_t@gmail.com",
+        "password": "$2a$10$aUoFshiF80CCDZzaJsV4jeBL2OJ3bgshX87Bun.wyZaBTOqtQ80dy",
+        "role": "user",
+        "phone": "0636156166",
+        "image": "image-1650841972789-48743459.png"
     }
 ]

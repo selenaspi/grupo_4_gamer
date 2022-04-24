@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const usersFilePath = path.join(__dirname, '../database/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
+const bcryptjs = require('bcryptjs');
 const category = require("../database/category.json")
 
 
@@ -34,7 +34,7 @@ const controller = {
             name: req.body.name,
             lastName: req.body.lastName,
             email: req.body.email,
-            password: req.body.password,
+            password: bcryptjs.hashSync (req.body.password,10),
             role: "user",
             phone: req.body.phoneArea.toString() + req.body.phone.toString(),
             image: req.file.filename
