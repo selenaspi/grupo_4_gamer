@@ -1,24 +1,33 @@
+const usuarios = require("../database/users.json");
+const category = require("../database/category.json")
 const fs = require('fs');
 const path = require('path');
-const usersFilePath = path.join(__dirname, '../database/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
-const category = require("../database/category.json")
-
-
+let usuariosJSON = JSON.stringify(usuarios);
+let usuariosList = JSON.parse(usuariosJSON);
 let categoryJSON = JSON.stringify(category);
 let categoryList = JSON.parse(categoryJSON);
+
+const usersfilePath = path.join(__dirname, '../database/users.json');
+let users = JSON.parse(fs.readFileSync(usersfilePath, 'utf-8'));
 
 let usersActivos = users.filter(usuario => usuario.alta);
 
 const controller = {
-    mostrarProfileUser: (req, res) => { res.render("users/profileUser", { categoryList }) },
 
-    mostrarInfoUser: (req, res) => { res.render("users/infoUser", { categoryList }) },
+    mostrarProfileUser: (req, res) => { 
+        
+            let idUsuario = Number(req.params.id);
+            let listaUsers = [usersActivos[idUsuario], usersActivos[idUsuario + 1], usersActivos[idUsuario + 2], usersActivos[idUsuario + 3]];
+    
+            res.render("users/profileUser", { userSimil: listaUsers, detalleUs: usersActivos[idUsuario - 1], categoryList })
+        },
 
-    mostrarLogin: (req, res) => { res.render("users/login", { categoryList }) },
+    mostrarInfoUser: (req, res) => { res.render("users/infoUser") },
 
-    mostrarRegistro: (req, res) => { res.render("users/register", { categoryList }) },
+    mostrarLogin: (req, res) => { res.render("users/login") },
+
+    mostrarRegistro: (req, res) => { res.render("users/register") },
 
     // Detail - Detail from one user 
     detail: (req, res) => {
@@ -40,7 +49,7 @@ const controller = {
             image: req.file.filename
         }
         users.push(usuarionuevo);
-        fs.writeFileSync(usersFilePath, JSON.stringify(users))
+        fs.writefileSync(usersFilePath, JSON.stringify(users))
         res.redirect("/");
     },
     edit: (req, res) => {
@@ -72,7 +81,7 @@ const controller = {
     },
     allUsers: (req, res) => {
 
-        res.render("users/profileUser", { similares: usersActivos, categoryList });
+        res.render("users/profileUser", { userSimil: usersActivos, categoryList});
     },
     userDelete: (req, res) => {
         const id = req.params.id;
@@ -93,7 +102,7 @@ const controller = {
             return user;
 
         }),
-            fs.writeFileSync(usersfilePath, JSON.stringify(users));
+            fs.writeFileSync(usersFilePath, JSON.stringify(users));
         res.redirect('/')
     }
 };

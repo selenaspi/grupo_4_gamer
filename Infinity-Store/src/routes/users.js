@@ -38,6 +38,7 @@ router.delete("/:id/delete", usersController.userDelete);
 
 router.get("/login", usersController.mostrarLogin);
 
+
 router.get("/profileUser",usersController.mostrarProfileUser);
 
 module.exports = router;

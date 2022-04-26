@@ -3,10 +3,13 @@
 <head>
     <%- include('../partials/head') %>
     <link rel="stylesheet" href="/css/profileUser.css">
+    <title>Mi perfil</title>
 </head>
 <body>
     <%- include('../partials/header') %>
+    <main>
     <section class="perfil-usuario">
+        <!-- <% for(let i = 0; i < userSimil.length; i++) { %> -->
             <div class="contenedor-perfil">
                 <div class="portada-perfil" style="background-image: url('http://localhost/multimedia/relleno/fondo-9.png');">
                     <div class="sombra"></div>
@@ -18,8 +21,8 @@
                         </a>
                     </div>
                     <div class="datos-perfil">
-                        <h4 class="titulo-usuario">Nombre de usuario</h4>
-                        <p class="bio-usuario">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        <h4 class="titulo-usuario">Nombre</h4>
+                        <p class="bio-usuario"> Descripcion </p>
                     </div>
                     <div class="opcciones-perfil">
                         <button type="">Cambiar portada</button>
@@ -35,7 +38,9 @@
                     </ul>
                 </div>
             </div>
+            <!-- <% } %>  -->
     </section>
+</main>
     <%- include('../partials/footer') %>
 </body>
 </html>
