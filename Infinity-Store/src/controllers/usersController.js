@@ -2,6 +2,14 @@ const usuarios = require("../database/users.json");
 const category = require("../database/category.json")
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
+=======
+const usersFilePath = path.join(__dirname, '../database/users.json');
+const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const bcryptjs = require('bcryptjs');
+const category = require("../database/category.json")
+
+>>>>>>> 51e4a21b5f8172d40c8c37a7cc79615bfc38fed2
 
 let usuariosJSON = JSON.stringify(usuarios);
 let usuariosList = JSON.parse(usuariosJSON);
@@ -43,7 +51,7 @@ const controller = {
             name: req.body.name,
             lastName: req.body.lastName,
             email: req.body.email,
-            password: req.body.password,
+            password: bcryptjs.hashSync (req.body.password,10),
             role: "user",
             phone: req.body.phoneArea.toString() + req.body.phone.toString(),
             image: req.file.filename
