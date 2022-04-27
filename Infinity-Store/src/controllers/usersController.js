@@ -2,22 +2,18 @@ const usuarios = require("../database/users.json");
 const category = require("../database/category.json")
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-=======
 const usersFilePath = path.join(__dirname, '../database/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const bcryptjs = require('bcryptjs');
-const category = require("../database/category.json")
-
->>>>>>> 51e4a21b5f8172d40c8c37a7cc79615bfc38fed2
+const usersfilePath = path.join(__dirname, '../database/users.json');
 
 let usuariosJSON = JSON.stringify(usuarios);
-let usuariosList = JSON.parse(usuariosJSON);
+let usuariosList = JSON.parse(usuariosJSON); 
 let categoryJSON = JSON.stringify(category);
-let categoryList = JSON.parse(categoryJSON);
+let categoryList = JSON.parse(categoryJSON); 
 
-const usersfilePath = path.join(__dirname, '../database/users.json');
-let users = JSON.parse(fs.readFileSync(usersfilePath, 'utf-8'));
+
+
 
 let usersActivos = users.filter(usuario => usuario.alta);
 
@@ -28,7 +24,7 @@ const controller = {
             let idUsuario = Number(req.params.id);
             let listaUsers = [usersActivos[idUsuario], usersActivos[idUsuario + 1], usersActivos[idUsuario + 2], usersActivos[idUsuario + 3]];
     
-            res.render("users/profileUser", { userSimil: listaUsers, detalleUs: usersActivos[idUsuario - 1], categoryList })
+            res.render("users/profileUser", { userSimil: listaUsers, detalleUs: usersActivos[idUsuario - 1], categoryList, usuariosList })
         },
 
     mostrarInfoUser: (req, res) => { res.render("users/infoUser") },

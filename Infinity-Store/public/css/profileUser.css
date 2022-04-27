@@ -1,43 +1,23 @@
-html {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-    line-height: 1.4;
-}
-
 
 * {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
 }
 
 body {
-    color: #404040;
-    font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
+  
     width: 100vw;
 }
 
-
 .perfil-usuario {
     background: linear-gradient(blue, rgb(236, 5, 140));
-    color: #333;
 }
 .perfil-usuario .sombra {
     position: absolute;
     display: block;
-    background: linear-gradient(transparent,rgba(0, 0, 0, .5));
     width: 100%;
-    height: 50%;
-    bottom: 0;
-    left: 0;
 }
-.perfil-usuario .portada-perfil,
-.perfil-usuario .sombra {
-    border-radius: 0 0 20px 20px;
-}
+
 .perfil-usuario img {
     width: 100%;
 }
@@ -50,7 +30,7 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 100%;
 }
 .perfil-usuario .portada-perfil {
     display: block;
@@ -58,8 +38,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    height: 20rem;
-    margin-bottom: .5rem;
 }
 .perfil-usuario .avatar-perfil {
     display: block;
@@ -67,7 +45,7 @@ body {
     height: 230px;
     background-color: #D9DCF1;
     position: absolute;
-    bottom: -65px;
+    bottom: -60px;
     left: 4rem;
     border-radius: 50%;
     overflow: hidden;
@@ -132,13 +110,11 @@ body {
 
 .perfil-usuario .opcciones-perfil {
     display: block;
-    position: absolute;
-    right: 2rem;
-    top: 1rem;
+    position: absolute;    
 }
 .perfil-usuario .opcciones-perfil button {
     border: 0;
-    padding: 8px 20px;
+    padding: 8px;
     border-radius: 8px;
     background-color: rgba(0, 0, 0, .5);
     color: #fff;
@@ -146,9 +122,6 @@ body {
 }
 .perfil-usuario .menu-perfil ul {
     display: flex;
-    list-style: none;
-    margin-left: calc(200px + 8rem);
-    width: calc(100% - 200px - 8rem);
 }
 .perfil-usuario .menu-perfil ul li {
     margin-right: 1rem;
@@ -170,7 +143,7 @@ body {
     display: none;
     margin-right: .75rem;
 }
-@media (min-width: 780px) {
+@media (min-width: 520px) {
     .perfil-usuario .contenedor-perfil {
         width: 100%;
     }
@@ -194,7 +167,7 @@ body {
         font-size: 2.1rem;
     }
     .perfil-usuario .portada-perfil {
-        height: 28rem;
+        height: 20rem;
     }
     .perfil-usuario .menu-perfil ul {
         flex-direction: column;
@@ -219,4 +192,8 @@ body {
     .perfil-usuario .icono-perfil {
         display: inline-block;
     }
+}
+
+footer{
+    top: 50vh;
 }
