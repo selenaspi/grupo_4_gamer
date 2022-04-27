@@ -4,11 +4,6 @@
     padding: 0;
 }
 
-body {
-  
-    width: 100vw;
-}
-
 .perfil-usuario {
     background: linear-gradient(blue, rgb(236, 5, 140));
 }
