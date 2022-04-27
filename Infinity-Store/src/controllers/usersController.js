@@ -12,9 +12,6 @@ let usuariosList = JSON.parse(usuariosJSON);
 let categoryJSON = JSON.stringify(category);
 let categoryList = JSON.parse(categoryJSON); 
 
-
-
-
 let usersActivos = users.filter(usuario => usuario.alta);
 
 const controller = {
@@ -27,11 +24,11 @@ const controller = {
             res.render("users/profileUser", { userSimil: listaUsers, detalleUs: usersActivos[idUsuario - 1], categoryList, usuariosList })
         },
 
-    mostrarInfoUser: (req, res) => { res.render("users/infoUser") },
+    mostrarInfoUser: (req, res) => { res.render("users/infoUser",{categoryList} ) },
 
-    mostrarLogin: (req, res) => { res.render("users/login") },
+    mostrarLogin: (req, res) => { res.render("users/login",{categoryList} )},
 
-    mostrarRegistro: (req, res) => { res.render("users/register") },
+    mostrarRegistro: (req, res) => { res.render("users/register",{categoryList} ) },
 
     // Detail - Detail from one user 
     detail: (req, res) => {
