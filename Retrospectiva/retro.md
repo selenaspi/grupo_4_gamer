@@ -41,3 +41,12 @@ disponibilidad de tiempo de cada integrante.
 5. Dejar de Hacer: No avisar cuando nos surje un problema extra, que nos impide dedicar horas de trabajo al sprint, porque en parte la buena comunicación lograda hace un tiempo es debido al planteo de estos problemas, propios de todo equipo.
 
                                                      Sprint 4
+1. Comenzar a hacer: plantear distintas alternativas de solución a cada uno de los puntos de los sprint
+
+2. Hacer mas:compartir pantalla y explicar el código a nuestros compañeros.
+
+3. Continuar haciendo: la comunicación sigue siendo fundamental para lograr los objetivos por lo que no debemos de descuidarla. 
+
+4. Hacer menos: dejar detalles para lo último.
+
+5. Dejar de Hacer: asistir a las reuniones grupales sin haber leído el sprint que se desarrollará.
