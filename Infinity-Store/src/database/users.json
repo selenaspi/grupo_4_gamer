@@ -7,7 +7,8 @@
         "password": "1231",
         "category": "mmmmm",
         "image": "ccccc",
-        "date of birth": "28/06/1992"
+        "date of birth": "28/06/1992",
+        "alta": true
     },
     {
         "id": 2,
@@ -17,13 +18,8 @@
         "password": "1345",
         "category": "zzzz",
         "image": "cvcv",
-        "date of birth": "28/09/1999"
-    },
-    {
-        "id": 3
-    },
-    {
-        "id": 4
+        "date of birth": "28/09/1999",
+        "alta": true
     },
     {
         "id": 5,
@@ -32,7 +28,8 @@
         "email": "ignaciocosta1234@gmail.com",
         "password": "4564",
         "role": "user",
-        "phone": "114564564"
+        "phone": "114564564",
+        "alta": true
     },
     {
         "id": 6,
@@ -41,7 +38,8 @@
         "email": "martina@gmail.com",
         "password": "125",
         "role": "user",
-        "phone": "03432222222"
+        "phone": "03432222222",
+        "alta": true
     },
     {
         "id": 7,
@@ -50,7 +48,8 @@
         "email": "luana@gmail.com",
         "password": "152",
         "role": "user",
-        "phone": "0343115151"
+        "phone": "0343115151",
+        "alta": true
     },
     {
         "id": 8,
@@ -60,7 +59,8 @@
         "password": "1515",
         "role": "user",
         "phone": "034334215",
-        "image": "image-1650032852895-26653613.jpg"
+        "image": "image-1650032852895-26653613.jpg",
+        "alta": true
     },
     {
         "id": 9,
@@ -70,6 +70,7 @@
         "password": "$2a$10$aUoFshiF80CCDZzaJsV4jeBL2OJ3bgshX87Bun.wyZaBTOqtQ80dy",
         "role": "user",
         "phone": "0636156166",
-        "image": "image-1650841972789-48743459.png"
+        "image": "image-1650841972789-48743459.png",
+        "alta": true
     }
 ]

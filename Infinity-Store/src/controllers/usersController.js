@@ -67,12 +67,13 @@ const controller = {
                     user = {
                         id: users[users.length - 1].id + 1,
                         name: req.body.name,
-                        lastName: req.body.lastName,
+                        lastName: req.body.firsName,
                         email: req.body.email,
                         password: req.body.password,
                         role: "user",
                         phone: req.body.phoneArea.toString() + req.body.phone.toString(),
-                        image: req.file.filename
+                        image: req.file.filename,
+                        alta: true
                     }
                 }
                 return user;
@@ -94,12 +95,13 @@ const controller = {
                 user = {
                     id: users[users.length - 1].id + 1,
                     name: req.body.name,
-                    lastName: req.body.lastName,
+                    lastName: req.body.firsName,
                     email: req.body.email,
                     password: req.body.password,
                     role: "user",
                     phone: req.body.phoneArea.toString() + req.body.phone.toString(),
-                    image: req.file.filename
+                    image: req.file.filename,
+                    alta: false
                 }
             }
             console.log(user);
