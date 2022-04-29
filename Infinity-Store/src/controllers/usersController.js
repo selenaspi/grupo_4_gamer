@@ -41,7 +41,7 @@ const controller = {
     store: (req, res) => {
         const usuarioNuevo = {
             id: users[users.length - 1].id + 1,
-            name: req.body.firsName,
+            name: req.body.firstName,
             lastName: req.body.lastName,
             email: req.body.email,
             password: bcryptjs.hashSync (req.body.password,10),
@@ -63,7 +63,7 @@ const controller = {
                 if (user.id == req.params.id) {
                     user = {
                         id: users[users.length - 1].id + 1,
-                        name: req.body.firsName,
+                        name: req.body.firstName,
                         lastName: req.body.LastName,
                         email: req.body.email,
                         password: req.body.password,
@@ -91,7 +91,7 @@ const controller = {
             if (user.id == req, params.id) {
                 user = {
                     id: users[users.length - 1].id + 1,
-                    name: req.body.firsName,
+                    name: req.body.firstName,
                     lastName: req.body.LastName,
                     email: req.body.email,
                     password: req.body.password,
