@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+ <meta charset="UTF-8">
     <%- include('../partials/head') %>
     <link rel="stylesheet" href="/css/profileUser.css">
     <title>Mi perfil</title>
 </head>
 <body>
     <%- include('../partials/header') %> 
+    <main>
     <section class="perfil-usuario">
             <div class="contenedor-perfil">
                 <div class="portada-perfil">
-
                     <div class="avatar-perfil">
                         <img src="" alt="img">
                         <a href="#" class="cambiar-foto">
@@ -19,8 +20,8 @@
                         </a>
                     </div>
                     <div class="datos-perfil">
-                        <h4 class="titulo-usuario">Nombre</h4>
-                        <p class="bio-usuario"> Descripcion </p>
+                        <h4 class="titulo-usuario">Nombre</h4> 
+                        <p class="bio-usuario">Descripcion</p>
                     </div>
                     <div class="opcciones-perfil">
                         <button type="">Cambiar portada</button>
@@ -36,7 +37,9 @@
                     </ul>
                 </div>
             </div>
+            
     </section>
+</main>
     <%- include('../partials/footer') %>
 </body>
 </html>

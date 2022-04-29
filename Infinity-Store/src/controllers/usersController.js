@@ -39,9 +39,9 @@ const controller = {
 
     // para crear nuevo usuario
     store: (req, res) => {
-        const usuarionuevo = {
+        const usuarioNuevo = {
             id: users[users.length - 1].id + 1,
-            name: req.body.name,
+            name: req.body.firsName,
             lastName: req.body.lastName,
             email: req.body.email,
             password: bcryptjs.hashSync (req.body.password,10),
@@ -49,22 +49,22 @@ const controller = {
             phone: req.body.phoneArea.toString() + req.body.phone.toString(),
             image: req.file.filename
         }
-        users.push(usuarionuevo);
-        fs.writefileSync(usersFilePath, JSON.stringify(users))
+        users.push(usuarioNuevo);
+        fs.writefileSync(usersfilePath, JSON.stringify(users))
         res.redirect("/");
     },
     edit: (req, res) => {
         const id = req.params.id;
         const user = user.find(user => user.id == id);
-        return res.render("login ", { user }),
+        return res.render("login ", { users }),
 
             users = users.map(user => {
 
                 if (user.id == req.params.id) {
                     user = {
                         id: users[users.length - 1].id + 1,
-                        name: req.body.name,
-                        lastName: req.body.firsName,
+                        name: req.body.firsName,
+                        lastName: req.body.LastName,
                         email: req.body.email,
                         password: req.body.password,
                         role: "user",
@@ -91,8 +91,8 @@ const controller = {
             if (user.id == req, params.id) {
                 user = {
                     id: users[users.length - 1].id + 1,
-                    name: req.body.name,
-                    lastName: req.body.firsName,
+                    name: req.body.firsName,
+                    lastName: req.body.LastName,
                     email: req.body.email,
                     password: req.body.password,
                     role: "user",
@@ -105,7 +105,7 @@ const controller = {
             return user;
 
         }),
-            fs.writeFileSync(usersFilePath, JSON.stringify(users));
+            fs.writeFileSync(usersfilePath, JSON.stringify(users));
         res.redirect('/')
     }
 };
