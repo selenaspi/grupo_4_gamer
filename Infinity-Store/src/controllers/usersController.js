@@ -5,14 +5,13 @@ const path = require('path');
 const usersFilePath = path.join(__dirname, '../database/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const bcryptjs = require('bcryptjs');
-const usersfilePath = path.join(__dirname, '../database/users.json');
 
 let usuariosJSON = JSON.stringify(usuarios);
 let usuariosList = JSON.parse(usuariosJSON); 
 let categoryJSON = JSON.stringify(category);
 let categoryList = JSON.parse(categoryJSON); 
 
-let usersActivos = users.filter(usuario => usuario.alta);
+let usersActivos = users.filter(user => user.alta);
 
 const controller = {
 
@@ -50,7 +49,7 @@ const controller = {
             image: req.file.filename
         }
         users.push(usuarioNuevo);
-        fs.writefileSync(usersfilePath, JSON.stringify(users))
+        fs.writefileSync(usersFilePath, JSON.stringify(users))
         res.redirect("/");
     },
     edit: (req, res) => {
@@ -76,7 +75,7 @@ const controller = {
                 return user;
             }),
 
-            fs.writeFileSync(usersfilePath, JSON.stringify(users)),
+            fs.writeFileSync(usersFilePath, JSON.stringify(users)),
 
             res.redirect('/');
 
@@ -85,29 +84,12 @@ const controller = {
 
         res.render("users/profileUser", { userSimil: usersActivos, categoryList});
     },
-    userDelete: (req, res) => {
-        const id = req.params.id;
-        users = users.map(user => {
-            if (user.id == req, params.id) {
-                user = {
-                    id: users[users.length - 1].id + 1,
-                    name: req.body.firstName,
-                    lastName: req.body.LastName,
-                    email: req.body.email,
-                    password: req.body.password,
-                    role: "user",
-                    phone: req.body.phoneArea.toString() + req.body.phone.toString(),
-                    image: req.file.filename,
-                    alta: false
-                }
-            }
-            console.log(user);
-            return user;
-
-        }),
-            fs.writeFileSync(usersfilePath, JSON.stringify(users));
-        res.redirect('/')
-    }
+    userDelete: function (id) {
+		let allUsers = this.findAll();
+		let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);
+		fs.writeFileSync(this.usersFilePath, JSON.stringify(finalUsers, null, ' '));
+		return true;
+	}
 };
 
 

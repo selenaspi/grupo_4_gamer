@@ -2,6 +2,7 @@ const products = require("../database/products.json");
 const category = require("../database/category.json")
 const fs = require('fs');
 const path = require('path')
+
 let productsJSON = JSON.stringify(products);
 let productsList = JSON.parse(productsJSON);
 let categoryJSON = JSON.stringify(category);
