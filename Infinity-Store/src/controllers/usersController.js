@@ -101,6 +101,10 @@ const controller = {
 
         res.render("users/profileUser", { userSimil: usersActivos, categoryList});
     },
+
+
+    //-------------------------------------------------------------------// eliminar usuarios
+
     userDelete: function (id) {
 		let allUsers = this.findAll();
 		let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);
