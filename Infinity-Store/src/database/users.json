@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "firstName": "Manuel",
+        "name": "Manuel",
         "lastName": "Ortega",
         "email": "ortega@gmail.com",
         "password": "1231",
@@ -12,7 +12,7 @@
     },
     {
         "id": 2,
-        "firstName": "Francisca",
+        "name": "Francisca",
         "lastName": "Gallardo",
         "email": "gallardo@gmail.com",
         "password": "1345",
@@ -23,7 +23,7 @@
     },
     {
         "id": 5,
-        "firstName": "esto",
+        "name": "esto",
         "lastName": "va a funcionar",
         "email": "ignaciocosta1234@gmail.com",
         "password": "4564",
@@ -33,7 +33,7 @@
     },
     {
         "id": 6,
-        "firstName": "Martina",
+        "name": "Martina",
         "lastName": "Colomé",
         "email": "martina@gmail.com",
         "password": "125",
@@ -43,7 +43,7 @@
     },
     {
         "id": 7,
-        "firstName": "Luana",
+        "name": "Luana",
         "lastName": "Colomé",
         "email": "luana@gmail.com",
         "password": "152",
@@ -62,7 +62,7 @@
     },
     {
         "id": 9,
-        "firstName": "carla",
+        "name": "carla",
         "lastName": "tomasi",
         "email": "carla_t@gmail.com",
         "password": "$2a$10$aUoFshiF80CCDZzaJsV4jeBL2OJ3bgshX87Bun.wyZaBTOqtQ80dy",

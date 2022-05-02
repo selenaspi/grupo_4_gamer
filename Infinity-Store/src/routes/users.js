@@ -35,12 +35,14 @@ router.put('/:id',upload.single("image"),usersController.edit);
 //----------------------------------------------------------------------------------//
 
 /*** DELETE ONE USER***/ 
-router.get("/:id/delete", (req,res) => res.render("users/usersDelete", {id:req.params.id}))
-router.delete("/:id/delete", usersController.userDelete);
+router.get("/:id/delete", usersController.mostrarBorradoDeUsuario);
+router.delete("/:id/delete", usersController.delete);
 
+/*** LOGUIN ***/
 router.get("/login", usersController.mostrarLogin);
 
-
+/*** PROFILE USER ***/
 router.get("/profileUser",usersController.mostrarProfileUser);
+
 
 module.exports = router;

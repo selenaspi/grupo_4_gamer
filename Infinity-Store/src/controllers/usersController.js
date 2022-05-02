@@ -63,7 +63,6 @@ const controller = {
                 }
             });
     
-           
             res.render("users/usersEdition", {
                 metodo: "PUT",
                 ruta: req.params.id + "?_method=PUT",
@@ -102,15 +101,33 @@ const controller = {
         res.render("users/profileUser", { userSimil: usersActivos, categoryList});
     },
 
-
     //-------------------------------------------------------------------// eliminar usuarios
 
-    userDelete: function (id) {
+    delete: function (id) {
 		let allUsers = this.findAll();
 		let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);
 		fs.writeFileSync(this.usersFilePath, JSON.stringify(finalUsers, null, ' '));
 		return true;
-	}
+	},
+    // ----------------------------------------------------------------- // mostrar la vista de borrado de usuarios
+
+    mostrarBorradoDeUsuario : (req, res) => {
+        idQuery = Number(req.params.id);
+        let usuarioElegido;
+
+        usersList.forEach(user => {
+            if (user.id === idQuery) {
+                usuarioElegido = user
+            }
+        });
+
+        res.render("users/userDelete", {
+            metodo: "PUT",
+            ruta: req.params.id + "?_method=PUT",
+            user: usuarioElegido,
+            categoryList
+        })
+    }
 };
 
 
