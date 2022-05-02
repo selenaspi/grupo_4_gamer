@@ -2,12 +2,12 @@ const usuarios = require("../database/users.json");
 const category = require("../database/category.json")
 const fs = require('fs');
 const path = require('path');
-const usersFilePath = path.join(__dirname, '../database/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const usersfilePath = path.join(__dirname, '../database/users.json');
+let users = JSON.parse(fs.readFileSync(usersfilePath, 'utf-8'));
 const bcryptjs = require('bcryptjs');
 
-let usuariosJSON = JSON.stringify(usuarios);
-let usuariosList = JSON.parse(usuariosJSON); 
+let usersJSON= JSON.stringify(users);
+let usersList = JSON.parse(usersJSON);
 let categoryJSON = JSON.stringify(category);
 let categoryList = JSON.parse(categoryJSON); 
 
@@ -52,34 +52,51 @@ const controller = {
         fs.writefileSync(usersFilePath, JSON.stringify(users))
         res.redirect("/");
     },
-    edit: (req, res) => {
-        const id = req.params.id;
-        const user = user.find(user => user.id == id);
-        return res.render("login ", { users }),
-
-            users = users.map(user => {
-
-                if (user.id == req.params.id) {
-                    user = {
-                        id: users[users.length - 1].id + 1,
-                        name: req.body.firstName,
-                        lastName: req.body.LastName,
-                        email: req.body.email,
-                        password: req.body.password,
-                        role: "user",
-                        phone: req.body.phoneArea.toString() + req.body.phone.toString(),
-                        image: req.file.filename,
-                        alta: true
-                    }
+        //--------------------------------------------------------------------//  muestra bien el formulario de edicion
+        mostrarformulariodeedicion: (req, res) => {
+            idQuery = Number(req.params.id);
+            let usuarioElegido;
+    
+            usersList.forEach(user => {
+                if (user.id === idQuery) {
+                    usuarioElegido = user
                 }
-                return user;
-            }),
-
-            fs.writeFileSync(usersFilePath, JSON.stringify(users)),
-
-            res.redirect('/');
-
-    },
+            });
+    
+           
+            res.render("users/usersEdition", {
+                metodo: "PUT",
+                ruta: req.params.id + "?_method=PUT",
+                user: usuarioElegido,
+                categoryList
+            })
+        },
+    //-------------------------------------------------------------------// edita usuarios
+        edit: (req, res) => {
+            
+            
+                users = users.map(user => {
+    
+                    if (user.id == req.params.id) {
+                        user = {
+                            id: Number(req.params.id),
+                            name: req.body.name,
+                            lastName: req.body.lastName,
+                            email: req.body.email,
+                            password:  bcryptjs.hashSync (req.body.password,10),
+                            phone: req.body.phone,
+                            image: req.file.filename
+                        }
+                    }
+                    return user;
+                }),
+    
+                fs.writeFileSync(usersfilePath, JSON.stringify(users)),
+    
+                res.redirect('/');
+    
+        },
+        
     allUsers: (req, res) => {
 
         res.render("users/profileUser", { userSimil: usersActivos, categoryList});

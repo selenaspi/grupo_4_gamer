@@ -53,14 +53,12 @@
     },
     {
         "id": 8,
-        "firstName": "nuevo",
+        "name": "Tamara",
         "lastName": "Colomé",
         "email": "martina@gmail.com",
-        "password": "1515",
-        "role": "user",
+        "password": "$2a$10$spTp6MoX0gdJpoY4MKvsEu5fPh.e868e/bomlUMRj0JI1ET/Aod7S",
         "phone": "034334215",
-        "image": "image-1650032852895-26653613.jpg",
-        "alta": true
+        "image": "image-1651515375999-486954713.jpg"
     },
     {
         "id": 9,

@@ -28,9 +28,11 @@ router.get("/register", usersController.mostrarRegistro);
 // GET ONE USER
 router.get("/id:/", usersController.detail);
 
-/*** EDIT ONE USER ***/ 
-router.get('/edit/:id', usersController.mostrarInfoUser); 
-router.put('/:id',usersController.edit); 
+//-----------------------------------------------------------------------------------//
+//Formulario de edición
+router.get('/:id/:edit', usersController.mostrarformulariodeedicion); 
+router.put('/:id',upload.single("image"),usersController.edit); 
+//----------------------------------------------------------------------------------//
 
 /*** DELETE ONE USER***/ 
 router.get("/:id/delete", (req,res) => res.render("users/usersDelete", {id:req.params.id}))
