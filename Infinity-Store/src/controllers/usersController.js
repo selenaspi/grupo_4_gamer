@@ -40,7 +40,7 @@ const controller = {
     store: (req, res) => {
         const usuarioNuevo = {
             id: users[users.length - 1].id + 1,
-            name: req.body.firstName,
+            name: req.body.name,
             lastName: req.body.lastName,
             email: req.body.email,
             password: bcryptjs.hashSync (req.body.password,10),
@@ -49,7 +49,7 @@ const controller = {
             image: req.file.filename
         }
         users.push(usuarioNuevo);
-        fs.writefileSync(usersFilePath, JSON.stringify(users))
+        fs.writeFileSync(usersfilePath, JSON.stringify(users))
         res.redirect("/");
     },
         //--------------------------------------------------------------------//  muestra bien el formulario de edicion
