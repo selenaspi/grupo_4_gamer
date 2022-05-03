@@ -54,7 +54,7 @@ const controller = {
         }
 
         productos.push(newProduct);
-        fs.writeFileSync(productosfilePath, JSON.stringify(productos));
+        fs.writeFileSync(productosfilePath, JSON.stringify(productos, null, ' '));
 
         res.redirect('/');
     },

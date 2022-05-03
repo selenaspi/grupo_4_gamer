@@ -49,7 +49,7 @@ const controller = {
             image: req.file.filename
         }
         users.push(usuarioNuevo);
-        fs.writeFileSync(usersfilePath, JSON.stringify(users))
+        fs.writeFileSync(usersfilePath, JSON.stringify(users, null, ' '));
         res.redirect("/");
     },
         //--------------------------------------------------------------------//  muestra bien el formulario de edicion
