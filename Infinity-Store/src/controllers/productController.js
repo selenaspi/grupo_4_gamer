@@ -102,7 +102,7 @@ const controller = {
         });
 
 
-        fs.writeFileSync(productosfilePath, JSON.stringify(productos));
+        fs.writeFileSync(productosfilePath, JSON.stringify(productos, null, ' '));
 
         res.redirect('/');
     },

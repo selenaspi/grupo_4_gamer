@@ -90,7 +90,7 @@ const controller = {
                     return user;
                 }),
     
-                fs.writeFileSync(usersfilePath, JSON.stringify(users)),
+                fs.writeFileSync(usersfilePath, JSON.stringify(users, null, ' ')),
     
                 res.redirect('/');
     
