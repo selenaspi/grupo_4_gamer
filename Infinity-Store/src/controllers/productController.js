@@ -2,6 +2,7 @@ const products = require("../database/products.json");
 const category = require("../database/category.json")
 const fs = require('fs');
 const path = require('path')
+
 let productsJSON = JSON.stringify(products);
 let productsList = JSON.parse(productsJSON);
 let categoryJSON = JSON.stringify(category);
@@ -53,7 +54,7 @@ const controller = {
         }
 
         productos.push(newProduct);
-        fs.writeFileSync(productosfilePath, JSON.stringify(productos));
+        fs.writeFileSync(productosfilePath, JSON.stringify(productos, null, ' '));
 
         res.redirect('/');
     },
@@ -101,7 +102,7 @@ const controller = {
         });
 
 
-        fs.writeFileSync(productosfilePath, JSON.stringify(productos));
+        fs.writeFileSync(productosfilePath, JSON.stringify(productos, null, ' '));
 
         res.redirect('/');
     },

@@ -28,16 +28,21 @@ router.get("/register", usersController.mostrarRegistro);
 // GET ONE USER
 router.get("/id:/", usersController.detail);
 
-/*** EDIT ONE USER ***/ 
-router.get('/edit/:id', usersController.edit); 
-router.put('/:id', usersController.update); 
-
+//-----------------------------------------------------------------------------------//
+//Formulario de edición
+router.get('/:id/:edit', usersController.mostrarformulariodeedicion); 
+router.put('/:id',upload.single("image"),usersController.edit); 
+//----------------------------------------------------------------------------------//
 
 /*** DELETE ONE USER***/ 
-router.delete('/:id', usersController.destroy);
+router.get("/:id/delete", usersController.mostrarBorradoDeUsuario);
+router.delete("/:id/delete", usersController.delete);
 
-
+/*** LOGUIN ***/
 router.get("/login", usersController.mostrarLogin);
+
+/*** PROFILE USER ***/
+router.get("/profileUser",usersController.mostrarProfileUser);
 
 
 module.exports = router;

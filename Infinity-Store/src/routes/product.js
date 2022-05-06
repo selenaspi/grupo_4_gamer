@@ -33,4 +33,5 @@ router.get("/allProducts",productController.allProducts);
 
 router.get("/:id/delete", (req,res) => res.render("products/productDelete", {id:req.params.id}))
 router.delete("/:id/delete", productController.productDelete);
+
 module.exports = router;
