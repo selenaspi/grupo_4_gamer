@@ -48,14 +48,17 @@
                     <a href="/" class="logo-cuadrado-d"><img src="/images/dragon_cuadrado.jpg" alt=""></a>
                 </li>
 
-                <li class="categorias">
+                <li class="categoria items cat" id="b-categ-d">
 
-                    <button type="button" class="boton-categorias">Categorías <i
-                            class="fa-solid fa-angle-down"></i></button>
+                    <div >
+                        <p>Categorías</p>
+                        <p class="down"><i class="fa-solid fa-angle-down"></i></p>
+                        <p class="up"><i class="fa-solid fa-angle-up"></i></p>
+                    </div>
 
                     <ul>
                         <% for(let i=0; i< categoryList.length; i++) {%>
-                            <li><a href="#"><img src="/images/category/<%=categoryList[i].image%>" alt=""><span><%=categoryList[i].name%></span></a></li>
+                            <li><a href="#"><img src="/images/category/<%=categoryList[i].image%>" alt=""><span><%= categoryList[i].name.length <14? categoryList[i].name  : (categoryList[i].name.substring(0, 10)) + "..." %></span></a></li>
                         <%}%>
 
                     </ul>
