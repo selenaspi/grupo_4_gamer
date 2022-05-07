@@ -1,66 +1,5 @@
 [
  {
-  "id": 1,
-  "name": "Manuel",
-  "lastName": "Ortega",
-  "email": "ortega@gmail.com",
-  "password": "1231",
-  "category": "mmmmm",
-  "image": "ccccc",
-  "date of birth": "28/06/1992",
-  "alta": true
- },
- {
-  "id": 2,
-  "name": "Francisca",
-  "lastName": "Gallardo",
-  "email": "gallardo@gmail.com",
-  "password": "1345",
-  "category": "zzzz",
-  "image": "cvcv",
-  "date of birth": "28/09/1999",
-  "alta": true
- },
- {
-  "id": 5,
-  "name": "esto",
-  "lastName": "va a funcionar",
-  "email": "ignaciocosta1234@gmail.com",
-  "password": "4564",
-  "role": "user",
-  "phone": "114564564",
-  "alta": true
- },
- {
-  "id": 6,
-  "name": "Martina",
-  "lastName": "Colomé",
-  "email": "martina@gmail.com",
-  "password": "125",
-  "role": "user",
-  "phone": "03432222222",
-  "alta": true
- },
- {
-  "id": 7,
-  "name": "Luana",
-  "lastName": "Colomé",
-  "email": "luana@gmail.com",
-  "password": "152",
-  "role": "user",
-  "phone": "0343115151",
-  "alta": true
- },
- {
-  "id": 8,
-  "name": "Tamara",
-  "lastName": "Colomé",
-  "email": "martina@gmail.com",
-  "password": "$2a$10$spTp6MoX0gdJpoY4MKvsEu5fPh.e868e/bomlUMRj0JI1ET/Aod7S",
-  "phone": "034334215",
-  "image": "image-1651515375999-486954713.jpg"
- },
- {
   "id": 9,
   "name": "carla",
   "lastName": "tomasi",
@@ -73,12 +12,14 @@
  },
  {
   "id": 10,
-  "lastName": "Colomé",
+  "lastName": "None",
   "email": "nachocosta287@gmail.com",
   "password": "$2a$10$w2jl4OXMj3xnAIjB/xYV9uFNVZ6O5iJW/taQzZIxDtdYILxywSX3q",
   "role": "user",
   "phone": "03431561651651",
-  "image": "image-1651536717476-759387625.jpg"
+  "image": "image-1651810428023-867402593.jpg",
+  "alta": false,
+  "name": "Carla"
  },
  {
   "id": 11,
@@ -98,6 +39,7 @@
   "password": "$2a$10$3UUg2uVc7c2S1COmEl7XiOMQWppzMtjPu1c4O5ZuLUlFpmH7SIZDu",
   "role": "user",
   "phone": "1112345678",
-  "image": "image-1651885376904-84193745.png"
+  "image": "image-1651537021925-477586135.jpg",
+  "alta": true
  }
 ]
