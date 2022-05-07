@@ -14,6 +14,8 @@ let productosActivos = productsList.filter(producto => producto.alta);
 const controller = {
 
    index: (req, res) => {
+      console.log('Estas en Login');
+        console.log(req.session);
 
       let categorias = categoryList;
       let aleatorioCategory, randomCategorias =[];

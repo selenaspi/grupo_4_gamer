@@ -20,6 +20,7 @@ const storage = multer.diskStorage({
 
 // CONTROLLER REQUIRE
 const usersController = require('../controllers/usersController')
+const guestMiddleware = require('../../middlewares/guestMiddleware');
 
 // Formulario de creación de usuarios
 router.post("/register",upload.single("image"), usersController.store);
@@ -40,7 +41,8 @@ router.delete("/:id/delete", usersController.delete);
 
 /*** LOGUIN ***/
 router.get("/login", usersController.mostrarLogin);
-
+// Procesar el login
+router.post('/login', usersController.loginProcess);
 /*** PROFILE USER ***/
 router.get("/profileUser",usersController.mostrarProfileUser);
 

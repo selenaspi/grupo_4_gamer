@@ -11,6 +11,14 @@ const productCartRouter = require('./routes/productCart');
 const productRouter = require('./routes/product');
 const usersRouter = require ('./routes/users');
 
+const session = require('express-session');
+
+app.use(session({
+    secret: "Shhh, Its a secret",
+    resave: false,
+    saveUninitialized: false,
+}))
+
 const publicPath = path.resolve(__dirname, '../public');
 const port = process.env.PORT || 3030;
 

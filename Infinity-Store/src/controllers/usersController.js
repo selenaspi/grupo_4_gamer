@@ -5,7 +5,7 @@ const path = require('path');
 const usersfilePath = path.join(__dirname, '../database/users.json');
 let users = JSON.parse(fs.readFileSync(usersfilePath, 'utf-8'));
 const bcryptjs = require('bcryptjs');
-
+const User = require('../../models/User');
 let usersJSON= JSON.stringify(users);
 let usersList = JSON.parse(usersJSON);
 let categoryJSON = JSON.stringify(category);
@@ -25,8 +25,39 @@ const controller = {
 
     mostrarInfoUser: (req, res) => { res.render("users/infoUser",{categoryList} ) },
 
-    mostrarLogin: (req, res) => { res.render("users/login",{categoryList} )},
+    mostrarLogin: (req, res) => { 
+        res.render("users/login",{categoryList});
+    },
 
+//  ----------------------------------------------------------PROCESO DE LOGIN----------------------------------------------------------------------
+    loginProcess:(req,res) => {
+        let userToLogin = User.findByField('email', req.body.email);
+        if(userToLogin){
+             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
+            if(isOkThePassword){
+                 delete userToLogin.password;
+                 req.session.userLogged = userToLogin
+                 return res.redirect('/')
+            }
+            return res.render('users/login', {categoryList,
+                errors: {
+                        email: {
+                            msg: 'Las credenciales son inválidas'
+                        }
+                }
+            });
+        };
+
+        return res.render('users/login', {categoryList,
+        errors: {
+                email: {
+                    msg: 'No se encuentra este email en nuestra base de datos'
+                }
+        }
+    });
+    }
+,
+// -----------------------------------------------------------------------------------------------------------------------------------------
     mostrarRegistro: (req, res) => { res.render("users/register",{categoryList} ) },
 
     // Detail - Detail from one user 
