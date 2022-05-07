@@ -121,7 +121,7 @@ const controller = {
             }
         });
 
-        res.render("users/userDelete", {
+        res.render("users/usersDelete", {
             metodo: "PUT",
             ruta: req.params.id + "?_method=PUT",
             user: usuarioElegido,
