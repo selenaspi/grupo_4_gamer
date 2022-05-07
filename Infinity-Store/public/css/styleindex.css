@@ -19,7 +19,22 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: linear-gradient(var(--xiketic), var(--azul)) 
+  background: linear-gradient(var(--xiketic), var(--azul));
+
+}
+
+body::-webkit-scrollbar {
+  width: 15px;      
+  z-index: -1;         /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.8);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--purpuraOscuro);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */ /* creates padding around scroll thumb */
 }
 
 h2, a {

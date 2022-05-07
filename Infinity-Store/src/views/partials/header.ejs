@@ -36,7 +36,7 @@
                         <li class="items"><a href="/productCart" class="link-item">Carrito</a></li>
                         <li class="items"><a href="#" class="link-item">Mis compras</a></li>
                         <li class="items"><a href="#" class="link-item">Mi perfil</a>
-                        <li class="items"><a href="#" class="link-item">Configuración</a>
+                        <li class="items"><a href="#" class="link-item">Ajustes</a>
                         <li class="items"><a href="#" class="link-item">Ingresar</a></li>
 
                     </ul>
@@ -60,7 +60,6 @@
                         <% for(let i=0; i< categoryList.length; i++) {%>
                             <li><a href="#"><img src="/images/category/<%=categoryList[i].image%>" alt=""><span><%= categoryList[i].name.length <14? categoryList[i].name  : (categoryList[i].name.substring(0, 10)) + "..." %></span></a></li>
                         <%}%>
-
                     </ul>
 
                 </li>
@@ -82,12 +81,18 @@
 
                 <!--Próxima incorporación-->
 
-                <li class="perfil"><a href="#">Mi perfil</a>
+                <li class="perfil" id="b-profile-d">
+
+                    <div>
+                        <img src="/images/dragon_cuadrado.jpg" alt="">
+                    </div>
 
                     <ul>
                         <li class="menu-perfil"><a href="#">Mis compras</a></li>
-                        <li class="menu-perfil"><a href="#">Mi perfil</a>
-                        <li class="menu-perfil"><a href="#">Configuración</a>
+                        <li class="menu-perfil"><a href="#">Mis favoritos</a></li>
+                        <li class="menu-perfil"><a href="/users/profileUser">Mi perfil</a>
+                        <li class="menu-perfil"><a href="#">Ajustes</a>
+                        <li class="menu-perfil"><a href="#">Salir<i class="fa-solid fa-arrow-right-from-bracket"></i> </a>
                     </ul>
 
                 </li>
