@@ -44,6 +44,9 @@
             const botonCat = document.querySelector("#b-categ")
             const botonCatD = document.querySelector("#b-categ-d")
 
+            const botonProfileD = document.querySelector("#b-profile-d")
+            
+
             barMenu.addEventListener("click", () => {
                 barMenu.classList.toggle("active");
                 options.classList.toggle("active-menu")
@@ -57,6 +60,15 @@
             botonCatD.addEventListener("click", () => {
                 botonCatD.classList.toggle("active-boton-cat");
             })
+
+            botonProfileD.addEventListener("click", () => {
+                botonProfileD.classList.toggle("active-m-profile")
+            })
+
+
+
+
+
 
             favOff1.addEventListener("click", ()=> {
                 favOn1.classList.toggle("con-fav")
