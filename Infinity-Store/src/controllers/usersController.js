@@ -10,10 +10,7 @@ const fs = require('fs');
 const path = require('path');
 const usersfilePath = path.join(__dirname, '../database/users.json');
 let users = JSON.parse(fs.readFileSync(usersfilePath, 'utf-8'));
-const bcryptjs = require('bcryptjs');
-const User = require('../../models/User');
-let usersJSON= JSON.stringify(users);
-let usersList = JSON.parse(usersJSON);
+
 
 
 let usersActivos = users.filter(user => user.alta);
