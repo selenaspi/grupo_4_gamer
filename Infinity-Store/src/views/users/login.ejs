@@ -11,10 +11,17 @@
     <%- include('../partials/header') %>
 
     <main class="form-login">
-        <form action="/" method="POST">
+        <form method="POST" action="/users/login">
         <h4>Formulario Login</h4>
-        <input class="control" type="text" name="usuario" value="" placeholder="Usuario">
-        <input class="control" type="password" name="contraseña" value="" placeholder="Contraseña">
+        <div class="form-group">
+        <input type="text" name="email" value="" class="form-control" placeholder="Email">
+        <% if (locals.errors && errors.email) { %>
+            <div class="text-danger">
+                <%= errors.email.msg %>
+            </div>
+            <% } %>
+        </div>
+        <input class="control" type="password" name="password" value="" placeholder="Contraseña">
         <input class="boton" type="submit" name="" value="Ingresar">
   
     <li class="Enlaces">¿No tienes cuenta?<a href="/users/Register">Regístrate</a></li>

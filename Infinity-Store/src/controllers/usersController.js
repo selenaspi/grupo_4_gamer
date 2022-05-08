@@ -11,6 +11,8 @@ const path = require('path');
 const usersfilePath = path.join(__dirname, '../database/users.json');
 let users = JSON.parse(fs.readFileSync(usersfilePath, 'utf-8'));
 
+
+
 let usersActivos = users.filter(user => user.alta);
 
 const controller = {
@@ -18,6 +20,51 @@ const controller = {
     //CREATE
     register: (req, res) => { res.render("users/register", { categoryList }) },
 
+    mostrarInfoUser: (req, res) => { res.render("users/infoUser",{categoryList} ) },
+
+    mostrarLogin: (req, res) => { 
+        res.render("users/login",{categoryList});
+    },
+
+//  ----------------------------------------------------------PROCESO DE LOGIN----------------------------------------------------------------------
+    loginProcess:(req,res) => {
+        let userToLogin = User.findByField('email', req.body.email);
+        if(userToLogin){
+             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
+            if(isOkThePassword){
+                 delete userToLogin.password;
+                 req.session.userLogged = userToLogin
+                 return res.redirect('/')
+            }
+            return res.render('users/login', {categoryList,
+                errors: {
+                        email: {
+                            msg: 'Las credenciales son inválidas'
+                        }
+                }
+            });
+        };
+
+        return res.render('users/login', {categoryList,
+        errors: {
+                email: {
+                    msg: 'No se encuentra este email en nuestra base de datos'
+                }
+        }
+    });
+    }
+,
+// -----------------------------------------------------------------------------------------------------------------------------------------
+    mostrarRegistro: (req, res) => { res.render("users/register",{categoryList} ) },
+
+    // Detail - Detail from one user 
+    detail: (req, res) => {
+        const id = req.params.id;
+        const user = users.find(user => user.id == id);
+        return res.render("detail", { user });
+    },
+
+    // para crear nuevo usuario
     store: (req, res) => {
 
         const userData = {
