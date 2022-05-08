@@ -87,10 +87,11 @@ const controller = {
 
     profileUser: (req, res) => {
 
-        // let idUsuario = Number(req.params.id);
+         let usuarioBuscado = User.findByPk(Number(req.params.id));
+
         // let listaUsers = [usersActivos[idUsuario], usersActivos[idUsuario + 1], usersActivos[idUsuario + 2], usersActivos[idUsuario + 3]];
 
-        res.render("users/profileUser", { categoryList })
+        res.render("users/profileUser", { categoryList, usuarioBuscado  })
         // res.render("users/profileUser", { userSimil: listaUsers, detalleUs: usersActivos[idUsuario - 1], categoryList })
     },
 

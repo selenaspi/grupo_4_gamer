@@ -26,7 +26,7 @@ router.get("/register", usersController.register);
 router.post("/register", upload.single("image"), usersController.store);
 
 //Perfil de usuario - READ
-router.get("/profileUser", usersController.profileUser);
+router.get("/:id/profileUser", usersController.profileUser);
 
 //Formulario de edición - UPDATE
 router.get('/:id/edit', usersController.edition);
