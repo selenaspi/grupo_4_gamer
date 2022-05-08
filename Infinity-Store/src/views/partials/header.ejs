@@ -26,7 +26,7 @@
 
                             <ul>
                                 <% for(let i=0; i< categoryList.length; i++) {%>
-                                    <li><a href="#"><%=categoryList[i].name%></a></li>
+                                    <li><a href="/product/category/<%= categoryList[i].id %>"><%=categoryList[i].name%></a></li>
                                 <%}%>
                             </ul>
 
@@ -58,7 +58,7 @@
 
                     <ul>
                         <% for(let i=0; i< categoryList.length; i++) {%>
-                            <li><a href="#"><img src="/images/category/<%=categoryList[i].image%>" alt=""><span><%= categoryList[i].name.length <14? categoryList[i].name  : (categoryList[i].name.substring(0, 10)) + "..." %></span></a></li>
+                            <li><a href="/product/category/<%= categoryList[i].id %>"><img src="/images/category/<%=categoryList[i].image%>" alt=""><span><%= categoryList[i].name.length <14? categoryList[i].name  : (categoryList[i].name.substring(0, 10)) + "..." %></span></a></li>
                         <%}%>
                     </ul>
 
