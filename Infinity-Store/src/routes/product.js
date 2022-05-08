@@ -33,4 +33,6 @@ router.put("/:id", upload.single("image"), productController.edit);
 router.get("/:id/delete", (req, res) => res.render("products/productDelete", { id: req.params.id }))
 router.delete("/:id/delete", productController.productDelete);
 
+
+router.get("/category/:idCategory", productController.filterByCategory);
 module.exports = router;

@@ -117,6 +117,10 @@ const controller = {
     productDelete: (req, res) => {
         Product.delete(Number(req.params.id));
         res.redirect('/')
+    }, 
+
+    filterByCategory: (req, res) => {
+        res.render("products/allProducts", { similares: Product.filterActivesByField("idCategory", req.params.idCategory), categoryList }) //no debería llamarse similares pero bue
     }
 }
 
