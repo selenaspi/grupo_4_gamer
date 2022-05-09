@@ -132,7 +132,7 @@ const controller = {
     mostrarBorradoDeUsuario: (req, res) => {
         let usuarioElegido = User.findByPk(Number(req.params.id));
 
-        res.render("users/userDelete", {
+        res.render("users/usersDelete", {
             metodo: "DELETE",
             ruta: req.params.id + "?_method=DELETE",
             user: usuarioElegido,
