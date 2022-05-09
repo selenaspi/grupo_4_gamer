@@ -43,7 +43,6 @@ const Product = {
     filterActivesByField: function(field, text) {
 		let allActives = this.findActiveProducts();
         let productsFound = allActives.filter(product => product[field] == text);
-		console.log(productsFound)
         return productsFound;
     },
 

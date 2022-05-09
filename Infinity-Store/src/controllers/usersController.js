@@ -48,7 +48,7 @@ const controller = {
         return res.render('users/login', {categoryList,
         errors: {
                 email: {
-                    msg: 'No se encuentra este email en nuestra base de datos'
+                    msg: 'Los datos ingresados son incorrectos. '
                 }
         }
     });

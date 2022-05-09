@@ -87,7 +87,7 @@ nav .menu-desplegable {
 }
 
 .active #line1 {
-    transform: rotate(45deg) translate(2.2px, -3.7px);
+    transform: rotate(45deg) translate(2.5px, -4px);
     transform-origin: 0%;
 }
 
@@ -98,7 +98,7 @@ nav .menu-desplegable {
 }
 
 .active #line3 {
-    transform: rotate(-45deg) translate(2.5px, 3.1px);
+    transform: rotate(-45deg) translate(2px, 4px);
     transform-origin: 0%;
 }
 

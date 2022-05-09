@@ -221,6 +221,7 @@ p.descuento {
     width: 95%;
     margin: auto;
     justify-content: space-around;
+    cursor: pointer;
   }
 
   .categorias > div {
