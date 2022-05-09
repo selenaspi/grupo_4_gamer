@@ -10,17 +10,17 @@
     <%- include('../partials/header') %> 
     <main>
     <section class="perfil-usuario">
+       
             <div class="contenedor-perfil">
                 <div class="portada-perfil">
                     <div class="avatar-perfil">
-                        <img src="" alt="img">
+                        <img src="/images/users/<%= usuarioBuscado.image %>" alt="">
                         <a href="#" class="cambiar-foto">
                             <i class="fas fa-camera"></i> 
-                            <span>Cambiar foto</span>
                         </a>
                     </div>
                     <div class="datos-perfil">
-                        <h4 class="titulo-usuario">Nombre</h4> 
+                        <h4 class="titulo-usuario"><%= usuarioBuscado.name %></h4> 
                     </div>
                     <div class="opcciones-perfil">
                         <button type="">Cambiar portada</button>
@@ -35,8 +35,7 @@
                         <li><a href="#" title=""><i class="fa-solid fa-cart-shopping"></i> Mis compras</a></li>
                     </ul>
                 </div>
-            </div>
-            
+            </div>    
     </section>
 </main>
     <%- include('../partials/footer') %>
