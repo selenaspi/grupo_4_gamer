@@ -1,43 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="es">
+
 <head>
- <meta charset="UTF-8">
     <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/css/profileUser.css">
-    <title>Mi perfil</title>
+        <link rel="stylesheet" href="/css/profileUser.css">
 </head>
+
 <body>
-    <%- include('../partials/header') %> 
-    <main>
-    <section class="perfil-usuario">
-       
-            <div class="contenedor-perfil">
-                <div class="portada-perfil">
-                    <div class="avatar-perfil">
-                        <img src="/images/users/<%= usuarioBuscado.image %>" alt="">
-                        <a href="#" class="cambiar-foto">
-                            <i class="fas fa-camera"></i> 
-                        </a>
-                    </div>
-                    <div class="datos-perfil">
-                        <h4 class="titulo-usuario"><%= usuarioBuscado.name %></h4> 
-                    </div>
-                    <div class="opcciones-perfil">
-                        <button type="">Cambiar portada</button>
-                        <button type=""><i class="fas fa-wrench"></i></button>
-                    </div>
+
+    <%- include('../partials/header') %>
+
+        <main>
+
+            <div class="portada-perfil">
+
+                <div class="avatar-perfil">
+
+                    <img src="/images/usuarios/<%= usuarioBuscado.image %>" alt="">
+
+                    <a href="#" class="cambiar-foto">
+                        <i class="fas fa-camera"></i>
+                    </a>
+
                 </div>
-                <div class="menu-perfil">
-                    <ul>
-                        <li><a href="#" title=""><i class="icono-perfil fas fa-bullhorn"></i>Notificaciones</a></li>
-                        <li><a href="#" title=""><i class="icono-perfil fas fa-info-circle"></i>Informacion</a></li>
-                        <li><a href="#" title=""><i class="icono-perfil fas fa-grin"></i>Ayuda</a></li>
-                        <li><a href="#" title=""><i class="fa-solid fa-cart-shopping"></i> Mis compras</a></li>
-                    </ul>
+
+                <div class="editar-perfil">
+                    <button type=""><a href=""><i class="fa-solid fa-pencil"></i></a></button>
                 </div>
-            </div>    
-    </section>
-</main>
-    <%- include('../partials/footer') %>
+
+            </div>
+
+            <div class="datos-usuario">
+                <h2>
+                    <%= `${usuarioBuscado.lastName.toUpperCase()}, ${usuarioBuscado.name.substring(0,
+                        1).toUpperCase()}${usuarioBuscado.name.substring(1).toLowerCase()}`%>
+                </h2>
+                <ul>
+                    <li>
+                        <p>Fecha de nacimiento</p>
+                        <h3>
+                            09/02/1800 
+                        </h3>
+                    </li>
+                    <li>
+                        <p>Domicilio</p>
+                        <h3>
+                            Siempreviva 742 
+                        </h3>
+                    </li>
+                    <li>
+                        <p>Email</p>
+                        <h3>
+                            <%= usuarioBuscado.email %>
+                        </h3>
+                    </li>
+                    <li>
+                        <p>Teléfono</p>
+                        <h3>
+                            <%= usuarioBuscado.phone %>
+                        </h3>
+                    </li>
+                </ul>
+            </div>
+
+
+
+
+
+
+            <!-- <div class="datos-perfil">
+                            <h4 class="titulo-usuario">
+                                <%= //usuarioBuscado.name %>
+                            </h4>
+                        </div>
+
+                    </div>
+                    <div class="menu-perfil">
+                        <ul> -->
+            <!-- <li><a href="#" title=""><i class="icono-perfil fas fa-info-circle"></i>Informacion</a></li> -->
+            <!-- <li><a href="#" title=""><i class="icono-perfil fas fa-grin"></i>Ayuda</a></li> -->
+
+            <!-- <li><a href="#" title=""><i class="fa-solid fa-cart-shopping"></i> Mis datos</a></li>
+                            <li><a href="#" title=""><i class="fa-solid fa-cart-shopping"></i> Mis compras</a></li>
+                            <li><a href="#" title=""><i class="fa-solid fa-cart-shopping"></i> Mis favoritos</a></li> -->
+            <!-- <li><a href="#" title=""><i class="icono-perfil fas fa-bullhorn"></i>Notificaciones</a></li> -->
+            <!-- </ul> -->
+
+
+
+
+        </main>
+
+        <%- include('../partials/footer') %>
 </body>
+
 </html>

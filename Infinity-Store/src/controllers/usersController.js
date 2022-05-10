@@ -39,7 +39,7 @@ const controller = {
             return res.render('users/login', {categoryList,
                 errors: {
                         email: {
-                            msg: 'Las credenciales son inválidas'
+                            msg: 'Los datos ingresados son incorrectos.'
                         }
                 }
             });

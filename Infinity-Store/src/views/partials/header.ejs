@@ -77,25 +77,31 @@
 
                 <li class="carrito"><a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a></li>
 
-                <li class="login"><a href="/users/login">Ingresar</a></li>
+                <% if (locals.isLogged) { %>
+
+                    <li class="perfil" id="b-profile-d">
+
+                        <div>
+                            <img src="/images/dragon_cuadrado.jpg" alt="">
+                        </div>
+    
+                        <ul>
+                            <li class="menu-perfil"><a href="#">Mis compras</a></li>
+                            <li class="menu-perfil"><a href="#">Mis favoritos</a></li>
+                            <li class="menu-perfil"><a href="/users/profileUser">Mi perfil</a>
+                            <li class="menu-perfil"><a href="#">Ajustes</a>
+                            <li class="menu-perfil"><a href="#">Salir<i class="fa-solid fa-arrow-right-from-bracket"></i> </a>
+                        </ul>
+    
+                    </li>
+                <% } else {%>
+                    <li class="login"><a href="/users/login">Ingresar</a></li>
+                <% } %> 
+
 
                 <!--Próxima incorporación-->
 
-                <li class="perfil" id="b-profile-d">
 
-                    <div>
-                        <img src="/images/dragon_cuadrado.jpg" alt="">
-                    </div>
-
-                    <ul>
-                        <li class="menu-perfil"><a href="#">Mis compras</a></li>
-                        <li class="menu-perfil"><a href="#">Mis favoritos</a></li>
-                        <li class="menu-perfil"><a href="/users/profileUser">Mi perfil</a>
-                        <li class="menu-perfil"><a href="#">Ajustes</a>
-                        <li class="menu-perfil"><a href="#">Salir<i class="fa-solid fa-arrow-right-from-bracket"></i> </a>
-                    </ul>
-
-                </li>
 
             </ul>
 

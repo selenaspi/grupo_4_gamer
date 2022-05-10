@@ -459,8 +459,7 @@ footer>p {
     nav .categoria,
     nav .arma-tu-pc,
     nav .carrito,
-    /*nav .login*/
-    /*Va el login también cuando se implemente ruta huésped y usuario*/
+    nav .login,
     nav .perfil {
         display: block;
     }
