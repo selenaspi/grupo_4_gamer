@@ -19,29 +19,31 @@ const upload = multer({ storage: storage })
 
 // CONTROLLER REQUIRE
 const usersController = require('../controllers/usersController')
+
+// MIDDLEWARE REQUIRE
 const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 // Formulario de creación de usuarios - CREATE
-router.get("/register", usersController.register);
+router.get("/register", guestMiddleware, usersController.register);
 router.post("/register", upload.single("image"), usersController.store);
 
 //Perfil de usuario - READ
-router.get("/:id/profileUser", usersController.profileUser);
+router.get("/profile", authMiddleware, usersController.profileUser);
 
 //Formulario de edición - UPDATE
-router.get('/:id/edit', usersController.edition);
+router.get('/:id/edit', authMiddleware, usersController.edition);
 router.put('/:id', upload.single("image"), usersController.edit);
 
 // DELETE ONE USER - DELETE
-router.get("/:id/delete", usersController.mostrarBorradoDeUsuario);
+router.get("/:id/delete", authMiddleware, usersController.mostrarBorradoDeUsuario);
 router.delete("/:id", upload.single("image"), usersController.deleteUser);
 
 /*** LOGIN ***/
-router.get("/login", usersController.mostrarLogin);
-// Procesar el login
+router.get("/login", guestMiddleware, usersController.mostrarLogin);
 router.post('/login', usersController.loginProcess);
-/*** PROFILE USER ***/
-// router.get("/profileUser",usersController.mostrarProfileUser);
 
+/*** LOGOUT ***/
+router.get("/logout", authMiddleware, usersController.logout);
 
 module.exports = router;

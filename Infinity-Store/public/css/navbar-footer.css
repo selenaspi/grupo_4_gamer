@@ -111,7 +111,7 @@ nav .menu-desplegable {
 .active-menu {
     position: fixed;
     max-height: 80vh;
-    width: 70%;
+    width: 65%;
     top: 11vh;
     padding: 5% 0% 8%;
     overflow-y: auto;
@@ -132,8 +132,16 @@ nav .menu-desplegable {
     cursor: pointer;
 }
 
+.active-menu .items i {
+    margin-left: 10px;
+}
+
 .cat {
     cursor: pointer;
+}
+
+.cat p {
+    margin: 0;
 }
 
 .up {
@@ -340,7 +348,7 @@ footer>p {
     /*Desplegable*/
 
     .active-menu {
-        width: 70%;
+        width: 50%;
     }
 
     /*-----Logo----*/
@@ -599,7 +607,7 @@ footer>p {
     }
 
     nav .perfil>div {
-        width: 60%; 
+        width: 60%;
         cursor: pointer;
     }
 
@@ -687,7 +695,7 @@ footer>p {
     /*-----Profile-----*/
 
     nav .perfil>div {
-        width: 50%; 
+        width: 50%;
     }
 
     nav .perfil>ul {
@@ -700,7 +708,7 @@ footer>p {
     nav .perfil>ul>li a {
         font-size: 20px;
     }
-    
+
     /*---------------------Footer---------------------*/
 
     /*------Tópicos------*/

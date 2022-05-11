@@ -17,8 +17,8 @@
                     <ul class="options-burger-menu" id="options-burger-menu">
 
                         <li class="items cat" id="b-categ">
-                            
-                            <div >
+
+                            <div>
                                 <p>Categorías</p>
                                 <p class="down"><i class="fa-solid fa-angle-down"></i></p>
                                 <p class="up"><i class="fa-solid fa-angle-up"></i></p>
@@ -33,11 +33,20 @@
                         </li>
 
                         <li class="items"><a href="#" class="link-item">Armá tu pc</a></li>
-                        <li class="items"><a href="/productCart" class="link-item">Carrito</a></li>
-                        <li class="items"><a href="#" class="link-item">Mis compras</a></li>
-                        <li class="items"><a href="#" class="link-item">Mi perfil</a>
-                        <li class="items"><a href="#" class="link-item">Ajustes</a>
-                        <li class="items"><a href="#" class="link-item">Ingresar</a></li>
+
+                        <% if (locals.isLogged) { %>
+                            <li class="items"><a href="/productCart" class="link-item">Carrito</a></li>
+                            <li class="items"><a href="#" class="link-item">Mis compras</a></li>
+                            <li class="items"><a href="#" class="link-item">Mis favoritos</a></li>
+                            <li class="items"><a href="/users/profile" class="link-item">Mi perfil</a></li>
+                            <li class="items"><a href="#" class="link-item">Ayuda</a></li>
+                            <li class="items"><a href="#" class="link-item">Ajustes</a></li>
+                            <li class="items"><a href="/users/logout" class="link-item">Salir<i
+                                        class="fa-solid fa-arrow-right-from-bracket"></i> </a>
+                        <% } else { %>
+                            <li class="items"><a href="#" class="link-item">Ayuda</a></li>
+                            <li class="items"><a href="/users/login" class="link-item">Ingresar<i class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
+                        <% } %>
 
                     </ul>
 
@@ -50,16 +59,25 @@
 
                 <li class="categoria items cat" id="b-categ-d">
 
-                    <div >
+                    <div>
                         <p>Categorías</p>
                         <p class="down"><i class="fa-solid fa-angle-down"></i></p>
                         <p class="up"><i class="fa-solid fa-angle-up"></i></p>
                     </div>
 
                     <ul>
+
                         <% for(let i=0; i< categoryList.length; i++) {%>
-                            <li><a href="/product/category/<%= categoryList[i].id %>"><img src="/images/category/<%=categoryList[i].image%>" alt=""><span><%= categoryList[i].name.length <14? categoryList[i].name  : (categoryList[i].name.substring(0, 10)) + "..." %></span></a></li>
+
+                            <li>
+                                <a href="/product/category/<%= categoryList[i].id %>">
+                                    <img src="/images/category/<%=categoryList[i].image%>" alt="">
+                                    <span><%= categoryList[i].name.length <14? categoryList[i].name : (categoryList[i].name.substring(0, 10)) + "..." %></span>
+                                </a>
+                            </li>
+
                         <%}%>
+
                     </ul>
 
                 </li>
@@ -84,24 +102,20 @@
                         <div>
                             <img src="/images/dragon_cuadrado.jpg" alt="">
                         </div>
-    
+
                         <ul>
                             <li class="menu-perfil"><a href="#">Mis compras</a></li>
                             <li class="menu-perfil"><a href="#">Mis favoritos</a></li>
-                            <li class="menu-perfil"><a href="/users/profileUser">Mi perfil</a>
+                            <li class="menu-perfil"><a href="/users/profile">Mi perfil</a>
                             <li class="menu-perfil"><a href="#">Ajustes</a>
-                            <li class="menu-perfil"><a href="#">Salir<i class="fa-solid fa-arrow-right-from-bracket"></i> </a>
+                            <li class="menu-perfil"><a href="/users/logout">Salir<i
+                                        class="fa-solid fa-arrow-right-from-bracket"></i> </a>
                         </ul>
-    
+
                     </li>
                 <% } else {%>
-                    <li class="login"><a href="/users/login">Ingresar</a></li>
-                <% } %> 
-
-
-                <!--Próxima incorporación-->
-
-
+                        <li class="login"><a href="/users/login">Ingresar</a></li>
+                <% } %>
 
             </ul>
 
