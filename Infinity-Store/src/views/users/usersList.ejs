@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+</head>
+
+<%- include('../partials/head') %>
+
+<style type="text/css">
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th,td{
+        padding: 10px;
+    }
+
+    th{
+        text-align: left;
+    }
+
+</style>
+<body>
+
+    <%- include('../partials/header') %>
+
+    <h1>Lista de Usuarios</h1>
+
+    <table style="width: 100%">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Apellido
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Contraseña
+            </th>
+            <th>
+                Rol
+            </th>
+            <th>
+                Telefono
+            </th>
+            <th>
+                Imagen
+            </th>
+            <th>
+                Alta
+            </th>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>carla</td>
+            <td>tomasi</td>
+            <td>carla_t@gmail.com</td>
+            <td>carTon</td>
+            <td>user</td>
+            <td>0636156166</td>
+            <td>image-1650841972789-48743459.png</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>None</td>
+            <td>Carla</td>
+            <td>nachocosta287@gmail.com</td>
+            <td>noneCA</td>
+            <td>user</td>
+            <td>03431561651651</td>
+            <td>image-1650032852895-26653613.jpg</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Martina</td>
+            <td>Colomé</td>
+            <td>manu@gmail.com</td>
+            <td>martinaC</td>
+            <td>user</td>
+            <td>0343156165116</td>
+            <td>image-1651537021925-477586135.jpg</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Nico</td>
+            <td>Gerez</td>
+            <td>gerez.nicolas@gmail.com</td>
+            <td>NicoGe</td>
+            <td>user</td>
+            <td>1112345678</td>
+            <td>image-1651885376904-84193745.png</td>
+            <td>true</td>
+        </tr>
+    </table>
+
+    <%- include('../partials/footer') %>
+
+</body>
+
+</html>
