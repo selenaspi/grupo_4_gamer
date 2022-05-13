@@ -24,6 +24,9 @@ app.use(session({
     saveUninitialized: false,
 }))
 
+const cookies = require('cookie-parser');
+app.use(cookies()); 
+
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 app.use(userLoggedMiddleware);
 
@@ -31,6 +34,7 @@ const mainRouter = require('./routes/main');
 const productCartRouter = require('./routes/productCart');
 const productRouter = require('./routes/product');
 const usersRouter = require ('./routes/users');
+
 
 app.use("/", mainRouter);
 app.use("/productCart", productCartRouter);
