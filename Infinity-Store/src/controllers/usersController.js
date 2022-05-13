@@ -143,6 +143,9 @@ const controller = {
         res.redirect("/");
     },
 
+    usersList: (req, res) => {
+        res.render("users/usersList", { categoryList })
+    },
 };
 
 module.exports = controller;
