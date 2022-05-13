@@ -33,6 +33,7 @@ const controller = {
     //READ
 
     profileUser: (req, res) => {
+        console.log(req.cookies.userEmail);
         res.render("users/profileUser", { categoryList, usuarioBuscado: req.session.userLogged })
     },
 
@@ -91,6 +92,7 @@ const controller = {
     //LOGIN
 
     mostrarLogin: (req, res) => {
+        res.cookie('testing', 'Hola Mundo!', {maxAge: 1000 *30});
         res.render("users/login", { categoryList });
     },
 
@@ -104,8 +106,13 @@ const controller = {
 
             if (isOkThePassword) {
                 delete userToLogin.password;
-                req.session.userLogged = userToLogin
-                return res.redirect('/')
+                req.session.userLogged = userToLogin;
+                
+                if(req.body.remember_user) {
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 });
+				}
+                
+                return res.redirect('/users/profile');
             }
 
             return res.render('users/login', {
@@ -131,6 +138,7 @@ const controller = {
     //LOGOUT 
 
     logout: (req, res) => {
+        res.clearCookie('userEmail');
         req.session.destroy();
         res.redirect("/");
     },
