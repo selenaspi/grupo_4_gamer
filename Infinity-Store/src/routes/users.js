@@ -46,4 +46,8 @@ router.post('/login', usersController.loginProcess);
 /*** LOGOUT ***/
 router.get("/logout", authMiddleware, usersController.logout);
 
+/** Lista de Usuarios ***/
+
+router.get("/usersList", usersController.usersList);
+
 module.exports = router;
