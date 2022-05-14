@@ -74,6 +74,13 @@ let detallesCompra = {
     }
 }
 
+
+
+
+
+
+
+
 const controller = {
     mostrarCarrito: (req, res) => {
         res.render("products/productCart", { productos: listaProductos, envio: envios, detallesDeLaCompra: detallesCompra, categoryList})

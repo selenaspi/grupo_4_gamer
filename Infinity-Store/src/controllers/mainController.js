@@ -1,6 +1,6 @@
 const products = require("../database/products.json");
 const opinions = require("../database/opinions.json");
-const category = require("../database/category.json")
+const category = require("../database/category.json");
 
 let productsJSON = JSON.stringify(products);
 let productsList = JSON.parse(productsJSON);
@@ -14,8 +14,8 @@ let productosActivos = productsList.filter(producto => producto.alta);
 const controller = {
 
    index: (req, res) => {
-      console.log('Estas en Login');
-        console.log(req.session);
+
+
 
       let categorias = categoryList;
       let aleatorioCategory, randomCategorias =[];

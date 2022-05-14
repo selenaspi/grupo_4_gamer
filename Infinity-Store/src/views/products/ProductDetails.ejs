@@ -3,23 +3,32 @@
 
 <head>
     <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/css/styleproductDetail.css">
+        <link rel="stylesheet" href="/css/styleproductDetail.css">
 </head>
 
 <body>
-    
+
     <%- include('../partials/header') %>
-    <main>
-        <section class="caja-producto">
-            <div class="caja-titulo">
-                <h2 class="producto"><%= detalle.name %></h2>
-            </div>
-            <section class="contenedor-fotos-datos">
-                <div class="caja-articulo">
-                    <div class="caja-foto-principal">
-                        <img src="/images/products/<%= detalle.image %>" alt="Foto principal">
-                    </div>
-                    <div class="fotos-muestra">
+
+        <main>
+
+            <section class="caja-producto">
+
+                <div class="name">
+                    <h2>
+                        <%= detalle.name %>
+                    </h2>
+                </div>
+
+                <div class="contenedor-fotos-datos">
+
+                    <div class="caja-fotos">
+
+                        <div class="principal">
+                            <img src="/images/products/<%= detalle.image %>" alt="Foto principal">
+                        </div>
+
+                        <!-- <div class="fotos-muestra">
                         <div class="foto-2">
                             <img src="/images/Draconic2.jpg" alt="Foto">
                         </div>
@@ -32,66 +41,81 @@
                         <div class="foto-5">
                             <img src="/images/Draconic5.jpg" alt="Foto">
                         </div>
+                        </div> -->
+
+                    </div>
+
+                    <div class="contenedor-datos">
+
+                        <div>
+                            <h2 class="name-t">
+                                <%= detalle.name %>
+                            </h2>
+                        </div>
+
+                        <div class="caja-precio">
+                            <h3>$<%= detalle.price %>
+                            </h3>
+                            <p class="cuotas">12 cuotas de $<%= detalle.price /12 %>
+                            </p>
+                        </div>
+
+                        <form action="" class="caja-carrito">
+                            <input type="number">
+                            <button type="submit">Añadir al carrito</button>
+                        </form>
+
+
+                        <div class="caja-envio">
+                            <p class="envio">Envio</p>
+                            <p class="texto-envio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum facilis
+                                nam
+                                tempora.
+                                Voluptatibus</p>
+                        </div>
                     </div>
                 </div>
-                <div class="contenedor-datos">
-                    <div class="titulo-producto2">
-                    <h2 class="producto2"><%= detalle.name %></h2>
+
+                <div class="caja-botones">
+                    <p class="estado"><button>En stock</button> </p>
+                    <button class="botondedescripcion">Descripción</button>
+                    <div class="caja-descripcion">
+                        <p class="descripcion">Disfrutá de tus partidas en otro nivel con Redragon, marca reconocida que
+                            se
+                            especializa
+                            en brindar la mejor experiencia de juego al público gamer desde hace más de 20 años. Sus
+                            teclados se
+                            adaptan
+                            a todo tipo de jugadores y esto los convierten en un fiel reflejo de la alta gama y calidad
+                            que
+                            la
+                            compañía
+                            ofrece.</p>
                     </div>
-                    <div class="caja-compra">
-                        <p class="valor">$<%= detalle.price %></p>
-                        <p class="cuotas">12 cuotas de $<%= detalle.price /12 %></p>
-                    </div>
-                    <div class="caja-carrito">
-                        <p class="cantidad"><button>1</button></p>
-                        <p class="agregar-carrito"><button>Añadir al carrito</button></p>
-                    </div>
-                    <div class="caja-envio">
-                        <p class="envio">Envio</p>
-                        <p class="texto-envio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum facilis nam
-                            tempora.
-                            Voluptatibus</p>
-                    </div>
+                    <button class="botondeficha">Ficha técnica</button>
+                    <button class="botondeopiniones">Opiniones</button>
                 </div>
             </section>
-            <!-- <div class="boton-flotante">
-                <img src="/images/CirculoFixed.png" alt="Foto">
-                <p><i class="fa-solid fa-cart-shopping"></i></p>
-            </div> -->
-            <div class="caja-botones">
-                <p class="estado"><button>En stock</button> </p>
-                <button class="botondedescripcion">Descripción</button>
-                <div class="caja-descripcion">
-                    <p class="descripcion">Disfrutá de tus partidas en otro nivel con Redragon, marca reconocida que se
-                        especializa
-                        en brindar la mejor experiencia de juego al público gamer desde hace más de 20 años. Sus
-                        teclados se
-                        adaptan
-                        a todo tipo de jugadores y esto los convierten en un fiel reflejo de la alta gama y calidad que
-                        la
-                        compañía
-                        ofrece.</p>
-                </div>
-                <button class="botondeficha">Ficha técnica</button>
-                <button class="botondeopiniones">Opiniones</button>
+            <div class="caja-similares">
+
+                <p class="similarestitu">Similares</p>
+                <hr>
+                <section class="similares">
+                    <% for(let i=0; i < similares.length; i++) { %>
+                        <div class="articulo">
+                            <img src="/images/products/<%=similares[i].image%>" alt="Foto Similares">
+                            <p class="producto-similar1">
+                                <%=similares[i].name.substring(0, 20)%>...
+                            </p>
+                            <p class="valor2">$<%= similares[i].price %>
+                            </p>
+                        </div>
+                        <% } %>
+                </section>
+
             </div>
-        </section>
-        <div class="caja-similares">
-
-            <p class="similarestitu">Similares</p>
-            <hr> 
-        <section class="similares">
-                <% for(let i = 0; i < similares.length; i++) { %>
-                    <div class="articulo">
-                    <img src="/images/products/<%=similares[i].image%>" alt="Foto Similares">
-                    <p class="producto-similar1"> <%=similares[i].name.substring(0, 20)%>... </p>
-                    <p class="valor2">$<%= similares[i].price %> </p>
-                </div>
-                <% } %> 
-            </section>
-
-        </div>
-    </main>
-    <%- include('../partials/footer') %>
+        </main>
+        <%- include('../partials/footer') %>
 </body>
+
 </html>

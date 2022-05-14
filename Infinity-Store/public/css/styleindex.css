@@ -101,11 +101,13 @@ article {
   margin-bottom: 8%;
   position: relative;
   cursor: pointer;
-  min-height: 403px;
+  /* height: calc(68vw + 125px + 20px); */
 } 
 
 main section article img {
-  width: 100%;
+  width: 68vw;
+  height: 68vw;
+  /* max-height: 248px; */
 }
 
 
@@ -172,6 +174,7 @@ p.precio-antes {
 
 p.precio {
   font-size: 24px;
+  color: black;
 }
 
 p.descuento {
@@ -274,10 +277,16 @@ p.descuento {
   }
 
   main section article {
-    width: 42%;
-    padding: 3%;
+    width: 38%;
+    padding: 3% 5%;
     box-shadow: -1px 2px 22px -1px var(--grisOscuro);
-    min-height: 354px;
+    height: calc(34vw + 115px + 25px);
+  }
+
+  main section article img {
+    width: 34vw;
+    height: 34vw;
+    /* max-height: 210px; */
   }
 
   .material-icons-outlined {
@@ -358,8 +367,13 @@ p.descuento {
     width: 25%;
     padding: 3%;
     box-shadow: -1px 2px 22px -1px var(--grisOscuro);
-    min-height: 309px;
+    height: calc(21vw + 115px + 25px);
     margin-bottom: 5%;
+  }
+
+  main section article img {
+    width: 21vw;
+    height: 21vw;
   }
   
   .articulo4 {
@@ -425,8 +439,13 @@ p.descuento {
     width: 18%;
     padding: 3%;
     box-shadow: -1px 2px 22px -1px var(--grisOscuro);
-    min-height: 309px;
+    height: calc(15.3vw + 115px + 25px);
     margin-bottom: 5%;
+  }
+
+  main section article img {
+    width: 15.3vw;
+    height: 15.3vw;
   }
   
   .articulo4 {

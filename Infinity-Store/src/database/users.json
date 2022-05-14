@@ -29,7 +29,8 @@
   "password": "$2a$10$8isdBZlwi0MDnz0VQOofjOrpqF7jUIeV3HN/adl.keCH34qNJ6FLu",
   "role": "user",
   "phone": "0343156165116",
-  "image": "image-1651537021925-477586135.jpg"
+  "image": "image-1651537021925-477586135.jpg",
+  "alta": true
  },
  {
   "id": 12,
