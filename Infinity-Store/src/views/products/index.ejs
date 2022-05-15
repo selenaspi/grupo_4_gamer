@@ -64,14 +64,14 @@
                     <% for(let i=0; i < productosOfertas.length; i++) { %>
 
                         <article class="articulo<%=i + 1%>">
-                            
-                            <a href="/product/<%= productosOfertas[i].id%>/details ">   
-                                
-                                
+
+                            <a href="/product/<%= productosOfertas[i].id%>/details ">
+
+
                                 <div id="favOff<%=i + 1%>">
                                     <span class="material-icons-outlined">favorite_border</span>
                                 </div>
-    
+
                                 <div id="favOn<%=i + 1%>">
                                     <span class="material-icons">favorite</span>
                                 </div>
@@ -123,53 +123,57 @@
 
                         <article class="articulo<%=i + 1%>">
 
-                            <img src="/images/products/<%= productsRecomendados[i].image %>" alt="imagen del producto">
+                            <a href="/product/<%= productsRecomendados[i].id%>/details ">
 
-                            <div id="favOffR<%=i + 1%>" class="favOff">
-                                <span class="material-icons-outlined">favorite_border</span>
-                            </div>
+                                <img src="/images/products/<%= productsRecomendados[i].image %>"
+                                    alt="imagen del producto">
 
-                            <div id="favOnR<%=i + 1%>" class="favOn"><span class="material-icons">favorite</span></div>
+                                <div id="favOffR<%=i + 1%>" class="favOff">
+                                    <span class="material-icons-outlined">favorite_border</span>
+                                </div>
 
-                            <div class="main-article">
+                                <div id="favOnR<%=i + 1%>" class="favOn"><span class="material-icons">favorite</span>
+                                </div>
 
-                                <p class="name">
-                                    <%= productsRecomendados[i].name.length <40?
-                                        productsRecomendados[i].name.toUpperCase() :
-                                        (productsRecomendados[i].name.substring(0, 28)).toUpperCase() + "..." %>
-                                </p>
+                                <div class="main-article">
 
-                                <% if(productsRecomendados[i].discount !==0) {%>
-
-                                    <p class="precio-antes">$<%= productsRecomendados[i].price %>
+                                    <p class="name">
+                                        <%= productsRecomendados[i].name.length <40?
+                                            productsRecomendados[i].name.toUpperCase() :
+                                            (productsRecomendados[i].name.substring(0, 28)).toUpperCase() + "..." %>
                                     </p>
 
-                                    <div>
+                                    <% if(productsRecomendados[i].discount !==0) {%>
 
-                                        <p class="precio">$<%= productsRecomendados[i].price -
-                                                ((productsRecomendados[i].price*productsRecomendados[i].discount)/100)%>
-                                        </p>
+                                        <p class="precio-antes">$<%= productsRecomendados[i].price %></p>
 
-                                        <p class="descuento">
-                                            <%= productsRecomendados[i].discount %>% OFF
-                                        </p>
+                                        <div>
 
-                                    </div>
+                                            <p class="precio">$<%= productsRecomendados[i].price -
+                                                    ((productsRecomendados[i].price*productsRecomendados[i].discount)/100)%>
+                                            </p>
+
+                                            <p class="descuento">
+                                                <%= productsRecomendados[i].discount %>% OFF
+                                            </p>
+
+                                        </div>
 
                                     <%} else {%>
 
                                         <div>
-                                            <p class="precio">$<%= productsRecomendados[i].price%>
-                                            </p>
+                                            <p class="precio">$<%= productsRecomendados[i].price%></p>
                                         </div>
 
-                                        <%}%>
+                                    <%}%>
 
-                            </div>
+                                </div>
+
+                            </a>
 
                         </article>
-
-                        <% } %>
+                        
+                    <% } %>
 
                 </div>
 

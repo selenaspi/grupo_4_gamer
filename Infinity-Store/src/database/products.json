@@ -11,7 +11,7 @@
   "price": 1964,
   "offSale": false,
   "discount": 0,
-  "stock": 9
+  "stock": 0
  },
  {
   "id": 2,
@@ -735,10 +735,10 @@
   "data_sheet": [],
   "image": "image-1650033049127-607683659.jpg",
   "color": [],
-  "price": "4548",
+  "price": 4548,
   "offSale": false,
   "discount": 0,
-  "stock": "12"
+  "stock": 12
  },
  {
   "id": 18,
@@ -749,10 +749,10 @@
   "data_sheet": [],
   "image": "image-1650079759459-760635741.jpg",
   "color": [],
-  "price": "12000",
+  "price": 12000,
   "offSale": false,
   "discount": 0,
-  "stock": "3"
+  "stock": 3
  },
  {
   "id": 19,
@@ -763,9 +763,9 @@
   "data_sheet": [],
   "image": "image-1650079759459-760635741.jpg",
   "color": [],
-  "price": "12000",
+  "price": 12000,
   "offSale": false,
   "discount": 0,
-  "stock": "3"
+  "stock": 3
  }
 ]

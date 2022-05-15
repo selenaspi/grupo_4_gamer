@@ -23,20 +23,6 @@ body {
 
 }
 
-body::-webkit-scrollbar {
-  width: 15px;      
-  z-index: -1;         /* width of the entire scrollbar */
-}
-
-body::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.8);        /* color of the tracking area */
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: var(--purpuraOscuro);    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */ /* creates padding around scroll thumb */
-}
-
 h2, a {
   font-size: 30px;
   color: var(--blanco);
@@ -109,8 +95,6 @@ main section article img {
   height: 68vw;
   /* max-height: 248px; */
 }
-
-
 
 .favOff, #favOff1, #favOff2, #favOff3, #favOff4, #favOn1, #favOn2 ,#favOn3, #favOn4, #favOffR1, #favOffR2, #favOffR3, #favOffR4, #favOnR1, #favOnR2 ,#favOnR3, #favOnR4 {
   position: absolute;
