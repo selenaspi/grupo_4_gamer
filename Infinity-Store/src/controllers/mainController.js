@@ -1,41 +1,77 @@
-// const path = require("path");
+const products = require("../database/products.json");
+const opinions = require("../database/opinions.json");
+const category = require("../database/category.json");
+
+let productsJSON = JSON.stringify(products);
+let productsList = JSON.parse(productsJSON);
+let opinionsJSON = JSON.stringify(opinions);
+let opinionList = JSON.parse(opinionsJSON);
+let categoryJSON = JSON.stringify(category);
+let categoryList = JSON.parse(categoryJSON);
+
+let productosActivos = productsList.filter(producto => producto.alta);
 
 const controller = {
-    index : (req, res) => {
-        
 
-let productosOfertas = [
-    {
-       descripcion :"Silla Gamer 01",
-       descuento : "25%",
-       precio : "$15000",
-    },
-    {
-        descripcion :"Silla Gamer 02",
-        descuento : "35%",
-        precio : "$12500",
-     },
-     {
-        descripcion :"Silla Gamer 03",
-        descuento : "45%",
-        precio : "$10000",
-     },
-     {
-        descripcion :"Silla Gamer 04",
-        descuento : "15%",
-        precio : "$11000",
-     },
-     
-];
-let productosRecomendados = 
-{
-        descripcion :"Productos Recomendados",
-        precio : "$10000",  
-};
+   index: (req, res) => {
 
 
 
-        res.render('products/index',{productosOfertas, productosRecomendados})}
+      let categorias = categoryList;
+      let aleatorioCategory, randomCategorias =[];
+
+      for (i = 0; i < 6; i++) {
+         do {
+            aleatorioCategory = Math.floor(Math.random() * categorias.length);
+         } while (randomCategorias.indexOf(categorias[aleatorioCategory]) !== -1);
+         randomCategorias.push(categorias[aleatorioCategory]);
+      } 
+
+      let productsOffSale = productosActivos.filter(product => { return product.offSale });
+      let indexAleatorioOffSale, indexAleatorioRecomendados;
+      let productosOfertas = [], popularProducts = [], opinionXProducto = [], productsRecomendados = [];
+
+      for (i = 0; i < 4; i++) {
+         do {
+            indexAleatorioOffSale = Math.floor(Math.random() * productsOffSale.length);
+         } while (productosOfertas.indexOf(productsOffSale[indexAleatorioOffSale]) !== -1);
+         productosOfertas.push(productsOffSale[indexAleatorioOffSale]);
+      } 
+
+      /**/
+
+      let acumulador = 0;
+
+      for (i = 0; i < productosActivos.length; i++) {
+         opinionList.forEach(opinion => {
+            if(opinion.idProduct === i) {
+               opinionXProducto.push(opinion);
+            }
+         });
+         opinionXProducto.forEach(opinion => {
+            acumulador += opinion.rating;
+         });
+         if (acumulador / opinionXProducto.length >= 4) {
+            for(j = 0; j < productosActivos.length; j++) {
+               if(productosActivos[j].id === i) {
+                  popularProducts.push(productosActivos[j]);
+               }
+            }
+         }
+         acumulador = 0;
+         opinionXProducto = []
+      }
+
+      for (i = 0; i < 4; i++) {
+         do {
+            indexAleatorioRecomendados = Math.floor(Math.random() * popularProducts.length);
+         } while (productsRecomendados.indexOf(popularProducts[indexAleatorioRecomendados]) !== -1);
+         productsRecomendados.push(popularProducts[indexAleatorioRecomendados]);
+      }
+
+      res.render('products/index', {randomCategorias, productosOfertas, productsRecomendados, categoryList});
+      // res.send(productsRecomendados)
+   }
 }
 
 module.exports = controller;

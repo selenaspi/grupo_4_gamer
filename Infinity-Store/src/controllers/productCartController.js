@@ -1,3 +1,14 @@
+const products = require("../database/products.json");
+const opinions = require("../database/opinions.json");
+const category = require("../database/category.json")
+
+let productsJSON = JSON.stringify(products);
+let productsList = JSON.parse(productsJSON);
+let opinionsJSON = JSON.stringify(opinions);
+let opinionList = JSON.parse(opinionsJSON);
+let categoryJSON = JSON.stringify(category);
+let categoryList = JSON.parse(categoryJSON);
+
 const path = require("path");
 
 function Producto(name = "Sin nombre", precio = 0, cantidad = 0, foto = "") {
@@ -63,9 +74,16 @@ let detallesCompra = {
     }
 }
 
+
+
+
+
+
+
+
 const controller = {
     mostrarCarrito: (req, res) => {
-        res.render("products/productCart", { productos: listaProductos, envio: envios, detallesDeLaCompra: detallesCompra})
+        res.render("products/productCart", { productos: listaProductos, envio: envios, detallesDeLaCompra: detallesCompra, categoryList})
     }
 }
 

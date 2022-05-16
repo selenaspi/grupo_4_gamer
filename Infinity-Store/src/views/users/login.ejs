@@ -1,29 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/css/stylelogin.css">
-    <link rel="stylesheet" href="/css/styleregistro.css">
+        <link rel="stylesheet" href="/css/stylelogin.css">
+
 </head>
 
 <body>
+
     <%- include('../partials/header') %>
 
-    <main class="form-login">
-        <form action="/" method="POST">
-        <h4>Formulario Login</h4>
-        <input class="control" type="text" name="usuario" value="" placeholder="Usuario">
-        <input class="control" type="password" name="contraseña" value="" placeholder="Contraseña">
-        <input class="boton" type="submit" name="" value="Ingresar">
-  
-    <li class="Enlaces">¿No tienes cuenta?<a href="/users/Register">Regístrate</a></li>
-    <li class="Enlaces"><a href="#">¿Olvidaste tu Contraseña?</a></li>
-    Recordar Contraseña<input class="recordar" type = "checkbox" name="contraseña" value = "Recordar Contraseña"/></form>
-    </main>
+    <div class="main-oculto" id="main-oculto"></div>
 
-    <%- include('../partials/footer') %>
-    
+        <main>
+
+            <div class="form-login">
+
+                <form method="POST" action="/users/login">
+
+                    <h1>Iniciar sesión</h1>
+
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
+
+                    <div class="controls">
+                        <input type="text" name="email" id="email" required>
+                        <label for="email">
+                            <span>Email</span>
+                        </label>
+                    </div>
+
+
+                    <div class="controls">
+                        <input type="password" name="password" id="password" required>
+                        <label for="password">
+                            <span>Contraseña</span>
+                        </label>
+                    </div>
+
+                    <div class="recordar">
+                        <input type="checkbox" class="form-check-input" name="remember_user">
+                        <span>Recuérdame</span>
+                    </div>
+
+                    <button type="submit" class="boton">Ingresar</button>
+
+                </form>
+
+                <a href="#" class="contrasenia-olvidada">Olvidé mi contraseña</a>
+
+                <div class="enlace">
+                    <p>¿No tienes cuenta?</p>
+                    <a href="/users/Register">Regístrate</a><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </div>
+
+            </div>
+
+        </main>
+
+        <%- include('../partials/footer') %>
+
 </body>
 
 </html>

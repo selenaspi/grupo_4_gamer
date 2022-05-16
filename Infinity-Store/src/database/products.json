@@ -1,0 +1,771 @@
+[
+ {
+  "id": 1,
+  "alta": true,
+  "name": "PENDRIVE PATRIOT BIT+ 64GB USB 3.2 GEN1",
+  "idCategory": 1,
+  "description": "La unidad flash USB Bit+ de Patriot ofrece una interfaz USB 3.2 Gen 1 de alta velocidad para una conexión sencilla y una transferencia de datos rápida en cualquier PC o portátil. ¡Bit+ está configurado para una calidad favorable y una confiabilidad sólida al almacenar documentos personales, datos importantes, sus películas favoritas, los juegos más recientes y más! Encerrado en una carcasa aerodinámica totalmente negra con un peso superligero de 1,7 gramos, el Bit+ es la solución flash plug and play perfecta y fácil de usar. Con un diseño compacto y sin tapa, el Bit+ se mantiene protegido mientras viaja. Un diseño pequeño y portátil permite que el USB quepa en su bolsillo, mochila o cartera. Lleva tus archivos contigo dondequiera que viajes. Creado teniendo en cuenta la compatibilidad, Bit+ se sincroniza sin problemas en los sistemas operativos más recientes. Simplemente conecte la unidad flash e inmediatamente acceda a un poco más de almacenamiento. Acceda al instante a Bit+ de Patriot con capacidades que se adaptan a todas sus necesidades de almacenamiento digital. Arrastra y suelta para transferir toda tu información y trabajar más rápido que nunca, manteniendo la productividad constante. ",
+  "data_sheet": [],
+  "image": "PENDRIVE-PATRIOT-BIT+-64GB-USB-3.2-GEN1.jpg",
+  "color": [],
+  "price": 1964,
+  "offSale": false,
+  "discount": 0,
+  "stock": 0
+ },
+ {
+  "id": 2,
+  "alta": true,
+  "name": "REGULAR DE VOLTAJE FORZA FVR-902A 220V 900VA/450W 4-IRAM",
+  "idCategory": 1,
+  "description": "",
+  "data_sheet": [
+   {
+    "name": "Capacidad",
+    "value": "900va/450w"
+   },
+   {
+    "name": "Tensión",
+    "value": "220v"
+   },
+   {
+    "name": "Margen de tensión",
+    "value": "172-268VCA"
+   },
+   {
+    "name": "Frecuencia",
+    "value": "50/60Hz (detección automática )"
+   },
+   {
+    "name": "Corriente máxima de protección",
+    "value": "6000A"
+   },
+   {
+    "name": "Tipo de enchufe",
+    "value": "IRAM (Argentino Tipo I)"
+   },
+   {
+    "name": "Tomas de salida",
+    "value": "4 IRAM (Argentino Tipo I)"
+   },
+   {
+    "name": "Temporizador de retardo",
+    "value": "2 seg"
+   },
+   {
+    "name": "Pasos de regulación",
+    "value": "1 elevación/ 1 atenuación"
+   },
+   {
+    "name": "Protección contra sobrecarga",
+    "value": "termofusible"
+   },
+   {
+    "name": "Protección de red, línea telefónica, fax y módem",
+    "value": "rj45"
+   },
+   {
+    "name": "Regulación de tensión",
+    "value": "220V"
+   },
+   {
+    "name": "Función de elevación",
+    "value": "202VCA"
+   },
+   {
+    "name": "Función de atenuación",
+    "value": "246VCA"
+   },
+   {
+    "name": "LEDs",
+    "value": "1"
+   },
+   {
+    "name": "Luz de conexión",
+    "value": "verde"
+   },
+   {
+    "name": "Recalentamiento/Temperatura de corte",
+    "value": "Se extingue la luz LED"
+   },
+   {
+    "name": "Temperatura de funcionamiento",
+    "value": "0-40°C"
+   },
+   {
+    "name": "Temperatura de almacenamiento",
+    "value": "-15-45°C"
+   },
+   {
+    "name": "Humedad relativa",
+    "value": "0-95% no condensada"
+   },
+   {
+    "name": "Ruido audible",
+    "value": "<40dB a un metro"
+   },
+   {
+    "name": "Interruptor",
+    "value": "iluminado"
+   },
+   {
+    "name": "Cubierta",
+    "value": "Plástico retardador de llama"
+   },
+   {
+    "name": "Longitud del cable",
+    "value": "1.2mts"
+   },
+   {
+    "name": "Dimensiones",
+    "value": "28,2x8,8x8,8cm"
+   },
+   {
+    "name": "Peso",
+    "value": "1.1kg"
+   }
+  ],
+  "image": "REGULADOR-DE-VOLTAJE-FORZA-FVR902A-220V-900VA450W-4IRAM.jpg",
+  "color": "",
+  "price": 3051,
+  "offSale": false,
+  "discount": 0,
+  "stock": 2
+ },
+ {
+  "id": 3,
+  "alta": true,
+  "name": "DISCO SSD 2TB ADATA XPG SPECTRIX S40G RGB NVME",
+  "idCategory": 2,
+  "description": "Con la unidad en estado sólido XPG vas a incrementar la capacidad de respuesta de tu equipo. Gracias a esta tecnología podrás invertir en velocidad y eficiencia para el inicio, la carga y la transferencia de datos. Este disco transfiere datos a través de sus interfaces PCIe 3.0 y NVMe 1.3, lo que te permite transmitir una mayor cantidad de información de una sola vez.",
+  "data_sheet": [
+   {
+    "name": "Marca",
+    "value": "XPG"
+   },
+   {
+    "name": "Línea",
+    "value": "Spectrix S40G"
+   },
+   {
+    "name": "Modelo",
+    "value": "AS40G-256GT-C"
+   },
+   {
+    "name": "Ancho",
+    "value": "22 mm"
+   },
+   {
+    "name": "Altura",
+    "value": "8 mm"
+   },
+   {
+    "name": "Profundidad",
+    "value": "80 mm"
+   },
+   {
+    "name": "Peso",
+    "value": "13.4 g"
+   },
+   {
+    "name": "Capacidad",
+    "value": "256 GB"
+   },
+   {
+    "name": "Tecnología de almacenamiento",
+    "value": "SSD"
+   },
+   {
+    "name": "Interfaces",
+    "value": "PCIe 3.0, NVMe 1.3"
+   },
+   {
+    "name": "Aplicaciones",
+    "value": "PC"
+   },
+   {
+    "name": "Ubicación del disco",
+    "value": "Interno"
+   },
+   {
+    "name": "Factor de forma",
+    "value": "M.2 2280"
+   },
+   {
+    "name": "Con tecnología 3D NAND",
+    "value": "Sí"
+   },
+   {
+    "name": "Con disipador de calor",
+    "value": "Sí"
+   },
+   {
+    "name": "Consumo energético",
+    "value": "0.33 W"
+   }
+  ],
+  "image": "DISCO-SSD-2TB-ADATA-XPG-SPECTRIX-S40G-RGB-NVME.jpg",
+  "color": [],
+  "price": 42109,
+  "offSale": true,
+  "discount": 15,
+  "stock": 5
+ },
+ {
+  "id": 4,
+  "alta": true,
+  "name": "LENTE NIKON 70-200 F4 ED VR",
+  "idCategory": 4,
+  "description": "",
+  "data_sheet": [
+   {
+    "name": "Tipo de montura",
+    "value": "Nikon F-Bayoneta"
+   },
+   {
+    "name": "Escala de distancia focal",
+    "value": "70 – 200mm"
+   },
+   {
+    "name": "Relación del zoom",
+    "value": "2.9x"
+   },
+   {
+    "name": "Apertura máxima",
+    "value": "f/ 4"
+   },
+   {
+    "name": "Apertura mínima",
+    "value": "f/ 32"
+   },
+   {
+    "name": "Formato",
+    "value": "FX/35 mm"
+   },
+   {
+    "name": "Ángulo de visión máximo (formato DX)",
+    "value": "22°50′"
+   },
+   {
+    "name": "Ángulo de visión mínimo (formato DX)",
+    "value": "8°"
+   }
+  ],
+  "image": "Lente-Nikon-70-200-F4-ED-VR.jpg",
+  "color": [
+   "Negro"
+  ],
+  "price": 390000,
+  "offSale": false,
+  "discount": 0,
+  "stock": 1
+ },
+ {
+  "id": 5,
+  "alta": true,
+  "name": "COOLER AEROCOOL VERKHO 2 (1150/1151/1156/775/FM2/FM1/FM2/AM3",
+  "idCategory": 6,
+  "description": "Dos heatpipes proporcionan una superficie perfectamente plana que asegura una disipación de calor más rápida. Las tiras abiertas a lo largo de los lados del ventilador aseguran un flujo de aire mejorado y más fuerte que otros ventiladores regulares de 90 mm, manteniendo el nivel de ruido al mínimo. El diseño irregular de la superficie de la aleta crea un área de disipación de calor. Es compatible con la mayoría de las CPUs debido a un diseño compacto.",
+  "data_sheet": [
+   {
+    "name": "Nombre del modelo",
+    "value": "Verkho 2"
+   },
+   {
+    "name": "Material de base",
+    "value": "H.C.T.T"
+   },
+   {
+    "name": "Material de la aleta",
+    "value": "Aluminio"
+   },
+   {
+    "name": "Tubo de calor",
+    "value": "6mm x 2"
+   },
+   {
+    "name": "Dimensión",
+    "value": "92 x 62 x 142"
+   },
+   {
+    "name": "TDP",
+    "value": "110w"
+   },
+   {
+    "name": "VENTILADOR",
+    "value": "90 x 25 mm"
+   },
+   {
+    "name": "Sistema de cojinetes",
+    "value": "Hidráulico"
+   },
+   {
+    "name": "Tensión nominal",
+    "value": "12V"
+   },
+   {
+    "name": "Tensión de arranque",
+    "value": "5V"
+   },
+   {
+    "name": "Corriente nominal",
+    "value": "0.15A"
+   },
+   {
+    "name": "El consumo de energía",
+    "value": "1.8W"
+   },
+   {
+    "name": "Velocidad",
+    "value": "800-2000 RPM"
+   },
+   {
+    "name": "Flujo de aire",
+    "value": "18.5-23.6 CFM"
+   },
+   {
+    "name": "ruido",
+    "value": "15-25 dBA"
+   },
+   {
+    "name": "Conector",
+    "value": "PWM- 4pin"
+   },
+   {
+    "name": "MTBF",
+    "value": "60000 horas"
+   }
+  ],
+  "image": "COOLER-AEROCOOL-VERKHO-2.jpg",
+  "color": [],
+  "price": 2218,
+  "offSale": false,
+  "discount": 0,
+  "stock": 6
+ },
+ {
+  "id": 7,
+  "alta": true,
+  "name": "FAN AEROCOOL ASTRO 12 ARGB DUAL RING",
+  "idCategory": 6,
+  "description": "Combinando un exclusivo diseño LED RGB Omni y un acabado de estilo fibra de carbono para conseguir una estética nunca vista, el ventilador ASTRO 12 de Aerocool te garantiza la mejor refrigeración y la mejor decoración interna para tu PC. Hasta 16.8 millones de colores con placas base ARGB y prestaciones profesionales para conseguir un rendimiento óptimo.",
+  "data_sheet": [],
+  "image": "FAN-AEROCOOL-ASTRO-12-ARGB-DUAL-RING.jpg",
+  "color": [],
+  "price": 3184,
+  "offSale": false,
+  "discount": 0,
+  "stock": 8
+ },
+ {
+  "id": 8,
+  "alta": true,
+  "name": "FUENTE 850W CoolerMaster MWE GOLD FULL MODULAR",
+  "idCategory": 7,
+  "description": "El MWE Gold - V2 (Full Modular) es el siguiente paso en la evolución de la línea de unidades de suministro de energía 80 PLUS Gold de Cooler Master. La serie MWE Gold original se creó para ofrecer una opción con calificación Gold más simple y asequible para ayudar a los usuarios a hacer más accesible la transición de las unidades de suministro de energía 80 PLUS White y Bronze. La eficiencia siempre ha sido uno de los factores más importantes para los usuarios a la hora de elegir su fuente de alimentación. Si bien hay una variedad de opciones de eficiencia, 80 PLUS Gold ha sido la opción ideal durante los últimos años y continúa siendo considerada el estándar en gran parte del mundo. El MWE Gold - V2 ofrece una certificación 80 PLUS Gold, lo que garantiza una eficiencia mínima típica del 90%.",
+  "data_sheet": [
+   {
+    "name": "Modelo",
+    "value": "MPE-8501-AFAAG"
+   },
+   {
+    "name": "Versión ATX",
+    "value": "ATX 12V"
+   },
+   {
+    "name": "PFC",
+    "value": "PFC activo"
+   },
+   {
+    "name": "Voltaje de entrada",
+    "value": "90-264 V"
+   },
+   {
+    "name": "Corriente de entrada",
+    "value": "12-6A"
+   },
+   {
+    "name": "Frecuencia de entrada",
+    "value": "47-63 Hz"
+   },
+   {
+    "name": "Dimensiones (L x An x Al)",
+    "value": "160 x 150 x 86 mm"
+   },
+   {
+    "name": "Tamaño del ventilador",
+    "value": "120 mm"
+   },
+   {
+    "name": "Cojinete de ventilador",
+    "value": "HDB"
+   },
+   {
+    "name": "Velocidad del ventilador",
+    "value": "1500 RPM"
+   },
+   {
+    "name": "Nivel de ruido al 20%",
+    "value": "0 dBA"
+   },
+   {
+    "name": "Nivel de ruido al 50%",
+    "value": "17,8 dBA"
+   },
+   {
+    "name": "Nivel de ruido al 100%",
+    "value": "25,9 dBA"
+   },
+   {
+    "name": "Eficiencia",
+    "value": "90% a carga típica"
+   },
+   {
+    "name": "Calificación 80 PLUS",
+    "value": "80 PLUS oro"
+   },
+   {
+    "name": "ErP 2014 Lote 3",
+    "value": "sí"
+   },
+   {
+    "name": "Temperatura de funcionamiento",
+    "value": "0-50 ° C"
+   }
+  ],
+  "image": "FUENTE-850W-CoolerMaster-MWE-GOLD-FULL-MODULAR.png",
+  "color": [],
+  "price": 34160,
+  "offSale": true,
+  "discount": 8,
+  "stock": 1
+ },
+ {
+  "id": 9,
+  "alta": true,
+  "name": "MEMORIA UDIMM MUSHKIN SILVERLINE DDR4 16GB 3200MHZ 1.2V BULK",
+  "idCategory": 11,
+  "description": "Los módulos de memoria Ram Mushkin Silverline DDR4 están diseñados para exceder los estándares de la industria y garantizar la mayor compatibilidad con PC Intel y AMD. Su disipador de calor de nuevo diseño está hecho de aluminio de grado aeronáutico, lo que le da al módulo de memoria un aspecto refinado y elegante que complementa perfectamente su potencia. Ideal para Gamers y clientes que buscan la mejor performance, sin descuidar sus costos.",
+  "data_sheet": [
+   {
+    "name": "Capacidad total",
+    "value": "16 GB"
+   },
+   {
+    "name": "Formato",
+    "value": "DIMM"
+   },
+   {
+    "name": "Tecnología",
+    "value": "DDR4 SDRAM"
+   },
+   {
+    "name": "Velocidad",
+    "value": "3200 MHz"
+   },
+   {
+    "name": "Aplicación",
+    "value": "Computadoras de escritorio"
+   }
+  ],
+  "image": "MEMORIA-UDIMM-MUSHKIN-SILVERLINE-DDR4-16GB-3200MHZ-1.2V-BULK.jpg",
+  "color": [],
+  "price": 14738,
+  "offSale": true,
+  "discount": 10,
+  "stock": 3
+ },
+ {
+  "id": 10,
+  "alta": true,
+  "name": "Memoria DDR3 HYNIX 2GB 1600MHz",
+  "idCategory": 11,
+  "description": "",
+  "data_sheet": [
+   {
+    "name": "Marca",
+    "value": "SK hynix"
+   },
+   {
+    "name": "Línea",
+    "value": "PC"
+   },
+   {
+    "name": "Modelo",
+    "value": "PC3-12800U"
+   },
+   {
+    "name": "Módulos de memoria",
+    "value": "1 x 2 GB"
+   },
+   {
+    "name": "Capacidad total",
+    "value": "2 GB"
+   },
+   {
+    "name": "Capacidad individual",
+    "value": "2 GB"
+   },
+   {
+    "name": "Tecnología de la memoria",
+    "value": "DDR3 SDRAM"
+   },
+   {
+    "name": "Formato",
+    "value": "UDIMM"
+   },
+   {
+    "name": "Velocidad",
+    "value": "1600 MHz"
+   },
+   {
+    "name": "Aplicación",
+    "value": "Computadoras de escritorio"
+   }
+  ],
+  "image": "Memoria-DDR3-HYNIX-2GB-1600MHz.jpg",
+  "color": [],
+  "price": 1364,
+  "offSale": false,
+  "discount": 0,
+  "stock": 15
+ },
+ {
+  "id": 11,
+  "alta": true,
+  "name": "MICROFONO RAZER SEIREN MINI ULTRA QUARTZ",
+  "idCategory": 12,
+  "description": "Hecho para configuraciones minimalistas o más pequeñas, este micrófono de condensador compacto apenas ocupa espacio en el escritorio y es discreto en la cámara para que el foco siempre esté en ti. También es fácil de llevar si necesita llevar su transmisión o trabajar a otra parte.",
+  "data_sheet": [
+   {
+    "name": "Marca",
+    "value": "Razer"
+   },
+   {
+    "name": "Modelo",
+    "value": "Seiren MINI Quartz"
+   },
+   {
+    "name": "Frecuencia mínima - Frecuencia máxima",
+    "value": "44.1 kHz - 48 kHz"
+   },
+   {
+    "name": "Conectores de salida",
+    "value": "USB"
+   },
+   {
+    "name": "Tipos de micrófono",
+    "value": "Condensador"
+   },
+   {
+    "name": "Patrones polares",
+    "value": "Supercardioide"
+   }
+  ],
+  "image": "MICROFONO-RAZER-SEIREN-MINI-ULTRA-QUARTZ.jpg",
+  "color": [
+   "Rosa"
+  ],
+  "price": 11042,
+  "offSale": false,
+  "discount": 0,
+  "stock": 5
+ },
+ {
+  "id": 12,
+  "alta": true,
+  "name": "MICRÓFONO DE EXPANSIÓN LOGINTECH",
+  "idCategory": 12,
+  "description": "Amplía el alcance del sistema de videoconferencia GROUP con micrófonos de expansión Logitech GROUP. Puede haber hasta 20 personas en una sala grande y se oirá la voz de todas y cada una de ellas. Basta con conectar los microfonos al altavoz de GROUP. Se reconocerán y configurarán automáticamente. Un indicador luminoso muestra cuándo se ha silenciado el micrófono, cuándo hay una llamada activada y cuándo se ha iniciado el emparejamiento inalámbrico Bluetooth®. Altura: 83 mm Ancho: 83 mm Profundidad: 21 mm Peso: 230 g Tipo de conexión: Plug and Play Indicadores luminosos (LED): LED para confirmar streaming de video, silenciamiento de micrófono, llamada en espera y emparejamiento Bluetooth. Tipo de micrófono: Mono, banda ancha, supresión de ruido Botones/Conmutador: Silenciar micrófono",
+  "data_sheet": [],
+  "image": "Micrófonos-de-Expansión-Logitech.jpg",
+  "color": [
+   "Negro"
+  ],
+  "price": 69909,
+  "offSale": true,
+  "discount": 15,
+  "stock": 1
+ },
+ {
+  "id": 13,
+  "alta": true,
+  "name": "MICROFONO RAZER SEIREN EMOTE",
+  "idCategory": 12,
+  "description": "Sorprende a tus seguidores y lleva tus dotes escénicas a otro nivel con Razer Seiren Emote, el primer micrófono USB que utiliza emoticonos para interactuar con tu público. Da un toque divertido y fresco a tus retransmisiones y deja a tu público con ganas de más con un nuevo nivel de entretenimiento que te permite destacar entre los demás. ",
+  "data_sheet": [
+   {
+    "name": "Marca",
+    "value": "Razer"
+   },
+   {
+    "name": "Modelo",
+    "value": "Seiren"
+   },
+   {
+    "name": "Largo del cable",
+    "value": "2.2 m"
+   },
+   {
+    "name": "Impedancia",
+    "value": "32 O "
+   },
+   {
+    "name": "Respuesta en frecuencia",
+    "value": "100 hz - 20 khz"
+   },
+   {
+    "name": "Sensibilidad",
+    "value": "110 dB"
+   },
+   {
+    "name": "Formato del auricular",
+    "value": "Rz19-03060100-r3u1"
+   }
+  ],
+  "image": "MICROFONO-RAZER-SEIREN-EMOTE.jpg",
+  "color": [
+   "Negro"
+  ],
+  "price": 34854,
+  "offSale": true,
+  "discount": 20,
+  "stock": 5
+ },
+ {
+  "id": 14,
+  "alta": true,
+  "name": "MPROCESADOR AMD (AM4) RYZEN 5 5600X 6 NÚCLEO",
+  "idCategory": 13,
+  "description": "Obtenga rendimiento de alta velocidad en los juegos, con el mejor procesador para computadoras de escritorio del mundo. Los núcleos más rápidos del mundo para los jugadores de PC.Software que combina la velocidad de SSD con la capacidad de disco duro en una sola unidad rápida y fácil de administrar, gratuitamente con la placa madre AMD Serie 400. La utilidad de overclocking sencilla ya la vez potente para los procesadores AMD Ryzen™",
+  "data_sheet": [
+   {
+    "name": "Número de núcleos de CPU",
+    "value": "6"
+   },
+   {
+    "name": "Número de hilos",
+    "value": "12"
+   },
+   {
+    "name": "Reloj base",
+    "value": "3.7GHz"
+   },
+   {
+    "name": "Reloj de aumento máx.",
+    "value": "Hasta 4.6GHz"
+   },
+   {
+    "name": "Package",
+    "value": "AM4"
+   },
+   {
+    "name": "Compatible con SO",
+    "value": "Windows 10 edición de 64·bits, RHEL x86 edición de 64·bits, Ubuntu x86 edición de 64·bits"
+   },
+   {
+    "name": "Velocidad máxima de memoria",
+    "value": "Up to 3200MHz"
+   },
+   {
+    "name": "Tipo de memoria",
+    "value": "DDR4"
+   },
+   {
+    "name": "Tecnologías compatibles",
+    "value": "AMD 'Zen 3' Core Architecture, Tecnología AMD StoreMI, Utilidad AMD Ryzen™ Master, AMD Ryzen™ VR-Ready Premium"
+   }
+  ],
+  "image": "MPROCESADOR-AMD(AM4)-RYZEN-5-5600X-6-NÚCLEO.jpg",
+  "color": [],
+  "price": 53291,
+  "offSale": false,
+  "discount": 0,
+  "stock": 6
+ },
+ {
+  "id": 15,
+  "alta": true,
+  "name": "MB AMD (AM4) ASUS PRO A320M-R WI-FI-SI (90MB10I0-M0ECY1)",
+  "idCategory": 15,
+  "description": "Tecnología de recuperación de BIOS automática exclusiva de ASUS para la recuperación automática del BIOS del sistema desde una copia de seguridad verificada Pueto LPC dedicada y tarjeta de depuración con pantalla LCD para una resolución de problemas más rápida. Registro de eventos para capturar y administrar información detallada del sistema. Las tarjetas madre comerciales ASUS Pro ofrecen características mejoradas para suavizar sus operaciones de TI, que incluyen protección integral del sistema, estabilidad y confiabilidad las 24 horas del día, los 7 días de la semana y un paquete de administración mejorado para una personalización más fácil. Conocida como la marca de tarjetas madre más grande y conocida del mundo, ASUS ofrece un servicio posventa de clase mundial y una disponibilidad garantizada a largo plazo para maximizar su inversión durante el ciclo de vida del producto y ofrece una solución de alta calidad optimizada para TCO para su negocio necesidades informáticas.",
+  "data_sheet": [
+   {
+    "name": "Memoria",
+    "value": "3.ª/2.ª/1.ª generación AMD Ryzen™/ 2.ª y 1.ª generación AMD Ryzen™ con gráficos Radeon™ Vega/ Athlon™ con procesadores gráficos Radeon™ Vega 2 x DIMM, máx. 32 GB, DDR4 2933/2666/2400/2133 MHz Memoria sin búfer Procesadores AMD serie A/Athlon X4 de 7.ª generación"
+   },
+   {
+    "name": "UPC",
+    "value": " Zócalo AMD AM4 para procesadores AMD Ryzen™ de 3.ª, 2.ª y 1.ª generación/AMD Ryzen™ de 2.ª y 1.ª generación con gráficos Radeon™ Vega/Athlon™ con gráficos Radeon™ Vega/ serie A de 7.ª generación/Athlon X4 Admite CPU de hasta 8 núcleos"
+   },
+   {
+    "name": "Conjunto de chips AMD A320",
+    "value": "4 x puerto(s) SATA 6Gb/s, gris, Support Raid 0, 1, 10"
+   },
+   {
+    "name": "LAN",
+    "value": "Realtek® RTL8111H, 1 controlador(es) LAN Gigabit"
+   },
+   {
+    "name": "Datos de redes inlámbricas",
+    "value": "WiFi 802.11 a/b/g/n/ac"
+   },
+   {
+    "name": "Bluetooth",
+    "value": "Bluetooth® 5.0"
+   },
+   {
+    "name": "Audio",
+    "value": "CODEC de audio de alta definición de 8 canales Realtek® ALC887"
+   }
+  ],
+  "image": "MB-AMD(AM4)-ASUS-PRO-A320M-R-WI-FI-SI-(90MB10I0-M0ECY1).png",
+  "color": [],
+  "price": 11786,
+  "offSale": true,
+  "discount": 5,
+  "stock": 8
+ },
+ {
+  "id": 17,
+  "alta": false,
+  "name": "teclado",
+  "idCategory": 1,
+  "description": "nuevo",
+  "data_sheet": [],
+  "image": "image-1650033049127-607683659.jpg",
+  "color": [],
+  "price": 4548,
+  "offSale": false,
+  "discount": 0,
+  "stock": 12
+ },
+ {
+  "id": 18,
+  "alta": true,
+  "name": "teclado Gamer",
+  "idCategory": 1,
+  "description": "teclado",
+  "data_sheet": [],
+  "image": "image-1650079759459-760635741.jpg",
+  "color": [],
+  "price": 12000,
+  "offSale": false,
+  "discount": 0,
+  "stock": 3
+ },
+ {
+  "id": 19,
+  "alta": true,
+  "name": "teclado Gamer",
+  "idCategory": 1,
+  "description": "teclado",
+  "data_sheet": [],
+  "image": "image-1650079759459-760635741.jpg",
+  "color": [],
+  "price": 12000,
+  "offSale": false,
+  "discount": 0,
+  "stock": 3
+ }
+]

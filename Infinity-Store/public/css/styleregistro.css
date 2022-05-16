@@ -1,9 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/*------------------------ Universales ------------------------*/
 :root {
     --azulOscuro: rgb(32, 33, 65);
     --purpuraOscuro: #46188c;
@@ -12,14 +7,14 @@
     --grisClaro: #ebebeb;
 }
 
-body{
+/* body{
     font-family:'Montserrat', sans-serif;
     background-image: url('/images/pexels-photo.jpg');
     width: 100%;
     height: 100vh;
     background-size: cover;
     background-position: center;
-}
+} */
 
 .Form-register{
     width: 400px;    
@@ -79,7 +74,7 @@ body{
     text-align: center;
 }
 
-.header{
+/* .header{
     background-color: var(--azulOscuro);
     height: 80px;
     position: fixed;
@@ -141,14 +136,14 @@ body{
     display: none;
     border-radius: 10px; 
     border: none;
-} 
+}  */
 
 @media(max-width: 521px){
     body{
         font-size: 18px;
     }
      
-    .header{
+    /* .header{
         height: 60px;       
     }
     .logo {
@@ -175,14 +170,14 @@ body{
     
     .nav-toggle {
         display: block;
-    } 
+    }  */
 }
 @media(max-width: 769px){
     body{
         font-size: 22px;
     }
      
-    .header{
+    /* .header{
         height: 60px;       
     }
     .logo {
@@ -211,5 +206,5 @@ body{
     
     .nav-toggle {
         display: block;
-    } 
+    }  */
 }

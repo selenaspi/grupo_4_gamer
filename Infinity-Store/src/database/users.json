@@ -1,0 +1,46 @@
+[
+ {
+  "id": 9,
+  "name": "carla",
+  "lastName": "tomasi",
+  "email": "carla_t@gmail.com",
+  "password": "$2a$10$aUoFshiF80CCDZzaJsV4jeBL2OJ3bgshX87Bun.wyZaBTOqtQ80dy",
+  "role": "user",
+  "phone": "0636156166",
+  "image": "image-1650841972789-48743459.png",
+  "alta": true
+ },
+ {
+  "id": 10,
+  "lastName": "None",
+  "email": "nachocosta287@gmail.com",
+  "password": "$2a$10$w2jl4OXMj3xnAIjB/xYV9uFNVZ6O5iJW/taQzZIxDtdYILxywSX3q",
+  "role": "user",
+  "phone": "03431561651651",
+  "image": "image-1650032852895-26653613.jpg",
+  "alta": false,
+  "name": "Carla"
+ },
+ {
+  "id": 11,
+  "name": "Martina",
+  "lastName": "Colomé",
+  "email": "manu@gmail.com",
+  "password": "$2a$10$8isdBZlwi0MDnz0VQOofjOrpqF7jUIeV3HN/adl.keCH34qNJ6FLu",
+  "role": "user",
+  "phone": "0343156165116",
+  "image": "image-1651537021925-477586135.jpg",
+  "alta": true
+ },
+ {
+  "id": 12,
+  "name": "Nico",
+  "lastName": "Gerez",
+  "email": "gerez.nicolas@gmail.com",
+  "password": "$2a$10$3UUg2uVc7c2S1COmEl7XiOMQWppzMtjPu1c4O5ZuLUlFpmH7SIZDu",
+  "role": "user",
+  "phone": "1112345678",
+  "image": "image-1651885376904-84193745.png",
+  "alta": true
+ }
+]

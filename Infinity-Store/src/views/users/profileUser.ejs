@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <%- include('../partials/head') %>
+        <link rel="stylesheet" href="/css/profileUser.css">
+</head>
+
+<body>
+
+    <%- include('../partials/header') %>
+
+        <main>
+
+            <div class="portada-perfil">
+
+                <div class="avatar-perfil">
+
+                    <img src="/images/usuarios/<%= usuarioBuscado.image %>" alt="">
+
+                    <a href="#" class="cambiar-foto">
+                        <i class="fas fa-camera"></i>
+                    </a>
+
+                </div>
+
+                <div class="editar-perfil">
+                    <button type=""><a href=""><i class="fa-solid fa-pencil"></i></a></button>
+                </div>
+
+            </div>
+
+            <div class="datos-usuario">
+                <h2>
+                    <%= `${usuarioBuscado.lastName.toUpperCase()}, ${usuarioBuscado.name.substring(0,
+                        1).toUpperCase()}${usuarioBuscado.name.substring(1).toLowerCase()}`%>
+                </h2>
+                <ul>
+                    <li>
+                        <p>Fecha de nacimiento</p>
+                        <h3>
+                            09/02/1800 
+                        </h3>
+                    </li>
+                    <li>
+                        <p>Domicilio</p>
+                        <h3>
+                            Siempreviva 742 
+                        </h3>
+                    </li>
+                    <li>
+                        <p>Email</p>
+                        <h3>
+                            <%= usuarioBuscado.email %>
+                        </h3>
+                    </li>
+                    <li>
+                        <p>Teléfono</p>
+                        <h3>
+                            <%= usuarioBuscado.phone %>
+                        </h3>
+                    </li>
+                </ul>
+            </div>
+
+
+
+
+
+
+        </main>
+
+        <%- include('../partials/footer') %>
+</body>
+
+</html>

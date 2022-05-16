@@ -1,38 +1,127 @@
-function Producto(name = "Sin nombre", precio = 0, cantidad = 0, foto = "") {
-    this.name = name;
-    this.precio = precio;
-    this.cantidad = cantidad;
-    this.foto = foto;
+const Product = require('../models/Product.js');
+
+const category = require("../database/category.json")
+let categoryJSON = JSON.stringify(category);
+let categoryList = JSON.parse(categoryJSON);
+
+let similarCategories = function (idCategorySimilar, productoBuscado) {
+    let similaresByCategory = [], similares = [];
+    do {
+        if (idCategorySimilar == (categoryList.length + 1)) {
+            idCategorySimilar = 1;
+        }
+        similaresByCategory = Product.filterActivesByField("idCategory", idCategorySimilar);
+        similaresByCategory = similaresByCategory.filter(product => product.id != productoBuscado.id)
+        if (similaresByCategory.length != 0) {
+            for (i = 0; i < similaresByCategory.length; i++) {
+                if (similares.length < 4) {
+                    similares.push(similaresByCategory[i])
+                }
+            }
+        }
+        idCategorySimilar++
+    } while (similares.length < 4);
+    return similares
 }
 
-let teclado = new Producto("TECLADO GAMER EVGA Z15 RGB COLOR LINEAR SILVER SPANISH", 6870, 3, "/images/TECLADO GAMER EVGA Z15 RGB COLOR LINEAR SILVER SPANISH.jpg");
-let notebook = new Producto("NOTEBOOK MSI CREATOR 15 A10SE", 380638, 1, "/images/NOTEBOOK MSI CREATOR 15 A10SE.jpg");
-let silla = new Producto("SILLA GAMER PRIMUS THRONOS 100T BLACK/YELLOW", 46840, 1, "/images/SILLA GAMER PRIMUS THRONOS 100T BLACK-AMARILLA.jpg")
-
-let listaProductos = [teclado, notebook, silla];
-
 const controller = {
-    mostrarDetalleProducto: (req, res) => {
-        let productosSimilares = {
-            descripcion: "Productos Similares",
-            precio: "$10000",
-        };
-        res.render("products/productDetails",{productos: listaProductos,productosSimilares})
-    },
-    crearProducto: (req, res) => { res.render("products/productCreationEdition", { existe: false, name: null, descripcion: null, foto: null, categoria: null, precio: null, descuento: null }) },
-    editarProducto: (req, res) => {
+
+    //CREATE
+    creation: (req, res) => {
         res.render("products/productCreationEdition", {
-            existe: true,
-            name: "Teclado Mecánico Inalámbrico Redragon Draconic K530W-RGB White",
-            descripcion: `Disfrutá de tus partidas en otro nivel con Redragon, marca reconocida que se especializa en brindar la mejor experiencia de juego al público gamer desde hace más de 20 años. Sus teclados se adaptan a todo tipo de jugadores y esto los convierten en un fiel reflejo de la alta gama y calidad que la compañía ofrece.`,
-            foto: null,
-            categoria: "teclado",
-            precio: 7310,
-            descuento: 15
+            metodo: "POST",
+            ruta: "",
+            categoryList
         })
+    },
+
+    store: (req, res) => {
+
+        let offSaleOn = req.body.checkDescuento === "on" ? true : false;
+
+        let discountUpdate = offSaleOn ? req.body.discount : 0;
+
+        const productData = {
+            alta: true,
+            name: req.body.name,
+            idCategory: Number(req.body.category),
+            description: req.body.description,
+            data_sheet: [],
+            image: req.file.filename,
+            color: [],
+            price: Number(req.body.price),
+            offSale: offSaleOn,
+            discount: Number(discountUpdate),
+            stock: Number(req.body.stock),
+        }
+
+        Product.create(productData);
+
+        res.redirect('/');
+    },
+
+    //READ
+    productDetails: (req, res) => {
+        let productoBuscado = Product.findByPk(Number(req.params.id));
+
+        let similares = similarCategories(productoBuscado.idCategory, productoBuscado);
+
+        res.render("products/productDetails", { similares, detalle: productoBuscado, categoryList })
+    },
+
+    allProducts: (req, res) => {
+
+        res.render("products/allProducts", { similares: Product.findActiveProducts(), categoryList })
+    },
+
+    //UPDATE
+
+    edition: (req, res) => {
+        let productoElegido = Product.findByPk(Number(req.params.id));
+
+        res.render("products/productCreationEdition", {
+            metodo: "PUT",
+            ruta: req.params.id + "?_method=PUT",
+            producto: productoElegido,
+            categoryList
+        })
+    },
+
+    edit: (req, res) => {
+
+        let offSaleOn = req.body.checkDescuento === "on" ? true : false;
+
+        let productToEdit = Product.findByPk(Number(req.params.id));
+
+        let productoEditado = {
+            ...productToEdit,
+            name: req.body.name,
+            idCategory: Number(req.body.category),
+            description: req.body.description,
+            data_sheet: [],
+            image: req.file ? req.file.filename : productToEdit.image,
+            color: [],
+            price: Number(req.body.price),
+            offSale: offSaleOn,
+            discount: offSaleOn === true ? Number(req.body.discount) : 0,
+            stock: Number(req.body.stock)
+
+        }
+
+        Product.edition(productoEditado);
+
+        res.redirect('/');
+    },
+
+    //DELETE
+    productDelete: (req, res) => {
+        Product.delete(Number(req.params.id));
+        res.redirect('/')
+    }, 
+
+    filterByCategory: (req, res) => {
+        res.render("products/allProducts", { similares: Product.filterActivesByField("idCategory", req.params.idCategory), categoryList }) //no debería llamarse similares pero bue
     }
 }
 
-
 module.exports = controller;
-

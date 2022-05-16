@@ -1,96 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/css/styleindex.css">
+        <link rel="stylesheet" href="/css/styleindex.css">
 </head>
 
 <body>
+
     <%- include('../partials/header') %>
 
-    <!------------------------- BANNER  ------------------------------->
+        <div class="main-oculto" id="main-oculto"></div>
 
-    <aside class="banner">
-        <img src="/images/pexels-soumil-kumar-735911.jpg" alt="banner">
-    </aside>
+        <!------------------------- BANNER  ------------------------->
 
-    <!-- ICONOS POR DEBAJO DE BANNER -->
+        <aside class="banner">
+            <img src="/images/pexels-soumil-kumar-735911.jpg" alt="banner">
+        </aside>
 
-    <section class="categorias">
+        <!-- ICONOS POR DEBAJO DE BANNER -->
 
-        <div class="icon1" alt="PC Armadas">
-            <i class="fa-solid fa-computer"></i>
-        </div>
+        <section class="categorias">
 
-        <div class="icon2" alt="Impresoras">
-            <i class="fa-solid fa-print"></i>
-        </div>
-        <div class="icon3" alt="Accesorios">
-            <i class="fa-solid fa-headphones-simple"></i>
-        </div>
-        <div class="icon4" alt="Conexiones">
-            <i class="fa-solid fa-wifi"></i>
-        </div>
-        <div class="icon5" alt="Hardware">
-            <i class="fa-solid fa-laptop-code"></i>
-        </div>
-        <div class="icon6" alt="OtraCosa">
-            <i class="fa-solid fa-laptop-code"></i>
-        </div>
-    </section>
+            <% for(let i=0; i< randomCategorias.length; i++) {%>
 
+                <div class="category<%=i + 1%>">
 
-    <!-- ICONO FIXED -->
-    <div class="shoppingCarF">
-        <i class="fa-solid fa-cart-shopping"></i> 
-    </div>
-
-<main>
-  <section class="ofertas">
-    <h2>Ofertas</h2>
-       <div class="productos">
-         <% for(let i = 0; i < productosOfertas.length; i++) { %>
-             <article>
-                  <img src="/images/SILLA GAMER PRIMUS THRONOS 100T BLACK-AMARILLA.jpg" alt="primer producto">
-                    <div class="main-article">
-                     <i class="fa-solid fa-star"></i>
-                       <br>
-                        <p class="descripcion"><b><%= productosOfertas[i].descripcion %></b></p>
-                        <br>
-                        <p class="descuento"><b><%= productosOfertas[i].descuento %></b></p>
-                        <br>
-                        <p class="precio"><b><%= productosOfertas[i].precio %></b></p>
+                    <a href="/product/category/<%= randomCategorias[i].id %>">
+                        <div class="icon<%=i + 1%>">
+                            <img src="/images/category/<%=randomCategorias[i].image%>" alt="">
                         </div>
-                    </article>
-                      <% } %>
-    
-            </div>
+                    </a>
+
+                    <div class="nameCategory<%=i + 1%>">
+                        <h3>
+                            <%= randomCategorias[i].name.length<10 ? randomCategorias[i].name :
+                                randomCategorias[i].name.substring(0, 8) + "..." %>
+                        </h3>
+                    </div>
+
+                </div>
+
+                <%}%>
+
         </section>
 
-        <section class="recomendado">
-            <h2>Recomendados</h2>
-            <div class="productos">
+        <!-- ICONO FIXED -->
 
-                <% for(let i = 0; i < 4; i++) { %>
-                    <article>
-                        <img src="/images\NOTEBOOK MSI CREATOR 15 A10SE.jpg" alt="">
-                        <div class="main-article">
-                            <i class="fa-solid fa-star"></i>
-                            <br>
-                            <p class="descripcion"><b><%= productosRecomendados.descripcion %></b></p>
-                            <br>
-                            <p class="precio"><b><%= productosRecomendados.precio %></b></p>
-                        </div>
-                    </article>
-
-<% } %> 
-            
+        <a href="/productCart">
+            <div class="shoppingCarF">
+                <i class="fa-solid fa-cart-shopping"></i>
             </div>
-        </section>
-    </main>
+        </a>
 
-    <%- include('../partials/footer') %>
+        <main>
+
+            <section class="ofertas">
+
+                <h2><a href="#">Ofertas</a></h2>
+
+                <div class="productos">
+
+                    <% for(let i=0; i < productosOfertas.length; i++) { %>
+
+                        <article class="articulo<%=i + 1%>">
+
+                            <a href="/product/<%= productosOfertas[i].id%>/details ">
+
+
+                                <div id="favOff<%=i + 1%>">
+                                    <span class="material-icons-outlined">favorite_border</span>
+                                </div>
+
+                                <div id="favOn<%=i + 1%>">
+                                    <span class="material-icons">favorite</span>
+                                </div>
+
+
+                                <img src="/images/products/<%= productosOfertas[i].image%>" alt="primer producto">
+
+
+                                <div class="main-article">
+
+                                    <p class="name">
+                                        <%= productosOfertas[i].name.length <40? productosOfertas[i].name.toUpperCase()
+                                            : (productosOfertas[i].name.substring(0, 28)).toUpperCase() + "..." %>
+                                    </p>
+
+                                    <p class="precio-antes">$<%= productosOfertas[i].price %>
+                                    </p>
+
+                                    <div>
+
+                                        <p class="precio">$<%= productosOfertas[i].price -
+                                                ((productosOfertas[i].price*productosOfertas[i].discount)/100) %>
+                                        </p>
+
+                                        <p class="descuento">
+                                            <%= productosOfertas[i].discount %>% OFF
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </a>
+                        </article>
+
+                        <% } %>
+
+                </div>
+
+            </section>
+
+            <section class="recomendado">
+
+                <h2><a href="#">Recomendados</a></h2>
+
+                <div class="productos">
+
+                    <% for(let i=0; i < productsRecomendados.length; i++) { %>
+
+                        <article class="articulo<%=i + 1%>">
+
+                            <a href="/product/<%= productsRecomendados[i].id%>/details ">
+
+                                <img src="/images/products/<%= productsRecomendados[i].image %>"
+                                    alt="imagen del producto">
+
+                                <div id="favOffR<%=i + 1%>" class="favOff">
+                                    <span class="material-icons-outlined">favorite_border</span>
+                                </div>
+
+                                <div id="favOnR<%=i + 1%>" class="favOn"><span class="material-icons">favorite</span>
+                                </div>
+
+                                <div class="main-article">
+
+                                    <p class="name">
+                                        <%= productsRecomendados[i].name.length <40?
+                                            productsRecomendados[i].name.toUpperCase() :
+                                            (productsRecomendados[i].name.substring(0, 28)).toUpperCase() + "..." %>
+                                    </p>
+
+                                    <% if(productsRecomendados[i].discount !==0) {%>
+
+                                        <p class="precio-antes">$<%= productsRecomendados[i].price %></p>
+
+                                        <div>
+
+                                            <p class="precio">$<%= productsRecomendados[i].price -
+                                                    ((productsRecomendados[i].price*productsRecomendados[i].discount)/100)%>
+                                            </p>
+
+                                            <p class="descuento">
+                                                <%= productsRecomendados[i].discount %>% OFF
+                                            </p>
+
+                                        </div>
+
+                                    <%} else {%>
+
+                                        <div>
+                                            <p class="precio">$<%= productsRecomendados[i].price%></p>
+                                        </div>
+
+                                    <%}%>
+
+                                </div>
+
+                            </a>
+
+                        </article>
+                        
+                    <% } %>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <%- include('../partials/footer') %>
+
 </body>
 
 </html>
