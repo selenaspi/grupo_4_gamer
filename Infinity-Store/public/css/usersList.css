@@ -1,3 +1,7 @@
+*{
+    
+        font-family: 'Montserrat', sans-serif;
+}
 .datatable-container {
     background-color: rgba(50, 51, 61, 0.822);
     border-radius: 3px;

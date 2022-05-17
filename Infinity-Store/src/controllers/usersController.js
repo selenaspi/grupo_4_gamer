@@ -144,7 +144,7 @@ const controller = {
     },
 
     usersList: (req, res) => {
-        res.render("users/usersList", { categoryList })
+        res.render("users/usersList", { categoryList, usuarios: User.findAll() })
     },
 };
 
