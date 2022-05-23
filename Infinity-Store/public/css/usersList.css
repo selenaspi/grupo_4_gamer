@@ -1,20 +1,17 @@
 * {
-
     font-family: 'Montserrat', sans-serif;
 }
 
-.datatable-container {
+    .datatable-container {
     background-color: rgba(50, 51, 61, 0.822);
     border-radius: 3px;
     color: white;
-    width: 100%;
-    margin: 0 auto;
-    font-size: 20px;
-}
+    font-size: 15px;
+}  
 
 .datatable-container .header-tools {
-    border-bottom: solid 1px grisOscuro;
-    padding: 12px;
+    border-bottom: solid 1px grey;
+    padding: 20px;
     display: flex;
     align-items: baseline;
 }
@@ -24,6 +21,7 @@
 }
 
 .datatable-container .header-tools .search .search-input {
+    margin: 20px;
     width: 100%;
     background-color: white;
     display: block;
@@ -38,8 +36,6 @@
 }
 
 .datatable-container .header-tools .tools ul {
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: start;
     align-items: baseline;
@@ -135,4 +131,9 @@
 
 .datatable-container .datatable tbody tr:hover {
     background-color: blue;
-}
+}  
+
+/* --------------------------------------------------------- */
+
+
+
