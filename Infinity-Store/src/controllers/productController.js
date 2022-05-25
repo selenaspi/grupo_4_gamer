@@ -1,4 +1,4 @@
-const Product = require('../models/Product.js');
+const Product = require('../database/models/Product.js');
 
 const category = require("../database/category.json")
 let categoryJSON = JSON.stringify(category);

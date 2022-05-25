@@ -4,7 +4,7 @@ const fs = require('fs');
 
 const ProductCartTransaction = {
 
-	fileName: path.join(__dirname, '../database/product_cart_Transaction.json'),
+	fileName: path.join(__dirname, '../product_cart_Transaction.json'),
 
 	getData: function () {
 		return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
