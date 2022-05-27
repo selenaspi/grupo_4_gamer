@@ -1,7 +1,7 @@
 module.exports={
   "development": {
     "username": "root",
-    "password": "gamer1234",
+    "password": "",
     "database": "infinity_store_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
