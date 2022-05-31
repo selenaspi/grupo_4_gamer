@@ -54,13 +54,13 @@
           <input type="file" name="image" accept="image" id="photo" class="form-input" <%= metodo==="POST" ? "required" : ""%>>
         </div>
 
-        <div>
+        <!-- <div>
           <label for="colores">Colores disponibles:</label>
           <div class="c-in-b-colores">
             <input type="text" name="colores" id="colores" class="controls">
             <button class="b-colores">+</button>
           </div>
-        </div>
+        </div> -->
 
         <div>
           <input type="checkbox" name="checkDescuento" id="check-descuento" <%= metodo==="PUT" ? producto.offSale? "checked" : "" : "" %>><label for="check-descuento" class="check-descuento">Tiene descuento</label>

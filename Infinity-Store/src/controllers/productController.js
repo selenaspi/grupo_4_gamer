@@ -1,126 +1,166 @@
+const db = require('../database/models');
+const Op = db.Sequelize.Op
+
+
 const Product = require('../database/models/Product.js');
 
 const category = require("../database/category.json")
 let categoryJSON = JSON.stringify(category);
 let categoryList = JSON.parse(categoryJSON);
 
-let similarCategories = function (idCategorySimilar, productoBuscado) {
-    let similaresByCategory = [], similares = [];
-    do {
-        if (idCategorySimilar == (categoryList.length + 1)) {
-            idCategorySimilar = 1;
-        }
-        similaresByCategory = Product.filterActivesByField("idCategory", idCategorySimilar);
-        similaresByCategory = similaresByCategory.filter(product => product.id != productoBuscado.id)
-        if (similaresByCategory.length != 0) {
-            for (i = 0; i < similaresByCategory.length; i++) {
-                if (similares.length < 4) {
-                    similares.push(similaresByCategory[i])
-                }
-            }
-        }
-        idCategorySimilar++
-    } while (similares.length < 4);
-    return similares
-}
+let categoriesPromise = db.ProductCategory.findAll()
 
 const controller = {
 
     //CREATE
     creation: (req, res) => {
-        res.render("products/productCreationEdition", {
-            metodo: "POST",
-            ruta: "",
-            categoryList
+        Promise.all([categoriesPromise]).then(function([categories]){
+            res.render("products/productCreationEdition", {
+                metodo: "POST",
+                ruta: "",
+                categoryList : categories
+            })
         })
     },
 
     store: (req, res) => {
 
-        let offSaleOn = req.body.checkDescuento === "on" ? true : false;
-
-        let discountUpdate = offSaleOn ? req.body.discount : 0;
-
-        const productData = {
-            alta: true,
+        let offSaleOn = req.body.checkDescuento === "on" ? 1 : 0;
+        let discountReq = offSaleOn ? req.body.discount : 0;
+        
+        db.Product.create({
             name: req.body.name,
-            idCategory: Number(req.body.category),
             description: req.body.description,
-            data_sheet: [],
             image: req.file.filename,
-            color: [],
             price: Number(req.body.price),
-            offSale: offSaleOn,
-            discount: Number(discountUpdate),
+            off_sale: offSaleOn,
+            discount: Number(discountReq),
             stock: Number(req.body.stock),
-        }
-
-        Product.create(productData);
+            product_category_id: Number(req.body.category),
+            alta: 1
+        })
 
         res.redirect('/');
+
     },
 
     //READ
     productDetails: (req, res) => {
-        let productoBuscado = Product.findByPk(Number(req.params.id));
+        let productPromise = db.Product.findByPk(Number(req.params.id));
 
-        let similares = similarCategories(productoBuscado.idCategory, productoBuscado);
+        Promise.all([categoriesPromise, productPromise]).then(function([categories, product]) {
+            
+            let idSimilarCategory;
 
-        res.render("products/productDetails", { similares, detalle: productoBuscado, categoryList })
+            if (product.product_category_id < 6) {
+                idSimilarCategory = 6
+            } else {
+                idSimilarCategory = product.product_category_id;
+            }
+
+            db.Product.findAll({
+                where: {
+                    product_category_id : {[Op.gte] : idSimilarCategory - 5},
+                    id: {[Op.ne] : product.id}
+                }, limit: 4
+            }).then(similares => {
+                res.render("products/productDetails", { similares , detalle: product, categoryList: categories })
+            })
+              
+        })
+        
     },
 
     allProducts: (req, res) => {
 
-        res.render("products/allProducts", { similares: Product.findActiveProducts(), categoryList })
+        let productsPromise = db.Product.findAll();
+
+        Promise.all([categoriesPromise, productsPromise]).then(function([categories, products]) {
+            res.render("products/allProducts", { similares: products, categoryList: categories })
+        })
+
     },
 
     //UPDATE
 
     edition: (req, res) => {
-        let productoElegido = Product.findByPk(Number(req.params.id));
 
-        res.render("products/productCreationEdition", {
-            metodo: "PUT",
-            ruta: req.params.id + "?_method=PUT",
-            producto: productoElegido,
-            categoryList
-        })
+        let productPromise = db.Product.findByPk(Number(req.params.id))
+        
+        Promise.all([categoriesPromise, productPromise]).then(function([categories, product]) {
+            res.render("products/productCreationEdition", {
+                metodo: "PUT",
+                ruta: req.params.id + "?_method=PUT",
+                producto: product,
+                categoryList: categories
+            })
+        });
+
     },
 
     edit: (req, res) => {
 
-        let offSaleOn = req.body.checkDescuento === "on" ? true : false;
+        let offSaleOn = req.body.checkDescuento === "on" ? 1 : 0;
+        let discountReq = offSaleOn ? req.body.discount : 0;
 
-        let productToEdit = Product.findByPk(Number(req.params.id));
-
-        let productoEditado = {
-            ...productToEdit,
-            name: req.body.name,
-            idCategory: Number(req.body.category),
-            description: req.body.description,
-            data_sheet: [],
-            image: req.file ? req.file.filename : productToEdit.image,
-            color: [],
-            price: Number(req.body.price),
-            offSale: offSaleOn,
-            discount: offSaleOn === true ? Number(req.body.discount) : 0,
-            stock: Number(req.body.stock)
-
+        if(req.file) {
+            db.Product.update({
+                name: req.body.name,
+                description: req.body.description,
+                image: req.file.filename,
+                price: Number(req.body.price),
+                off_sale: offSaleOn,
+                discount: Number(discountReq),
+                stock: Number(req.body.stock),
+                product_category_id: Number(req.body.category),
+            }, {
+                where: {
+                    id: Number(req.params.id)
+                }
+            })
+        } else {
+            db.Product.update({
+                name: req.body.name,
+                description: req.body.description,
+                price: Number(req.body.price),
+                off_sale: offSaleOn,
+                discount: Number(discountReq),
+                stock: Number(req.body.stock),
+                product_category_id: Number(req.body.category),
+            }, {
+                where: {
+                    id: Number(req.params.id)
+                }
+            })
         }
-
-        Product.edition(productoEditado);
 
         res.redirect('/');
     },
 
     //DELETE
     productDelete: (req, res) => {
-        Product.delete(Number(req.params.id));
+        db.Product.update({
+            alta: 0
+        }, {
+            where: {
+                id: Number(req.params.id)
+            }
+        })
         res.redirect('/')
     }, 
 
     filterByCategory: (req, res) => {
-        res.render("products/allProducts", { similares: Product.filterActivesByField("idCategory", req.params.idCategory), categoryList }) //no debería llamarse similares pero bue
+
+        let productsByCategoryPromise = db.Product.findAll({
+            where: {
+                product_category_id: req.params.idCategory
+            }
+        })
+
+        Promise.all([categoriesPromise, productsByCategoryPromise])
+        .then(function([categories, products]) {
+            res.render("products/allProducts", { similares: products, categoryList: categories }) //no debería llamarse similares pero bue
+        })
     }
 }
 

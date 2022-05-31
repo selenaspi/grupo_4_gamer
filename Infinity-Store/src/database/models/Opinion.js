@@ -46,6 +46,8 @@ module.exports = (sequelize, DataTypes) => {
 
     const Opinion = sequelize.define("Opinion", cols, config);
 
+	//FALTA ASOCIAR AL USUARIO
+
 	Opinion.associate = function(models) {
 		Opinion.belongsTo(models.Product, {
 			as: "product",
