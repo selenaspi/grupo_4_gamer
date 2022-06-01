@@ -169,6 +169,20 @@ module.exports = (sequelize, DataTypes) => {
 			as: "opinions",
 			foreignKey: "product_id"
 		})
+
+		Product.hasMany(models.ProductCartProduct, {
+			as: "joinProductCartProduct",
+			foreignKey: "product_id"
+		})
+		
+		Product.belongsToMany(models.ProductCart, {
+			as: "productCarts",
+			through: "product_carts_products",
+			foreignKey: "product_id",
+			otherKey: "product_cart_id",
+			timestamps: true
+		})
+
 	}
 
 	return Product;
