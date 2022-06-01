@@ -51,7 +51,7 @@ disponibilidad de tiempo de cada integrante.
 
 5. Dejar de Hacer: asistir a las reuniones grupales sin haber leído el sprint que se desarrollará.
 
-                                                     Sprint 5
+                                                     Sprint 5(Base de Datos)
 1. Comenzar a hacer: plantear distintas alternativas de solución a cada uno de los puntos de los sprint.
 
 2. Hacer mas:compartir pantalla y explicar el código a nuestros compañeros. Mantener una actualización más constante sobre el progreso actual de las actividades propuestas en el Sprint.
