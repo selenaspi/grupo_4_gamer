@@ -1,13 +1,6 @@
 const db = require('../database/models');
 const Op = db.Sequelize.Op
 
-
-const Product = require('../database/models/Product.js');
-
-const category = require("../database/category.json")
-let categoryJSON = JSON.stringify(category);
-let categoryList = JSON.parse(categoryJSON);
-
 let categoriesPromise = db.ProductCategory.findAll()
 
 const controller = {

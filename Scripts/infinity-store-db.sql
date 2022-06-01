@@ -34,7 +34,7 @@ CREATE TABLE `users` (
 ) CHARSET=utf8;
 
 LOCK TABLES `users` WRITE;
-INSERT INTO users VALUES (1, NOW(), NULL, "Nicolás", "Gerez", "gerez.nicolas@gmail.com", "$2a$10$3UUg2uVc7c2S1COmEl7XiOMQWppzMtjPu1c4O5ZuLUlFpmH7SIZDu", 1112345678, "image-1651885376904-84193745.png", 1, "2000/09/02", "Av. Siempreviva 3306", 1), (2, NOW(), NULL, "Carla", "Tomasi", "carla_t@gmail.com", "$2a$10$aUoFshiF80CCDZzaJsV4jeBL2OJ3bgshX87Bun.wyZaBTOqtQ80dy", 0636156166, "image-1650841972789-48743459.png", 1, "2000/09/02", "Av. Siempreviva 3306", 1), (3, NOW(), NULL, "Martina", "Colomé", "manu@gmail.com", "$2a$10$8isdBZlwi0MDnz0VQOofjOrpqF7jUIeV3HN/adl.keCH34qNJ6FLu", 0343156165116, "image-1651537021925-477586135.jpg", 1, "2000/09/02", "Av. Siempreviva 3306", 1);
+INSERT INTO users VALUES (1, NOW(), NULL, "Nicolás", "Gerez", "gerez.nicolas@gmail.com", "$2a$10$3UUg2uVc7c2S1COmEl7XiOMQWppzMtjPu1c4O5ZuLUlFpmH7SIZDu", 1112345678, "image-1651885376904-84193745.png", 1, "2000/09/02", "Av. Siempreviva 3306", 1), (2, NOW(), NULL, "Carla", "Tomasi", "carla_t@gmail.com", "$2a$10$aUoFshiF80CCDZzaJsV4jeBL2OJ3bgshX87Bun.wyZaBTOqtQ80dy", 0636156166, "image-1650841972789-48743459.png", 1, "2000/09/02", "Av. Siempreviva 3306", 1), (3, NOW(), NULL, "Martina", "Colomé", "manu@gmail.com", "$2a$10$8isdBZlwi0MDnz0VQOofjOrpqF7jUIeV3HN/adl.keCH34qNJ6FLu", 0343156165116, "image-1651515375999-486954713.jpg", 1, "2000/09/02", "Av. Siempreviva 3306", 1);
 UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `product_categories`;
@@ -74,6 +74,8 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `product_carts`;
 CREATE TABLE `product_carts` (
   `id` int unsigned NOT NULL AUTO_INCREMENT UNIQUE,
+  `created_at` datetime NOT NULL DEFAULT NOW(),
+  `closed_at` datetime NULL DEFAULT NULL,
   `user_id` int(10) unsigned NOT NULL, 
   `alta` tinyint(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
@@ -83,6 +85,8 @@ CREATE TABLE `product_carts` (
 DROP TABLE IF EXISTS `product_carts_products`;
 CREATE TABLE `product_carts_products` (
   `id` int unsigned NOT NULL AUTO_INCREMENT UNIQUE,
+  `created_at` datetime NOT NULL DEFAULT NOW(),
+  `updated_at` datetime NULL DEFAULT NULL,
   `product_id` int(10) unsigned NOT NULL, 
   `product_cart_id` int(10) unsigned NOT NULL, 
   `alta` tinyint(1) NOT NULL DEFAULT 0,
@@ -107,11 +111,5 @@ CREATE TABLE `opinions` (
 );
 
 LOCK TABLES `opinions` WRITE;
-  INSERT INTO `opinions` VALUES (1, NOW(), NULL, 1, 1, 5, "Muy buena calidad", 1), (2, NOW(), NULL, 1, 2, 3, "Me duró poco", 1), (3, NOW(), NULL, 1, 3, 3, "No me gustó", 1),(4, NOW(), NULL, 1, 4, 5, "Muy buena calidad", 1),(5, NOW(), NULL, 1, 5, 1, "No vale la pena", 1),(6, NOW(), NULL, 1, 6, 4, "Muy buena calidad", 1),(7, NOW(), NULL, 1, 7, 5, "Muy buena calidad", 1),(8, NOW(), NULL, 1, 8, 2, NULL, 1),(9, NOW(), NULL, 1, 9, 1, "Horrible", 1),(10, NOW(), NULL, 2, 1, 1, "Me llegó en mal estado", 1),(11, NOW(), NULL, 2, 3, 5, "Muy bueno", 1),(12, NOW(), NULL, 2, 6, 3, "Está bien", 1),(13, NOW(), NULL, 2, 7, 1, NULL, 1),(14, NOW(), NULL, 2, 10, 2, "No me convenció", 1),(15, NOW(), NULL, 2, 13, 5, NULL, 1),(16, NOW(), NULL, 3, 3, 1, "Horrible", 1),(17, NOW(), NULL, 2, 8, 5, NULL, 1),(18, NOW(), NULL, 2, 4, 4, NULL, 1),(19, NOW(), NULL, 2, 14, 5, "Realmente muy bueno", 1),(20, NOW(), NULL, 3, 14, 5, NULL, 1), (21, NOW(), NULL, 1, 10, 5, "Muy buena calidad", 1),
-(22, NOW(), NULL, 1, 11, 4.5, "El envoltorio estaba dañado pero el resto muy bien", 1),
-(23, NOW(), NULL, 1, 12, 2, "Esperaba algo más", 1),
-(24, NOW(), NULL, 1, 13, 5, "Excelente", 1),
-(25, NOW(), NULL, 1, 14, 4.5, "Está god", 1),
-(26, NOW(), NULL, 3, 8, 5, "Me gustó, muy buena atención", 1)
-;
+  INSERT INTO `opinions` VALUES (1, NOW(), NULL, 1, 1, 5, "Muy buena calidad", 1), (2, NOW(), NULL, 1, 2, 3, "Me duró poco", 1), (3, NOW(), NULL, 1, 3, 3, "No me gustó", 1),(4, NOW(), NULL, 1, 4, 5, "Muy buena calidad", 1),(5, NOW(), NULL, 1, 5, 1, "No vale la pena", 1),(6, NOW(), NULL, 1, 6, 4, "Muy buena calidad", 1),(7, NOW(), NULL, 1, 7, 5, "Muy buena calidad", 1),(8, NOW(), NULL, 1, 8, 2, NULL, 1),(9, NOW(), NULL, 1, 9, 1, "Horrible", 1),(10, NOW(), NULL, 2, 1, 1, "Me llegó en mal estado", 1),(11, NOW(), NULL, 2, 3, 5, "Muy bueno", 1),(12, NOW(), NULL, 2, 6, 3, "Está bien", 1),(13, NOW(), NULL, 2, 7, 1, NULL, 1),(14, NOW(), NULL, 2, 10, 2, "No me convenció", 1),(15, NOW(), NULL, 2, 13, 5, NULL, 1),(16, NOW(), NULL, 3, 3, 1, "Horrible", 1),(17, NOW(), NULL, 2, 8, 5, NULL, 1),(18, NOW(), NULL, 2, 4, 4, NULL, 1),(19, NOW(), NULL, 2, 14, 5, "Realmente muy bueno", 1),(20, NOW(), NULL, 3, 14, 5, NULL, 1), (21, NOW(), NULL, 1, 10, 5, "Muy buena calidad", 1), (22, NOW(), NULL, 1, 11, 4.5, "El envoltorio estaba dañado pero el resto muy bien", 1), (23, NOW(), NULL, 1, 12, 2, "Esperaba algo más", 1), (24, NOW(), NULL, 1, 13, 5, "Excelente", 1), (25, NOW(), NULL, 1, 14, 4.5, "Está god", 1), (26, NOW(), NULL, 3, 8, 5, "Me gustó, muy buena atención", 1);
 UNLOCK TABLES;

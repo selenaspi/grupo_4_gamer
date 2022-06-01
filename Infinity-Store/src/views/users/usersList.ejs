@@ -65,24 +65,25 @@
                             <th>Telefono</th>
                         </tr>
                     </thead>
-                    <% for(let i=0 ; i < usuarios.length; i++) { %>
+                  
+                     <% for(let i=0 ; i < users.length; i++) { %>
                         <tbody>
                             <tr>
                                 <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
-                                <td>
-                                    <%= usuarios[i].id %>
+                                 <td>
+                                    <%= users[i].id %>
                                 </td>
                                 <td>
-                                    <%= usuarios[i].name %>
+                                    <%= users[i].name %>
                                 </td>
                                 <td>
-                                    <%= usuarios[i].lastName %>
+                                    <%= users[i].last_name %>
                                 </td>
                                 <td>
-                                    <%= usuarios[i].email %>
+                                    <%= users[i].email %>
                                 </td>
                                 <td>
-                                    <%= usuarios[i].phone %>
+                                    <%= users[i].phone %>
                                 </td>
                             </tr>
                         </tbody>
