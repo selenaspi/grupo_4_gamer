@@ -5,28 +5,29 @@ const bcryptjs = require('bcryptjs');
 const category = require("../database/category.json")
 let categoryJSON = JSON.stringify(category);
 let categoryList = JSON.parse(categoryJSON);
-
+const db = require('../database/models');
 const controller = {
 
     //CREATE
 
-    register: (req, res) => { res.render("users/register", { categoryList }) },
-
-    store: (req, res) => {
-
-        const userData = {
-            alta: true,
-            role: "user",
-            name: req.body.name,
-            lastName: req.body.lastName,
-            email: req.body.email,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            phone: req.body.phoneArea.toString() + req.body.phone.toString(),
-            image: req.file.filename
-        }
-
-        User.create(userData)
-
+    register:function (req,res){
+        db.ProductCategory.findAll()
+        .then(function(categories){
+            return res.render ("users/register",{  categoryList : categories})
+        })
+    },
+    store: function (req,res){
+        db.User.create({
+            name:req.body.name,
+            last_name:req.body.last_name,
+            email:req.body.email,
+            password:bcryptjs.hashSync(req.body.password, 10),
+            phone:req.body.phone,
+            image:req.body.image,
+            date_of_birth:req.body. date_of_birth,
+            home_adress:req.body.home_adress,
+            role_id:req.body.role_id,
+        })
         res.redirect("/");
     },
 
