@@ -41,7 +41,7 @@ const controller = {
     //UPDATE
 
     edition: (req, res) => {
-        let usuarioElegido = User.findByPk(Number(req.params.id));
+        let usuarioElegido = db.User.findByPk(Number(req.params.id));
 
         res.render("users/usersEdition", {
             metodo: "PUT",
@@ -51,20 +51,15 @@ const controller = {
         })
     },
 
-    edit: (req, res) => {
-
-        let usuarioToEdit = User.findByPk(Number(req.params.id));
-
-        let usuarioEditado = {
-            ...usuarioToEdit,
-            name: req.body.name,
-            lastName: req.body.lastName,
-            email: req.body.email,
-            phone: req.body.phone,
-            image: req.file.filename
-        }
-
-        User.edition(usuarioEditado)
+    edit: function (req,res){
+        let pedidoUsuario = db.User.findByPk(req.params.id);
+    
+        let pedidoRoles = db.roles.findAll();
+    
+        Promise.all([pedidoUsuario,pedidoRoles])
+           .then(function([user, roles]){
+            res.render("users/usersEdition",{categoryList,users:user, roles:roles})
+           })
 
         res.redirect('/');
 
@@ -144,9 +139,14 @@ const controller = {
         res.redirect("/");
     },
 
-    usersList: (req, res) => {
-        res.render("users/usersList", { categoryList, usuarios: User.findAll() })
-    },
-};
+    usersList:function(req, res) {                         
+        db.User.findByPk(req.params.id, {
+            include: [{ association: "roles" }]
+        })
+            .then(function (users) {
+                res.render("users/usersList", {categoryList,users:users });
+            });
+        },
+}
 
 module.exports = controller;
