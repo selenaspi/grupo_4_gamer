@@ -139,12 +139,11 @@ const controller = {
         res.redirect("/");
     },
 
-    usersList:function(req, res) {                         
-        db.User.findByPk(req.params.id, {
-            include: [{ association: "roles" }]
-        })
-            .then(function (users) {
-                res.render("users/usersList", {categoryList,users:users });
+    usersList:function(req, res) {   
+        let promiseCategory = db.ProductCategory.findAll()                      
+      let promiseUsuarios = db.User.findAll()
+         Promise.all([promiseCategory,promiseUsuarios]).then(function ([categoryList,users]) {
+                res.render("users/usersList", {categoryList,users });
             });
         },
 }
