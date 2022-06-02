@@ -10,7 +10,8 @@ const Op = db.Sequelize.Op;
 		where: {
 			email : emailInCookie
 		}
-	}).then(function(usuariocookie) {if (userFromCookie) {
+	}).then(function(usuariocookie){
+		if (userFromCookie) {
 		req.session.userLogged = userFromCookie;
 	}
 
