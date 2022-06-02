@@ -6,6 +6,10 @@ const category = require("../database/category.json")
 let categoryJSON = JSON.stringify(category);
 let categoryList = JSON.parse(categoryJSON);
 const db = require('../database/models');
+const { use } = require('../routes/main');
+const Op = db.Sequelize.Op
+const User = db.User.findAll() ;
+let categoriesPromise = db.ProductCategory.findAll();
 const controller = {
 
     //CREATE
@@ -94,23 +98,25 @@ const controller = {
 
     loginProcess: (req, res) => {
 
-        let userToLogin = User.findByField('email', req.body.email);
-
-        if (userToLogin) {
-
+        let userToLogin = db.User.findOne({
+            where: {
+                email : req.body.email
+            }
+        })
+        Promise.all([categoriesPromise, userToLogin])
+        .then(function([categories, userToLogin]) {
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-
+            console.log(isOkThePassword);
             if (isOkThePassword) {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
                 
                 if(req.body.remember_user) {
-					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60000000) * 60 });
+					res.cookie('userEmail', req.body.email, { maxAge: (10000 * 6000) * 6000 });
 				}
-                
-                return res.redirect('/users/profile');
+                return res.redirect('/');
             }
-
+            
             return res.render('users/login', {
                 categoryList,
                 errors: {
@@ -119,17 +125,52 @@ const controller = {
                     }
                 }
             });
-        };
+            
+        })
+        },
 
-        return res.render('users/login', {
-            categoryList,
-            errors: {
-                email: {
-                    msg: 'Los datos ingresados son incorrectos. '
-                }
-            }
-        });
-    },
+
+
+        // .then(function(usuario) { let isOkThePassword = bcryptjs.compareSync(req.body.password, usuario.password);
+        // }). then(function(usuarioLog){console.log(usuarioLog)}) 
+
+
+
+
+        // if (userToLogin) {
+
+        //     let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+
+            //  if (isOkThePassword) {
+            //      delete userToLogin.password;
+            //      req.session.userLogged = userToLogin;
+                
+            //      if(req.body.remember_user) {
+		 	// 		res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60000000) * 60 });
+		 	// 	}
+                
+            //      return res.redirect('/users/profile');
+            //  }
+
+        //      return res.render('users/login', {
+        //          categoryList,
+        //         errors: {
+        //            email: {
+        //                msg: 'Los datos ingresados son incorrectos.'
+        //            }
+        //       }
+        //     });
+        //  };
+
+    //     return res.render('users/login', {
+    //         categoryList,
+    //         errors: {
+    //             email: {
+    //                 msg: 'Los datos ingresados son incorrectos. '
+    //             }
+    //         }
+    //     });
+    // },
 
     //LOGOUT 
 
