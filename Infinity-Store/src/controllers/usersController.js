@@ -129,14 +129,6 @@ const controller = {
         })
         },
 
-
-
-        // .then(function(usuario) { let isOkThePassword = bcryptjs.compareSync(req.body.password, usuario.password);
-        // }). then(function(usuarioLog){console.log(usuarioLog)}) 
-
-
-
-
         // if (userToLogin) {
 
         //     let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);

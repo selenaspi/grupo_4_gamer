@@ -11,8 +11,8 @@ const Op = db.Sequelize.Op;
 			email : emailInCookie
 		}
 	}).then(function(usuariocookie){
-		if (userFromCookie) {
-		req.session.userLogged = userFromCookie;
+		if (usuariocookie) {
+		req.session.userLogged = usuariocookie;
 	}
 
    if (req.session.userLogged) {
