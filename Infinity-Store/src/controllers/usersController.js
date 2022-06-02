@@ -118,7 +118,7 @@ const controller = {
             }
             
             return res.render('users/login', {
-                categoryList,
+                categoryList : categories,
                 errors: {
                     email: {
                         msg: 'Los datos ingresados son incorrectos.'
