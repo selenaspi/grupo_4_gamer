@@ -150,7 +150,7 @@ const controller = {
                 if(req.body.remember_user) {
 					res.cookie('userEmail', req.body.email, { maxAge: (10000 * 6000) * 6000 });
 				}
-                return res.redirect('/');
+                return res.redirect('/users/profile');
             }else{return res.render('users/login', {
                 categoryList : categories,
                 errors: {
