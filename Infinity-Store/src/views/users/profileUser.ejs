@@ -33,14 +33,14 @@
 
             <div class="datos-usuario">
                 <h2>
-                    <%= `${usuarioBuscado.lastName.toUpperCase()}, ${usuarioBuscado.name.substring(0,
+                    <%= `${usuarioBuscado.last_name.toUpperCase()}, ${usuarioBuscado.name.substring(0,
                         1).toUpperCase()}${usuarioBuscado.name.substring(1).toLowerCase()}`%>
                 </h2>
                 <ul>
                     <li>
                         <p>Fecha de nacimiento</p>
                         <h3>
-                            09/02/1800 
+                            <%= usuarioBuscado.date_of_birth%>
                         </h3>
                     </li>
                     <li>
