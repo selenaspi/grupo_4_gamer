@@ -33,7 +33,7 @@
 
             <div class="datos-usuario">
                 <h2>
-                    <%= `${usuarioBuscado.lastName.toUpperCase()}, ${usuarioBuscado.name.substring(0,
+                    <%= `${usuarioBuscado.last_name[0].toUpperCase()+usuarioBuscado.last_name.substring(1)}, ${usuarioBuscado.name.substring(0,
                         1).toUpperCase()}${usuarioBuscado.name.substring(1).toLowerCase()}`%>
                 </h2>
                 <ul>
