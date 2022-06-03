@@ -132,8 +132,17 @@ const controller = {
         })
         Promise.all([categoriesPromise, userToLogin])
         .then(function([categories, userToLogin]) {
+            if(userToLogin == null){
+                return res.render('users/login', {
+                    categoryList : categories,
+                    errors: {
+                        email: {
+                            msg: 'Los datos ingresados son incorrectos.'
+                        }
+                    }
+                })
+            }
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-            console.log(isOkThePassword);
             if (isOkThePassword) {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
@@ -142,16 +151,15 @@ const controller = {
 					res.cookie('userEmail', req.body.email, { maxAge: (10000 * 6000) * 6000 });
 				}
                 return res.redirect('/');
-            }
-            
-            return res.render('users/login', {
+            }else{return res.render('users/login', {
                 categoryList : categories,
                 errors: {
                     email: {
                         msg: 'Los datos ingresados son incorrectos.'
                     }
                 }
-            });
+            })}
+            ;
             
         })
         },
