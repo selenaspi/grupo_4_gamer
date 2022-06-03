@@ -44,28 +44,54 @@ const controller = {
 
     //UPDATE
 
-    edition: (req, res) => {
-        let usuarioElegido = db.User.findByPk(Number(req.params.id));
-
-        res.render("users/usersEdition", {
-            metodo: "PUT",
-            ruta: req.params.id + "?_method=PUT",
-            user: usuarioElegido,
-            categoryList
-        })
+    edition:  (req, res) => {
+        let usersPromise = db.User.findByPk(Number(req.params.id))
+        Promise.all([categoriesPromise, usersPromise]).then(function([categories, users]) {
+            res.render("users/usersEdition", {
+                metodo: "PUT",
+                ruta: req.params.id + "?_method=PUT",
+                user: users,
+                categoryList: categories
+            })
+        });
     },
+    
+    //function (req,res){
+      //  db.ProductCategory.findAll()
+      //  .then(function(categories,users){
+       //  return res.render ("users/usersEdition",{  categoryList : categories,user:users})
+       //  })
+    //(req, res) => {
+       //let usuarioElegido = db.User.findByPk(Number(req.params.id));
+
+       // res.render("users/usersEdition", {
+         //   metodo: "PUT",
+          //  ruta: req.params.id + "?_method=PUT",
+          //  user: usuarioElegido,
+          //  categoryList
+      //  })
+      //  function (req,res){
+      //      db.ProductCategory.findAll()
+      //      .then(function(categories){
+       //         return res.render ("users/usersEdition",{  categoryList : categories})
+       //     })
+
 
     edit: function (req,res){
-        let pedidoUsuario = db.User.findByPk(req.params.id);
-    
-        let pedidoRoles = db.roles.findAll();
-    
-        Promise.all([pedidoUsuario,pedidoRoles])
-           .then(function([user, roles]){
-            res.render("users/usersEdition",{categoryList,users:user, roles:roles})
-           })
-
-        res.redirect('/');
+            db.User.update({
+                name:req.body.name,
+                last_name:req.body.last_name,
+                email:req.body.email,
+                phone:req.body.phone,
+                image:req.body.image,
+                date_of_birth:req.body. date_of_birth,
+                home_adress:req.body.home_adress,
+            }, {
+                where: {
+                    id: Number(req.params.id)
+                }
+            })
+            res.redirect("/");
 
     },
 
