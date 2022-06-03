@@ -92,7 +92,7 @@ const controller = {
                     id: Number(req.params.id)
                 }
             })
-            res.redirect("/");
+            res.redirect("/users/profile");
 
     },
 
