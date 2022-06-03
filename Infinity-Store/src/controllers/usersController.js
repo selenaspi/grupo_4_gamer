@@ -39,7 +39,8 @@ const controller = {
 
     profileUser: (req, res) => {
         console.log(req.cookies.userEmail);
-        res.render("users/profileUser", { categoryList, usuarioBuscado: req.session.userLogged })
+        res.render("users/profileUser", { categoryList, usuarioBuscado: req.session.userLogged });
+        console.log(req.session.userLogged);
     },
 
     //UPDATE
