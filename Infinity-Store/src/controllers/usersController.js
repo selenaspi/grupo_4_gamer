@@ -98,23 +98,28 @@ const controller = {
 
     //DELETE 
 
-    mostrarBorradoDeUsuario: (req, res) => {
-
-        let usuarioElegido = User.findByPk(Number(req.params.id));
-
-        res.render("users/usersDelete", {
-            metodo: "DELETE",
-            ruta: req.params.id + "?_method=DELETE",
-            user: usuarioElegido,
-            categoryList
+   // mostrarBorradoDeUsuario:(req, res) => {
+          //  let usersPromise = db.User.findByPk(Number(req.params.id))
+          //  Promise.all([categoriesPromise, usersPromise]).then(function([categories, users]) {
+          //      res.render("users/usersDelete", {
+          //          metodo: "PUT",
+          //          ruta: req.params.id + "?_method=PUT",
+          //          user: users,
+          //          categoryList: categories
+         //       })
+         //   });
+      //  },
+// los usuarios que se den de baja, se identificarán con cero en nuetra BD, no se borran definitivamente.
+    deleteUser:(req, res) => {
+        db.User.update({
+            alta: 0
+        }, {
+            where: {
+                id: Number(req.params.id)
+            },
         })
-
-    },
-
-    deleteUser: (req, res) => {
-        User.delete(Number(req.params.id));
-        res.redirect("/")
-    },
+        res.redirect('/') 
+    }, 
 
     //LOGIN
 

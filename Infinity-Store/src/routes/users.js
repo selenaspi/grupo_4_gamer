@@ -36,8 +36,8 @@ router.get('/:id/edit', authMiddleware, usersController.edition);
 router.put('/:id', upload.single("image"), usersController.edit);
 
 // DELETE ONE USER - DELETE
-router.get("/:id/delete", authMiddleware, usersController.mostrarBorradoDeUsuario);
-router.delete("/:id", upload.single("image"), usersController.deleteUser);
+//router.get("/:id/delete", authMiddleware, usersController.mostrarBorradoDeUsuario);
+router.post("/:id", upload.single("image"), usersController.deleteUser);
 
 /*** LOGIN ***/
 router.get("/login", guestMiddleware, usersController.mostrarLogin);
