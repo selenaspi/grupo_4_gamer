@@ -159,10 +159,9 @@ const controller = {
                     }
                 }
             })}
-            ;
             
         })
-        },
+    },
 
         // if (userToLogin) {
 
