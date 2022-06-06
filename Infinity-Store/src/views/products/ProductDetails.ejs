@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+        <link rel="stylesheet" href="/css/styleproductDetail.css">
+</head>
+
+<body>
+
+    <%- include('../partials/header') %>
+
+        <main>
+
+            <section class="caja-producto">
+
+                <div class="name">
+                    <h2>
+                        <%= detalle.name %>
+                    </h2>
+                </div>
+
+                <div class="contenedor-fotos-datos">
+
+                    <div class="caja-fotos">
+
+                        <div class="principal">
+                            <img src="/images/products/<%= detalle.image %>" alt="Foto principal">
+                        </div>
+
+                        <!-- <div class="fotos-muestra">
+                        <div class="foto-2">
+                            <img src="/images/Draconic2.jpg" alt="Foto">
+                        </div>
+                        <div class="foto-3">
+                            <img src="/images/Draconic3.jpg" alt="Foto">
+                        </div>
+                        <div class="foto-4">
+                            <img src="/images/Draconic4.jpg" alt="Foto">
+                        </div>
+                        <div class="foto-5">
+                            <img src="/images/Draconic5.jpg" alt="Foto">
+                        </div>
+                        </div> -->
+
+                        <div class="stock">
+
+                            <% if (detalle.stock> 0) { %>
+                                <span>En stock</span>
+                            <% } else {%>
+                                    <span>Sin stock</span>
+                            <% } %>
+                            
+                        </div>
+
+                    </div>
+
+
+                    <div class="contenedor-datos">
+
+                        <div>
+                            <h2 class="name-t">
+                                <%= detalle.name %>
+                            </h2>
+                        </div>
+
+                        <div class="caja-precio">
+                            <h3>$<%= detalle.price %>
+                            </h3>
+                            <p class="cuotas">12 cuotas de $<%= (detalle.price /12).toFixed(2) %>
+                            </p>
+                        </div>
+
+                        <form action="" class="caja-carrito">
+                            <input type="number">
+                            <button type="submit">Añadir al carrito</button>
+                        </form>
+
+                        <div class="caja-envio">
+                            <h4>Envío</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum facilis nam tempora.
+                                Voluptatibus</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="caja-botones">
+
+                    <button type="button">Descripción</button>
+
+                    <!-- <div class="caja-descripcion">
+                        <p>Disfrutá de tus partidas en otro nivel con Redragon, marca reconocida que
+                            se
+                            especializa
+                            en brindar la mejor experiencia de juego al público gamer desde hace más de 20 años. Sus
+                            teclados se
+                            adaptan
+                            a todo tipo de jugadores y esto los convierten en un fiel reflejo de la alta gama y calidad
+                            que
+                            la
+                            compañía
+                            ofrece.</p>
+                    </div> -->
+
+                    <button type="button">Ficha técnica</button>
+
+                    <button type="button">Opiniones</button>
+
+                </div>
+
+            </section>
+
+            <section class="caja-similares">
+
+                <h2>Similares</h2>
+
+                <div class="productos">
+
+                    <% for(let i=0; i < similares.length; i++) { %>
+
+                        <article class="articulo<%=i + 1%>">
+
+                            <a href="/product/<%= similares[i].id%>/details ">
+                                <div id="favOff<%=i + 1%>">
+                                    <span class="material-icons-outlined">favorite_border</span>
+                                </div>
+
+                                <div id="favOn<%=i + 1%>">
+                                    <span class="material-icons">favorite</span>
+                                </div>
+
+                                <img src="/images/products/<%= similares[i].image%>" alt="primer producto">
+
+
+                            <div class="main-article">
+
+                                <p class="name">
+                                    <%= similares[i].name.length <40? similares[i].name.toUpperCase() : (similares[i].name.substring(0, 28)).toUpperCase() + "..." %>
+                                </p>
+                                
+                                <% if (similares[i].discount != 0) { %>
+                                    <p class="precio-antes">$<%= similares[i].price %>
+                                    </p>
+                                <% } %>
+
+                                <div>
+
+                                    <p class="precio">$<%= similares[i].price -((similares[i].price*similares[i].discount)/100) %>
+                                    </p>
+
+                                    <% if (similares[i].discount != 0) { %>
+                                        <p class="descuento">
+                                            <%= similares[i].discount %>% OFF
+                                        </p>
+                                    <% } %>
+
+
+                                </div>
+
+                            </div>
+                            </a>
+
+                        </article>
+
+                        <% } %>
+
+                </div>
+
+
+
+
+            </section>
+
+            
+        </main>
+        <%- include('../partials/footer') %>
+</body>
+
+</html>

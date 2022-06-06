@@ -1,0 +1,142 @@
+[
+    {
+        "id" : 1,
+        "name" : "Accesorios",
+        "image" : "accesorio-icon.png"
+    },
+    {
+        "id" : 2,
+        "name" : "Almacenamiento",
+        "image" : "storage-icon.png"
+    },
+    {
+        "id" : 3,
+        "name" : "Auriculares",
+        "image" : "listener-icon.png"
+    },
+    {
+        "id" : 4,
+        "name" : "Cámaras digitales",
+        "image" : "camera-icon.png"
+    },
+    {
+        "id" : 5,
+        "name" : "Conectividad",
+        "image" : "conectividad-icon.png"
+    },
+    {
+        "id" : 6,
+        "name" : "Fan Coolers"
+        ,"image" : "fan-cooler-icon.png"
+    },
+    {
+        "id" : 7,
+        "name" : "Fuentes"
+        ,"image" : "fuente-icon.png"
+    },
+    {
+        "id" : 8,
+        "name" : "Gabinetes"
+        ,"image" : "computer-tower-icon.png"
+    },
+    {
+        "id" : 9,
+        "name" : "Impresoras"
+        ,"image" : "printer-icon.png"
+    },
+    {
+        "id" : 10,
+        "name" : "Joysticks"
+        ,"image" : "joystick-icon.png"
+    },
+    {
+        "id" : 11,
+        "name" : "Memorias RAM"
+        ,"image" : "ram-icon.png"
+    },
+    {
+        "id" : 12,
+        "name" : "Micrófonos"
+        ,"image" : "microphone-icon.png"
+    },
+    {
+        "id" : 13,
+        "name" : "Microprocesadores"
+        ,"image" : "microprocessor-icon.png"
+    },
+    {
+        "id" : 14,
+        "name" : "Monitores"
+        ,"image" : "desktop-icon.png"
+    },
+    {
+        "id" : 15,
+        "name" : "Motherboards"
+        ,"image" : "motherboard-icon.png"
+    },
+    {
+        "id" : 16,
+        "name" : "Mouse"
+        ,"image" : "mouse-icon.png"
+    },
+    {
+        "id" : 17,
+        "name" : "Mouse Pads"
+        ,"image" : "mouse-pad-icon.png"
+    },
+    {
+        "id" : 18,
+        "name" : "Notebooks"
+        ,"image" : "laptop-icon.png"
+    },
+    {
+        "id" : 19,
+        "name" : "Parlantes"
+        ,"image" : "speaker-icon.png"
+    },
+    {
+        "id" : 21,
+        "name" : "PC armadas"
+        ,"image" : "computer-desktop-icon.png"
+    },
+    {
+        "id" : 22,
+        "name" : "Placas de sonido"
+        ,"image" : "sonic-icon.png"
+    },
+    {
+        "id" : 23,
+        "name" : "Placas de video"
+        ,"image" : "graphics-card-icon.png"
+    },
+    {
+        "id" : 24,
+        "name" : "Sillas gamer"
+        ,"image" : "gaming-chair-icon.png"
+    },
+    {
+        "id" : 25,
+        "name" : "Smartphones",
+        "image" : "mobile-phone-icon.png"
+    },
+    {
+        "id" : 26,
+        "name" : "Tablets",
+        "image" : "tablet-icon.png"
+    },
+    {
+        "id" : 27,
+        "name" : "Teclados",
+        "image" : "keyboard-icon.png"
+    },
+    {
+        "id" : 28,
+        "name" : "Webcams",
+        "image" : "webcam-icon.png"
+    }, 
+    {
+        "id" : 29,
+        "name" : "Otros",
+        "image" : "otros-icon.png"
+    }
+]

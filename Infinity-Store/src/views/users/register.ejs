@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/styleregistro.css">
+    <link rel="stylesheet" href="/css/stylelogin.css">
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+
+    <main class="Form-register">
+        <form action="/users/register" method="POST" enctype="multipart/form-data">
+       
+            <h4>Formulario de Registro</h4>
+        <div>
+        <input class="Controls" type="text" name="name" id="Nombres" placeholder="Ingrese su Nombre">
+        </div>
+        <input class="Controls" type="text" name="last_name" id="Apellido" placeholder="Ingrese su Apellido">
+        <div>
+        <input class="Controls" type="text" name="email" id="Correo electrónico"
+            placeholder="Ingrese su Correo">
+        </div>
+        <input class="Controls" type="text" name="password" id="Contraseña" placeholder="Contraseña">
+        <div>
+        <input class="Controls" type="text" name="phone" id="Teléfono" placeholder="Teléfono">
+        </div>
+            <div class="c-photos">
+                <label for="photo">Foto de Perfil</label>
+                <input type="file" name="image" accept="image/*" id="photo" class="controls" multiple/>
+              </div>
+              <div>
+                <label for="">Fecha de Nacimiento</label>
+                <input class="Controls" type="date" name="date_of_birth">
+                </div>
+                <div>
+                    <input class="Controls" type="text" name="home_adress" id="dirección" placeholder="Dirección">
+                    </div>
+        <p> Acepto los <a href="#">términos y condiciones</a></p>
+        <div>
+        <input class="botons" type="submit" value="Aceptar"></form>
+    </div>
+    </main>
+
+    <%- include('../partials/footer') %>
+    
+</body>
+
+</html>

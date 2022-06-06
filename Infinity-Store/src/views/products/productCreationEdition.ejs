@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/productCreationEdition.css" />
+</head>
+
+<body>
+
+  <%- include('../partials/header') %>
+
+    <main>
+
+      <h1>
+        <%= metodo!=="POST" ? "Actualizar producto" : "Crear producto" %>
+      </h1>
+
+      <form method="POST" action="/product/<%=ruta%>" enctype="multipart/form-data">
+
+        <div>
+          <label for="name">Nombre del producto</label>
+          <input type="text" name="name" class="controls" id="name" value="<%= metodo === 'POST' ? '' : producto.name%>"
+            placeholder="Ingrese el nombre del producto" required/>
+        </div>
+
+        <div>
+
+          <label for="category">Categoría del producto</label>
+
+          <select id="category" name="category" class="controls">
+
+            <% for(i=0; i < categoryList.length; i++) {%>
+              <option value="<%=categoryList[i].id%>" <%=metodo==="PUT" ? categoryList[i].id===producto.idCategory? "Selected" : "" : "" %>><%= categoryList[i].name%></option>
+            <%}%>
+
+          </select>
+
+        </div>
+
+        <div>
+          <label for="precio">Precio del producto</label>
+          <input type="number" name="price" id="precio" class="controls" value="<%= metodo === 'POST' ? '' : producto.price%>" placeholder="Ingrese el precio del producto" required/>
+        </div>
+
+        <div class="descripcion">
+          <label for="descripcion">Descripción del producto</label>
+          <textarea class="controls" name="description" id="descripcion" cols="30" rows="5"
+            placeholder="Ingrese descripción del producto"><%= metodo === 'POST' ? '' : producto.description%></textarea>
+        </div>
+
+        <div class="c-photos">
+          <label for="image"class="form-label">Fotos del producto</label>
+          <input type="file" name="image" accept="image" id="photo" class="form-input" <%= metodo==="POST" ? "required" : ""%>>
+        </div>
+
+        <!-- <div>
+          <label for="colores">Colores disponibles:</label>
+          <div class="c-in-b-colores">
+            <input type="text" name="colores" id="colores" class="controls">
+            <button class="b-colores">+</button>
+          </div>
+        </div> -->
+
+        <div>
+          <input type="checkbox" name="checkDescuento" id="check-descuento" <%= metodo==="PUT" ? producto.offSale? "checked" : "" : "" %>><label for="check-descuento" class="check-descuento">Tiene descuento</label>
+          <div class="descuentos">
+            <label for="in-descuento">Descuento (%): </label>
+            <input id="in-descuento" name="discount" type="number" value="<%= metodo === 'POST' ? '' : producto.discount%>" class="controls">
+          </div>
+        </div>
+
+        <div>
+          <label for="stock">Cantidad en stock: </label>
+          <input type="number" name="stock" id="stock" class="controls" value="<%= metodo === 'POST' ? '' : producto.stock%>" placeholder="Ingrese el stock de este producto" required/>
+        </div>
+
+        <div class="botones">
+          <button type="reset"><a href="/"><i class="fa-solid fa-arrows-rotate"></i></a></button>
+          <button type="submit">Enviar</button>
+        </div>
+
+      </form>
+
+    </main>
+
+    <%- include('../partials/footer') %>
+
+</body>
+
+</html>

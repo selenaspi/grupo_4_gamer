@@ -1,0 +1,139 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+    .datatable-container {
+    background-color: rgba(50, 51, 61, 0.822);
+    border-radius: 3px;
+    color: white;
+    font-size: 15px;
+}  
+
+.datatable-container .header-tools {
+    border-bottom: solid 1px grey;
+    padding: 20px;
+    display: flex;
+    align-items: baseline;
+}
+
+.datatable-container .header-tools .search {
+    width: 30%;
+}
+
+.datatable-container .header-tools .search .search-input {
+    margin: 20px;
+    width: 100%;
+    background-color: white;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid white;
+    color: black;
+}
+
+.datatable-container .header-tools .tools {
+    width: 70%;
+}
+
+.datatable-container .header-tools .tools ul {
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+}
+
+.datatable-container .header-tools .tools ul li {
+    display: inline-block;
+    margin: 0 12px;
+    align-items: baseline;
+}
+
+.datatable-container .footer-tools {
+    padding: 12px;
+    display: flex;
+    align-items: baseline;
+}
+
+.datatable-container .footer-tools .list-items {
+    width: 50%;
+}
+
+.datatable-container .footer-tools .pages {
+    margin-left: auto;
+    margin-right: 0;
+    width: 50%;
+}
+
+.datatable-container .footer-tools .pages ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+}
+
+.datatable-container .footer-tools .pages ul li {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.datatable-container .footer-tools .pages ul li button,
+.datatable-container .header-tools .tools ul li button {
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 3px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.datatable-container .footer-tools .pages ul li button:hover,
+.datatable-container .header-tools .tools ul li button:hover {
+    background: purple;
+    color: yellow;
+}
+
+.datatable-container .footer-tools .pages ul li span.active {
+    background-color: rgba(33, 37, 65, 0.822);
+    border-radius: yellow;
+}
+
+.datatable-container .footer-tools .pages ul li button,
+.datatable-container .header-tools .tools ul li button,
+.datatable-container .footer-tools .pages ul li span {
+    padding: 12px;
+}
+
+.datatable-container .datatable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.datatable-container .datatable,
+.datatable-container .datatable th,
+.datatable-container .datatable td {
+    padding: 10px;
+}
+
+.datatable-container .datatable th {
+    font-weight: bolder;
+    text-align: left;
+    border-bottom: 2px solid black;
+}
+
+.datatable-container .datatable td {
+    border-bottom: 1px solid grey;
+}
+
+.datatable-container .datatable tbody tr:nth-child(even) {
+    background-color: grey;
+}
+
+.datatable-container .datatable tbody tr:hover {
+    background-color: blue;
+}  
+
+/* --------------------------------------------------------- */
+
+
+

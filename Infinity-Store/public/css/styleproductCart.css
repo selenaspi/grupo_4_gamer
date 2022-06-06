@@ -1,0 +1,853 @@
+/*------------------------ Universales ------------------------*/
+:root {
+    --amarillo: #eac926;
+    --azul: rgb(3, 38, 76);
+    --celeste: #1259c3;
+    --grisOscuro: rgb(156, 156, 156);
+    --grisClaro: #ebebeb;
+    --verde: #39b54a;
+    --rosado: rgba(196, 15, 233, 0.986);
+    --purpuraOscuro: #46188c;
+    --purpura: #7514b7;
+    --negro: rgba(0, 0, 0, 0.8);
+    --turquesa: #15cec0;
+    --blanco: rgba(255, 255, 255, 0.9);
+    --xiketic: #0b0b16;
+    --azulOscuro: rgb(32, 33, 65);
+  }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background: linear-gradient(var(--xiketic), var(--azul));
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    font-size: 1.7rem;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+main .siguiente-b button:hover, main .final-b button:hover{
+    border: var(--purpura) solid 2px;
+    background-color: var(--turquesa);
+    color: black;
+}
+
+/*------------------------ Navbar -----------------------*/
+
+li.carrito {
+    display: none; /*Sería una poco redundante que en el carrito aparezca el carrito*/
+}
+
+/*------------------------ Main ------------------------*/
+
+main {
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+    font-size: 18px;
+}
+
+main>h1, main>h2 {
+    display: block; 
+    color: var(--blanco);
+}
+
+/*------Productos y subtotal------*/
+
+main .product-cards-subtotal {
+    width: 100%;
+    margin-bottom: 10%;
+    color: var(--negro);
+}
+
+/*-----Producto-----*/
+
+main .product-cards-subtotal article {
+    display: block;
+    width: 100%;
+    position: relative;
+    background-color: white;
+    margin-bottom: 8%;
+    padding-bottom: 5%;
+    -webkit-box-shadow: 10px 10px 25px -20px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 25px -20px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 25px -20px rgba(0,0,0,0.75);
+}
+
+/*----Fotos de los artículos----*/
+
+main .product-cards-subtotal article .foto-articulo {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding: 10% 0% 5% 0%;
+}
+
+/*---Nombre artículo---*/
+
+.product-cards-subtotal article .descripcion-producto>h3 {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 5%;
+}
+
+/*---Agregar sacar---*/
+
+.product-cards-subtotal article .agregar-sacar {
+    display: flex;
+    justify-content: center;
+    height: 7.5vw;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 6%;
+    border-bottom: 1px solid black;
+}
+
+.product-cards-subtotal article .agregar-sacar button {
+    padding: 0px 8px;
+    border-radius: 15%;
+    border-style: none;
+    background-color: var(--turquesa);
+}
+
+.product-cards-subtotal article .agregar-sacar button i {
+    padding-top: 1px;
+}
+
+.product-cards-subtotal article .agregar-sacar input {
+    border-radius: 15%;
+    border: 1px black solid;
+    margin: 0px 5px;
+    width: 15%;
+    text-align: center;
+}
+
+/*---Precio producto---*/
+
+main .product-cards-subtotal article .c-precio-a-s h2 {
+    width: 70%;
+    margin: auto;
+    text-align: right;
+    padding-top: 3%;
+}
+
+/*Botón desktop que desaparece*/
+
+.borrar-producto-desktop {
+    display: none;
+}
+
+/*Borrar mobile-tablet*/
+
+.product-cards-subtotal article .borrar-producto-m-t {
+    border-radius: 50%;
+    border: solid 2.5px rgb(50, 50, 50); 
+    position: absolute;
+    top: -3%;
+    right: -5%;
+    background-color: rgba(124, 124, 124, 0.5);
+}
+
+.product-cards-subtotal article .borrar-producto-m-t i {
+    padding: 5px;
+    font-size: 1.4rem;
+    color: rgb(50, 50, 50);
+}
+
+/*-----Subtotal------*/
+
+.product-cards-subtotal .subtotal-productos {
+    margin-top: 5%;
+    color: rgb(50, 50, 50);
+    background-color: white;
+    -webkit-box-shadow: 10px 10px 25px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 25px -14px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 25px -14px rgba(0,0,0,0.75);
+}
+
+.subtotal-productos h2 {
+    padding: 5%;
+    text-align: center;
+}
+
+/*------ Envío ------*/
+
+main .envio {
+    display: block;
+    width: 100%;
+    margin-top: 5%;
+    padding: 1% 0% 4% ;
+    background-color: white;
+    color: rgb(50, 50, 50);
+    -webkit-box-shadow: 10px 10px 25px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 25px -14px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 25px -14px rgba(0,0,0,0.75);
+}
+
+main .envio .o-sucursal, main .envio .o-domicilio {
+    width: 80%;
+    margin: auto;
+    padding-top: 5%;
+}
+
+main .envio .o-domicilio .o-dom {
+    padding-bottom: 5%;
+}
+
+/*---- Calculador envío ----*/
+
+main .envio .calculador {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+
+main .envio .calculador input {
+    width: 40%;
+    height: 2rem;
+    padding-left: 8px;
+    font-size: 14px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    background-color: rgba(3, 38, 76, 0.7);
+    color: white;
+}
+
+main .envio .calculador input::placeholder {
+    color: white;
+}
+
+main .envio .calculador button {
+    border-radius: 0%;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgba(3, 38, 76, 0.7);
+    color: white;
+}
+
+/*---- Subtotal envío ----*/
+
+main .envio h2 {
+    display: block;
+    width: 80%;
+    margin: auto;
+    padding-top: 3%;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: end;
+    border-top: solid gray 1px;
+}
+
+/*---- Botón siguiente ----*/
+
+main .siguiente-b {
+    margin-top: 8%;
+    text-align: center;
+}
+
+main .siguiente-b button {
+    font-size: 20px;
+}
+
+/*------------------------------ Detalles compra ------------------------------*/
+
+main .title-desktop {
+    display: none;
+}
+
+main .detalles-compra {
+    background-color: white;
+    padding: 3% 0%;
+    -webkit-box-shadow: 10px 10px 25px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 25px -14px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 25px -14px rgba(0,0,0,0.75);
+    color: var(--negro);  
+}
+
+main .detalles-compra p {
+    margin: 0%;
+}
+
+main .detalles-compra h2 {
+    margin: 0%;
+    margin-bottom: 2%;
+}
+
+main .detalles-compra .conteiner-detalles {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+/*Especificación por producto, envío e impuestos*/
+
+main .detalles-compra .d-producto, main .detalles-compra .d-envio, main .detalles-compra .d-impuestos {
+    margin-bottom: 3%;
+}
+
+/*Cantidad de un mismo producto e importe, destino y costo de ese envío, nombre y monto de impuesto/descuento*/
+
+main .detalles-compra .d-producto>div, main .detalles-compra .d-envio, main .detalles-compra .d-impuestos>div, main .detalles-compra .d-descuentos>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Nombre artículo en desktop que desaparece*/
+
+.nombre-desktop {
+    display: none;
+}
+
+/*Nombre del producto*/
+
+.nombre-mobile>strong {
+    font-weight: 400;
+}
+
+main .detalles-compra .d-producto>div {
+    margin-top: 2%;
+}
+
+main .detalles-compra .d-descuentos {
+    padding-bottom: 5%; /*Padding para que se separe del borde del subtotal*/
+}
+
+/*Total*/
+
+main .conteiner-detalles .total {
+    padding: 5% 0% 3%;
+    margin: 0%;
+    border-top: 1px solid black;
+    text-align: end;
+}
+
+/*Botones terminar compra, descargar pdf y volver*/
+
+main .final-b {
+    margin: 5% 0%;
+    padding: 0% 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .final-b button {
+    font-size: 18px;
+}
+
+/*----Botones general----*/
+
+main .siguiente-b button, main .final-b button{
+    padding: 7px;
+    background-color: var(--purpura);
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: normal;
+    border-radius: 5px;
+}
+
+/*--------------------------------------- Media Queries ---------------------------------------*/
+
+@media (min-width: 521px) {
+
+    body {
+        font-size: 18px;
+    }
+
+    /*------------------------ Main ------------------------*/
+    
+    main {
+        width: 85%;
+    }
+
+    /*------Productos y subtotal------*/
+    
+    main .product-cards-subtotal {
+        margin-bottom: 6%;
+    }
+
+    /*-----Producto-----*/
+
+    main .product-cards-subtotal article {
+        display: flex;
+        padding: 3% 0% 3%;
+        align-items: center;
+        margin: 0% 0% 4%;
+    }
+    
+    /*----Fotos de los artículos----*/
+
+    main .product-cards-subtotal article .foto-articulo {
+        width: 15%;
+        padding: 0% 4%;
+        margin: 0%;
+        flex-grow: 0.2;
+    }
+
+    /*----Contenedor de nombre, botones de agregar y sacar, y precio*/
+    
+    .product-cards-subtotal article .descripcion-producto {
+        width: 85%;
+    }
+    
+    /*---Nombre artículo---*/
+
+    .product-cards-subtotal article .descripcion-producto>h3 {
+        width: 90%;
+        margin-right: 10%;
+        padding-bottom: 2%;
+        font-size: 1rem;
+    }
+    
+    /*---Contenedor botones agregar sacar y precio---*/
+    
+    main .product-cards-subtotal article .c-precio-a-s {
+        display: flex;
+        width: 90%;
+    }
+    
+    /*--Agregar sacar--*/
+    
+    .product-cards-subtotal article .c-precio-a-s .agregar-sacar {
+        width: 50%;
+        height: 4.5vh;
+        border-bottom: none;
+        padding-bottom: 0%;
+        justify-content: left;
+    }
+    
+    /*--Precio producto--*/
+    
+    main .product-cards-subtotal article .c-precio-a-s h2 {
+        padding-top: 0%;
+        font-size: 1.4rem;
+        text-align: right;
+    }
+
+    /*Borrar mobile-tablet*/
+
+    .product-cards-subtotal article .borrar-producto-m-t {
+        padding: 2px 6px 0px;
+        right: -2%; 
+        top: -12%;
+    }
+
+    .product-cards-subtotal article .borrar-producto-m-t i {
+        padding: 0;
+        font-size: 1.2rem;
+    }
+
+    /*-----Subtotal------*/
+
+    .subtotal-productos h2 {
+        padding: 3% 5%;
+        margin: 0% 0% 2%;
+        text-align: right;
+    }
+    
+    /*------ Envío ------*/
+
+    main .envio {
+        margin-top: 0%;
+        padding: 0% 0% 3% ;
+    }
+    
+    main .envio .o-sucursal {
+        width: 85%;
+        padding-top: 4%;
+    }
+    
+    main .envio .o-domicilio {
+        display: flex;
+        width: 85%;
+        padding: 3% 0%;
+        align-items: center;
+    }
+    
+    main .envio .o-domicilio .o-dom {
+        padding-bottom: 0%;
+    }
+    
+    /*---- Calculador envío ----*/
+
+    main .envio .calculador {
+        padding-bottom: 0%;
+        width: 50%;
+    }
+
+    main .envio .calculador input {
+        width: 50%;
+        font-size: 16px;
+    }
+
+    /*---- Subtotal envío ----*/
+
+    main .envio h2 {
+        width: 85%;
+        padding-top: 2%;
+    }
+
+    main .siguiente-b {
+        margin-top: 5%;
+    }
+
+    /*------------------ Detalles compra ------------------*/
+
+    main .detalles-compra p {
+        font-size: 1rem;
+    }
+    
+    /*------Detalle del producto------*/
+    
+    main .detalles-compra .d-producto {
+        margin-bottom: 2%;
+    }
+    
+    /*-----Cantidad, nombre y precio productos-----*/
+
+    main .detalles-compra .d-producto>div {
+        align-items: center;
+        margin-top: 0%;
+    }
+
+    /*----Cantidad del producto----*/
+    
+    main .detalles-compra .d-producto .cantidad {
+        display: block;
+        width: 8%;
+    }
+
+    /*----Nombre artículo en mobile que desaparece----*/
+
+    .nombre-mobile {
+        display: none;
+    }
+    
+    /*----Nombre artículo en desktop que aparece----*/
+    
+    .nombre-desktop {
+        display: inherit;
+        width: 70%;
+        font-size: 20px;
+    }
+    
+    .nombre-desktop>strong {
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+    
+    /*----Precio----*/
+
+    main .detalles-compra .d-producto .precio {
+        display: block;
+        width: 20%;
+        text-align: end;
+    }
+    
+    /*-----Impuestos y descuentos-----*/
+
+    main .detalles-compra .d-impuestos>div, main .detalles-compra .d-descuentos>div {
+        margin-bottom: 2%;
+    }
+    
+    /*-----Descuentos-----*/
+    
+    main .detalles-compra .d-descuentos {
+        padding-bottom: 1%; /*Padding para que se separe del borde del subtotal*/
+    }
+    
+    /*-----Total-----*/
+    
+    main .conteiner-detalles .total {
+        padding: 3% 0% 0%;
+    }
+ 
+}
+
+
+@media (min-width: 769px) {
+    
+    body {
+        font-size: 22px;
+    }
+    
+    /*--------------------- Main ---------------------*/
+
+    main {
+        width: 90%;
+    }
+    
+
+    /*------Productos y subtotal------*/
+
+    .product-cards-subtotal {
+        background-color: white;
+        -webkit-box-shadow: 10px 10px 25px -10px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 25px -10px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 25px -10px rgba(0,0,0,0.75);
+    }
+    
+    /*-----Producto-----*/
+
+    main .product-cards-subtotal article {
+        width: 90%;
+        margin-top: 0%;
+        margin: auto;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border-bottom: solid 1px gray;
+    }
+
+    /*----Fotos de los artículos----*/
+
+    main .product-cards-subtotal article .foto-articulo {
+        width: 15%;
+        padding: 0%;
+    }
+
+     /*----Contenedor de nombre, botones de agregar y sacar, y precio*/
+
+    .product-cards-subtotal article .descripcion-producto {
+        display: flex;
+        width: 90%;
+        align-items: center;
+    }
+    
+    /*---Nombre artículo---*/
+    
+    .product-cards-subtotal article .descripcion-producto>h3 {
+        width: 40%;
+        margin-right: 0;
+        padding: 0% 0% 0% 5%;
+    }
+
+    /*---Contenedor botones agregar sacar y precio---*/
+    
+    main .product-cards-subtotal article .c-precio-a-s {
+        width: 60%;
+        justify-content: space-around;
+        padding: 0% 1%;
+    }
+
+    /*--Agregar sacar--*/
+
+    .product-cards-subtotal article .c-precio-a-s .agregar-sacar {
+        width: 40%;
+        padding: 0% 2%;
+
+    }
+
+    .product-cards-subtotal article .agregar-sacar button {
+        padding: 0px 6px;
+    }
+
+    .product-cards-subtotal article .agregar-sacar input {
+        width: 25px;
+    }
+    
+    /*--Precio producto--*/
+    
+    main .product-cards-subtotal article .c-precio-a-s h2 {
+        width: 60%;
+        text-align: right;
+    }
+    
+    /*Botón mobile-table que desaparece */
+
+    .borrar-producto-m-t {
+        display: none;
+    }
+
+    /*Contenedor de botón borrar producto desktop*/
+
+    .product-cards-subtotal article .c-b-borrar-producto {
+        width: 12%; 
+        border: none;
+        border-radius: 10%;
+        height: 20%;
+        padding: 0%;
+        order: 1;
+    }
+    
+    .product-cards-subtotal article .c-b-borrar-producto .borrar-producto-desktop {
+        display: block;
+        margin: auto;
+        border: none;
+        border-radius: 10%;
+        position: static;
+        height: 20%;
+        padding: 0%;
+    }
+    
+    .product-cards-subtotal article .c-b-borrar-producto .borrar-producto-desktop i {
+        padding: 3px 10px 5px;
+        font-size: 1rem;
+        color: #dc3545;
+    }
+
+    /*-----Subtotal------*/
+    .product-cards-subtotal .subtotal-productos {
+        width: 90%;
+        margin: auto;
+        margin-top: 0%;
+        padding: 2% 0%;
+        background-color: white;
+        color: rgba(0, 0, 0, 0.8);
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .product-cards-subtotal .subtotal-productos h2 {
+        margin: 0%;
+        padding: 0%;
+        text-align: right;
+    }
+
+    /*------ Envío ------*/
+
+    main .envio {
+        margin-top: 3%;
+        margin-bottom: 6%;
+        padding: 1% 0% 2% ;
+    }
+
+    main .envio .o-sucursal, main .envio .o-domicilio { 
+        width: 90%;
+        padding-top: 2%;
+        font-size: 1em;
+    }
+    
+    main .envio .o-domicilio {
+        padding-bottom: 3%;
+    }
+    
+    /*---- Calculador envío ----*/
+
+    main .envio .calculador input {
+        width: 60%;
+        font-size: 18px;
+    }
+
+    /*---- Subtotal envío ----*/
+
+    main .envio h2 {
+        width: 90%;
+    }
+
+    /*---- Botón siguiente ----*/
+
+    main .siguiente-b {
+        display: none;
+    }
+
+    /*------------------ Detalles compra ------------------*/
+
+    main .title-m-t {
+        display: none;
+    }
+
+    main .title-desktop {
+        display: inherit;
+    }
+
+    main .detalles-compra p {
+        font-size: 1.2rem;
+    }
+
+    
+    main .detalles-compra h2 {
+        margin: 0%;
+        margin-bottom: 2%;
+    }
+
+    /*Secciones de detalles de productos, envíos e impuestos*/
+    
+    main .detalles-compra .d-producto, main .detalles-compra .d-envio, main .detalles-compra .d-impuestos {
+        margin-bottom: 3%;
+    }   
+
+    main .detalles-compra .d-producto>div, main .detalles-compra .d-envio, main .detalles-compra .d-impuestos>div, main .detalles-compra .d-descuentos>div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /*----Cantidad del producto----*/
+
+    main .detalles-compra .d-producto .cantidad {
+        width: 5%;
+    }
+
+    /*----Nombre artículo en desktop que aparece----*/
+
+    .nombre-desktop {
+        width: 75%;
+    }
+
+    .nombre-desktop>strong {
+        font-size: 1.2rem;
+    }
+
+    /*----Precio----*/
+
+    main .detalles-compra .d-producto .precio {
+        width: 15%;
+    }
+
+    /*-----Impuestos y descuentos-----*/
+
+    main .detalles-compra .d-impuestos>div, main .detalles-compra .d-descuentos>div {
+        margin-bottom: 3%;
+    }
+
+    /*-----Descuentos-----*/
+
+    main .detalles-compra .d-descuentos {
+        padding-bottom: 3%;
+    }
+
+    /*-----Total-----*/
+
+    main .conteiner-detalles .total {
+        padding: 2% 0% 0%;
+    }
+
+    main .final-b button {
+        font-size: 22px;
+    }
+
+}
+
+@media (min-width: 1100px) {
+
+    main {
+        width: 70%;
+    }
+        
+    /*---- Calculador envío ----*/
+
+    main .envio .calculador {
+        width: 40%;
+        justify-content: center;
+    }
+
+    main .envio .calculador input {
+        width: 60%;
+        font-size: 18px;
+    }
+}

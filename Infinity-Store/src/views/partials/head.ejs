@@ -1,0 +1,116 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Store</title>
+
+    <!-- https://material.io/resources/icons/?style=outline -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/navbar-footer.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            const barMenu = document.querySelector("#bar-menu")
+            const options = document.querySelector("#options-burger-menu");
+            const main = document.querySelector("#main-oculto")
+
+            const favOff1 = document.querySelector("#favOff1");
+            const favOff2 = document.querySelector("#favOff2");
+            const favOff3 = document.querySelector("#favOff3");
+            const favOff4 = document.querySelector("#favOff4");
+
+            const favOn1 = document.querySelector("#favOn1");
+            const favOn2 = document.querySelector("#favOn2");
+            const favOn3 = document.querySelector("#favOn3");
+            const favOn4 = document.querySelector("#favOn4");
+
+            const favOffR1 = document.querySelector("#favOffR1");
+            const favOffR2 = document.querySelector("#favOffR2");
+            const favOffR3 = document.querySelector("#favOffR3");
+            const favOffR4 = document.querySelector("#favOffR4");
+
+            const favOnR1 = document.querySelector("#favOnR1");
+            const favOnR2 = document.querySelector("#favOnR2");
+            const favOnR3 = document.querySelector("#favOnR3");
+            const favOnR4 = document.querySelector("#favOnR4");
+
+            const botonCat = document.querySelector("#b-categ")
+            const botonCatD = document.querySelector("#b-categ-d")
+
+            const botonProfileD = document.querySelector("#b-profile-d")
+            
+
+            barMenu.addEventListener("click", () => {
+                barMenu.classList.toggle("active");
+                options.classList.toggle("active-menu")
+                main.classList.toggle("main-active")
+            });
+
+            botonCat.addEventListener("click", () => {
+                botonCat.classList.toggle("active-boton-cat");
+            })
+
+            botonCatD.addEventListener("click", () => {
+                botonCatD.classList.toggle("active-boton-cat");
+            })
+
+            botonProfileD.addEventListener("click", () => {
+                botonProfileD.classList.toggle("active-m-profile")
+            })
+
+
+
+
+
+
+            favOff1.addEventListener("click", ()=> {
+                favOn1.classList.toggle("con-fav")
+                favOff1.classList.toggle("sin-fav")
+            })
+
+            favOff2.addEventListener("click", ()=> {
+                favOn2.classList.toggle("con-fav")
+                favOff2.classList.toggle("sin-fav")
+            })
+
+            favOff3.addEventListener("click", ()=> {
+                favOn3.classList.toggle("con-fav")
+                favOff3.classList.toggle("sin-fav")
+            })
+
+            favOff4.addEventListener("click", ()=> {
+                favOn4.classList.toggle("con-fav")
+                favOff4.classList.toggle("sin-fav")
+            })
+
+            favOffR1.addEventListener("click", ()=> {
+                favOnR1.classList.toggle("con-fav")
+                favOffR1.classList.toggle("sin-fav")
+            })
+
+            favOffR2.addEventListener("click", ()=> {
+                favOnR2.classList.toggle("con-fav")
+                favOffR2.classList.toggle("sin-fav")
+            })
+
+            favOffR3.addEventListener("click", ()=> {
+                favOnR3.classList.toggle("con-fav")
+                favOffR3.classList.toggle("sin-fav")
+            })
+
+            favOffR4.addEventListener("click", ()=> {
+                favOnR4.classList.toggle("con-fav")
+                favOffR4.classList.toggle("sin-fav")
+            })
+
+        });
+
+    </script>
+</head>

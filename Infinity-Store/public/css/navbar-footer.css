@@ -1,0 +1,750 @@
+/*------------------------ Universales ------------------------*/
+
+:root {
+    --azulOscuro: rgb(32, 33, 65);
+    --xiketic: #0b0b16;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0%;
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+    z-index: -1;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.8);
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--purpuraOscuro);
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    /* creates padding around scroll thumb */
+}
+
+header a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+}
+
+nav {
+    width: 100%;
+    background-color: var(--azulOscuro);
+}
+
+nav .nav-bar {
+    display: flex;
+    width: 100%;
+    margin: 0%;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    /* z-index: 40; */
+}
+
+main {
+    position: relative;
+    top: 12vh;
+}
+
+footer {
+    position: relative;
+    top: 18vh;
+}
+
+img {
+    width: 100%;
+}
+
+/*-------------------------- Mobile --------------------------*/
+
+/*---------------------NavBar---------------------*/
+
+/*------Menú despegable------*/
+
+/*Menu hamburguesa*/
+
+nav .menu-desplegable {
+    width: 20%;
+}
+
+.bar-menu {
+    width: 38px;
+    margin: auto;
+    padding: 2px 0px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: white 1.3px solid;
+}
+
+.bar-menu span {
+    display: block;
+    width: 75%;
+    height: 3px;
+    background-color: white;
+    margin: auto;
+    margin-top: 6.25px;
+    margin-bottom: 6.25px;
+    transition: all 250ms;
+    border-radius: 1px;
+}
+
+.active #line1 {
+    transform: rotate(45deg) translate(2.5px, -4px);
+    transform-origin: 0%;
+}
+
+.active #line2 {
+    opacity: 0;
+    margin-left: -10px;
+    transition-delay: 0ms;
+}
+
+.active #line3 {
+    transform: rotate(-45deg) translate(2.8px, 3.4px);
+    transform-origin: 0%;
+}
+
+/*Desplegable*/
+
+.options-burger-menu .items {
+    display: none;
+}
+
+.active-menu {
+    position: fixed;
+    max-height: 80vh;
+    width: 65%;
+    top: 11vh;
+    padding: 5% 0% 8%;
+    overflow-y: auto;
+    z-index: -1;
+    background: var(--xiketic);
+}
+
+.active-menu .items {
+    display: block;
+    width: 82%;
+    margin: auto;
+    margin-top: 3%;
+    font-size: 40px;
+}
+
+.link-item {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.active-menu .items i {
+    margin-left: 10px;
+}
+
+.cat {
+    cursor: pointer;
+}
+
+.cat p {
+    margin: 0;
+}
+
+.up {
+    display: none;
+}
+
+/*Desplegable categoría*/
+
+.active-menu .cat>div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.active-menu .cat>div>p {
+    font-size: 24px;
+    color: white;
+}
+
+.active-menu .cat>ul>li>a {
+    display: none;
+}
+
+.active-menu .active-boton-cat>div {
+    border-bottom: 1px solid white;
+    padding-bottom: 8px;
+}
+
+.active-menu .active-boton-cat ul>li>a {
+    display: block;
+    font-size: 22px;
+    margin: 10px 0px;
+    margin-left: 8px;
+}
+
+.active-menu .active-boton-cat ul {
+    border-bottom: 1px solid white;
+}
+
+.active-boton-cat .up {
+    display: initial;
+}
+
+.active-boton-cat .down {
+    display: none;
+}
+
+/*-----Logo----*/
+
+nav .logo-infinity-store {
+    width: 30%;
+    padding: 2%;
+
+}
+
+nav .logo-infinity-store img {
+    max-height: 8vh;
+}
+
+/*-----Opciones de menú desplegable, botón de categorías, armá tu pc. carrito y login, 
+logo cuadradro del navbar desktop, barra de busqueda, posible botón de perfil-----*/
+
+nav .categoria,
+nav .arma-tu-pc,
+nav .logo-infinity-store .logo-cuadrado-d,
+nav .buscador .barra-busqueda,
+nav .carrito,
+nav .login,
+nav .perfil {
+    display: none;
+}
+
+/*------Buscador------*/
+
+nav .buscador {
+    width: 20%;
+    text-align: center;
+}
+
+nav .buscador button {
+    background-color: transparent;
+    border: none;
+}
+
+nav .buscador a {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+}
+
+nav .buscador i {
+    color: white;
+}
+
+/*---------------------Footer---------------------*/
+
+footer {
+    background-color: var(--xiketic);
+    margin-top: 8%;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 22px;
+}
+
+/*------Tópicos------*/
+
+footer>ul {
+    width: 80%;
+    margin: auto;
+    padding: 10% 10% 2%;
+}
+
+/*-----Botones desplegables tópicos-----*/
+
+footer>ul>li button {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 0%;
+    border: none;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+footer>ul>li button h3 {
+    margin: 4% 0%;
+    padding-left: 1%;
+    font-size: 18px;
+}
+
+footer>ul>li button i {
+    padding-right: 3%
+}
+
+/*----h3 que desaparece en mobile----*/
+
+footer>ul>li>h3 {
+    display: none;
+}
+
+/*----El menú desplegable no se muestra en mobile (clickeable)-----*/
+
+footer>ul>li>ul,
+footer>ul>li p {
+    display: none;
+}
+
+/*----Redes----*/
+
+footer .f-redes {
+    margin: 20% 0% 3%;
+    text-align: center;
+}
+
+footer .f-redes h3 {
+    display: none;
+    /*El título no se muestra*/
+}
+
+/*---Íconos de las redes---*/
+
+footer .f-redes a {
+    padding: 8px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/*-----Copyright-----*/
+
+footer>p {
+    display: block;
+    width: 80%;
+    margin: auto;
+    padding: 3% 0% 5%;
+    color: white;
+    text-align: center;
+    border-top: 1px solid white;
+}
+
+/*--------------------------------------- Media Queries ---------------------------------------*/
+
+@media (min-width: 521px) {
+
+    nav .nav-bar {
+        justify-content: space-between;
+    }
+
+    /*------Menú despegable------*/
+
+    /*Menu hamburguesa*/
+
+    nav .menu-desplegable {
+        width: 15%;
+    }
+
+    nav .menu-desplegable .burger-menu {
+        font-size: 22px;
+    }
+
+    /*Desplegable*/
+
+    .active-menu {
+        width: 50%;
+    }
+
+    /*-----Logo----*/
+
+    nav .logo-infinity-store {
+        width: 40%;
+    }
+
+    /*------Buscador------*/
+
+    nav .buscador {
+        width: 15%;
+        font-size: 24px;
+    }
+
+    nav .buscador .barra-busqueda {
+        display: none;
+    }
+}
+
+@media (min-width: 621px) {
+
+    /*---------------------Footer---------------------*/
+
+    /*------Tópicos------*/
+
+    footer>ul {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        padding: 5% 0% 8%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        line-height: 30px;
+        font-size: 18px;
+    }
+
+    footer>ul>li {
+        width: 50%;
+        margin-bottom: 1.5rem;
+    }
+
+    footer>ul>li button {
+        display: none;
+    }
+
+    footer>ul>li>h3 {
+        margin-bottom: 1%;
+        display: inherit;
+        width: 80%;
+        color: white;
+        margin: auto;
+        padding-bottom: 5px;
+        border-bottom: 1px solid white;
+        font-size: 20px;
+    }
+
+    /*----Ítems del tópic-----*/
+
+    footer>ul>li>ul,
+    footer>ul>li p {
+        display: inherit;
+        color: white;
+    }
+
+    footer>ul>li>ul a {
+        color: white;
+    }
+
+    /*---Horario de atención---*/
+
+    footer .f-atencion p {
+        margin: 0%;
+        font-style: italic;
+    }
+
+    /*----Redes----*/
+
+    footer .f-redes {
+        margin: 0%;
+    }
+
+    footer .f-redes h3 {
+        display: inherit;
+        /*El título se muestra*/
+        border-bottom: none;
+    }
+
+}
+
+@media (min-width: 769px) {
+
+    nav li.active-m-profile ul {
+        display: block;
+    }
+
+    main,
+    footer {
+        top: 8vh;
+    }
+
+    nav .nav-bar {
+        justify-content: space-around;
+        font-size: 18px;
+    }
+
+    /*------Menú despegable (desaparece)------*/
+
+    nav .menu-desplegable {
+        display: none;
+    }
+
+    /*-----Botón de categorías, armá tu pc, carrito y login (aparece)-----*/
+
+    nav .categoria,
+    nav .arma-tu-pc,
+    nav .carrito,
+    nav .login,
+    nav .perfil {
+        display: block;
+    }
+
+    /*-----Logo----*/
+
+    nav .logo-infinity-store {
+        order: -1;
+        width: 5%;
+        padding: 1%;
+    }
+
+    nav .logo-infinity-store .logo-cuadrado-d {
+        display: block;
+        width: 100%;
+    }
+
+    nav .logo-infinity-store img {
+        max-height: max-content;
+    }
+
+    /*-----Logo rectangular, opciones de categorías-----*/
+    nav .logo-infinity-store .logo-rectangular-m-t {
+        display: none;
+    }
+
+    .categoria div {
+        display: flex;
+        cursor: pointer;
+        color: white;
+        font-size: 18px;
+    }
+
+    .categoria .down,
+    .categoria .up {
+        margin-left: 8px
+    }
+
+    .categoria ul {
+        position: absolute;
+        left: 15vh;
+        top: 5vh;
+        display: none;
+        flex-wrap: wrap;
+        width: 80vw;
+        min-height: 60vh;
+        background-color: var(--azulOscuro);
+        padding: 20px;
+        padding-top: 40px;
+        z-index: -1;
+    }
+
+    .categoria ul>li {
+        width: 20%;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    .categoria ul>li a {
+        display: flex;
+        align-items: center;
+    }
+
+    .categoria ul>li img {
+        width: 5vh;
+    }
+
+    .categoria ul>li span {
+        font-size: 14px;
+        padding-left: 5px
+    }
+
+    .active-boton-cat ul {
+        display: flex;
+    }
+
+    nav .categoria .boton-categoria {
+        background-color: transparent;
+        border: none;
+        color: white;
+    }
+
+    /*----Enlace armá tu pc----*/
+
+    nav .arma-tu-pc a {
+        color: white;
+    }
+
+    /*------Buscador------*/
+
+    nav .buscador {
+        width: 30%;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav .buscador .barra-busqueda {
+        display: block;
+        width: 80%;
+        font-size: 14px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border: none;
+        height: 2rem;
+        padding-left: 8px;
+    }
+
+    nav .buscador button {
+        border-radius: 0%;
+        border: none;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-color: white;
+    }
+
+    nav .buscador a {
+        font-size: 18px;
+    }
+
+    nav .buscador i {
+        color: var(--azulOscuro);
+    }
+
+    nav .carrito i,
+    nav .login a {
+        color: white;
+    }
+
+    /*-----Profile-----*/
+
+    nav .perfil {
+        width: 8%;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav .perfil>div {
+        width: 60%;
+        cursor: pointer;
+    }
+
+    nav .perfil>div img {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+    }
+
+    nav .perfil>ul {
+        display: none;
+        flex-wrap: wrap;
+        position: absolute;
+        right: 2vh;
+        top: 8vh;
+        min-height: 30vh;
+        width: 14vw;
+        padding: 20px;
+        padding-top: 30px;
+        z-index: -1;
+        background-color: var(--azulOscuro);
+    }
+
+    nav .perfil>ul>li {
+        margin-top: 20px;
+    }
+
+    nav .perfil>ul>li a {
+        font-size: 16px;
+    }
+
+    nav .perfil>ul>li a i {
+        margin-left: 10px;
+    }
+
+    /*---------------------Footer---------------------*/
+
+    /*------Tópicos------*/
+
+    footer>ul {
+        padding: 4% 0%;
+    }
+
+    /*-----Copyright-----*/
+
+    footer>p {
+        padding: 1% 0%;
+        font-size: 16px;
+    }
+
+}
+
+@media (min-width: 1100px) {
+
+    main,
+    footer {
+        top: 12vh
+    }
+
+    header a {
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: normal;
+    }
+
+    nav .nav-bar {
+        width: 95%;
+        margin: auto;
+        font-size: 22px;
+    }
+
+    .categoria ul {
+        left: 25vh;
+        top: 8vh;
+        width: 68vw;
+    }
+
+    .categoria div p {
+        font-size: 22px;
+    }
+
+    .categoria ul>li span {
+        font-size: 18px;
+        padding-left: 5px
+    }
+
+    /*-----Profile-----*/
+
+    nav .perfil>div {
+        width: 50%;
+    }
+
+    nav .perfil>ul {
+        right: 10vh;
+        top: 8vh;
+        min-height: 28vh;
+        width: 12vw;
+    }
+
+    nav .perfil>ul>li a {
+        font-size: 20px;
+    }
+
+    /*---------------------Footer---------------------*/
+
+    /*------Tópicos------*/
+
+    footer>ul {
+        width: 90%;
+        flex-wrap: nowrap;
+        padding-top: 3%;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    footer>ul>li {
+        margin-bottom: 0%;
+    }
+
+}

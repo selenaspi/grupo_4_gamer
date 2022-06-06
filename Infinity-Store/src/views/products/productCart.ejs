@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/styleproductCart.css">
+</head>
+
+<body>
+
+    <%- include('../partials/header') %>
+
+    <main>
+
+        <h1>Artículos del carrito</h1>
+
+        <section class="product-cards-subtotal">
+
+            <%let subtotal=0%>
+
+            <% for(i=0; i < productos.length; i++) { %>
+
+                <article>
+
+                    <!--Implementar elemento picture-->
+                    <div class="foto-articulo">
+                        <img src="<%=productos[i].foto%>" alt="Foto del producto">
+                    </div>
+
+                    <div class="descripcion-producto">
+
+                        <button type="button" class="borrar-producto-m-t"><i
+                                class="fa-solid fa-xmark"></i></button>
+
+                        <div class="c-b-borrar-producto">
+                            <button type="button" class="borrar-producto-desktop"><i
+                                    class="fa-solid fa-trash"></i></button>
+                        </div>
+
+                        <h3><%=productos[i].name%></h3>
+
+                        <div class="c-precio-a-s">
+
+                            <div class="agregar-sacar">
+                                <button type="button"><i class="fa-solid fa-minus"></i></button>
+                                <input type="number" placeholder="0" value="<%=productos[i].cantidad%>">
+                                <button type="button"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <% let subtotalProducto=productos[i].precio * productos[i].cantidad %>
+
+                            <h2>$ <%=subtotalProducto%></h2>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <%subtotal+= subtotalProducto%>
+
+            <%}%>
+
+            <div class="subtotal-productos">
+                <h2>Subtotal: $ <%= subtotal %></h2>
+            </div>
+
+        </section>
+
+        <h2>Envío</h2>
+
+        <section class="envio">
+
+            <div class="o-sucursal">
+                <input type="radio" id="retiro-sucursal" name="envio">
+                <label for="retiro-sucursal">Retiro por sucursal</label>
+            </div>
+
+            <div class="o-domicilio">
+                <div class="o-dom">
+                    <input type="radio" id="envio-domicilio" name="envio">
+                    <label for="envio-domicilio">Envío a destino</label>
+                </div>
+
+                <div class="calculador">
+                    <input type="text" placeholder="Código postal" >
+                    <button type="button"><i class="fa-solid fa-truck"></i></button>
+                    <!--Me gustaría poner un input del domicilio-->
+                </div>
+
+            </div>
+
+            <h2>Costo de envío: $ <%= envio.precio %></h2>
+
+        </section>
+
+        <div class="siguiente-b">
+            <button type="button">Siguiente</button>
+        </div>
+
+        <!----------------------------¿En un html nuevo? idk--------------------------------------->
+
+        <h1 class="title-m-t">Detalles de la compra</h1>
+
+        <h2 class="title-desktop">Detalles de la compra</h2>
+
+        <section class="detalles-compra">
+
+            <div class="conteiner-detalles">
+
+                <section class="productos-d">
+
+                    <h2>Productos</h2>
+
+                    <%for(i=0; i < detallesDeLaCompra.destallesProductos.length; i++) {%>
+
+                        <div class="d-producto">
+
+                            <p class="nombre-mobile"><strong>
+                                        <%= detallesDeLaCompra.destallesProductos[i].name%>
+                                    </strong></p>
+
+                            <div>
+                                <p class="cantidad">
+                                    <%= detallesDeLaCompra.destallesProductos[i].cantidad %>
+                                </p>
+
+                                <p class="nombre-desktop">
+                                    <strong><%= detallesDeLaCompra.destallesProductos[i].name%></strong>
+                                </p>
+
+                                <p class="precio">$ <%= detallesDeLaCompra.destallesProductos[i].cantidad *
+                                            detallesDeLaCompra.destallesProductos[i].precio%>
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    <%}%>
+
+                </section>
+
+                <h2>Envío</h2>
+
+                <section class="d-envio">
+                    <p><%= detallesDeLaCompra.envio.destino%></p>
+                    <p>$ <%= detallesDeLaCompra.envio.precio%></p>
+                </section>
+
+                <h2>Tasas e impuestos</h2>
+
+                <section class="d-impuestos">
+
+                    <% for(i=0; i < detallesDeLaCompra.impuestos.length; i++) {%>
+
+                        <div>
+                            <p><%= detallesDeLaCompra.impuestos[i].name %></p>
+                            <p>$ <%= detallesDeLaCompra.impuestos[i].valor %></p>
+                        </div>
+
+                    <%}%>
+
+                </section>
+
+                <h2>Descuentos</h2>
+
+                <section class="d-descuentos">
+
+                    <% for(i=0; i < detallesDeLaCompra.descuentos.length; i++) {%>
+
+                        <div>
+                            <p><%= detallesDeLaCompra.descuentos[i].name%></p>
+                            <p>$ <%= detallesDeLaCompra.descuentos[i].valor%></p>
+                        </div>
+
+                    <%}%>
+
+                </section>
+                    
+                <h2 class="total">Total: $ <%= detallesDeLaCompra.calcularTotal() %></h2>
+
+            </div>
+
+        </section>
+
+        <div class="final-b">
+
+            <div>
+                <button type="button">Atrás</button>
+                <button type="button"><i class="fas fa-download"></i></button>
+            </div>
+
+            <button type="button">Comprar</button>
+
+        </div>
+
+
+    </main>
+
+    <%- include('../partials/footer') %>
+
+</body>
+
+</html>

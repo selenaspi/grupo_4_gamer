@@ -1,0 +1,244 @@
+:root {
+    --amarillo: #eac926;
+    --azul: #03264c;
+    --celeste: #1259c3;
+    --grisOscuro: rgb(156, 156, 156);
+    --grisClaro: #ebebeb;
+    --verde: #39b54a;
+    --rosado: rgba(196, 15, 233, 0.986);
+    --purpuraOscuro: #46188c;
+    --purpura: #7514b7;
+    --negro: rgba(0, 0, 0, 0.8);
+    --turquesa: #15cec0;
+    --blanco: rgba(255, 255, 255, 0.9);
+    --xiketic: #0b0b16;
+    --azulOscuro: rgb(32, 33, 65);
+}
+
+/*------------------------ Universales ------------------------*/
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(var(--xiketic), var(--azul));
+
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+    z-index: -1;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.8);
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--purpuraOscuro);
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    /* creates padding around scroll thumb */
+}
+
+h2 {
+    font-size: 30px;
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+p {
+    font-size: 18px;
+    margin: 0%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+main {
+    min-height: 100vh;
+    width: 90%;
+    margin: auto;
+    top: 20vh;
+}
+
+
+/*-------------------------- Mobile --------------------------*/
+
+.portada-perfil {
+    display: flex;
+    justify-content: end;
+}
+
+.avatar-perfil {
+    position: absolute;
+    top: 0vh;
+    left: calc(50% - 10vw);
+    z-index: 2;
+    width: 20vw;
+    height: 20vw;
+    border: 8px solid #FFFFFF;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 12px 2px rgba(0, 0, 0, .2);
+}
+
+.cambiar-foto {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, .5);
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(50%);
+    opacity: 0;
+    transition: all ease-in 200ms;
+}
+
+.cambiar-foto i {
+    margin-bottom: .5rem;
+    font-size: 18px;
+}
+
+.avatar-perfil:hover .cambiar-foto {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.editar-perfil button {
+    border-radius: 8px;
+    border: none;
+    padding: 8px 13px;
+    margin-bottom: 20px;
+    background-color: var(--azulOscuro);
+    color: #fff;
+    cursor: pointer;
+}
+
+.editar-perfil button a {
+    font-size: 20px;
+}
+
+.editar-perfil button i {
+    font-size: 16px;
+}
+
+.datos-usuario {
+    position: relative;
+    padding: 10vw 5vw 7vw;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #03264c;
+}
+
+.datos-usuario h2 {
+    color: #03264c;
+    border-bottom: 2px solid #03264c;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+}
+
+.datos-usuario p {
+    font-size: 16px;
+}
+
+.datos-usuario h3 {
+    margin-top: 2px;
+    font-size: 20px;
+}
+
+@media (min-width: 520px) {
+
+    /*------------------------ Universales ------------------------*/
+
+    main {
+        top: 30vh;
+    }
+
+    /*------------------------ Tablet ------------------------*/
+
+    .avatar-perfil {
+        top: -3vh;
+    }
+
+    .cambiar-foto i {
+        margin-bottom: .5rem;
+        font-size: 22px;
+    }
+
+    .datos-usuario {
+        padding: 10vw 5vw 1vw;
+    }
+
+    .datos-usuario ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .datos-usuario ul li {
+        display: block;
+        width: 48%;
+    }
+
+}
+
+@media (min-width: 769px) {
+    
+    main {
+        min-height: 125vh;
+        width: 70%;
+        top: 38vh;
+    }
+
+    /*------------------------ Desktop ------------------------*/
+
+    .avatar-perfil {
+        top: -6vh;
+        width: 17vw;
+        height: 17vw;
+        left: calc(50% - 8.5vw);
+    }
+
+    .datos-usuario {
+        padding: 9.5vw 5vw 1vw;
+    }
+    
+    .datos-usuario p {
+        font-size: 20px;
+    }
+    
+    .datos-usuario h3 {
+        margin-top: 2px;
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 769px) {
+
+    main {
+        min-height: 100vh;
+        width: 70%;
+        top: 32vh;
+    }
+
+    .avatar-perfil {
+        top: -6vh;
+        width: 15vw;
+        height: 15vw;
+        left: calc(50% - 7.5vw);
+    }
+
+    .datos-usuario {
+        padding: 8.5vw 5vw 1vw;
+    }
+}
