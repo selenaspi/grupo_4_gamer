@@ -55,6 +55,10 @@ module.exports = function (sequelize, dataTypes) {
 		home_adress: {
 			type: dataTypes.TEXT,
 			defaultValue: null
+		},
+		role_id:{
+			type: dataTypes.INTEGER,
+			defaultValue: 1,
 		}
 	}
 

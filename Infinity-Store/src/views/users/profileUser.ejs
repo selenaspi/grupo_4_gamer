@@ -62,13 +62,14 @@
                         </h3>
                     </li>
                 </ul>
+          
+            <a href="/users/<%=usuarioBuscado.id%>/edit">
+                <button>Editar mi Perfil</button>
+            </a>
+            <form action="/users/<%=usuarioBuscado.id%>"method="POST">
+                <button type="submit">Eliminar mi Perfil</button>
+            </form>
             </div>
-
-
-
-
-
-
         </main>
 
         <%- include('../partials/footer') %>
