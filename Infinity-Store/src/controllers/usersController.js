@@ -155,7 +155,7 @@ const controller = {
                 if(req.body.remember_user) {
 					res.cookie('userEmail', req.body.email, { maxAge: (10000 * 6000) * 6000 });
 				}
-                return res.redirect('/users/profile');
+                return res.redirect('profile');
             }else{return res.render('users/login', {
                 categoryList : categories,
                 errors: {
@@ -164,10 +164,9 @@ const controller = {
                     }
                 }
             })}
-            ;
             
         })
-        },
+    },
 
         // if (userToLogin) {
 
