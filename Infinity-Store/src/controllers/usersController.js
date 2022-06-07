@@ -92,29 +92,35 @@ const controller = {
                     id: Number(req.params.id)
                 }
             })
-            res.redirect("/");
+            res.redirect("profile");
 
     },
 
     //DELETE 
 
-    mostrarBorradoDeUsuario: (req, res) => {
+   //mostrarBorradoDeUsuario: (req, res) => {
 
-        let usuarioElegido = User.findByPk(Number(req.params.id));
+     //  let usuarioElegido = User.findByPk(Number(req.params.id));
 
-        res.render("users/usersDelete", {
-            metodo: "DELETE",
-            ruta: req.params.id + "?_method=DELETE",
-            user: usuarioElegido,
-            categoryList
+     //  res.render("users/usersDelete", {
+      //     metodo: "DELETE",
+         //  ruta: req.params.id + "?_method=DELETE",
+           //user: usuarioElegido,
+           // categoryList
+       //})
+
+  // },
+
+    deleteUser:(req, res) => {
+        db.User.update({
+            alta: 0
+        }, {
+            where: {
+                id: Number(req.params.id)
+            },
         })
-
-    },
-
-    deleteUser: (req, res) => {
-        User.delete(Number(req.params.id));
-        res.redirect("/")
-    },
+        res.redirect('/') 
+    }, 
 
     //LOGIN
 
