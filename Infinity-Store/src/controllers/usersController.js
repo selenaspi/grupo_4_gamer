@@ -133,7 +133,8 @@ const controller = {
 
         let userToLogin = db.User.findOne({
             where: {
-                email : req.body.email
+                email : req.body.email,
+                alta: 1
             }
         })
         Promise.all([categoriesPromise, userToLogin])
