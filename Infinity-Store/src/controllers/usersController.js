@@ -39,55 +39,88 @@ const controller = {
 
     profileUser: (req, res) => {
         console.log(req.cookies.userEmail);
-        res.render("users/profileUser", { categoryList, usuarioBuscado: req.session.userLogged })
+        res.render("users/profileUser", { categoryList, usuarioBuscado: req.session.userLogged });
+        console.log(req.session.userLogged);
     },
 
     //UPDATE
 
-    edition: (req, res) => {
-        let usuarioElegido = db.User.findByPk(Number(req.params.id));
-
-        res.render("users/usersEdition", {
-            metodo: "PUT",
-            ruta: req.params.id + "?_method=PUT",
-            user: usuarioElegido,
-            categoryList
-        })
+    edition:  (req, res) => {
+        let usersPromise = db.User.findByPk(Number(req.params.id))
+        Promise.all([categoriesPromise, usersPromise]).then(function([categories, users]) {
+            res.render("users/usersEdition", {
+                metodo: "PUT",
+                ruta: req.params.id + "?_method=PUT",
+                user: users,
+                categoryList: categories
+            })
+        });
     },
+    
+    //function (req,res){
+      //  db.ProductCategory.findAll()
+      //  .then(function(categories,users){
+       //  return res.render ("users/usersEdition",{  categoryList : categories,user:users})
+       //  })
+    //(req, res) => {
+       //let usuarioElegido = db.User.findByPk(Number(req.params.id));
+
+       // res.render("users/usersEdition", {
+         //   metodo: "PUT",
+          //  ruta: req.params.id + "?_method=PUT",
+          //  user: usuarioElegido,
+          //  categoryList
+      //  })
+      //  function (req,res){
+      //      db.ProductCategory.findAll()
+      //      .then(function(categories){
+       //         return res.render ("users/usersEdition",{  categoryList : categories})
+       //     })
+
 
     edit: function (req,res){
-        let pedidoUsuario = db.User.findByPk(req.params.id);
-    
-        let pedidoRoles = db.roles.findAll();
-    
-        Promise.all([pedidoUsuario,pedidoRoles])
-           .then(function([user, roles]){
-            res.render("users/usersEdition",{categoryList,users:user, roles:roles})
-           })
-
-        res.redirect('/');
+            db.User.update({
+                name:req.body.name,
+                last_name:req.body.last_name,
+                email:req.body.email,
+                phone:req.body.phone,
+                image:req.body.image,
+                date_of_birth:req.body. date_of_birth,
+                home_adress:req.body.home_adress,
+            }, {
+                where: {
+                    id: Number(req.params.id)
+                }
+            })
+            res.redirect("profile");
 
     },
 
     //DELETE 
 
-    mostrarBorradoDeUsuario: (req, res) => {
+   //mostrarBorradoDeUsuario: (req, res) => {
 
-        let usuarioElegido = User.findByPk(Number(req.params.id));
+     //  let usuarioElegido = User.findByPk(Number(req.params.id));
 
-        res.render("users/usersDelete", {
-            metodo: "DELETE",
-            ruta: req.params.id + "?_method=DELETE",
-            user: usuarioElegido,
-            categoryList
+     //  res.render("users/usersDelete", {
+      //     metodo: "DELETE",
+         //  ruta: req.params.id + "?_method=DELETE",
+           //user: usuarioElegido,
+           // categoryList
+       //})
+
+  // },
+
+    deleteUser:(req, res) => {
+        db.User.update({
+            alta: 0
+        }, {
+            where: {
+                id: Number(req.params.id)
+            },
         })
-
-    },
-
-    deleteUser: (req, res) => {
-        User.delete(Number(req.params.id));
-        res.redirect("/")
-    },
+        res.redirect('/') 
+    }, 
 
     //LOGIN
 
@@ -100,13 +133,23 @@ const controller = {
 
         let userToLogin = db.User.findOne({
             where: {
-                email : req.body.email
+                email : req.body.email,
+                alta: 1
             }
         })
         Promise.all([categoriesPromise, userToLogin])
         .then(function([categories, userToLogin]) {
+            if(userToLogin == null){
+                return res.render('users/login', {
+                    categoryList : categories,
+                    errors: {
+                        email: {
+                            msg: 'Los datos ingresados son incorrectos.'
+                        }
+                    }
+                })
+            }
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-            console.log(isOkThePassword);
             if (isOkThePassword) {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
@@ -114,17 +157,16 @@ const controller = {
                 if(req.body.remember_user) {
 					res.cookie('userEmail', req.body.email, { maxAge: (10000 * 6000) * 6000 });
 				}
-                return res.redirect('/');
-            }
-            
-            return res.render('users/login', {
+                return res.redirect('profile');
+            }else{return res.render('users/login', {
                 categoryList : categories,
                 errors: {
                     email: {
                         msg: 'Los datos ingresados son incorrectos.'
                     }
                 }
-            });
+            })}
+            ;
             
         })
         },
