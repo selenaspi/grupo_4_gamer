@@ -30,7 +30,7 @@ const controller = {
             image:req.body.image,
             date_of_birth:req.body. date_of_birth,
             home_adress:req.body.home_adress,
-            role_id:req.body.role_id,
+            role_id:1,
         })
         res.redirect("/");
     },
