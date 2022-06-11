@@ -21,10 +21,10 @@
           <input class="Controls" type="text" name="name" id="Nombres"value="<%= metodo === 'POST' ? '' :user.name%>"
           placeholder="Ingrese su Nombre" required/>
 
-        <input class="Controls" type="text" name="lastName" id="Apellido" value="<%= metodo === 'POST' ? '' :user.lastName%>"
+        <input class="Controls" type="text" name="last_name" id="Apellido" value="<%= metodo === 'POST' ? '' :user.last_name%>"
               placeholder="Ingrese su Apellido" required/>
 
-        <input class="Controls" type="email" name="email" id="Correo electrónico"
+        <input class="Controls" type="text" name="email" id="Correo electrónico"
            value="<%= metodo === 'POST' ? '' :user.email%>"
               placeholder="Ingrese su Email" required/>
 
@@ -40,6 +40,15 @@
                 <label for="photo">Foto de usuario</label>
                 <input type="file" name="image" accept="image/*" id="photo" class="controls" <%=metodo==="POST"?"required":""%>>
               </div>
+
+              <input class="Controls" type="text" name="date_of_birth" id="Fecha de Nacimiento"
+              value="<%= metodo === 'POST' ? '' :user. date_of_birth%>"
+                 placeholder="Ingrese su Fecha de Nacimiento" required/>
+
+                 <input class="Controls" type="text" name="home_adress" id="Dirección"
+                 value="<%= metodo === 'POST' ? '' :user. home_adress%>"
+                    placeholder="Ingrese lugar de Residencia" required/>
+
         <p> Acepto los <a href="#">términos y condiciones</a></p>
         <input class="botons" type="submit" value="Aceptar"></form>
     </main>

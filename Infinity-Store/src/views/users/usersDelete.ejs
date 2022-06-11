@@ -1,54 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/css/styleregistro.css">
-    <link rel="stylesheet" href="/css/stylelogin.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
-
-  <%- include('../partials/header') %>
-
-
-    <main class="Form-delete">
-
-
-      <form action="/users/<%=ruta%>" method="POST" enctype="multipart/form-data">
-        <h4>Eliminacion de usuario</h4>
-
-
-        <input class="Controls" type="text" name="naame" id="Nombres"
-          value="<%= metodo === 'POST' ? '' :user.name %>" placeholder="Ingrese su Nombre" required />
-
-        <input class="Controls" type="text" name="lastName" id="Apellido"
-          value="<%= metodo === 'POST' ? '' :user.lastName %>" placeholder="Ingrese su Apellido" required />
-
-        <input class="Controls" type="email" name="email" id="Correo electrónico"
-          value="<%= metodo === 'POST' ? '' :user.email%>" placeholder="Ingrese su Email" required />
-
-        <input class="Controls" type="number" name="phone" id="Teléfono"
-          value="<%= metodo === 'POST' ? '' :user.phone%>" placeholder="Teléfono" required />
-
-        <input class="Controls" type="password" name="password" id="Contraseña"
-          value="<%= metodo === 'POST' ? '' :user.password%>" placeholder="Contraseña" required />
-
-
-        <div class="c-photos">
-          <label for="photo">Foto de usuario</label>
-          <input type="file" name="image" accept="image/*" id="photo" class="controls" <%=metodo==="POST"
-            ?"required":""%>>
-        </div>
-
-        <!-- <input class="botons" type="submit" value="Borrar"> -->
-
-        <button type="submit"></button>
-      </form>
-    </main>
-
-    <%- include('../partials/footer') %>
-
+        <form method="post" action="/users/<%=id %>/delete?_method=DELETE">
+          Esta seguro que desea eliminar su cuenta?
+            <button type="submit">Borrar</button>
+        </form>
 </body>
-
 </html>

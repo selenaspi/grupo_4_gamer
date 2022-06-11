@@ -28,7 +28,7 @@ const cookies = require('cookie-parser');
 app.use(cookies()); 
 
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
-app.use(userLoggedMiddleware);
+ app.use(userLoggedMiddleware);
 
 const mainRouter = require('./routes/main');
 const productCartRouter = require('./routes/productCart');

@@ -50,3 +50,14 @@ disponibilidad de tiempo de cada integrante.
 4. Hacer menos: dejar detalles para lo último.
 
 5. Dejar de Hacer: asistir a las reuniones grupales sin haber leído el sprint que se desarrollará.
+
+                                                     Sprint 5
+1. Comenzar a hacer: intentar estar al día con los contenidos para poder empezar el proyecto con mayor antelación.
+
+2. Hacer más: compartir pantalla y explicar el código a nuestros compañeros. Mantener una actualización más constante sobre el progreso actual de las actividades propuestas en el Sprint.
+
+3. Continuar haciendo: la comunicación sigue siendo fundamental para lograr los objetivos por lo que no debemos de descuidarla. Como grupo nos dividimos las tareas y una vez finalizadas nos ofrecemos para ayudar a nuestros compañeros con su parte del Sprint.
+
+4. Hacer menos: aún continuamos con dejar detalles para lo último, si bien llegamos a completar los sprints, casi siempre llegamos justos de tiempo y no nos da mucho margén de tiempo para agregar detalles en el proyecto.
+
+5. Dejar de Hacer: asistir a las reuniones grupales sin haber leído el sprint que se desarrollará. No avisar cuando estemos con problemas para lograr comprender y adquirir los conocimientos necesarios para realizar las tareas del sprint, comprendemos que no todos manejamos los mismos horarios ni entendemos todo de la misma forma, por lo cual no hay problema si alguno de los integrantes del equipo pide un tiempo para prepararse mejor de cara al Sprint.

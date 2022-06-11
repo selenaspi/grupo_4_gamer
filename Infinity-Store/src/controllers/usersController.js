@@ -1,32 +1,37 @@
-const User = require('../models/User.js');
+// const User = require('../database/models/User.js');
 
 const bcryptjs = require('bcryptjs');
 
 const category = require("../database/category.json")
 let categoryJSON = JSON.stringify(category);
 let categoryList = JSON.parse(categoryJSON);
-
+const db = require('../database/models');
+const { use } = require('../routes/main');
+const Op = db.Sequelize.Op
+const User = db.User.findAll() ;
+let categoriesPromise = db.ProductCategory.findAll();
 const controller = {
 
     //CREATE
 
-    register: (req, res) => { res.render("users/register", { categoryList }) },
-
-    store: (req, res) => {
-
-        const userData = {
-            alta: true,
-            role: "user",
-            name: req.body.name,
-            lastName: req.body.lastName,
-            email: req.body.email,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            phone: req.body.phoneArea.toString() + req.body.phone.toString(),
-            image: req.file.filename
-        }
-
-        User.create(userData)
-
+    register:function (req,res){
+        db.ProductCategory.findAll()
+        .then(function(categories){
+            return res.render ("users/register",{  categoryList : categories})
+        })
+    },
+    store: function (req,res){
+        db.User.create({
+            name:req.body.name,
+            last_name:req.body.last_name,
+            email:req.body.email,
+            password:bcryptjs.hashSync(req.body.password, 10),
+            phone:req.body.phone,
+            image:req.body.image,
+            date_of_birth:req.body. date_of_birth,
+            home_adress:req.body.home_adress,
+            role_id:1,
+        })
         res.redirect("/");
     },
 
@@ -34,60 +39,88 @@ const controller = {
 
     profileUser: (req, res) => {
         console.log(req.cookies.userEmail);
-        res.render("users/profileUser", { categoryList, usuarioBuscado: req.session.userLogged })
+        res.render("users/profileUser", { categoryList, usuarioBuscado: req.session.userLogged });
+        console.log(req.session.userLogged);
     },
 
     //UPDATE
 
-    edition: (req, res) => {
-        let usuarioElegido = User.findByPk(Number(req.params.id));
-
-        res.render("users/usersEdition", {
-            metodo: "PUT",
-            ruta: req.params.id + "?_method=PUT",
-            user: usuarioElegido,
-            categoryList
-        })
+    edition:  (req, res) => {
+        let usersPromise = db.User.findByPk(Number(req.params.id))
+        Promise.all([categoriesPromise, usersPromise]).then(function([categories, users]) {
+            res.render("users/usersEdition", {
+                metodo: "PUT",
+                ruta: req.params.id + "?_method=PUT",
+                user: users,
+                categoryList: categories
+            })
+        });
     },
+    
+    //function (req,res){
+      //  db.ProductCategory.findAll()
+      //  .then(function(categories,users){
+       //  return res.render ("users/usersEdition",{  categoryList : categories,user:users})
+       //  })
+    //(req, res) => {
+       //let usuarioElegido = db.User.findByPk(Number(req.params.id));
 
-    edit: (req, res) => {
+       // res.render("users/usersEdition", {
+         //   metodo: "PUT",
+          //  ruta: req.params.id + "?_method=PUT",
+          //  user: usuarioElegido,
+          //  categoryList
+      //  })
+      //  function (req,res){
+      //      db.ProductCategory.findAll()
+      //      .then(function(categories){
+       //         return res.render ("users/usersEdition",{  categoryList : categories})
+       //     })
 
-        let usuarioToEdit = User.findByPk(Number(req.params.id));
 
-        let usuarioEditado = {
-            ...usuarioToEdit,
-            name: req.body.name,
-            lastName: req.body.lastName,
-            email: req.body.email,
-            phone: req.body.phone,
-            image: req.file.filename
-        }
-
-        User.edition(usuarioEditado)
-
-        res.redirect('/');
+    edit: function (req,res){
+            db.User.update({
+                name:req.body.name,
+                last_name:req.body.last_name,
+                email:req.body.email,
+                phone:req.body.phone,
+                image:req.body.image,
+                date_of_birth:req.body. date_of_birth,
+                home_adress:req.body.home_adress,
+            }, {
+                where: {
+                    id: Number(req.params.id)
+                }
+            })
+            res.redirect("profile");
 
     },
 
     //DELETE 
 
-    mostrarBorradoDeUsuario: (req, res) => {
+   //mostrarBorradoDeUsuario: (req, res) => {
 
-        let usuarioElegido = User.findByPk(Number(req.params.id));
+     //  let usuarioElegido = User.findByPk(Number(req.params.id));
 
-        res.render("users/usersDelete", {
-            metodo: "DELETE",
-            ruta: req.params.id + "?_method=DELETE",
-            user: usuarioElegido,
-            categoryList
+     //  res.render("users/usersDelete", {
+      //     metodo: "DELETE",
+         //  ruta: req.params.id + "?_method=DELETE",
+           //user: usuarioElegido,
+           // categoryList
+       //})
+
+  // },
+
+    deleteUser:(req, res) => {
+        db.User.update({
+            alta: 0
+        }, {
+            where: {
+                id: Number(req.params.id)
+            },
         })
-
-    },
-
-    deleteUser: (req, res) => {
-        User.delete(Number(req.params.id));
-        res.redirect("/")
-    },
+        res.redirect('/') 
+    }, 
 
     //LOGIN
 
@@ -98,42 +131,80 @@ const controller = {
 
     loginProcess: (req, res) => {
 
-        let userToLogin = User.findByField('email', req.body.email);
-
-        if (userToLogin) {
-
+        let userToLogin = db.User.findOne({
+            where: {
+                email : req.body.email,
+                alta: 1
+            }
+        })
+        Promise.all([categoriesPromise, userToLogin])
+        .then(function([categories, userToLogin]) {
+            if(userToLogin == null){
+                return res.render('users/login', {
+                    categoryList : categories,
+                    errors: {
+                        email: {
+                            msg: 'Los datos ingresados son incorrectos.'
+                        }
+                    }
+                })
+            }
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-
             if (isOkThePassword) {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
                 
                 if(req.body.remember_user) {
-					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 });
+					res.cookie('userEmail', req.body.email, { maxAge: (10000 * 6000) * 6000 });
 				}
-                
-                return res.redirect('/users/profile');
-            }
-
-            return res.render('users/login', {
-                categoryList,
+                return res.redirect('profile');
+            }else{return res.render('users/login', {
+                categoryList : categories,
                 errors: {
                     email: {
                         msg: 'Los datos ingresados son incorrectos.'
                     }
                 }
-            });
-        };
+            })}
+            ;
+            
+        })
+        },
 
-        return res.render('users/login', {
-            categoryList,
-            errors: {
-                email: {
-                    msg: 'Los datos ingresados son incorrectos. '
-                }
-            }
-        });
-    },
+        // if (userToLogin) {
+
+        //     let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+
+            //  if (isOkThePassword) {
+            //      delete userToLogin.password;
+            //      req.session.userLogged = userToLogin;
+                
+            //      if(req.body.remember_user) {
+		 	// 		res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60000000) * 60 });
+		 	// 	}
+                
+            //      return res.redirect('/users/profile');
+            //  }
+
+        //      return res.render('users/login', {
+        //          categoryList,
+        //         errors: {
+        //            email: {
+        //                msg: 'Los datos ingresados son incorrectos.'
+        //            }
+        //       }
+        //     });
+        //  };
+
+    //     return res.render('users/login', {
+    //         categoryList,
+    //         errors: {
+    //             email: {
+    //                 msg: 'Los datos ingresados son incorrectos. '
+    //             }
+    //         }
+    //     });
+    // },
 
     //LOGOUT 
 
@@ -143,9 +214,13 @@ const controller = {
         res.redirect("/");
     },
 
-    usersList: (req, res) => {
-        res.render("users/usersList", { categoryList })
-    },
-};
+    usersList:function(req, res) {   
+        let promiseCategory = db.ProductCategory.findAll()                      
+      let promiseUsuarios = db.User.findAll()
+         Promise.all([promiseCategory,promiseUsuarios]).then(function ([categoryList,users]) {
+                res.render("users/usersList", {categoryList,users });
+            });
+        },
+}
 
 module.exports = controller;

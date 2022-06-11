@@ -3,8 +3,6 @@ const router = express.Router();
 const path = require("path");
 const multer = require("multer");
 
-const productController = require('../controllers/productController.js')
-
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, path.resolve(__dirname, "../../public/images/usuarios"))
@@ -36,8 +34,8 @@ router.get('/:id/edit', authMiddleware, usersController.edition);
 router.put('/:id', upload.single("image"), usersController.edit);
 
 // DELETE ONE USER - DELETE
-router.get("/:id/delete", authMiddleware, usersController.mostrarBorradoDeUsuario);
-router.delete("/:id", upload.single("image"), usersController.deleteUser);
+router.get("/:id/delete", (req, res) => res.render("users/usersDelete", { id: req.params.id }))
+router.delete("/:id/delete", upload.single("image"), usersController.deleteUser);
 
 /*** LOGIN ***/
 router.get("/login", guestMiddleware, usersController.mostrarLogin);
