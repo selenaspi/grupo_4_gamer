@@ -24,8 +24,8 @@ module.exports = (sequelize, DataTypes) => {
 
     let config = {
         tableName: "product_image", charset: 'utf8',
-        collate: 'utf8_unicode_ci',
         charset: 'utf8',
+        collate: 'utf8_unicode_ci',
         timestamps: true,
         createdAt: "created_at",
     }
@@ -34,16 +34,18 @@ module.exports = (sequelize, DataTypes) => {
 
     Product_image.associate = function (models) {
         Product_image.belongsTo(models.Product, {
-            as: "product",
+            as: "images",
             foreignKey: "product_id"
         })
-        Product_image.hasMany(models.Product, {
-            as: "roducts",
+        Product_image.hasMany(models.Product_image, {
+            as: "productos",
             foreignKey: "product_id"
         })
-        Product_image.belongsToMany(models.Product_image, {
-            as: "Product_image", through: "products",
+        Product_image.belongsToMany(models.Product, {
+            as: "product_image",
+            through: "products",
             foreignKey: "product_id",
+            timestamps: true
         })
     }
     return Product_image;
