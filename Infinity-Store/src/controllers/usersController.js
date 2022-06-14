@@ -1,7 +1,6 @@
 // const User = require('../database/models/User.js');
 
 const bcryptjs = require('bcryptjs');
-
 const category = require("../database/category.json")
 let categoryJSON = JSON.stringify(category);
 let categoryList = JSON.parse(categoryJSON);
@@ -10,6 +9,9 @@ const { use } = require('../routes/main');
 const Op = db.Sequelize.Op
 const User = db.User.findAll() ;
 let categoriesPromise = db.ProductCategory.findAll();
+const path = require("path");
+const { validationResult } = require('express-validator');
+
 const controller = {
 
     //CREATE
@@ -21,7 +23,13 @@ const controller = {
         })
     },
     store: function (req,res){
-        db.User.create({
+        const resultValidation = validationResult(req);
+
+        if (resultValidation.errors.length > 0) {
+        db.ProductCategory.findAll()
+        .then(function(categories){
+            return res.render('users/register',{ categoryList : categories, errors: resultValidation.mapped(),	oldData: req.body })});
+        } else {db.User.create({
             name:req.body.name,
             last_name:req.body.last_name,
             email:req.body.email,
@@ -33,6 +41,7 @@ const controller = {
             role_id:1,
         })
         res.redirect("/");
+    }
     },
 
     //READ
