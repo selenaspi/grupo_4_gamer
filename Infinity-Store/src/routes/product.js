@@ -24,7 +24,8 @@ router.post('/', upload.single("image"), productController.store);
 //READ - todos los productos + por producto
 router.get("/:id/details", productController.productDetails);
 router.get("/all", productController.allProducts);
-
+router.get("/search",productController.busqueda);
+router.post('/search', productController.busqueda);
 //UPDATE
 router.get("/:id/edit", productController.edition);
 router.put("/:id", upload.single("image"), productController.edit);
