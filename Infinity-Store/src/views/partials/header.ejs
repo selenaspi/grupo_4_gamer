@@ -85,14 +85,14 @@
                 <li class="arma-tu-pc"><a href="#">Armá tu pc</a></li>
 
                 <li class="buscador">
-
-                    <input type="text" name="" id="" class="barra-busqueda"
+                    <form method="POST" action="/product/search">
+                    <input type="text" name="search" id="search" class="barra-busqueda"
                         placeholder="Buscar por producto, marca, categoría...">
 
-                    <button><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></button>
-
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
                 </li>
-
+            
                 <li class="carrito"><a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a></li>
 
                 <% if (locals.isLogged) { %>

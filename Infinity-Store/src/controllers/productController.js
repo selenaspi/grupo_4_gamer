@@ -154,7 +154,15 @@ const controller = {
         .then(function([categories, products]) {
             res.render("products/allProducts", { similares: products, categoryList: categories }) //no debería llamarse similares pero bue
         })
-    }
+    },busqueda: (req, res) => {
+        let productsPromise = db.Product.findAll({where:{name : {[Op.like] : '%' + req.body.search + '%'}}});
+        
+        Promise.all([categoriesPromise, productsPromise]).then(function([categories, products]) {
+            console.log(productsPromise);
+            res.render("products/allProducts", { similares: products, categoryList: categories })
+        })
+  
+    },
 }
 
 module.exports = controller;
