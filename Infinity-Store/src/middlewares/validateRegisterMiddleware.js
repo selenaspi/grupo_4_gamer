@@ -1,5 +1,6 @@
 const User = require('../database/models/User');
 const db = require('../database/models');
+const Op = db.Sequelize.Op;
 const path = require('path');
 const { body } = require('express-validator');
 
