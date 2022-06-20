@@ -7,13 +7,21 @@ const { body } = require('express-validator');
 const validator = [
 	body('name').notEmpty().withMessage("El nombre es obligatorio").isLength({ min: 2 }).withMessage('El nombre debe tener al menos dos caracteres'),
 	body('last_name').notEmpty().withMessage("El apellido es obligatorio").isLength({ min: 2 }).withMessage('El apellido debe tener al menos dos caracteres'),
-	body('email').notEmpty().withMessage("El email es obligatorio")
-		.isEmail().withMessage('Tienes que escribir un correo electrónico válido').bail()
-		.isEmail().withMessage('Debes escribir un formato de correo válido'),
+	body('email').notEmpty().withMessage("El email es obligatorio").bail()
+	.isEmail().withMessage('Debes escribir un formato de correo válido').bail()
+	.custom((value, { req }) => {
+			return db.User.findOne({
+				where: {
+					email: req.body.email
+				}
+			}).then(usuario => {
+				if (usuario) {
+					throw new Error('El usuario ya se encuentra registrado');
+				}
+			})
+		
+		}),
 	body('password').notEmpty().withMessage("La contraseña es obligatoria").isLength({ min: 8 }).withMessage('Tienes que escribir una contraseña de al menos 8 caracteres'),
-	body('phone').notEmpty().withMessage('Tienes que colocar tu número de teléfono'),
-	body('date_of_birth').notEmpty().withMessage('Tienes que colocar'),
-	body('home_adress').notEmpty().withMessage('Tienes que colocar tu dirección'),
 	body('image').custom((value, { req }) => {
 		let file = req.file;
 		let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
