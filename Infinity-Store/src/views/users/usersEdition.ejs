@@ -5,6 +5,7 @@
     <%- include('../partials/head') %>
     <link rel="stylesheet" href="/css/styleregistro.css">
     <link rel="stylesheet" href="/css/stylelogin.css">
+    <script src="/validacionesJS/validationEdit.js"></script>
 </head>
 <body>
 
@@ -14,23 +15,23 @@
     <main class="Form-register">
 
 
-        <form action="/users/<%=ruta%>" method="POST" enctype="multipart/form-data">
+        <form action="/users/<%=ruta%>" method="POST" enctype="multipart/form-data" class="edit">
           <h4>Formulario de Edición del perfil</h4>
       
       
-          <input class="Controls" type="text" name="name" id="Nombres"value="<%= metodo === 'POST' ? '' :user.name%>"
-          placeholder="Ingrese su Nombre" required/>
+          <input class="Controls name" type="text" name="name" id="Nombres"value="<%= metodo === 'POST' ? '' :user.name%>"
+          placeholder="Ingrese su Nombre"/>
 
-        <input class="Controls" type="text" name="last_name" id="Apellido" value="<%= metodo === 'POST' ? '' :user.last_name%>"
-              placeholder="Ingrese su Apellido" required/>
+        <input class="Controls lastName" type="text" name="last_name" id="Apellido" value="<%= metodo === 'POST' ? '' :user.last_name%>"
+              placeholder="Ingrese su Apellido"/>
 
-        <input class="Controls" type="text" name="email" id="Correo electrónico"
+        <input class="Controls email" type="text" name="email" id="Correo electrónico"
            value="<%= metodo === 'POST' ? '' :user.email%>"
-              placeholder="Ingrese su Email" required/>
+              placeholder="Ingrese su Email"/>
 
         
-        <input class="Controls" type="number" name="phone" id="Teléfono"value="<%= metodo === 'POST' ? '' :user.phone%>"
-              placeholder="Teléfono" required/>
+        <input class="Controls phone" type="number" name="phone" id="Teléfono"value="<%= metodo === 'POST' ? '' :user.phone%>"
+              placeholder="Teléfono"/>
 
         <!-- <input class="Controls" type="password" name="password" id="Contraseña"value="<%= metodo === 'POST' ? '' :user.password%>"
               placeholder="Contraseña" required/> -->
@@ -41,16 +42,22 @@
                 <input type="file" name="image" accept="image/*" id="photo" class="controls" <%=metodo==="POST"?"required":""%>>
               </div>
 
-              <input class="Controls" type="text" name="date_of_birth" id="Fecha de Nacimiento"
+              <input class="Controls date" type="text" name="date_of_birth" id="Fecha de Nacimiento"
               value="<%= metodo === 'POST' ? '' :user. date_of_birth%>"
-                 placeholder="Ingrese su Fecha de Nacimiento" required/>
+                 placeholder="Ingrese su Fecha de Nacimiento"/>
 
-                 <input class="Controls" type="text" name="home_adress" id="Dirección"
+                 <input class="Controls direccion" type="text" name="home_adress" id="Dirección"
                  value="<%= metodo === 'POST' ? '' :user. home_adress%>"
-                    placeholder="Ingrese lugar de Residencia" required/>
+                    placeholder="Ingrese lugar de Residencia"/>
 
         <p> Acepto los <a href="#">términos y condiciones</a></p>
-        <input class="botons" type="submit" value="Aceptar"></form>
+        <input class="botons" type="submit" value="Aceptar">
+        <div class="errores">
+          <ul>
+              
+          </ul>
+                      </div>
+      </form>
     </main>
 
     <%- include('../partials/footer') %>

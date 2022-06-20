@@ -5,31 +5,32 @@
     <%- include('../partials/head') %>
     <link rel="stylesheet" href="/css/styleregistro.css">
     <link rel="stylesheet" href="/css/stylelogin.css">
+    <script src="/validacionesJS/validationRegister.js"></script>
 </head>
 
 <body>
     <%- include('../partials/header') %>
 
     <main class="Form-register">
-        <form action="/users/register" method="POST" enctype="multipart/form-data">
+        <form action="/users/register" method="POST" enctype="multipart/form-data" class="register">
        
             <h4>Formulario de Registro</h4>
         <div>
             <% if (locals.errors && errors.name) { %> <%= errors.name.msg %><% } %>
-        <input class="Controls" type="text" name="name" id="Nombres" placeholder="Ingrese su Nombre">
+        <input class="Controls name" type="text" name="name" id="Nombres" placeholder="Ingrese su Nombre">
         </div>
         <% if (locals.errors && errors.last_name) { %> <%= errors.last_name.msg %><% } %>
-        <input class="Controls" type="text" name="last_name" id="Apellido" placeholder="Ingrese su Apellido">
+        <input class="Controls lastName" type="text" name="last_name" id="Apellido" placeholder="Ingrese su Apellido">
         <div>
             <% if (locals.errors && errors.email) { %> <%= errors.email.msg %><% } %>
-        <input class="Controls" type="text" name="email" id="Correo electrónico"
+        <input class="Controls email" type="text" name="email" id="Correo electrónico"
             placeholder="Ingrese su Correo">
         </div>
         <% if (locals.errors && errors.password) { %> <%= errors.password.msg %><% } %>
-        <input class="Controls" type="password" name="password" id="Contraseña" placeholder="Contraseña">
+        <input class="Controls pass" type="password" name="password" id="Contraseña" placeholder="Contraseña">
         <div>
             <% if (locals.errors && errors.phone) { %> <%= errors.phone.msg %><% } %>
-        <input class="Controls" type="text" name="phone" id="Teléfono" placeholder="Teléfono">
+        <input class="Controls phone" type="text" name="phone" id="Teléfono" placeholder="Teléfono">
         </div>
             <div class="c-photos">
                 <% if (locals.errors && errors.image) { %> <%= errors.image.msg %><% } %>
@@ -39,15 +40,21 @@
               <div>
                 <% if (locals.errors && errors.date_of_birth) { %> <%= errors.date_of_birth.msg %><% } %>
                 <label for="">Fecha de Nacimiento</label>
-                <input class="Controls" type="date" name="date_of_birth">
+                <input class="Controls date" type="date" name="date_of_birth">
                 </div>
                 <div>
                     <% if (locals.errors && errors.home_adress) { %> <%= errors.home_adress.msg %><% } %>
-                    <input class="Controls" type="text" name="home_adress" id="dirección" placeholder="Dirección">
+                    <input class="Controls direccion" type="text" name="home_adress" id="dirección" placeholder="Dirección">
                     </div>
         <p> Acepto los <a href="#">términos y condiciones</a></p>
         <div>
-        <input class="botons" type="submit" value="Aceptar"></form>
+        <input class="botons" type="submit" value="Aceptar">
+        <div class="errores">
+            <ul>
+
+            </ul>
+        </div>
+    </form>
     </div>
     </main>
 
