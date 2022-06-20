@@ -2,7 +2,7 @@ window.addEventListener("load", function () {
     let formulario = document.querySelector("form.register");
 
     formulario.addEventListener("submit", function (e) {
-        e.preventDefault();
+        
 
         let errores = [];
 

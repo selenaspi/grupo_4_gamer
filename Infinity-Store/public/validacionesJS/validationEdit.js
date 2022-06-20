@@ -2,7 +2,7 @@ window.addEventListener("load", function () {
     let formulario = document.querySelector("form.edit");
 
     formulario.addEventListener("submit", function (e) {
-        e.preventDefault();
+       
 
         let errores = [];
 
