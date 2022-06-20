@@ -1,5 +1,6 @@
 const User = require('../database/models/User');
 const db = require('../database/models');
+const Op = db.Sequelize.Op;
 const path = require('path');
 const { body } = require('express-validator');
 
@@ -10,9 +11,9 @@ const validator = [
 		.isEmail().withMessage('Tienes que escribir un correo electrónico válido').bail()
 		.isEmail().withMessage('Debes escribir un formato de correo válido'),
 	body('password').notEmpty().withMessage("La contraseña es obligatoria").isLength({ min: 8 }).withMessage('Tienes que escribir una contraseña de al menos 8 caracteres'),
-	body('phone').isEmpty().withMessage('Tienes que colocar tu número de teléfono'),
-	body('date_of_birth').isEmpty().withMessage('Tienes que colocar'),
-	body('home_adress').isEmpty().withMessage('Tienes que colocar tu dirección'),
+	body('phone').notEmpty().withMessage('Tienes que colocar tu número de teléfono'),
+	body('date_of_birth').notEmpty().withMessage('Tienes que colocar'),
+	body('home_adress').notEmpty().withMessage('Tienes que colocar tu dirección'),
 	body('image').custom((value, { req }) => {
 		let file = req.file;
 		let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
