@@ -32,22 +32,12 @@ window.addEventListener("load", function () {
         } else if (pass.value.length < 8) {
             errores.push("La contraseña debe contener al menos 8 caracteres")
         }
-        let phone = document.querySelector("input.phone");
-        if (phone.value == "") {
-            errores.push("Debe completar con su Telefono")
-        } else if (phone.value.length < 9) {
-            errores.push("El Telefono debe contener menos de 9 caracteres")
+        let fotoUsuario = document.querySelector("input.fotoUsuario")
+        if(fotoUsuario.value == ""){
+            errores.push("Debe subir una foto de perfil")
+        }else if(fotoUsuario.value == ""){
+            errores.push("Debe ser un archivo JPG, JPEG, PNG, GIF")
         }
-
-        let date = document.querySelector("input.date");
-        if (date.value == "") {
-            errores.push("Complete con su Fecha de Nacimiento")
-        }
-        let direccion = document.querySelector("input.direccion");
-        if (direccion.value == "") {
-            errores.push("Complete con su Direccion")
-        }
-
         if (errores.length > 0) {
             e.preventDefault();
         }
@@ -61,7 +51,6 @@ window.addEventListener("load", function () {
     })
 
 })
-
 
 
 
