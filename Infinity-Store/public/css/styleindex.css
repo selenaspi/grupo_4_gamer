@@ -289,6 +289,9 @@ p.descuento {
   }
 
   /*-------------------- Carrito fixed ----------------------*/
+  * {
+    box-sizing: content-box;
+  }
 
   .shoppingCarF {
     right: 3vw;
