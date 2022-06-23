@@ -7,6 +7,8 @@ const validator = [
         .isLength({ min: 5 }).withMessage('El nombre debe tener al menos cinco caracteres'),
     body('description').notEmpty().withMessage("El producto debe tener una descripción").bail()
         .isLength({ min: 20 }).withMessage('La descripción debe tener al menos 20 caracteres'),
+    body('price').notEmpty().withMessage("El producto debe tener un valor").bail(),
+
     body('image').custom((value, { req }) => {
 
         if (!req.params.id) {

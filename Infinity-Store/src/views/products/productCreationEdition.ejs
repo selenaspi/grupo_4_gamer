@@ -4,6 +4,7 @@
 <head>
   <%- include('../partials/head') %>
     <link rel="stylesheet" href="/css/productCreationEdition.css" />
+
 </head>
 
 <body>
@@ -16,11 +17,11 @@
         <%= metodo!=="POST" ? "Actualizar producto" : "Crear producto" %>
       </h1>
 
-      <form method="POST" action="/product/<%=ruta%>" enctype="multipart/form-data">
+      <form method="POST" action="/product/<%=ruta%>" enctype="multipart/form-data"  class="EditionCreation">
 
         <div>
           <label for="name">Nombre del producto</label>
-          <input type="text" name="name" class="controls" id="name" value="<%= metodo === 'POST' ? locals.old && old.name? old.name: "" : producto.name%>"
+          <input type="text" name="name" class="controls name" id="name" value="<%= metodo === 'POST' ? locals.old && old.name? old.name: "" : producto.name%>"
             placeholder="Ingrese el nombre del producto"/>
             <% if (locals.errors && errors.name) { %>
               <p><%= errors.name.msg %> </p>    
@@ -31,7 +32,7 @@
 
           <label for="category">Categoría del producto</label>
 
-          <select id="category" name="category" class="controls">
+          <select id="category" name="category" class="controls category">
 
             <% for(i=0; i < categoryList.length; i++) {%>
               <option value="<%=categoryList[i].id%>" <%=metodo==="PUT" ? categoryList[i].id===producto.idCategory? "Selected" : "" : "" %>><%= categoryList[i].name%></option>
@@ -41,14 +42,17 @@
 
         </div>
 
-        <div>
-          <label for="precio">Precio del producto</label>
-          <input type="number" name="price" id="precio" class="controls" value="<%= metodo === 'POST' ? '' : producto.price%>" placeholder="Ingrese el precio del producto"/>
+          <div>
+          <label for="price">Precio del producto</label>
+          <input type="number" name="price" id="price" class="controls price" value="<%= metodo === 'POST' ? '' : producto.price%>" placeholder="Ingrese el precio del producto"/>
+          <% if (locals.errors && errors.price) { %>
+            <p><%= errors.price.msg %> </p>    
+          <% } %>
         </div>
 
         <div class="descripcion">
           <label for="descripcion">Descripción del producto</label>
-          <textarea class="controls" name="description" id="descripcion" cols="30" rows="5"
+          <textarea class="controls" name="description" minlength="20" id="descripcion" cols="30" rows="5"
             placeholder="Ingrese descripción del producto"><%= metodo === 'POST' ? locals.old && old.description? old.description: "" : producto.description%></textarea>
             <% if (locals.errors && errors.description) { %>
               <p><%= errors.description.msg %> </p>    
@@ -83,6 +87,11 @@
           <label for="stock">Cantidad en stock: </label>
           <input type="number" name="stock" id="stock" class="controls" value="<%= metodo === 'POST' ? '' : producto.stock%>" placeholder="Ingrese el stock de este producto"/>
         </div>
+        <div class="errores">
+          <ul>
+              
+          </ul>
+        </div>
 
         <div class="botones">
           <button type="reset"><a href="/"><i class="fa-solid fa-arrows-rotate"></i></a></button>
@@ -94,7 +103,7 @@
     </main>
 
     <%- include('../partials/footer') %>
-
+    <script src="/validacionesJS/validationProductEdition.js"></script>
 </body>
 
 </html>
