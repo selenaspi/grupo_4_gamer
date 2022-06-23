@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <%- include('../partials/head') %>
     <link rel="stylesheet" href="/css/styleregistro.css">
     <link rel="stylesheet" href="/css/stylelogin.css">
-    <script src="/validacionesJS/validationRegister.js"></script>
 </head>
-
 <body>
     <%- include('../partials/header') %>
-
     <main class="Form-register">
         <form action="/users/register" method="POST" enctype="multipart/form-data" class="register">
-       
             <h4>Formulario de Registro</h4>
         <div>
             <% if (locals.errors && errors.name) { %> <%= errors.name.msg %><% } %>
@@ -35,7 +30,7 @@
             <div class="c-photos">
                 <% if (locals.errors && errors.image) { %> <%= errors.image.msg %><% } %>
                 <label for="photo">Foto de Perfil</label>
-                <input type="file" name="image" accept="image/*" id="photo" class="controls" multiple/>
+                <input type="file" name="image" accept="image/*" id="photo" class="Controls fotoUsuario" multiple/>
               </div>
               <div>
                 <% if (locals.errors && errors.date_of_birth) { %> <%= errors.date_of_birth.msg %><% } %>
@@ -59,7 +54,6 @@
     </main>
 
     <%- include('../partials/footer') %>
-    
+    <script src="/validacionesJS/validationRegister.js"></script>
 </body>
-
 </html>

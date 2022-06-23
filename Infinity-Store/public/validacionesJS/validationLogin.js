@@ -8,15 +8,14 @@ window.addEventListener("load", function () {
         let email = document.querySelector("input.email");
         if (email.value == "") {
             errores.push("Debe completar con su Correo Electronico")
-        } else if (email.value.length < 5) {
+        } else if (email.value.length < 10) {
             errores.push("El Correo Electronico NO es valido")
         }
         let pass = document.querySelector("input.password");
         if (pass.value == "") {
             errores.push("Complete con su Contraseña ")
-        } else if (pass.value.length < 6) {
-            errores.push("La contraseña debe contener al menos 6 caracteres")
-        }
+        } 
+        
         if (errores.length > 0) {
             e.preventDefault();
         }
