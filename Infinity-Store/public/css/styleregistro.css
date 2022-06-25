@@ -15,7 +15,10 @@
     background-size: cover;
     background-position: center;
 } */
-
+div.errores{
+    color:rgb(236, 118, 118);
+    font-size: 20px;
+}
 .Form-register{
     display: flex;
     align-items: center;

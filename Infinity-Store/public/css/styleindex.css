@@ -15,8 +15,11 @@
   --azulOscuro: rgb(32, 33, 65);
 }
 
+/* Banner */
+* {
+  box-sizing: content-box;
+}
 /*------------------------ Universales ------------------------*/
-
 body {
   font-family: "Montserrat", sans-serif;
   background: linear-gradient(var(--xiketic), var(--azul));
@@ -289,7 +292,7 @@ p.descuento {
   }
 
   /*-------------------- Carrito fixed ----------------------*/
-
+  
   .shoppingCarF {
     right: 3vw;
     font-size: 32px;

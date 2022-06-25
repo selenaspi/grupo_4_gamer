@@ -1,3 +1,7 @@
+div .errores{
+  color: red;
+}
+
 :root {
   --amarillo: #eac926;
   --azul: #03264c;
@@ -60,7 +64,10 @@ form>div {
   margin-bottom: 5%;
   color: var(--blanco);
 }
-
+/* --------------------------------------------------------------------------------- */
+.errores{
+  color: red;
+}
 .controls {
   width: 97%;
   height: 2.5rem;
@@ -163,10 +170,17 @@ input#check-descuento:checked ~ .descuentos{
   form {
     width: 80%;
   }
+  .errores{
+    color: red;
+  }
 }
 
 @media (min-width: 769px) {
-
+  div .errores{
+    color: red;
+    font-size: 20px;
+    position: absolute;
+  }
   footer {
     top: 14vh;
   }
