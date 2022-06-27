@@ -35,8 +35,12 @@ const productCartRouter = require('./routes/productCart');
 const productRouter = require('./routes/product');
 const usersRouter = require ('./routes/users');
 
+//rutas para apis
+const apiUsersRoutes = require('./routes/apis/apiUsers');
 
 app.use("/", mainRouter);
 app.use("/productCart", productCartRouter);
 app.use("/product", productRouter);
 app.use("/users",usersRouter);
+
+app.use(apiUsersRoutes);
