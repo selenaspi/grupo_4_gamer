@@ -37,6 +37,7 @@ const usersRouter = require ('./routes/users');
 
 //rutas para apis
 const apiUsersRoutes = require('./routes/apis/apiUsers');
+const apiProductRouter = require('./routes/apis/apiProducts');
 
 app.use("/", mainRouter);
 app.use("/productCart", productCartRouter);
@@ -44,3 +45,4 @@ app.use("/product", productRouter);
 app.use("/users",usersRouter);
 
 app.use(apiUsersRoutes);
+app.use(apiProductRouter);
