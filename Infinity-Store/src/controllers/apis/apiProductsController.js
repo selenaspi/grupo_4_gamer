@@ -3,7 +3,7 @@ const db = require('../../database/models');
 const apiController = {
 
     list: async (req, res) => {
-
+        res.header("Access-Control-Allow-Origin", "*");
         let products = await db.Product.findAll({
             attributes: ['id', 'name', 'description'],
             include: [
@@ -52,7 +52,7 @@ const apiController = {
     },
 
     detail: async (req, res) => {
-
+        res.header("Access-Control-Allow-Origin", "*");
         let product = await db.Product.findByPk(req.params.id, {
             include: [
                 { association: "category" }

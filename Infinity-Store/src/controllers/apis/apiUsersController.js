@@ -5,6 +5,7 @@ const User = require('../../database/models/User');
 
 const apiUsersController = {
     list: (req,res) =>{
+      res.header("Access-Control-Allow-Origin", "*");
       db.User.findAll({
             attributes: ['id', 'name', 'email'],
             }).then(users => {
@@ -19,6 +20,7 @@ const apiUsersController = {
             });
     },
    detail: (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
         db.User.findByPk(req.params.id,{
             attributes: ['id','created_at','updated_at','name','last_name','email','phone','image','alta','date_of_birth','home_adress']
           })                                                //http://localhost:3030/images/usuarios/ -----> falta concatenar a imagen
