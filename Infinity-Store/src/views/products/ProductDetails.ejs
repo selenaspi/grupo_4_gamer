@@ -7,27 +7,20 @@
 </head>
 
 <body>
-
     <%- include('../partials/header') %>
 
         <main>
-
             <section class="caja-producto">
-
                 <div class="name">
                     <h2>
                         <%= detalle.name %>
                     </h2>
                 </div>
-
                 <div class="contenedor-fotos-datos">
-
                     <div class="caja-fotos">
-
                         <div class="principal">
-                            <img src="/images/products/<%= detalle.image %>" alt="Foto principal">
+                            <img src="/images/products/<%= detalle.image %>" class="foto" alt="Foto principal">
                         </div>
-
                         <!-- <div class="fotos-muestra">
                         <div class="foto-2">
                             <img src="/images/Draconic2.jpg" alt="Foto">
@@ -42,28 +35,20 @@
                             <img src="/images/Draconic5.jpg" alt="Foto">
                         </div>
                         </div> -->
-
                         <div class="stock">
-
                             <% if (detalle.stock> 0) { %>
                                 <span>En stock</span>
                             <% } else {%>
                                     <span>Sin stock</span>
                             <% } %>
-                            
                         </div>
-
                     </div>
-
-
                     <div class="contenedor-datos">
-
                         <div>
                             <h2 class="name-t">
                                 <%= detalle.name %>
                             </h2>
                         </div>
-
                         <div class="caja-precio">
                             <h3>$<%= detalle.price %>
                             </h3>

@@ -2,7 +2,6 @@ const db = require('../../database/models');//traigo los modelos de mi base de d
 const sequelize = db.sequelize;
 const User = require('../../database/models/User');
 
-
 const apiUsersController = {
     list: (req,res) =>{
       res.header("Access-Control-Allow-Origin", "*");
@@ -11,7 +10,7 @@ const apiUsersController = {
             }).then(users => {
                 return res.status(200).json({
                  url:"http://localhost:3030/api/users",//url para obtener el detalle
-                 total:users.length,
+                 total:users.length,  
                  data: users,
             
                 })

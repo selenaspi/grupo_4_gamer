@@ -14,6 +14,8 @@ const controller = {
                 ruta: "",
                 categoryList: categories
             })
+        }).catch(err => {
+            return res.status(404).send({ message: err });
         })
     },
 
@@ -48,6 +50,8 @@ const controller = {
                     errors: errors.mapped(),
                     old: req.body
                 })
+            }).catch(err => {
+                return res.status(404).send({ message: err });
             })
         }
 
@@ -75,8 +79,12 @@ const controller = {
                 }, limit: 4
             }).then(similares => {
                 res.render("products/productDetails", { similares, detalle: product, categoryList: categories })
+            }).catch(err => {
+                return res.status(404).send({ message: err });
             })
 
+        }).catch(err => {
+            return res.status(404).send({ message: err });
         })
 
     },
@@ -87,6 +95,8 @@ const controller = {
 
         Promise.all([categoriesPromise, productsPromise]).then(function ([categories, products]) {
             res.render("products/allProducts", { similares: products, categoryList: categories })
+        }).catch(err => {
+            return res.status(404).send({ message: err });
         })
 
     },
@@ -104,7 +114,9 @@ const controller = {
                 producto: product,
                 categoryList: categories
             })
-        });
+        }).catch(err => {
+            return res.status(404).send({ message: err });
+        })
 
     },
 
@@ -165,7 +177,9 @@ const controller = {
                     errors: errors.mapped(),
                     old: req.body
                 })
-            });
+            }).catch(err => {
+                return res.status(404).send({ message: err });
+            })
         }
 
 
@@ -194,6 +208,8 @@ const controller = {
         Promise.all([categoriesPromise, productsByCategoryPromise])
             .then(function ([categories, products]) {
                 res.render("products/allProducts", { similares: products, categoryList: categories }) //no debería llamarse similares pero bue
+            }).catch(err => {
+                return res.status(404).send({ message: err });
             })
     }, busqueda: (req, res) => {
         let productsPromise = db.Product.findAll({ where: { name: { [Op.like]: '%' + req.body.search + '%' } } });
@@ -201,6 +217,8 @@ const controller = {
         Promise.all([categoriesPromise, productsPromise]).then(function ([categories, products]) {
             console.log(productsPromise);
             res.render("products/allProducts", { similares: products, categoryList: categories })
+        }).catch(err => {
+            return res.status(404).send({ message: err });
         })
 
     },

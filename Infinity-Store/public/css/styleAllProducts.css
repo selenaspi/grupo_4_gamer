@@ -20,6 +20,7 @@
 body{
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
+    background:linear-gradient(var(--rosado), var(--celeste))
 }
 main{
     width: 90%;
@@ -29,7 +30,7 @@ main{
     flex-wrap:wrap;
     position: relative;
     margin-top: 5%;
-    background:linear-gradient(var(--rosado), var(--celeste))
+    /* background:linear-gradient(var(--rosado), var(--celeste)) */
 }
 
 
@@ -109,28 +110,32 @@ div.articulo{
     main{
     width: 90%;
     display: flex;
+    
     }
 
     .similares{
         width: 90%;
         height: 90%;
         margin-top: 5%;
-        display: flexk;
+        display: flex;
         width: 90%;
         margin: auto;
-        justify-content:space-between;
+        /* justify-content:space-between; */
         flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-start;
    
      
 
      }
     div.articulo{
-        width: 18%;
-        height: 80%;
+        width:  15em;
+        height: 15rem;
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
         text-align: center;
         margin-top: 5%;
         margin-bottom: 3%;
+        margin-left: 5%;
     }
     .articulo img{
         margin-top: 10%;
@@ -144,5 +149,9 @@ div.articulo{
         font-size: 20px;
         text-align: center;
     }
- 
+    .footer{
+        margin-top: 30%;
+        width:100%;
+        height:100%;
+    }
     }
