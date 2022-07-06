@@ -5,7 +5,7 @@ const apiController = {
     list: async (req, res) => {
         res.header("Access-Control-Allow-Origin", "*");
         let products = await db.Product.findAll({
-            attributes: ['id', 'name', 'description'],
+            attributes: ['id', 'name', 'description', 'image', 'price'],
             include: [
                 { association: "category" }
             ]
@@ -41,6 +41,7 @@ const apiController = {
             product.dataValues.detail = 'http://localhost:3030/api/products/' + product.dataValues.id
             product.dataValues.relationsOneToMany = [{category : product.category}]
             delete product.dataValues.category
+            product.dataValues.image = 'http://localhost:3030/images/products/' + product.image
         });
 
         return res.status(200).json({
