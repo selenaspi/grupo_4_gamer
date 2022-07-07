@@ -13,7 +13,7 @@
     --blanco: rgba(255, 255, 255, 0.9);
     --xiketic: #0b0b16;
   }
-  
+
 /*Normalize*/
 @import url('normalize.css');
 
@@ -136,6 +136,16 @@ div.articulo{
         margin-top: 5%;
         margin-bottom: 3%;
         margin-left: 5%;
+        border-top: 1px var(--grisOscuro) solid;
+        border-radius: 15px;
+    }
+    
+    .linea {
+        border-top: 1px solid grey;
+        height: 1px;
+        width: 70%;
+        padding: 0;
+        margin: 20px auto 0 auto;
     }
     .articulo img{
         margin-top: 10%;
