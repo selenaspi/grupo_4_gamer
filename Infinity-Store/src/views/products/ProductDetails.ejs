@@ -90,27 +90,37 @@
 
 
                             <% if (detalle.stock && detalle.stock> 1) { %>
-                                <select class="cantidad">
-                                    <% for(i=0; i < detalle.stock; i++) {%>
-                                        <option value="<%= i + 1%>">
-                                            <%= i + 1%> 
-                                        </option>
-                                        <%}%>
-
-                                </select>
-                                <p class="disponible" >(<%= detalle.stock %>
-                                    disponibles)</p>
+                                <div>
+                                    <select class="cantidad">
+                                        <% for(i=0; i < detalle.stock; i++) {%>
+                                            <option value="<%= i + 1%>">
+                                                <%= i + 1%> 
+                                            </option>
+                                            <%}%>
+    
+                                    </select>
+                                    <p class="disponible" >(<%= detalle.stock %>
+                                        disponibles)</p>
+                                </div>
                                 <button type="submit">Añadir al carrito</button>
                                 <% }else if (detalle.stock && detalle.stock==1) {%>
-                                    <select class="cantidad">
 
-                                        <option value="1">
-                                            1 <span class="disponible">(1 disponible)</span>
-                                        </option>
+                                    <div>
 
-                                    </select >
-                                    <p></p>
+                                        <select class="cantidad">
+                                            <option value="1">
+                                                1
+                                            </option>
+                                        </select >
+
+                                        <p class="disponible" >(<%= detalle.stock %>
+                                            disponibles)
+                                        </p>
+
+                                    </div>
+
                                     <button type="submit">Añadir al carrito</button>
+
                                 <% }else { %>
                                     <select class="cantidad" disabled>
                                         <option value="0">
