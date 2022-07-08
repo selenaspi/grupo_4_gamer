@@ -166,7 +166,7 @@
                                             (productsRecomendados[i].name.substring(0, 28)).toUpperCase() + "..." %>
                                     </p>
 
-                                    <% if(productsRecomendados[i].discount !==0) {%>
+                                    <% if(productsRecomendados[i].off_sale) {%>
 
                                         <p class="precio-antes">$<%= productsRecomendados[i].price %></p>
 

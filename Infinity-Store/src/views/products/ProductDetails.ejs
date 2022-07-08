@@ -35,13 +35,17 @@
                             <img src="/images/Draconic5.jpg" alt="Foto">
                         </div>
                         </div> -->
-                        <div class="stock">
-                            <% if (detalle.stock> 0) { %>
+
+                        <% if (detalle.stock && detalle.stock> 0) { %>
+                            <div class="con-stock">
                                 <span>En stock</span>
+                            </div>
                             <% } else {%>
+                                <div class="sin-stock">
                                     <span>Sin stock</span>
-                            <% } %>
-                        </div>
+                                </div>
+                                <% } %>
+
                     </div>
                     <div class="contenedor-datos">
                         <div>
@@ -49,21 +53,79 @@
                                 <%= detalle.name %>
                             </h2>
                         </div>
-                        <div class="caja-precio">
-                            <h3>$<%= detalle.price %>
-                            </h3>
-                            <p class="cuotas">12 cuotas de $<%= (detalle.price /12).toFixed(2) %>
-                            </p>
+
+                        <div class="contenedor-precio">
+
+                            <% if (detalle.off_sale) { %>
+
+                                <p class="precio-antes">$<%= detalle.price %>
+                                </p>
+
+                                <div class="caja-precio">
+                                    <div>
+                                        <h3>$<%= detalle.price - ((detalle.discount * detalle.price)/100) %>
+                                        </h3>
+                                        <p class="descuento">
+                                            <%= detalle.discount %>% OFF
+                                        </p>
+                                    </div>
+                                    <p class="cuotas">12 cuotas de $<%= (detalle.price /12).toFixed(2) %>
+                                    </p>
+                                </div>
+                                <% } else {%>
+
+                                    <div class="caja-precio">
+                                        <h3>$<%= detalle.price %>
+                                        </h3>
+                                        <p class="cuotas">12 cuotas de $<%= (detalle.price /12).toFixed(2) %>
+                                        </p>
+                                    </div>
+
+                                    <% }%>
+
                         </div>
 
                         <form action="" class="caja-carrito">
-                            <input type="number">
-                            <button type="submit">Añadir al carrito</button>
+                            <p>Cantidad: </p>
+
+
+                            <% if (detalle.stock && detalle.stock> 1) { %>
+                                <select class="cantidad">
+                                    <% for(i=0; i < detalle.stock; i++) {%>
+                                        <option value="<%= i + 1%>">
+                                            <%= i + 1%> <span class="disponibles">(<%= detalle.stock %>
+                                                        disponibles)</span>
+                                        </option>
+                                        <%}%>
+
+                                </select>
+                                <button type="submit">Añadir al carrito</button>
+                                <% }else if (detalle.stock && detalle.stock==1) {%>
+                                    <select class="cantidad">
+
+                                        <option value="1">
+                                            1 <span class="disponibles">(1 disponible)</span>
+                                        </option>
+
+                                    </select >
+                                    <button type="submit">Añadir al carrito</button>
+                                <% }else { %>
+                                    <select class="cantidad" disabled>
+                                        <option value="0">
+                                            Sin stock</span>
+                                        </option>
+                                    </select>
+                                    <button type="submit" disabled>Añadir al carrito</button>
+                                        <% } %>
+
+
+                                            
                         </form>
 
                         <div class="caja-envio">
                             <h4>Envío</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum facilis nam tempora.
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum facilis nam
+                                tempora.
                                 Voluptatibus</p>
                         </div>
                     </div>
@@ -73,21 +135,7 @@
 
                     <button type="button">Descripción</button>
 
-                    <!-- <div class="caja-descripcion">
-                        <p>Disfrutá de tus partidas en otro nivel con Redragon, marca reconocida que
-                            se
-                            especializa
-                            en brindar la mejor experiencia de juego al público gamer desde hace más de 20 años. Sus
-                            teclados se
-                            adaptan
-                            a todo tipo de jugadores y esto los convierten en un fiel reflejo de la alta gama y calidad
-                            que
-                            la
-                            compañía
-                            ofrece.</p>
-                    </div> -->
-
-                    <button type="button">Ficha técnica</button>
+                    <!-- <button type="button">Ficha técnica</button> -->
 
                     <button type="button">Opiniones</button>
 
@@ -117,32 +165,34 @@
                                 <img src="/images/products/<%= similares[i].image%>" alt="primer producto">
 
 
-                            <div class="main-article">
+                                <div class="main-article">
 
-                                <p class="name">
-                                    <%= similares[i].name.length <40? similares[i].name.toUpperCase() : (similares[i].name.substring(0, 28)).toUpperCase() + "..." %>
-                                </p>
-                                
-                                <% if (similares[i].discount != 0) { %>
-                                    <p class="precio-antes">$<%= similares[i].price %>
-                                    </p>
-                                <% } %>
-
-                                <div>
-
-                                    <p class="precio">$<%= similares[i].price -((similares[i].price*similares[i].discount)/100) %>
+                                    <p class="name">
+                                        <%= similares[i].name.length <40? similares[i].name.toUpperCase() :
+                                            (similares[i].name.substring(0, 28)).toUpperCase() + "..." %>
                                     </p>
 
-                                    <% if (similares[i].discount != 0) { %>
-                                        <p class="descuento">
-                                            <%= similares[i].discount %>% OFF
+                                    <% if (similares[i].discount !=0) { %>
+                                        <p class="precio-antes">$<%= similares[i].price %>
                                         </p>
-                                    <% } %>
+                                        <% } %>
 
+                                            <div>
+
+                                                <p class="precio">$<%= similares[i].price
+                                                        -((similares[i].price*similares[i].discount)/100) %>
+                                                </p>
+
+                                                <% if (similares[i].discount !=0) { %>
+                                                    <p class="descuento">
+                                                        <%= similares[i].discount %>% OFF
+                                                    </p>
+                                                    <% } %>
+
+
+                                            </div>
 
                                 </div>
-
-                            </div>
                             </a>
 
                         </article>
@@ -156,7 +206,7 @@
 
             </section>
 
-            
+
         </main>
         <%- include('../partials/footer') %>
 </body>
