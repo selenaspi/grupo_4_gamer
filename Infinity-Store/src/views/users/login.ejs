@@ -28,15 +28,15 @@
                     <% } %>
 
                     <div class="controls">
-                        <input class="email" type="text" name="email" id="email" >
+                        <input class="email" type="text" name="email" id="email" required>
                         <label for="email">
                             <span>Email</span>
                         </label>
                     </div>
 
-
+ <!-- hacer que funcionen los estilos sin el required -->
                     <div class="controls">
-                        <input class="password" type="password" name="password" id="password">
+                        <input type="password" name="password" id="password" required>
                         <label for="password">
                             <span>Contraseña</span>
                         </label>
@@ -45,7 +45,7 @@
                         <ul>
                             
                         </ul>
-                                    </div>
+                        </div>
 
                     <div class="recordar">
                         <input type="checkbox" class="form-check-input" name="remember_user">

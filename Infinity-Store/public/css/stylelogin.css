@@ -124,14 +124,14 @@ footer {
     height: 100%;
     border-bottom: 2px solid var(--azulOscuro);
     transform: translateX(-100%);
-    transition: all 0.3 ease;
+    transition: all 0.3s ease;
 }
 
 .form-login .controls label span {
     position: absolute;
     bottom: 5px;
     left: 0;
-    transition: all 0.3 ease;
+    transition: all 0.3s ease;
     color: var(--grisClaro);
     z-index: 12;
 }

@@ -146,7 +146,12 @@ p.precio-antes {
     height: 40px;
     border-radius: 8px;
     padding-left: 3%;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+}
+
+.caja-carrito .disponible {
+    font-size: 14px;
+    margin-bottom: 16px;
 }
 
 /* .caja-carrito input {
@@ -196,6 +201,10 @@ p.precio-antes {
     width: 100%;
     margin: auto;
     margin-bottom: 15px;
+}
+
+.caja-description {
+    display: none;
 }
 
 /*Similares*/
@@ -349,6 +358,11 @@ p.descuento {
         width: 90%;
     }
     
+    .caja-producto {
+        width: 90%;
+        margin: auto;
+    }
+
     /*Titulo*/
     
 
@@ -401,7 +415,11 @@ p.descuento {
         width: 100%;
         border: solid 2px;
     }
- */
+    */
+    
+    .contenedor-datos {
+        width: 100%; 
+    }
 
     /*Precio*/
 
@@ -416,61 +434,48 @@ p.descuento {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    .contenedor-datos {
-        width: 100%;
-        
-    }
-
-    .caja-producto {
-        width: 90%;
-        margin: auto;
-    }
 }
 
 /*-------------------------------------MediaQuery Desktop-----------------------------------*/
+
 @media (min-width: 769px) {
+
     main {
         width: 90%;
-        margin: auto;
-        
     }
 
-    div.caja-titulo {
-        display: none;
-    }
-
-    /* .caja-articulo {
-        display: flex;
+    .caja-producto {
         width: 100%;
-        margin-top: 20%;
+        margin: 25px 0;
+    }
 
-    } */
+    .contenedor-fotos-datos {
+        display: flex;
+        justify-content: space-between;
+    }
 
-    .fotos-muestra {
+    /*Fotos*/
+
+    .caja-fotos {
+        width: 50vw;
+    }
+
+    .caja-fotos .principal {
+        width: 100%;
+        height: 50vw;
+    }
+
+    .caja-fotos .principal img {
+        height: 50vw;
+    }
+
+    /* .fotos-muestra {
         display: flex;
         flex-direction: column;
         width: 15%;
-    }
+    } */
 
-    .foto-2 {
+    /* .foto-2 {
         width: 100%;
         margin-bottom: 4%;
     }
@@ -506,154 +511,95 @@ p.descuento {
     .foto-5 img {
         width: 100%;
         border: solid 2px;
-    }
-
-    .caja-foto-principal {
-        width: 80%;
-        height: 60%;
-        order: 1;
-        padding: 0% 5%;
-    }
-
-    .contenedor-fotos-datos {
-        display: flex;
-    }
-
-    .contenedor-datos {
-        width: 50%;
-        ;
-    }
-
-    .caja-producto {
-        width: 90%;
-        margin: 0;
-    }
-
-
-
-    /* .valor {
-        font-size: 40px;
-        font-weight: bold;
-        text-align: left;
-        margin: 0;
     } */
 
-    .cuotas {
-        font-size: 20px;
-        text-align: 0;
-        margin: 0px 0px 0px 0px;
+    /*-Datos-*/
+
+    .contenedor-datos {
+        width: 38vw;
     }
 
+    /*Stock*/
+
+    .con-stock, .sin-stock {
+        width: 10vw;
+        top: 20px;
+        right: -10px;
+    }
+
+    /*Título*/
+
+    .name {
+        display: none;
+    }
+
+    .name-t {
+        display: inherit;
+        margin: 0 0 8px;
+        font-size: 20px;
+    }
+
+    /*Precio*/
+
+    .contenedor-precio {
+        margin: 8px 0px 4px;
+    }
+
+    .caja-precio h3 {
+        font-size: 38px;
+    }
+
+    /*Agregar a carrito*/
 
     .caja-carrito {
-        display: flex;
+        margin: 8px 0px;
     }
 
-    .cantidad {
-        font-size: 20px;
-        text-align: left;
-        margin: 0px 0px 0px 50px;
-    }
+    /*Descripción-opiniones*/
 
-    .agregar-carrito {
-        font-size: 20px;
-        text-align: left;
-        margin: 0px 0px 0px 30px;
-    }
-
-    .caja-envio {
-        font-size: 15px;
-        text-align: left;
-    }
-
-    .envio {
-        margin-left: 0;
-    }
-
-    .texto-envio {
-        margin-left: 0;
-    }
-
-    .cantidad {
-        margin: 0;
+    .conteiner-description-opinion {
+        background-color: var(--blanco);
+        padding-bottom: 32px;
+        margin-top: 5vh;
     }
 
     .caja-botones {
         display: flex;
-        justify-content: space-between;
-        margin-top: 3%;
+        margin-top: 0;
+        justify-content: space-around;
     }
 
-    .botondedescripcion,
-    .botondeficha,
-    .botondeopiniones {
-        width: 30%;
+    .caja-botones div {
+        width: 100%;
     }
 
-    .caja-descripcion {
-        display: none;
+    .caja-botones button {
+        /* width: 35vw; */
+        width: 100%;
+        margin-bottom: 0;
+        margin-left: 0;
+        padding: 0%;
+        border-radius: 0;
+        box-shadow: inherit;
     }
 
-    .caja-similares img {
-        display: block;
-        margin: auto;
+    .caja-botones div.left {
+        border-bottom: solid 2px var(--azul);
+        border-right: solid 1px var(--azul);
     }
 
-    div.articulo {
-        width: 20%;
-        height: 250px;
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        position: static;
-        z-index: 0;
-        margin-top: 10%;
-    }
-
-    .articulo img {
-        width: 225;
-        height: 201;
-    }
-
-    .producto-similar1 {
-        text-align: center;
-        font-size: 15px;
-    }
-
-    .valor2 {
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .similares {
-        margin-top: 5%;
-        display: flex;
-        width: 90%;
-        margin: auto;
-        justify-content: space-between;
-    }
-
-    .boton-flotante img {
-        width: 60px;
-        height: 60px;
-        position: fixed;
-        top: 480px;
-        right: 40px;
-        z-index: 5;
-    }
-
-    /*
-.fa-cart-shopping{
-    position: fixed;
-    top: 497px;
-    right: 53px;
-    z-index: 10; 
-    padding: auto;
-    font-size: 30px;
-}
-*/
-    .producto2 {
+    .caja-description {
         display: inherit;
-        padding-top: 4%;
-        margin: 0;
     }
+
+    .caja-description p {
+        margin: 16px 28px 0;
+        color: var(--xiketic);
+        font-size: 18px;
+    }
+
+}
+
+@media (min-width: 1100px) {
 
 }

@@ -86,11 +86,11 @@ nav .menu-desplegable {
 
 .bar-menu {
     width: 38px;
-    margin: auto;
+    margin: 0px 20px;
     padding: 2px 0px;
     cursor: pointer;
     border-radius: 5px;
-    border: white 1.3px solid;
+    /* border: white 1.3px solid; */
 }
 
 .bar-menu span {
@@ -496,7 +496,7 @@ footer>p {
     nav .logo-infinity-store {
         order: -1;
         width: 5%;
-        padding: 1%;
+        padding: 8px 0%;
     }
 
     nav .logo-infinity-store .logo-cuadrado-d {
@@ -583,6 +583,11 @@ footer>p {
         font-size: 20px;
         display: flex;
         justify-content: center;
+    }
+
+    nav .buscador form { 
+        display: flex;
+        width: 100%;
     }
 
     nav .buscador .barra-busqueda {
