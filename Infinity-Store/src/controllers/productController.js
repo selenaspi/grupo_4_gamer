@@ -111,6 +111,7 @@ const controller = {
             res.render("products/productCreationEdition", {
                 metodo: "PUT",
                 ruta: req.params.id + "?_method=PUT",
+                id: req.params.id,
                 producto: product,
                 categoryList: categories
             })
