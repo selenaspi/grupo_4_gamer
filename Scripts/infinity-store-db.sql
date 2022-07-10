@@ -82,6 +82,7 @@ CREATE TABLE `product_carts` (
   FOREIGN KEY (`user_id`) REFERENCES `users`(`id`)
 );
 
+-- agregar quantity
 DROP TABLE IF EXISTS `product_carts_products`;
 CREATE TABLE `product_carts_products` (
   `id` int unsigned NOT NULL AUTO_INCREMENT UNIQUE,
