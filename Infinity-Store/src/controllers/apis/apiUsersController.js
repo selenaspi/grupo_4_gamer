@@ -22,7 +22,7 @@ const apiUsersController = {
     res.header("Access-Control-Allow-Origin", "*");
         db.User.findByPk(req.params.id,{
             attributes: ['id','created_at','updated_at','name','last_name','email','phone','image','alta','date_of_birth','home_adress']
-          })                                                //http://localhost:3030/images/usuarios/ -----> falta concatenar a imagen
+          })                                         
         .then(users => {
            return res.status(200).json({
              data:{...users.dataValues,image:'http://localhost:3030/images/usuarios/'+users.image},
