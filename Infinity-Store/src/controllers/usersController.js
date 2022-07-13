@@ -20,6 +20,8 @@ const controller = {
         db.ProductCategory.findAll()
         .then(function(categories){
             return res.render ("users/register",{  categoryList : categories})
+        }).catch(err => {
+            return res.status(404).send({ message: err });
         })
     },
     store: function (req,res){
@@ -28,14 +30,17 @@ const controller = {
         if (resultValidation.errors.length > 0) {
         db.ProductCategory.findAll()
         .then(function(categories){
-            return res.render('users/register',{ categoryList : categories, errors: resultValidation.mapped(),	oldData: req.body })});
+            return res.render('users/register',{ categoryList : categories, errors: resultValidation.mapped(),	oldData: req.body })})
+            .catch(err => {
+                return res.status(404).send({ message: err });
+            });
         } else {db.User.create({
             name:req.body.name,
             last_name:req.body.last_name,
             email:req.body.email,
             password:bcryptjs.hashSync(req.body.password, 10),
             phone:req.body.phone,
-            image:req.body.image,
+            image:req.file.filename,
             date_of_birth:req.body. date_of_birth,
             home_adress:req.body.home_adress,
             role_id:1,
@@ -63,6 +68,8 @@ const controller = {
                 user: users,
                 categoryList: categories
             })
+        }).catch(err => {
+            return res.status(404).send({ message: err });
         });
     },
     
@@ -177,7 +184,9 @@ const controller = {
             })}
             ;
             
-        })
+        }).catch(err => {
+            return res.status(404).send({ message: err });
+        });
         },
 
         // if (userToLogin) {
@@ -228,6 +237,8 @@ const controller = {
       let promiseUsuarios = db.User.findAll()
          Promise.all([promiseCategory,promiseUsuarios]).then(function ([categoryList,users]) {
                 res.render("users/usersList", {categoryList,users });
+            }).catch(err => {
+                return res.status(404).send({ message: err });
             });
         },
 }

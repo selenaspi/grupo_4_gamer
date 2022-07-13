@@ -94,11 +94,16 @@
         </div>
 
         <div class="botones">
+          <!-- <button action="/product/<%=ruta%>/delete">Llévame a otro lado</button> -->
           <button type="reset"><a href="/"><i class="fa-solid fa-arrows-rotate"></i></a></button>
           <button type="submit">Enviar</button>
+       
         </div>
 
       </form>
+      <form method="post" action="/product/<%=id%>/delete?_method=DELETE">
+        <button type="submit">Borrar</button>
+    </form>
 
     </main>
 

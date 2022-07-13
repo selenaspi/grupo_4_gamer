@@ -36,13 +36,13 @@ p {
 /*-------------------------- Mobile --------------------------*/
 
 main {
-    top: 15vh;
+    top: 100px;
     width: 87%;
     margin: auto;
     color: var(--blanco);
 }
 
-/*Titulo*/
+/*Título*/
 
 .name h2 {
     font-size: 24px;
@@ -50,6 +50,10 @@ main {
 
 .caja-fotos {
     position: relative;
+}
+
+.caja-fotos .principal {
+    background-color: #fff;
 }
 
 .caja-fotos .principal img {
@@ -80,39 +84,81 @@ main {
 
 /*Stock*/
 
-.stock {
+.con-stock, .sin-stock {
     width: 16vw;
     background: rgb(126, 238, 141, 0.9);
     border: 2px solid #39b54a;
     position: absolute;
-    top: 110px;
+    top: 40px;
     right: -20px;
     text-align: center;
 }
 
-.stock span {
+.sin-stock {
+
+    background: rgba(238, 126, 126, 0.9);
+    border: 2px solid #dd0000;
+
+}
+
+.con-stock span, .sin-stock span {
     font-weight: bolder;
 }
 
 /*Precio*/
 
+.contenedor-precio {
+    margin: 16px 0px 4px;
+}
+
+p.precio-antes {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: line-through;
+}
+
 .caja-precio h3 {
     font-size: 42px;
-    margin: 16px 0px 4px;
+    margin: 0px 0px;
 }
 
 .caja-precio p {
     font-size: 20px;
 }
 
+.caja-precio>div {
+    display: flex;
+}
+
+.descuento {
+    margin-top: 8px;
+}
+
 /*Agregar a carrito*/
 
 .caja-carrito {
-    display: flex;
     margin: 16px 0px;
 }
 
-.caja-carrito input {
+.caja-carrito p {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.caja-carrito .cantidad {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    padding-left: 3%;
+    margin-bottom: 4px;
+}
+
+.caja-carrito .disponible {
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+/* .caja-carrito input {
     height: 1.7rem;
     width: 30px;
     font-size: 18px;
@@ -120,13 +166,14 @@ main {
     background: rgba(255, 255, 255, 0.8);
     border: none;
     border-radius: 2px;
-}
+} */
 
 .caja-carrito button,
 .caja-botones button {
-    margin-left: 20px;
+    height: 40px;
+    width: 100%;
     padding: 0px 10px;
-    font-size: 19px;
+    font-size: 20px;
     background: rgba(255, 255, 255, 0.8);
     border: none;
     box-shadow: 0px 0px 3px var(--blanco);
@@ -138,13 +185,14 @@ main {
 /*Envío*/
 
 .caja-envio {
-    font-size: 20px;
+    font-size: 16px;
     text-align: left;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .caja-envio h4 {
     margin: 10px 0px 5px;
+    font-size: 20px;
 }
 
 /* Botones*/
@@ -154,10 +202,13 @@ main {
 }
 
 .caja-botones button {
-    width: 60%;
+    width: 100%;
     margin: auto;
-    height: 2rem;
     margin-bottom: 15px;
+}
+
+.caja-description {
+    display: none;
 }
 
 /*Similares*/
@@ -279,7 +330,7 @@ p.name {
     color: rgba(0, 0, 0, 0.92);
 }
 
-p.precio-antes {
+.caja-similares p.precio-antes {
     font-size: 14px;
     color: rgb(60, 60, 60);
     text-decoration: line-through;
@@ -303,38 +354,132 @@ p.descuento {
     color: var(--verde);
 }
 
+/*---------------------------------------->MediaQuery Tablet<----------------------------------*/
 
+@media (min-width: 521px) {
 
-
-
-
-/*Responsive*/
-
-/*-------------------------------------MediaQuery Desktop-----------------------------------*/
-@media (min-width: 769px) {
     main {
+        width: 90%;
+    }
+    
+    .caja-producto {
         width: 90%;
         margin: auto;
     }
 
-    div.caja-titulo {
-        display: none;
+    /*Titulo*/
+    
+
+    
+    /*Fotos*/
+
+    .caja-foto-principal {
+        width: 80%;
+        height: 60%;
+        order: 1;
+        padding: 0% 5%;
+    }
+    
+    .caja-fotos .principal img {
+        height: 90vw;
     }
 
-    /* .caja-articulo {
-        display: flex;
+    /* .foto-2 {
         width: 100%;
-        margin-top: 20%;
+    }
 
-    } */
+    .foto-2 img {
+        width: 100%;
+        border: solid 2px;
+    }
 
-    .fotos-muestra {
+    .foto-3 {
+        width: 100%;
+    }
+
+    .foto-3 img {
+        width: 100%;
+        border: solid 2px;
+    }
+
+    .foto-4 {
+        width: 100%;
+    }
+
+    .foto-4 img {
+        width: 100%;
+        border: solid 2px;
+    }
+
+    .foto-5 {
+        width: 100%;
+    }
+
+    .foto-5 img {
+        width: 100%;
+        border: solid 2px;
+    }
+    */
+    
+    .contenedor-datos {
+        width: 100%; 
+    }
+
+    /*Precio*/
+
+    p.precio-antes {
+        color: #fff;
+    }
+
+    /*Envío*/
+
+    .caja-envio p {
+        font-size: 16px;
+    }
+
+
+}
+
+/*-------------------------------------MediaQuery Desktop-----------------------------------*/
+
+@media (min-width: 769px) {
+
+    main {
+        width: 90%;
+    }
+
+    .caja-producto {
+        width: 100%;
+        margin: 25px 0;
+    }
+
+    .contenedor-fotos-datos {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /*Fotos*/
+
+    .caja-fotos {
+        width: 50vw;
+    }
+
+    .caja-fotos .principal {
+        width: 100%;
+        height: 50vw;
+    }
+
+    .caja-fotos .principal img {
+        height: 50vw;
+    }
+
+    /* .fotos-muestra {
         display: flex;
         flex-direction: column;
         width: 15%;
-    }
+    } */
 
-    .foto-2 {
+    /* .foto-2 {
         width: 100%;
         margin-bottom: 4%;
     }
@@ -370,383 +515,141 @@ p.descuento {
     .foto-5 img {
         width: 100%;
         border: solid 2px;
-    }
-
-    .caja-foto-principal {
-        width: 80%;
-        height: 60%;
-        order: 1;
-        padding: 0% 5%;
-    }
-
-    .contenedor-fotos-datos {
-        display: flex;
-    }
-
-    .contenedor-datos {
-        width: 50%;
-        ;
-    }
-
-    .caja-producto {
-        width: 90%;
-        margin: 0;
-    }
-
-
-
-    /* .valor {
-        font-size: 40px;
-        font-weight: bold;
-        text-align: left;
-        margin: 0;
     } */
 
-    .cuotas {
-        font-size: 20px;
-        text-align: 0;
-        margin: 0px 0px 0px 0px;
+    /*-Datos-*/
+
+    .contenedor-datos {
+        width: 38vw;
     }
 
+    /*Stock*/
 
-    .caja-carrito {
-        display: flex;
+    .con-stock, .sin-stock {
+        width: 10vw;
+        top: 20px;
+        right: -10px;
     }
 
-    .cantidad {
-        font-size: 20px;
-        text-align: left;
-        margin: 0px 0px 0px 50px;
-    }
+    /*Título*/
 
-    .agregar-carrito {
-        font-size: 20px;
-        text-align: left;
-        margin: 0px 0px 0px 30px;
-    }
-
-    .caja-envio {
-        font-size: 15px;
-        text-align: left;
-    }
-
-    .envio {
-        margin-left: 0;
-    }
-
-    .texto-envio {
-        margin-left: 0;
-    }
-
-    .cantidad {
-        margin: 0;
-    }
-
-    .caja-botones {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 3%;
-    }
-
-    .botondedescripcion,
-    .botondeficha,
-    .botondeopiniones {
-        width: 30%;
-    }
-
-    .caja-descripcion {
+    .name {
         display: none;
     }
 
-    .caja-similares img {
-        display: block;
-        margin: auto;
-    }
-
-    div.articulo {
-        width: 20%;
-        height: 250px;
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        position: static;
-        z-index: 0;
-        margin-top: 10%;
-    }
-
-    .articulo img {
-        width: 225;
-        height: 201;
-    }
-
-    .producto-similar1 {
-        text-align: center;
-        font-size: 15px;
-    }
-
-    .valor2 {
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .similares {
-        margin-top: 5%;
-        display: flex;
-        width: 90%;
-        margin: auto;
-        justify-content: space-between;
-    }
-
-    .boton-flotante img {
-        width: 60px;
-        height: 60px;
-        position: fixed;
-        top: 480px;
-        right: 40px;
-        z-index: 5;
-    }
-
-    /*
-.fa-cart-shopping{
-    position: fixed;
-    top: 497px;
-    right: 53px;
-    z-index: 10; 
-    padding: auto;
-    font-size: 30px;
-}
-*/
-    .producto2 {
+    .name-t {
         display: inherit;
-        padding-top: 4%;
-        margin: 0;
-    }
-
-}
-
-/*---------------------------------------->MediaQuery Tablet<----------------------------------*/
-@media (min-width: 520px) {
-    main {
-        width: 90%;
-        margin: auto;
-    }
-
-    div.caja-titulo {
-        display: none;
-    }
-
-    /* 
-    .caja-articulo {
-        display: flex;
-        width: 100%;
-        margin: auto;
-        justify-content: center;
-
-    } */
-
-    .fotos-muestra {
-        display: flex;
-        flex-direction: column;
-        width: 15%;
-        margin-left: 5%;
-    }
-
-    .foto-2 {
-        width: 100%;
-    }
-
-    .foto-2 img {
-        width: 100%;
-        border: solid 2px;
-    }
-
-    .foto-3 {
-        width: 100%;
-    }
-
-    .foto-3 img {
-        width: 100%;
-        border: solid 2px;
-    }
-
-    .foto-4 {
-        width: 100%;
-    }
-
-    .foto-4 img {
-        width: 100%;
-        border: solid 2px;
-    }
-
-    .foto-5 {
-        width: 100%;
-    }
-
-    .foto-5 img {
-        width: 100%;
-        border: solid 2px;
-    }
-
-    .caja-foto-principal {
-        width: 80%;
-        height: 60%;
-        order: 1;
-        padding: 0% 5%;
-    }
-
-
-    .contenedor-datos {
-        width: 100%;
-        ;
-    }
-
-    .caja-producto {
-        width: 90%;
-        margin-top: 5%;
-    }
-
-
-
-    /* .valor {
-        font-size: 40px;
-        font-weight: bold;
-        text-align: left;
-        margin-left: 5%;
-    } */
-
-    .cuotas {
+        margin: 0 0 8px;
         font-size: 20px;
-        text-align: 0;
-        margin: 0px 0px 0px 0px;
-        margin-left: 5%;
     }
 
+    /*Precio*/
+
+    .contenedor-precio {
+        margin: 8px 0px 4px;
+    }
+
+    .caja-precio h3 {
+        font-size: 38px;
+    }
+
+    /*Agregar a carrito*/
 
     .caja-carrito {
-        display: flex;
-        margin-left: 5%;
+        margin: 8px 0px;
     }
 
-    .cantidad {
-        font-size: 20px;
-        text-align: left;
-        margin: 0px 0px 0px 50px;
-    }
+    /*Descripción-opiniones*/
 
-    .agregar-carrito {
-        font-size: 20px;
-        text-align: left;
-        margin: 0px 0px 0px 30px;
-    }
-
-    .caja-envio {
-        font-size: 15px;
-        text-align: left;
-        margin-left: 5%;
-    }
-
-    .envio {
-        margin-left: 0;
-    }
-
-    .texto-envio {
-        margin-left: 0;
-    }
-
-    .cantidad {
-        margin: 0;
+    .conteiner-description-opinion {
+        background-color: var(--blanco);
+        padding-bottom: 32px;
+        margin-top: 5vh;
     }
 
     .caja-botones {
         display: flex;
-        justify-content: space-between;
-        margin-top: 3%;
-        margin-left: 5%;
-    }
-
-    .botondedescripcion,
-    .botondeficha,
-    .botondeopiniones {
-        width: 30%;
-    }
-
-    .caja-descripcion {
-        display: none;
-    }
-
-    .caja-similares {
-        margin-top: 5%;
-    }
-
-    .caja-similares img {
-        display: block;
-        margin: auto;
-    }
-
-    div.articulo {
-        width: 20%;
-        height: 250px;
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        position: static;
-        z-index: 0;
-        margin-top: 20px;
-    }
-
-    .articulo img {
-        width: 225;
-        height: 201;
-    }
-
-    .producto-similar1 {
-        text-align: center;
-        font-size: 15px;
-    }
-
-    .valor2 {
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .similares {
         margin-top: 0;
-        display: flex;
-        width: 90%;
-        margin: auto;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
-    .boton-flotante img {
-        width: 60px;
-        height: 60px;
-        position: fixed;
-        top: 480px;
-        right: 40px;
-        z-index: 5;
+    .caja-botones div {
+        width: 100%;
     }
 
-    /*.fa-cart-shopping{
-            position: fixed;
-            top: 497px;
-            right: 53px;
-            z-index: 10; 
-            padding: auto;
-            font-size: 30px;
-        }
-        */
-    .producto2 {
+    .caja-botones button {
+        /* width: 35vw; */
+        width: 100%;
+        margin-bottom: 0;
+        margin-left: 0;
+        padding: 0%;
+        border-radius: 0;
+        box-shadow: inherit;
+    }
+
+    .caja-botones div.left {
+        border-bottom: solid 2px var(--azul);
+        border-right: solid 1px var(--azul);
+    }
+
+    .caja-description {
         display: inherit;
-        padding-top: 4%;
-        text-align: left;
-        margin-left: 5%;
+    }
+
+    .caja-description p {
+        margin: 16px 28px 0;
+        color: var(--xiketic);
+        font-size: 18px;
     }
 
 }
 
-/*body {font-family: 'Roboto', sans-serif;}
-.foto-principal{
-    width: 500px;
-    height: auto;
+@media (min-width: 1150px) {
+    main {
+        top: 150px;
+        width: 75%;
+    }
+
+    .caja-producto {
+        margin: 0px;
+    }
+
+    /*Fotos*/
+
+    .caja-fotos {
+        width: 39vw;
+    }
+
+    .caja-fotos .principal {
+        width: 100%;
+        height: 39vw;
+    }
+
+    .caja-fotos .principal img {
+        height: 39vw;
+    }
+
+    /*-Datos-*/
+
+    .contenedor-datos {
+        width: 32vw;
+    }
+
+    /*Stock*/
+
+    .con-stock, .sin-stock {
+        width: 8vw;
+        top: 20px;
+        right: -20px;
+    }
+
+    /*Descripción-opiniones*/
+
+    .conteiner-description-opinion {
+        background-color: var(--blanco);
+        padding-bottom: 32px;
+        margin-top: 60px;
+    }
+
+
 }
-img {
-    max-width: 100%;
-    max-height: 100%;
-   }
-   */

@@ -26,8 +26,10 @@
 
                             <ul>
                                 <% for(let i=0; i< categoryList.length; i++) {%>
-                                    <li><a href="/product/category/<%= categoryList[i].id %>"><%=categoryList[i].name%></a></li>
-                                <%}%>
+                                    <li><a href="/product/category/<%= categoryList[i].id %>">
+                                            <%=categoryList[i].name%>
+                                        </a></li>
+                                    <%}%>
                             </ul>
 
                         </li>
@@ -43,18 +45,19 @@
                             <li class="items"><a href="#" class="link-item">Ajustes</a></li>
                             <li class="items"><a href="/users/logout" class="link-item">Salir<i
                                         class="fa-solid fa-arrow-right-from-bracket"></i> </a>
-                        <% } else { %>
+                                <% } else { %>
                             <li class="items"><a href="#" class="link-item">Ayuda</a></li>
-                            <li class="items"><a href="/users/login" class="link-item">Ingresar<i class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
-                        <% } %>
+                            <li class="items"><a href="/users/login" class="link-item">Ingresar<i
+                                        class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
+                            <% } %>
 
                     </ul>
 
                 </li>
 
                 <li class="logo-infinity-store">
-                    <a href="/" class="logo-rectangular-m-t"><img src="/images/dragon_rectangular.jpg" alt=""></a>
-                    <a href="/" class="logo-cuadrado-d"><img src="/images/dragon_cuadrado.jpg" alt=""></a>
+                    <a href="/" class="logo-rectangular-m-t"><img src="/images/logo-mt.png" alt=""></a>
+                    <a href="/" class="logo-cuadrado-d"><img src="/images/logo-t.png" alt=""></a>
                 </li>
 
                 <li class="categoria items cat" id="b-categ-d">
@@ -72,11 +75,14 @@
                             <li>
                                 <a href="/product/category/<%= categoryList[i].id %>">
                                     <img src="/images/category/<%=categoryList[i].image%>" alt="">
-                                    <span><%= categoryList[i].name.length <14? categoryList[i].name : (categoryList[i].name.substring(0, 10)) + "..." %></span>
+                                    <span>
+                                        <%= categoryList[i].name.length <14? categoryList[i].name :
+                                            (categoryList[i].name.substring(0, 10)) + "..." %>
+                                    </span>
                                 </a>
                             </li>
 
-                        <%}%>
+                            <%}%>
 
                     </ul>
 
@@ -86,13 +92,13 @@
 
                 <li class="buscador">
                     <form method="POST" action="/product/search">
-                    <input type="text" name="search" id="search" class="barra-busqueda"
-                        placeholder="Buscar por producto, marca, categoría...">
+                        <input type="text" name="search" id="search" class="barra-busqueda"
+                            placeholder="Buscar por producto, marca, categoría...">
 
-                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
                 </li>
-            
+
                 <li class="carrito"><a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a></li>
 
                 <% if (locals.isLogged) { %>
@@ -113,9 +119,9 @@
                         </ul>
 
                     </li>
-                <% } else {%>
+                    <% } else {%>
                         <li class="login"><a href="/users/login">Ingresar</a></li>
-                <% } %>
+                        <% } %>
 
             </ul>
 
