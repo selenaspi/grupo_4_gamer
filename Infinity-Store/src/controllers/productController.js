@@ -12,7 +12,9 @@ const controller = {
             res.render("products/productCreationEdition", {
                 metodo: "POST",
                 ruta: "",
+                // id: req.params.id,
                 categoryList: categories
+
             })
         }).catch(err => {
             return res.status(404).send({ message: err });
