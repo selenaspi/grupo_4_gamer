@@ -32,6 +32,9 @@ main{
     margin-top: 5%;
     /* background:linear-gradient(var(--rosado), var(--celeste)) */
 }
+a{
+    text-decoration: none
+}
 
 
 

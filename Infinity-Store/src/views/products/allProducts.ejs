@@ -14,7 +14,7 @@
                 <div class="articulo">
                 <img src="/images/products/<%=similares[i].image%>" alt="Foto Similares">
                 <div class="linea"></div>
-                <p class="producto-similar1"> <%=similares[i].name.substring(0, 20)%>... </p>
+                <p class="producto-similar1"><a href="/product/<%=similares[i].id%>/details"> <%=similares[i].name.substring(0, 20)%>... </p></a>
                 <p class="valor2">$<%= similares[i].price %> </p>
             </div>
             <% } %> 
