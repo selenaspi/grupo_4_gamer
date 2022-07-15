@@ -101,9 +101,11 @@
         </div>
 
       </form>
+      <%if(metodo=== "PUT") { %>
       <form method="post" action="/product/<%=id%>/delete?_method=DELETE">
         <button type="submit">Borrar</button>
     </form>
+    <%}%>
 
     </main>
 

@@ -13,6 +13,7 @@ const controller = {
                 metodo: "POST",
                 ruta: "",
                 categoryList: categories
+
             })
         }).catch(err => {
             return res.status(404).send({ message: err });

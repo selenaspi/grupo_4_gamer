@@ -26,7 +26,7 @@
                 </div>
 
                 <div class="editar-perfil">
-                    <button type=""><a href=""><i class="fa-solid fa-pencil"></i></a></button>
+                    <button type=""><a href="/users/<%=usuarioBuscado.id%>/edit"><i class="fa-solid fa-pencil"></i></a></button>
                 </div>
 
             </div>
@@ -63,11 +63,11 @@
                     </li>
                 </ul>
             </div>
-            <a href="/users/<%=usuarioBuscado.id%>/edit">
+            <!-- <a href="/users/<%=usuarioBuscado.id%>/edit">
                 <button>Editar mi Perfil</button>
-            </a>
+            </a> -->
             <form action="/users/<%=usuarioBuscado.id%>/delete">
-                <button type="submit">Eliminar mi Perfil</button>
+                <button type="submit">Eliminar mi Cuenta</button>
             </form>
 
 
