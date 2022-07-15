@@ -34,19 +34,19 @@
 
                         </li>
 
-                        <li class="items"><a href="#" class="link-item">Armá tu pc</a></li>
+                        <li class="items"><a href="/armar-pc" class="link-item">Armá tu pc</a></li>
 
                         <% if (locals.isLogged) { %>
                             <li class="items"><a href="/productCart" class="link-item">Carrito</a></li>
-                            <li class="items"><a href="#" class="link-item">Mis compras</a></li>
-                            <li class="items"><a href="#" class="link-item">Mis favoritos</a></li>
+                            <li class="items"><a href="/armar-pc" class="link-item">Mis compras</a></li>
+                            <li class="items"><a href="/armar-pc" class="link-item">Mis favoritos</a></li>
                             <li class="items"><a href="/users/profile" class="link-item">Mi perfil</a></li>
-                            <li class="items"><a href="#" class="link-item">Ayuda</a></li>
-                            <li class="items"><a href="#" class="link-item">Ajustes</a></li>
+                            <li class="items"><a href="/armar-pc" class="link-item">Ayuda</a></li>
+                            <li class="items"><a href="/armar-pc" class="link-item">Ajustes</a></li>
                             <li class="items"><a href="/users/logout" class="link-item">Salir<i
                                         class="fa-solid fa-arrow-right-from-bracket"></i> </a>
                                 <% } else { %>
-                            <li class="items"><a href="#" class="link-item">Ayuda</a></li>
+                            <li class="items"><a href="/armar-pc" class="link-item">Ayuda</a></li>
                             <li class="items"><a href="/users/login" class="link-item">Ingresar<i
                                         class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
                             <% } %>
@@ -88,13 +88,12 @@
 
                 </li>
 
-                <li class="arma-tu-pc"><a href="#">Armá tu pc</a></li>
+                <li class="arma-tu-pc"><a href="/armar-pc">Armá tu pc</a></li>
 
                 <li class="buscador">
                     <form method="POST" action="/product/search">
                         <input type="text" name="search" id="search" class="barra-busqueda"
                             placeholder="Buscar por producto, marca, categoría...">
-
                         <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
                 </li>
@@ -110,10 +109,10 @@
                         </div>
 
                         <ul>
-                            <li class="menu-perfil"><a href="#">Mis compras</a></li>
-                            <li class="menu-perfil"><a href="#">Mis favoritos</a></li>
+                            <li class="menu-perfil"><a href="/armar-pc">Mis compras</a></li>
+                            <li class="menu-perfil"><a href="/armar-pc">Mis favoritos</a></li>
                             <li class="menu-perfil"><a href="/users/profile">Mi perfil</a>
-                            <li class="menu-perfil"><a href="#">Ajustes</a>
+                            <li class="menu-perfil"><a href="/armar-pc">Ajustes</a>
                             <li class="menu-perfil"><a href="/users/logout">Salir<i
                                         class="fa-solid fa-arrow-right-from-bracket"></i> </a>
                         </ul>

@@ -130,6 +130,10 @@ const controller = {
 
          })
 
+   },
+
+   armarPc: (req, res) => {
+      return res.render("generales/no-found");
    }
 }
 

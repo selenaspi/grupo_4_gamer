@@ -75,6 +75,10 @@ div.articulo{
 
 }
 
+.no-found {
+    color: white;
+    font-weight: 400;
+}
 
 /*Responsive*/
 
@@ -136,6 +140,7 @@ div.articulo{
 /*-----------------------------------------------------------------------ediaQuery Desktop--------------------------------------------------------------------------*/
 @media (min-width: 769px){
     main{
+        top: 15vh;
         width: 90%;
         margin: auto;
         display: flex;

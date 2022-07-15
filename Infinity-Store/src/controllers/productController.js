@@ -95,7 +95,7 @@ const controller = {
         let productsPromise = db.Product.findAll();
 
         Promise.all([categoriesPromise, productsPromise]).then(function ([categories, products]) {
-            res.render("products/allProducts", { similares: products, categoryList: categories })
+            res.render("products/allProducts", { similares: products, categoryList: categories, buscado : null })
         }).catch(err => {
             return res.status(404).send({ message: err });
         })
@@ -199,7 +199,7 @@ const controller = {
         res.redirect('/')
     },
 
-    filterByCategory: (req, res) => {
+    filterByCategory: async (req, res) => {
 
         let productsByCategoryPromise = db.Product.findAll({
             where: {
@@ -207,18 +207,29 @@ const controller = {
             }
         })
 
+        let categoria = await db.ProductCategory.findOne({
+            where: {
+                id: req.params.idCategory
+            }
+        }).catch(err => {
+            return res.status(404).send({ message: err });
+        })
+
         Promise.all([categoriesPromise, productsByCategoryPromise])
             .then(function ([categories, products]) {
-                res.render("products/allProducts", { similares: products, categoryList: categories }) //no debería llamarse similares pero bue
+                res.render("products/allProducts", { similares: products, categoryList: categories, buscado : categoria.name }) //no debería llamarse similares pero bue
             }).catch(err => {
                 return res.status(404).send({ message: err });
             })
-    }, busqueda: (req, res) => {
+    },
+
+    busqueda: (req, res) => {
+
         let productsPromise = db.Product.findAll({ where: { name: { [Op.like]: '%' + req.body.search + '%' } } });
 
         Promise.all([categoriesPromise, productsPromise]).then(function ([categories, products]) {
             console.log(productsPromise);
-            res.render("products/allProducts", { similares: products, categoryList: categories })
+            res.render("products/allProducts", { similares: products, categoryList: categories, buscado: req.body.search })
         }).catch(err => {
             return res.status(404).send({ message: err });
         })
