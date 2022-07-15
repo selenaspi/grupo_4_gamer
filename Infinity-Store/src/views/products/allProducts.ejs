@@ -12,11 +12,15 @@
         <section class="similares">
             <% for(let i = 0; i < similares.length; i++) { %>
                 <div class="articulo">
+                <a href="/product/<%=similares[i].id%>/details">
+                <div class="articulo23">
                 <img src="/images/products/<%=similares[i].image%>" alt="Foto Similares">
                 <div class="linea"></div>
-                <p class="producto-similar1"><a href="/product/<%=similares[i].id%>/details"> <%=similares[i].name.substring(0, 20)%>... </p></a>
+                <p class="producto-similar1"> <%=similares[i].name.substring(0, 20)%>... </p>
                 <p class="valor2">$<%= similares[i].price %> </p>
             </div>
+        </a>
+    </div>  
             <% } %> 
         </section>
     </main>
