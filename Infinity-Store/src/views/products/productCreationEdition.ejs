@@ -76,7 +76,7 @@
         </div> -->
 
         <div>
-          <input type="checkbox" name="checkDescuento" id="check-descuento" <%= metodo==="PUT" ? producto.offSale? "checked" : "" : "" %>><label for="check-descuento" class="check-descuento">Tiene descuento</label>
+          <input type="checkbox" name="checkDescuento" id="check-descuento" <%= metodo==="PUT" ? producto.off_sale? "checked" : "" : "" %>><label for="check-descuento" class="check-descuento">Tiene descuento</label>
           <div class="descuentos">
             <label for="in-descuento">Descuento (%): </label>
             <input id="in-descuento" name="discount" type="number" value="<%= metodo === 'POST' ? '' : producto.discount%>" class="controls">

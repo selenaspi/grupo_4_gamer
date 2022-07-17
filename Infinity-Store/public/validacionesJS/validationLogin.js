@@ -3,7 +3,7 @@ window.addEventListener("load", function () {
 
     formulario.addEventListener("submit", function (e) {
 
-
+        console.log("hola")
         let errores = [];
         let email = document.querySelector("input.email");
         if (email.value == "") {

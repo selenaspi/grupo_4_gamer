@@ -109,13 +109,15 @@ const controller = {
         let productPromise = db.Product.findByPk(Number(req.params.id))
 
         Promise.all([categoriesPromise, productPromise]).then(function ([categories, product]) {
-            res.render("products/productCreationEdition", {
+            if(product && product.alta){
+                res.render("products/productCreationEdition", {
                 metodo: "PUT",
                 ruta: req.params.id + "?_method=PUT",
                 id: req.params.id,
                 producto: product,
                 categoryList: categories
-            })
+            })}
+            else{return res.status(404).send("Producto no encontrado")}
         }).catch(err => {
             return res.status(404).send({ message: err });
         })

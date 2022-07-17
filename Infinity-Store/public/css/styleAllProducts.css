@@ -35,7 +35,8 @@ main{
     /* background:linear-gradient(var(--rosado), var(--celeste)) */
 }
 a{
-    text-decoration: none
+    text-decoration: none;
+    color: black;
 }
 
 
