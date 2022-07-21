@@ -72,3 +72,15 @@ disponibilidad de tiempo de cada integrante.
 4. Hacer menos: sería ideal que no dejemos cosas para último momento para poder disponer de tiempo ante posibles inconvenientes que surjan o para ponernos al día con el contenido que sigue. 
 
 5. Dejar de Hacer: no revisar aquello que envíamos al repositorio por si estamos enviando algún error que pueda perjudicar al que se lo descargue. 
+
+                                                   Sprint 7
+1. Comenzar a hacer: finiquitar los detalles y ponerlo prolijo para que quede en nuestro portfolio.
+
+2. Hacer más: buscar en internet y en playground sobre los posibles errores que van surgiendo.
+
+3. Continuar haciendo: comunicarnos e informarnos sobre cómo viene nuestra parte del proyecto, si llegaremos con lo encargado o pedir ayuda.
+
+4. Hacer menos: confiarnos con los tiempos de las entregas e intentar estilizar el proyecto.
+
+
+5. Dejar de Hacer: revisar la funcionalidad cuando trabajemos sobre un codigo que haya sido creado por un compañero.
