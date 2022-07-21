@@ -74,7 +74,8 @@ disponibilidad de tiempo de cada integrante.
 5. Dejar de Hacer: no revisar aquello que envíamos al repositorio por si estamos enviando algún error que pueda perjudicar al que se lo descargue. 
 
 
-Sprint 7
+                                                      
+                                                     Sprint 7
 Comenzar a hacer: finiquitar los detalles y ponerlo prolijo para que quede en nuestro portfolio.
 
 Hacer más: buscar en internet y en playground sobre los posibles errores que van surgiendo.
